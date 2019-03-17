@@ -1,0 +1,82 @@
+.btn,
+a.btn {
+    @apply text-base py-3 px-6 inline-block text-center border border-transparent bg-grey-100 text-grey-600 rounded cursor-pointer;
+
+    @screen md {
+        @apply py-3 px-8 font-sans-medium;
+    }
+
+    &:hover {
+        @apply bg-grey-200;
+    }
+
+    &:disabled,
+    &[disabled] {
+        @apply cursor-not-allowed;
+    }
+
+    &:hover {
+        @apply bg-grey-200;
+    }
+
+    // Sizes
+    &--small {
+        @apply text-sm-1 py-2 px-3;
+    }
+
+    &--large {
+        @apply py-3 px-8;
+
+        @screen md {
+            @apply text-lg-1 py-4 px-10;
+        }
+    }
+
+    // Colors
+    &--primary,
+    &.active {
+        @apply bg-brand-primary border-brand-primary text-white;
+
+        &:hover {
+            @apply bg-brand-primary-light-1 border-brand-primary-light-1 text-white;
+        }
+
+        // Disabled
+        &.disabled,
+        &[disabled],
+        &.disabled:hover,
+        &[disabled]:hover {
+            cursor: not-allowed;
+            opacity: 0.85;
+            @apply bg-brand-primary;
+        }
+    }
+
+    // Outline
+    &--outline {
+        background: transparent;
+        @apply border-brand-primary text-brand-primary;
+
+        &:hover {
+            background: transparent;
+            @apply bg-brand-primary text-white;
+        }
+
+        // Disabled
+        &.disabled,
+        &:disabled,
+        &[disabled] {
+            @apply text-grey-400 bg-white border-grey-400;
+        }
+    }
+
+    // Buttons appearing to be links (keeps padding)
+    &--link {
+        background: transparent;
+
+        &:hover,
+        &:active {
+            background: transparent;
+        }
+    }
+}

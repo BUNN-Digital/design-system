@@ -1,0 +1,113 @@
+// Headings
+h1,
+.heading--alpha {
+    @apply font-sans-regular text-lg-2 my-6 mb-4;
+    line-height: 2.5rem;
+
+    @screen lg {
+        @apply font-sans-light text-lg-4 mt-8 mb-6;
+        line-height: 4rem;
+    }
+}
+
+h2,
+.heading--beta {
+    @apply font-sans-regular text-lg-1 mt-6 mb-4;
+    line-height: 2rem;
+
+    @screen lg {
+        @apply font-sans-light text-lg-3 mt-8;
+        line-height: 3.25rem;
+    }
+}
+
+h3,
+.heading--gamma {
+    @apply font-sans-medium text-lg-1 mt-6 mb-4;
+    line-height: 1.75rem;
+
+    @screen lg {
+        @apply font-sans-regular text-lg-2 mt-8;
+        line-height: 2.5rem;
+    }
+}
+
+h4,
+.heading--delta,
+.section-heading {
+    @apply font-sans-demi text-base mt-6 mb-4;
+    line-height: 1.5rem;
+
+    @screen lg {
+        @apply font-sans-medium text-lg-1 mt-8;
+        line-height: 1.75rem;
+    }
+}
+
+h5,
+.heading--epsilon {
+    @apply font-sans-medium text-base mt-6 mb-4;
+    line-height: 1.5rem;
+
+    @screen lg {
+        @apply font-sans-medium text-base mt-8;
+        line-height: 1.5rem;
+    }
+}
+
+.section-heading {
+    @apply pb-2 mt-4 border-b border-grey-100 mt-8;
+
+    @screen lg {
+        @apply pb-4 mt-12;
+    }
+}
+
+//Additional sizes
+.text-display {
+    @apply font-sans-light text-lg-3 mt-8 mb-6;
+    line-height: 3rem;
+
+    @screen lg {
+        @apply font-sans-light text-lg-5 mt-8 mb-6;
+        line-height: 4.75rem;
+    }
+}
+
+.milli {
+    @apply text-sm-1;
+}
+
+// Text
+p {
+    @apply my-4;
+}
+
+.lede,
+p.lede,
+.large-text {
+    @apply text-base my-6;
+    line-height: 2rem;
+
+    @screen lg {
+        @apply text-lg-1 mt-8 mb-6;
+        line-height: 2.5rem;
+    }
+}
+
+// Links
+a {
+    @apply text-brand-primary;
+
+    &:hover {
+        @apply text-brand-primary;
+    }
+
+    &.link--neutral {
+        @apply text-grey-500;
+
+        &:hover {
+            @apply text-brand-primary;
+        }
+    }
+}

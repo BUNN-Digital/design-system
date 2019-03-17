@@ -1,0 +1,38 @@
+.pagination {
+    @apply py-8;
+
+    &__item {
+        display: inline-block;
+        margin-left: 2px;
+        margin-right: 2px;
+
+        &.active .pagination__item-link {
+            @apply bg-brand-primary text-white border-brand-primary;
+        }
+
+        &-label,
+        &-link {
+            display: block;
+            padding: 8px 16px;
+            border-radius: 4px;
+        }
+
+        &-link {
+            @apply border border-grey-100 text-brand-primary;
+
+            &:hover {
+                @apply bg-grey-100;
+            }
+
+            &--disabled {
+                @apply bg-grey-75 border-grey-75;
+                color: #888;
+
+                &:hover {
+                    color: #888;
+                    @apply bg-grey-75 border-grey-75;
+                }
+            }
+        }
+    }
+}

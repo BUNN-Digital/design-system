@@ -1,0 +1,71 @@
+.notification-bar {
+    @apply fixed pin-t pin-l pin-r flex items-center m-4 rounded font-sans-medium bg-white text-sm-1 shadow-lg py-5 pr-6 z-negative;
+    padding-left: 5.425rem;
+    min-height: 72px;
+    opacity: 0;
+    transition: all 0.4s;
+    transition-timing-function: ease-in;
+
+    &:before {
+        @apply flex bg-grey-75 items-center justify-center px-6 absolute pin-t pin-l pin-b rounded-l text-white;
+        font-family: "Font Awesome 5 Pro";
+        font-weight: bold;
+        font-size: 1.125rem;
+        content: "\f05a";
+    }
+
+    @screen sm {
+        @apply w-2/3;
+        left: auto;
+    }
+
+    @screen md {
+        @apply w-1/2;
+    }
+
+    @screen md {
+        @apply w-auto;
+        max-width: 400px;
+    }
+
+    &.active {
+        @apply z-floating;
+        opacity: 1;
+    }
+
+    &.affirm {
+        @apply bg-affirm-light;
+        &:before {
+            @apply bg-affirm;
+            content: "\f00c";
+        }
+    }
+    &.declare {
+        @apply bg-declare-light;
+        &:before {
+            @apply bg-declare;
+            content: "\f071";
+        }
+    }
+    &.inform {
+        @apply bg-inform-light;
+        &:before {
+            @apply bg-inform;
+            content: "\f05a";
+        }
+    }
+    &.avert {
+        @apply bg-avert-light;
+        &:before {
+            @apply bg-avert;
+            content: "\f06a";
+        }
+    }
+    &.plain {
+        @apply bg-grey-75;
+        &:before {
+            @apply bg-grey-500;
+            content: "\f4b0";
+        }
+    }
+}

@@ -1,0 +1,80 @@
+.b-video {
+    @apply relative bg-cover bg-center bg-grey-200;
+    // video player aspect ratio
+    padding-bottom: 56.25%;
+
+    &.featured {
+        @apply border-t-8 border-brand-primary-light-1;
+    }
+
+    &__play {
+        @apply absolute rounded-lg text-center no-underline;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        color: rgba(255, 255, 255, 0.8);
+
+        &:hover {
+            color: rgba(255, 255, 255, 1);
+        }
+
+        // Play icon
+        &:before {
+            content: "\f144";
+            font-family: "Font Awesome 5 Pro";
+            font-size: 4rem;
+            line-height: 4rem;
+            display: block;
+            @screen lg {
+                font-size: 5rem;
+                line-height: 5rem;
+            }
+        }
+
+        // Play icon w/ Watch video text
+        .featured & {
+            padding: 1rem;
+            background: rgba(0, 0, 0, 0.5);
+            // Solid play button
+            &:before {
+                content: "\f144";
+                font-family: "Font Awesome 5 Pro";
+                font-weight: 900;
+                font-size: 2.5rem;
+                line-height: 3.125rem;
+                display: block;
+                @screen sm {
+                    font-size: 3rem;
+                    line-height: 4rem;
+                }
+                @screen lg {
+                    font-size: 3.625rem;
+                    line-height: 4.75rem;
+                }
+            }
+
+            &:after {
+                content: "Watch video";
+                font-size: 1rem;
+                line-height: 1rem;
+                margin: 0;
+                @screen sm {
+                    font-size: 1.425rem;
+                    line-height: 1.425rem;
+                }
+                @screen lg {
+                    font-size: 1.625rem;
+                    line-height: 1.625rem;
+                }
+            }
+        }
+    }
+
+    &__row {
+        @apply flex flex-wrap -mx-3;
+    }
+
+    &__box {
+        @apply p-3;
+    }
+}

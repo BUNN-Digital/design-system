@@ -1,0 +1,13 @@
+// Links with an icon. Allows us to add an underline to text only on hover.
+.icon-link,
+a.icon-link {
+    text-decoration: none;
+
+    &:hover {
+        text-decoration: none;
+
+        > span {
+            text-decoration: underline;
+        }
+    }
+}

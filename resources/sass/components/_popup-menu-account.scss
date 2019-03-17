@@ -1,0 +1,16 @@
+.account-popup-menu {
+    a {
+        color: #222;
+
+        &:hover {
+            //color: $brand-primary;
+        }
+    }
+
+    @media screen and (min-width: 768px) {
+        .popup-menu__header,
+        .popup-menu__close-btn {
+            display: none;
+        }
+    }
+}

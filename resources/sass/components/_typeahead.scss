@@ -1,0 +1,44 @@
+.typeahead {
+    @apply relative z-menu;
+
+    @screen lg {
+        @apply mx-0;
+    }
+
+    &__content {
+        width: 100%;
+        box-shadow: 0 2px 8px 0 rgba(black, 0.25);
+        //transform: translateY(-20px);
+        transition: all 0.2s ease-out;
+        opacity: 0;
+        @apply hidden flex-col absolute pin-l pin-r p-4 mt-1 bg-white rounded-lg;
+
+        @screen md {
+            @apply flex-row items-stretch p-0;
+        }
+
+        @screen lg {
+            width: 800px;
+            @apply pin-none pin-t pin-r;
+        }
+
+        &.active {
+            opacity: 1;
+            transform: translateY(0);
+            @apply flex;
+        }
+    }
+
+    &__section {
+        min-width: 200px;
+        @apply pl-2 pr-4;
+
+        @screen md {
+            @apply py-8 pl-8 pr-12;
+        }
+
+        &--products img {
+            max-width: 80px;
+        }
+    }
+}

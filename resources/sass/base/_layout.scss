@@ -1,0 +1,28 @@
+.section {
+    @apply py-8;
+
+    &--collapsed {
+        padding: 0;
+    }
+
+    @screen md {
+        @apply py-16;
+    }
+}
+
+.container {
+    width: 100%;
+    @apply max-w-4xl mx-auto px-4;
+
+    @screen md {
+        @apply px-6;
+    }
+
+    &--wide {
+        @apply max-w-5xl;
+    }
+
+    &--fluid {
+        max-width: 100%;
+    }
+}

@@ -1,0 +1,12 @@
+.bunn-tabs {
+    @apply flex mb-3;
+
+    a {
+        @apply py-3 px-8 border-b-4 border-transparent cursor-pointer;
+        margin-bottom: -1px;
+
+        &.active {
+            @apply border-brand-primary;
+        }
+    }
+}
