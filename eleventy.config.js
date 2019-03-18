@@ -1,9 +1,9 @@
-// const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
+const syntaxHighlight = require("@11ty/eleventy-plugin-syntaxhighlight")
 
 module.exports = eleventyConfig => {
 
     // Add syntax highlighting
-    // eleventyConfig.addPlugin(syntaxHighlight)
+    eleventyConfig.addPlugin(syntaxHighlight);
 
     // Add a readable date formatter filter to Nunjucks
     eleventyConfig.addFilter("dateDisplay", require("./filters/dates.js"))

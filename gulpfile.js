@@ -26,8 +26,7 @@ var paths = {
 
     sass: {
         main: './resources/sass/main.scss',
-        designSystem: './resources/sass/design-system.scss',
-        fonts: './resources/sass/fonts.scss',
+        designSystem: './resources/sass/_design-system/**/*.scss',
         dest: 'css/'
     },
 
@@ -78,11 +77,8 @@ function compileMainCss() {
 /**
  * Compile Other CSS
  */
-function compileOtherCss() {
-    return gulp.src([
-            paths.sass.designSystem,
-            paths.sass.fonts
-        ])
+function compileDesignSystemCss() {
+    return gulp.src(paths.sass.designSystem)
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sass())
         .pipe(rename({
@@ -90,7 +86,7 @@ function compileOtherCss() {
         }))
         .pipe(gulp.dest(paths.sass.dest))
         .pipe(notify({
-            message: 'Other CSS - Compile Success'
+            message: 'Design System CSS - Compile Success'
         }));
 }
 
@@ -225,19 +221,15 @@ function watch(done) {
     var tailwindWatcher = gulp.watch('./tailwind.config.js');
     var sassWatcher = gulp.watch([
         './resources/sass/**/*.scss',
-        '!./resources/sass/design-system.scss',
-        '!./resources/sass/fonts.scss'
+        '!./resources/sass/_design-system/'
     ]);
-    var otherSassWatcher = gulp.watch([
-        './resources/sass/design-system.scss',
-        './resources/sass/fonts.scss'
-    ]);
+    var designSystemSassWatcher = gulp.watch('./resources/sass/_design-system/**/*.scss');
     var jsWatcher = gulp.watch('./resources/js/**/*.js');
 
     // templateWatcher.on('change', gulp.series(compileMainCss, minifyCss));
     tailwindWatcher.on('change', compileMainCss);
     sassWatcher.on('change', compileMainCss);
-    otherSassWatcher.on('change', compileOtherCss);
+    designSystemSassWatcher.on('change', compileDesignSystemCss);
     jsWatcher.on('change', compileJs);
 
     done();
@@ -256,7 +248,13 @@ function eleventy() {
 /**
  * Default Gulp task
  */
-gulp.task('default', gulp.series(gulp.parallel(gulp.series(compileMainCss, compileOtherCss, minifyCss), compileJs)));
+gulp.task('default', 
+    gulp.parallel(
+        gulp.series(compileJs, minifyJs),
+        gulp.series(compilePreflight, minifyPreflight, minifyCss),
+        compileDesignSystemCss
+    )
+);
 
 /**
  * Dev task
@@ -266,7 +264,7 @@ gulp.task('default', gulp.series(gulp.parallel(gulp.series(compileMainCss, compi
 
 gulp.task('dev', 
     gulp.series(
-        gulp.parallel(compileJs, compileMainCss, compileOtherCss), watch, eleventy
+        gulp.parallel(compileJs, compileMainCss, compileDesignSystemCss), watch, eleventy
     )
 );
 
@@ -280,6 +278,6 @@ gulp.task('build',
     gulp.parallel(
         gulp.series(compileJs, minifyJs),
         gulp.series(compilePreflight, minifyPreflight, minifyCss),
-        compileOtherCss
+        compileDesignSystemCss
     )
 );

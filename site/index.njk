@@ -8,7 +8,7 @@ title: BUNN Design System
 
 <div class="container">
 
-    <h1>{{ title }}</h1>
+    <h1>{{ title }}</h1>  
             
     <p class="lede">The BUNN digital design system uses <a href="https://tailwindcss.com/docs/what-is-tailwind/" target="_blank">Tailwind CSS</a>, a utility-first CSS framework.</p>
 
@@ -17,11 +17,9 @@ title: BUNN Design System
     <p>Getting started with web projects is as easy as adding the following CSS reference to your project, as well as deploying font files to a <code>/fonts</code> directory on the web server. Licenced font files can be included with any project that is sponsored by BUNN&reg; or hosted at bunn.com.
     </p>
     
-    <div class="panel panel--stroke panel--rounded">
-<pre class="max-w-full"><code class="language-html">
+{% highlight "html" %}
 <link rel="stylesheet" href="https://resource.bunn.com/assets/common/design/v0.0.3/main.css" />
-</code></pre>
-    </div>
+{% endhighlight %}
 
     <h2>Configuration</h2>
     <p>We've made slight adjustments to the <code>tailwind.js</code> configuration file that is unique to our design system; pimarily in the area of typography and color. Below is the current configuration file used for BUNN Design.</p>

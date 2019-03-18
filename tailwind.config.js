@@ -119,11 +119,11 @@ module.exports = {
     */
 
     screens: {
-    'sm': '480px',
-    'md': '768px',
-    'lg': '1200px',
-    'xl': '1920px',
-},
+        'sm': '480px',
+        'md': '768px',
+        'lg': '1200px',
+        'xl': '1920px',
+    },
 
 
     /*
@@ -145,95 +145,95 @@ module.exports = {
     */
 
     fonts: {
-    'sans-regular': [
-    '"AvenirNextLTW01-Regular"',
-    '"HelveticaNeue-Light"',
-    '"Helvetica Neue Light"',
-    '"Helvetica Neue"',
-    'Helvetica',
-    'Arial',
-    '"Lucida Grande"',
-    'sans-serif',
-    ],
-    'sans-regular-ital': [
-    '"AvenirNextLTW01-Italic"',
-    '"HelveticaNeue-Light"',
-    '"Helvetica Neue Light"',
-    '"Helvetica Neue"',
-    'Helvetica',
-    'Arial',
-    '"Lucida Grande"',
-    'sans-serif',
-    ],
-    'sans-demi': [
-    '"Avenir Next LT W01 Demi"',
-    '"HelveticaNeue-Light"',
-    '"Helvetica Neue Light"',
-    '"Helvetica Neue"',
-    'Helvetica',
-    'Arial',
-    '"Lucida Grande"',
-    'sans-serif',
-    ],
-    'sans-demi-ital': [
-    '"AvenirNextLTW01-DemiIta"',
-    '"HelveticaNeue-Light"',
-    '"Helvetica Neue Light"',
-    '"Helvetica Neue"',
-    'Helvetica',
-    'Arial',
-    '"Lucida Grande"',
-    'sans-serif',
-    ],
-    'sans-medium': [
-    '"AvenirNextLTW01-Medium"',
-    '"HelveticaNeue-Light"',
-    '"Helvetica Neue Light"',
-    '"Helvetica Neue"',
-    'Helvetica',
-    'Arial',
-    '"Lucida Grande"',
-    'sans-serif',
-    ],
-    'sans-medium-ital': [
-    '"AvenirNextLTW01-MediumI_721278"',
-    '"HelveticaNeue-Light"',
-    '"Helvetica Neue Light"',
-    '"Helvetica Neue"',
-    'Helvetica',
-    'Arial',
-    '"Lucida Grande"',
-    'sans-serif',
-    ],
-    'sans-light': [
-    '"Avenir Next W01 Light"',
-    '"HelveticaNeue-Light"',
-    '"Helvetica Neue Light"',
-    '"Helvetica Neue"',
-    'Helvetica',
-    'Arial',
-    '"Lucida Grande"',
-    'sans-serif',
-    ],
-    'sans-light-ital': [
-    '"AvenirNextW01-LightItal"',
-    '"HelveticaNeue-Light"',
-    '"Helvetica Neue Light"',
-    '"Helvetica Neue"',
-    'Helvetica',
-    'Arial',
-    '"Lucida Grande"',
-    'sans-serif',
-    ],
-    'mono': [
-    '"Menlo"',
-    '"Monaco"',
-    '"Consolas"',
-    '"Liberation Mono"',
-    '"Courier New"',
-    'monospace',
-    ]
-},
+        'sans-regular': [
+            '"AvenirNextLTW01-Regular"',
+            '"HelveticaNeue-Light"',
+            '"Helvetica Neue Light"',
+            '"Helvetica Neue"',
+            'Helvetica',
+            'Arial',
+            '"Lucida Grande"',
+            'sans-serif',
+        ],
+        'sans-regular-ital': [
+            '"AvenirNextLTW01-Italic"',
+            '"HelveticaNeue-Light"',
+            '"Helvetica Neue Light"',
+            '"Helvetica Neue"',
+            'Helvetica',
+            'Arial',
+            '"Lucida Grande"',
+            'sans-serif',
+        ],
+        'sans-demi': [
+            '"Avenir Next LT W01 Demi"',
+            '"HelveticaNeue-Light"',
+            '"Helvetica Neue Light"',
+            '"Helvetica Neue"',
+            'Helvetica',
+            'Arial',
+            '"Lucida Grande"',
+            'sans-serif',
+        ],
+        'sans-demi-ital': [
+            '"AvenirNextLTW01-DemiIta"',
+            '"HelveticaNeue-Light"',
+            '"Helvetica Neue Light"',
+            '"Helvetica Neue"',
+            'Helvetica',
+            'Arial',
+            '"Lucida Grande"',
+            'sans-serif',
+        ],
+        'sans-medium': [
+            '"AvenirNextLTW01-Medium"',
+            '"HelveticaNeue-Light"',
+            '"Helvetica Neue Light"',
+            '"Helvetica Neue"',
+            'Helvetica',
+            'Arial',
+            '"Lucida Grande"',
+            'sans-serif',
+        ],
+        'sans-medium-ital': [
+            '"AvenirNextLTW01-MediumI_721278"',
+            '"HelveticaNeue-Light"',
+            '"Helvetica Neue Light"',
+            '"Helvetica Neue"',
+            'Helvetica',
+            'Arial',
+            '"Lucida Grande"',
+            'sans-serif',
+        ],
+        'sans-light': [
+            '"Avenir Next W01 Light"',
+            '"HelveticaNeue-Light"',
+            '"Helvetica Neue Light"',
+            '"Helvetica Neue"',
+            'Helvetica',
+            'Arial',
+            '"Lucida Grande"',
+            'sans-serif',
+        ],
+        'sans-light-ital': [
+            '"AvenirNextW01-LightItal"',
+            '"HelveticaNeue-Light"',
+            '"Helvetica Neue Light"',
+            '"Helvetica Neue"',
+            'Helvetica',
+            'Arial',
+            '"Lucida Grande"',
+            'sans-serif',
+        ],
+        'mono': [
+            '"Menlo"',
+            '"Monaco"',
+            '"Consolas"',
+            '"Liberation Mono"',
+            '"Courier New"',
+            'monospace',
+        ]
+    },
 
 
     /*
@@ -258,34 +258,34 @@ module.exports = {
     */
 
     textSizes: {
-    
-    // 1.250
 
-    // 'sm-2': '.64rem',    // 9px      milli
-    // 'sm-1': '.8rem',   // 12px     small
-    // 'base': '1rem',      // 16.00px    base, h5
-    // 'lg-1': '1.25rem',   // 20px     h4
-    // 'lg-2': '1.563rem',    // 25px     h3
-    // 'lg-3': '1.953rem',  // 31.25px    h2
-    // 'lg-4': '2.441rem',    // 39.06px    h1
-    // 'lg-5': '3.052em',   // 48.83px    
-    // 'lg-6': '3.815rem',    // 61.04px    
-    // 'lg-7': '4.678rem',    // 76.29px    mega
-    // 'lg-8': '5.96rem',     // 95.37px    jumbo
+        // 1.250
 
-    // 1.333
-    
-    'sm-2': '.563rem',    // 9px      milli
-    'sm-1': '.75rem',   // 12px     small
-    'base': '1rem',       // 16.00px    base, h5
-    'lg-1': '1.333rem',   // 21.333px   h4
-    'lg-2': '1.777rem',   // 28.48px    h3
-    'lg-3': '2.369rem',   // 37.90px    h2
-    'lg-4': '3.157rem',   // 50.52px    h1
-    'lg-5': '4.209em',    // 67.34px    display
-    'lg-6': '5.61rem',    // 89.76px    mega
-    'lg-7': '7.478rem',     // 119.66px   jumbo
-},
+        // 'sm-2': '.64rem',    // 9px      milli
+        // 'sm-1': '.8rem',   // 12px     small
+        // 'base': '1rem',      // 16.00px    base, h5
+        // 'lg-1': '1.25rem',   // 20px     h4
+        // 'lg-2': '1.563rem',    // 25px     h3
+        // 'lg-3': '1.953rem',  // 31.25px    h2
+        // 'lg-4': '2.441rem',    // 39.06px    h1
+        // 'lg-5': '3.052em',   // 48.83px    
+        // 'lg-6': '3.815rem',    // 61.04px    
+        // 'lg-7': '4.678rem',    // 76.29px    mega
+        // 'lg-8': '5.96rem',     // 95.37px    jumbo
+
+        // 1.333
+
+        'sm-2': '.563rem',    // 9px      milli
+        'sm-1': '.75rem',   // 12px     small
+        'base': '1rem',       // 16.00px    base, h5
+        'lg-1': '1.333rem',   // 21.333px   h4
+        'lg-2': '1.777rem',   // 28.48px    h3
+        'lg-3': '2.369rem',   // 37.90px    h2
+        'lg-4': '3.157rem',   // 50.52px    h1
+        'lg-5': '4.209em',    // 67.34px    display
+        'lg-6': '5.61rem',    // 89.76px    mega
+        'lg-7': '7.478rem',     // 119.66px   jumbo
+    },
 
 
     /*
@@ -303,16 +303,16 @@ module.exports = {
     */
 
     fontWeights: {
-    'hairline': 100,
-    'thin': 200,
-    'light': 300,
-    'normal': 400,
-    'medium': 500,
-    'semibold': 600,
-    'bold': 700,
-    'extrabold': 800,
-    'black': 900,
-},
+        'hairline': 100,
+        'thin': 200,
+        'light': 300,
+        'normal': 400,
+        'medium': 500,
+        'semibold': 600,
+        'bold': 700,
+        'extrabold': 800,
+        'black': 900,
+    },
 
 
     /*
@@ -328,11 +328,11 @@ module.exports = {
     */
 
     leading: {
-    'none': 1,
-    'tight': 1.25,
-    'normal': 1.5,
-    'loose': 2,
-},
+        'none': 1,
+        'tight': 1.25,
+        'normal': 1.5,
+        'loose': 2,
+    },
 
 
     /*
@@ -348,10 +348,10 @@ module.exports = {
     */
 
     tracking: {
-    'tight': '-0.05em',
-    'normal': '0',
-    'wide': '0.075em',
-},
+        'tight': '-0.05em',
+        'normal': '0',
+        'wide': '0.075em',
+    },
 
 
     /*
@@ -400,10 +400,10 @@ module.exports = {
     */
 
     backgroundSize: {
-    'auto': 'auto',
-    'cover': 'cover',
-    'contain': 'contain',
-},
+        'auto': 'auto',
+        'cover': 'cover',
+        'contain': 'contain',
+    },
 
 
     /*
@@ -420,12 +420,12 @@ module.exports = {
     */
 
     borderWidths: {
-    default: '1px',
-    '0': '0',
-    '2': '2px',
-    '4': '4px',
-    '8': '8px',
-},
+        default: '1px',
+        '0': '0',
+        '2': '2px',
+        '4': '4px',
+        '8': '8px',
+    },
 
 
     /*
@@ -445,7 +445,7 @@ module.exports = {
     |
     */
 
-    borderColors: global.Object.assign({default: colors['grey-light']}, colors),
+    borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
 
 
     /*
@@ -465,12 +465,12 @@ module.exports = {
     */
 
     borderRadius: {
-    'none': '0',
-    'sm': '.125rem',
-    default: '.25rem',
-    'lg': '.5rem',
-    'full': '9999px',
-},
+        'none': '0',
+        'sm': '.125rem',
+        default: '.25rem',
+        'lg': '.5rem',
+        'full': '9999px',
+    },
 
 
     /*
@@ -494,36 +494,36 @@ module.exports = {
     */
 
     width: {
-    'auto': 'auto',
-    'px': '1px',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '0.75rem',
-    '4': '1rem',
-    '5': '1.25rem',
-    '6': '1.5rem',
-    '8': '2rem',
-    '10': '2.5rem',
-    '12': '3rem',
-    '16': '4rem',
-    '24': '6rem',
-    '32': '8rem',
-    '48': '12rem',
-    '64': '16rem',
-    '1/2': '50%',
-    '1/3': '33.33333%',
-    '2/3': '66.66667%',
-    '1/4': '25%',
-    '3/4': '75%',
-    '1/5': '20%',
-    '2/5': '40%',
-    '3/5': '60%',
-    '4/5': '80%',
-    '1/6': '16.66667%',
-    '5/6': '83.33333%',
-    'full': '100%',
-    'screen': '100vw',
-},
+        'auto': 'auto',
+        'px': '1px',
+        '1': '0.25rem',
+        '2': '0.5rem',
+        '3': '0.75rem',
+        '4': '1rem',
+        '5': '1.25rem',
+        '6': '1.5rem',
+        '8': '2rem',
+        '10': '2.5rem',
+        '12': '3rem',
+        '16': '4rem',
+        '24': '6rem',
+        '32': '8rem',
+        '48': '12rem',
+        '64': '16rem',
+        '1/2': '50%',
+        '1/3': '33.33333%',
+        '2/3': '66.66667%',
+        '1/4': '25%',
+        '3/4': '75%',
+        '1/5': '20%',
+        '2/5': '40%',
+        '3/5': '60%',
+        '4/5': '80%',
+        '1/6': '16.66667%',
+        '5/6': '83.33333%',
+        'full': '100%',
+        'screen': '100vw',
+    },
 
 
     /*
@@ -542,25 +542,25 @@ module.exports = {
     */
 
     height: {
-    'auto': 'auto',
-    'px': '1px',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '0.75rem',
-    '4': '1rem',
-    '5': '1.25rem',
-    '6': '1.5rem',
-    '8': '2rem',
-    '10': '2.5rem',
-    '12': '3rem',
-    '16': '4rem',
-    '24': '6rem',
-    '32': '8rem',
-    '48': '12rem',
-    '64': '16rem',
-    'full': '100%',
-    'screen': '100vh',
-},
+        'auto': 'auto',
+        'px': '1px',
+        '1': '0.25rem',
+        '2': '0.5rem',
+        '3': '0.75rem',
+        '4': '1rem',
+        '5': '1.25rem',
+        '6': '1.5rem',
+        '8': '2rem',
+        '10': '2.5rem',
+        '12': '3rem',
+        '16': '4rem',
+        '24': '6rem',
+        '32': '8rem',
+        '48': '12rem',
+        '64': '16rem',
+        'full': '100%',
+        'screen': '100vh',
+    },
 
 
     /*
@@ -578,9 +578,9 @@ module.exports = {
     */
 
     minWidth: {
-    '0': '0',
-    'full': '100%',
-},
+        '0': '0',
+        'full': '100%',
+    },
 
 
     /*
@@ -598,10 +598,10 @@ module.exports = {
     */
 
     minHeight: {
-    '0': '0',
-    'full': '100%',
-    'screen': '100vh',
-},
+        '0': '0',
+        'full': '100%',
+        'screen': '100vh',
+    },
 
 
     /*
@@ -620,18 +620,18 @@ module.exports = {
     */
 
     maxWidth: {
-    'xxs': '15rem',    // 240px
-    'xs': '20rem',    // 320px
-    'sm': '30rem',    // 480px
-    'md': '40rem',    // 640px
-    'lg': '50rem',    // 800px
-    'xl': '60rem',    // 960px
-    '2xl': '70rem',   // 1120px
-    '3xl': '80rem',   // 1280px
-    '4xl': '90rem',   // 1440px
-    '5xl': '120rem',  // 1600px
-    'full': '100%',
-},
+        'xxs': '15rem',    // 240px
+        'xs': '20rem',    // 320px
+        'sm': '30rem',    // 480px
+        'md': '40rem',    // 640px
+        'lg': '50rem',    // 800px
+        'xl': '60rem',    // 960px
+        '2xl': '70rem',   // 1120px
+        '3xl': '80rem',   // 1280px
+        '4xl': '90rem',   // 1440px
+        '5xl': '120rem',  // 1600px
+        'full': '100%',
+    },
 
 
     /*
@@ -649,9 +649,9 @@ module.exports = {
     */
 
     maxHeight: {
-    'full': '100%',
-    'screen': '100vh',
-},
+        'full': '100%',
+        'screen': '100vh',
+    },
 
 
     /*
@@ -670,22 +670,22 @@ module.exports = {
     */
 
     padding: {
-    'px': '1px',
-    '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '0.75rem',
-    '4': '1rem',
-    '5': '1.25rem',
-    '6': '1.5rem',
-    '8': '2rem',
-    '10': '2.5rem',
-    '12': '3rem',
-    '16': '4rem',
-    '20': '5rem',
-    '24': '6rem',
-    '32': '8rem',
-},
+        'px': '1px',
+        '0': '0',
+        '1': '0.25rem',
+        '2': '0.5rem',
+        '3': '0.75rem',
+        '4': '1rem',
+        '5': '1.25rem',
+        '6': '1.5rem',
+        '8': '2rem',
+        '10': '2.5rem',
+        '12': '3rem',
+        '16': '4rem',
+        '20': '5rem',
+        '24': '6rem',
+        '32': '8rem',
+    },
 
 
     /*
@@ -704,23 +704,23 @@ module.exports = {
     */
 
     margin: {
-    'auto': 'auto',
-    'px': '1px',
-    '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '0.75rem',
-    '4': '1rem',
-    '5': '1.25rem',
-    '6': '1.5rem',
-    '8': '2rem',
-    '10': '2.5rem',
-    '12': '3rem',
-    '16': '4rem',
-    '20': '5rem',
-    '24': '6rem',
-    '32': '8rem',
-},
+        'auto': 'auto',
+        'px': '1px',
+        '0': '0',
+        '1': '0.25rem',
+        '2': '0.5rem',
+        '3': '0.75rem',
+        '4': '1rem',
+        '5': '1.25rem',
+        '6': '1.5rem',
+        '8': '2rem',
+        '10': '2.5rem',
+        '12': '3rem',
+        '16': '4rem',
+        '20': '5rem',
+        '24': '6rem',
+        '32': '8rem',
+    },
 
 
     /*
@@ -739,22 +739,22 @@ module.exports = {
     */
 
     negativeMargin: {
-    'px': '1px',
-    '0': '0',
-    '1': '0.25rem',
-    '2': '0.5rem',
-    '3': '0.75rem',
-    '4': '1rem',
-    '5': '1.25rem',
-    '6': '1.5rem',
-    '8': '2rem',
-    '10': '2.5rem',
-    '12': '3rem',
-    '16': '4rem',
-    '20': '5rem',
-    '24': '6rem',
-    '32': '8rem',
-},
+        'px': '1px',
+        '0': '0',
+        '1': '0.25rem',
+        '2': '0.5rem',
+        '3': '0.75rem',
+        '4': '1rem',
+        '5': '1.25rem',
+        '6': '1.5rem',
+        '8': '2rem',
+        '10': '2.5rem',
+        '12': '3rem',
+        '16': '4rem',
+        '20': '5rem',
+        '24': '6rem',
+        '32': '8rem',
+    },
 
 
     /*
@@ -774,13 +774,13 @@ module.exports = {
     */
 
     shadows: {
-    default: '0 2px 4px 0 rgba(0,0,0,0.10)',
-    'md': '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
-    'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
-    'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
-    'outline': '0 0 0 3px rgba(52,144,220,0.5)',
-    'none': 'none',
-},
+        default: '0 2px 4px 0 rgba(0,0,0,0.10)',
+        'md': '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
+        'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
+        'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
+        'outline': '0 0 0 3px rgba(52,144,220,0.5)',
+        'none': 'none',
+    },
 
 
     /*
@@ -797,15 +797,15 @@ module.exports = {
     */
 
     zIndex: {
-    'negative': -1,
-    'auto': 'auto',
-    'page': 0,
-    'shell': 100,
-    'menu': 200,
-    'floating': 300,
-    'overlay': 400,
-    'modal': 500,
-},
+        'negative': -1,
+        'auto': 'auto',
+        'page': 0,
+        'shell': 100,
+        'menu': 200,
+        'floating': 300,
+        'overlay': 400,
+        'modal': 500,
+    },
 
 
     /*
@@ -822,18 +822,18 @@ module.exports = {
     */
 
     opacity: {
-    '0': '0',
-    '10': '.1',
-    '20': '.2',
-    '30': '.3',
-    '40': '.4',
-    '50': '.5',
-    '60': '.6',
-    '70': '.7',
-    '80': '.8',
-    '90': '.9',
-    '100': '1',
-},
+        '0': '0',
+        '10': '.1',
+        '20': '.2',
+        '30': '.3',
+        '40': '.4',
+        '50': '.5',
+        '60': '.6',
+        '70': '.7',
+        '80': '.8',
+        '90': '.9',
+        '100': '1',
+    },
 
 
     /*
@@ -851,8 +851,8 @@ module.exports = {
     */
 
     svgFill: {
-    'current': 'currentColor',
-},
+        'current': 'currentColor',
+    },
 
 
     /*
@@ -870,8 +870,8 @@ module.exports = {
     */
 
     svgStroke: {
-    'current': 'currentColor',
-},
+        'current': 'currentColor',
+    },
 
 
     /*
@@ -895,55 +895,55 @@ module.exports = {
     */
 
     modules: {
-    appearance: ['responsive'],
-    backgroundAttachment: ['responsive'],
-    backgroundColors: ['responsive', 'hover', 'focus'],
-    backgroundPosition: ['responsive'],
-    backgroundRepeat: ['responsive'],
-    backgroundSize: ['responsive'],
-    borderCollapse: [],
-    borderColors: ['responsive', 'hover', 'focus'],
-    borderRadius: ['responsive'],
-    borderStyle: ['responsive'],
-    borderWidths: ['responsive'],
-    cursor: ['responsive'],
-    display: ['responsive'],
-    flexbox: ['responsive'],
-    float: ['responsive'],
-    fonts: ['responsive'],
-    fontWeights: ['responsive', 'hover', 'focus'],
-    height: ['responsive'],
-    leading: ['responsive'],
-    lists: ['responsive'],
-    margin: ['responsive'],
-    maxHeight: ['responsive'],
-    maxWidth: ['responsive'],
-    minHeight: ['responsive'],
-    minWidth: ['responsive'],
-    negativeMargin: ['responsive'],
-    opacity: ['responsive'],
-    outline: ['focus'],
-    overflow: ['responsive'],
-    padding: ['responsive'],
-    pointerEvents: ['responsive'],
-    position: ['responsive'],
-    resize: ['responsive'],
-    shadows: ['responsive', 'hover', 'focus'],
-    svgFill: [],
-    svgStroke: [],
-    tableLayout: ['responsive'],
-    textAlign: ['responsive'],
-    textColors: ['responsive', 'hover', 'focus'],
-    textSizes: ['responsive'],
-    textStyle: ['responsive', 'hover', 'focus'],
-    tracking: ['responsive'],
-    userSelect: ['responsive'],
-    verticalAlign: ['responsive'],
-    visibility: ['responsive'],
-    whitespace: ['responsive'],
-    width: ['responsive'],
-    zIndex: ['responsive'],
-},
+        appearance: ['responsive'],
+        backgroundAttachment: ['responsive'],
+        backgroundColors: ['responsive', 'hover', 'focus'],
+        backgroundPosition: ['responsive'],
+        backgroundRepeat: ['responsive'],
+        backgroundSize: ['responsive'],
+        borderCollapse: [],
+        borderColors: ['responsive', 'hover', 'focus'],
+        borderRadius: ['responsive'],
+        borderStyle: ['responsive'],
+        borderWidths: ['responsive'],
+        cursor: ['responsive'],
+        display: ['responsive'],
+        flexbox: ['responsive'],
+        float: ['responsive'],
+        fonts: ['responsive'],
+        fontWeights: ['responsive', 'hover', 'focus'],
+        height: ['responsive'],
+        leading: ['responsive'],
+        lists: ['responsive'],
+        margin: ['responsive'],
+        maxHeight: ['responsive'],
+        maxWidth: ['responsive'],
+        minHeight: ['responsive'],
+        minWidth: ['responsive'],
+        negativeMargin: ['responsive'],
+        opacity: ['responsive'],
+        outline: ['focus'],
+        overflow: ['responsive'],
+        padding: ['responsive'],
+        pointerEvents: ['responsive'],
+        position: ['responsive'],
+        resize: ['responsive'],
+        shadows: ['responsive', 'hover', 'focus'],
+        svgFill: [],
+        svgStroke: [],
+        tableLayout: ['responsive'],
+        textAlign: ['responsive'],
+        textColors: ['responsive', 'hover', 'focus'],
+        textSizes: ['responsive'],
+        textStyle: ['responsive', 'hover', 'focus'],
+        tracking: ['responsive'],
+        userSelect: ['responsive'],
+        verticalAlign: ['responsive'],
+        visibility: ['responsive'],
+        whitespace: ['responsive'],
+        width: ['responsive'],
+        zIndex: ['responsive'],
+    },
 
 
     /*
@@ -961,22 +961,22 @@ module.exports = {
     */
 
     plugins: [
-    // require('tailwindcss/plugins/container')({
-    //   center: true,
-    //   padding: '2rem',
-    // }),
-    function ({addUtilities}) {
-        // This function is your plugin
-        const bunnComponents = {
-        '.b-button': {
-            padding: '.5rem 1rem',
-            borderRadius: '.25rem',
-            fontWeight: '600',
+        // require('tailwindcss/plugins/container')({
+        //   center: true,
+        //   padding: '2rem',
+        // }),
+        function ({ addUtilities }) {
+            // This function is your plugin
+            const bunnComponents = {
+                '.b-button': {
+                    padding: '.5rem 1rem',
+                    borderRadius: '.25rem',
+                    fontWeight: '600',
+                },
+            };
+            addUtilities(bunnComponents);
         },
-    };
-    addUtilities(bunnComponents);
-},
-],
+    ],
 
 
     /*
@@ -990,9 +990,9 @@ module.exports = {
     */
 
     options: {
-    prefix: '',
-    important: false,
-    separator: ':',
-},
+        prefix: '',
+        important: false,
+        separator: ':',
+    },
 
 };
