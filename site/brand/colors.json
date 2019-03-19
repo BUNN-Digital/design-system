@@ -1,0 +1,166 @@
+{     
+    "corporate": [
+        {
+            "name": "brand-primary",
+            "hex": "#245595",
+            "hsla": "HSLA(214, 61%, 36%, 1)",
+            "swatch": "bg-brand-primary"
+        },
+        {
+            "name": "brand-primary-light-1",
+            "hex": "#3F68A0",
+            "hsla": "HSLA(214, 44%, 44%, 1)",
+            "swatch": "bg-brand-primary-light-1"
+        },
+        {
+            "name": "brand-primary-light-2",
+            "hex": "#6487B9",
+            "hsla": "HSLA(215, 38%, 56%, 1)",
+            "swatch": "bg-brand-primary-light-2"
+        },
+        {
+            "name": "brand-primary-dark-1",
+            "hex": "#143F79",
+            "hsla": "HSLA(215, 72%, 28%, 1)",
+            "swatch": "bg-brand-primary-dark-1"
+        },
+        {
+            "name": "brand-primary-dark-2",
+            "hex": "#082D60",
+            "hsla": "HSLA(215, 85%, 20%, 1)",
+            "swatch": "bg-brand-primary-dark-2"
+        }
+    ],
+    "gourmet": [
+        {
+            "name": "brand-gourmet",
+            "hex": "#856F51",
+            "hsla": "HSLA(215, 85%, 20%, 1)",
+            "swatch": "bg-brand-gourmet"
+        },
+        {
+            "name": "brand-gourmet-light-1",
+            "hex": "#997D59",
+            "hsla": "HSLA(215, 72%, 28%, 1)",
+            "swatch": "bg-brand-gourmet-light-1"
+        }
+    ],
+    "greys": [
+        {
+            "name": "grey-50",
+            "hex": "#f9f9f9",
+            "hsla": "",
+            "swatch": "bg-grey-50"
+        },
+        {
+            "name": "grey-100",
+            "hex": "#dfdfdf",
+            "hsla": "",
+            "swatch": "bg-grey-100"
+        },
+        {
+            "name": "grey-200",
+            "hex": "#c5c5ca",
+            "hsla": "",
+            "swatch": "bg-grey-200"
+        },
+        {
+            "name": "grey-300",
+            "hex": "#acacac",
+            "hsla": "",
+            "swatch": "bg-grey-300"
+        },
+        {
+            "name": "grey-400",
+            "hex": "#939393",
+            "hsla": "",
+            "swatch": "bg-grey-400"
+        },
+        {
+            "name": "grey-500",
+            "hex": "#797979",
+            "hsla": "",
+            "swatch": "bg-grey-500"
+        },
+        {
+            "name": "grey-600",
+            "hex": "#606060",
+            "hsla": "",
+            "swatch": "bg-grey-600"
+        },
+        {
+            "name": "grey-700",
+            "hex": "#464646",
+            "hsla": "",
+            "swatch": "bg-grey-700"
+        },
+        {
+            "name": "grey-800",
+            "hex": "#2d2d2d",
+            "hsla": "",
+            "swatch": "bg-grey-800"
+        },
+        {
+            "name": "grey-900",
+            "hex": "#131313",
+            "hsla": "",
+            "swatch": "bg-grey-900"
+        },
+        {
+            "name": "black",
+            "hex": "#0b0c0a",
+            "hsla": "",
+            "swatch": "bg-black"
+        }
+    ],
+    "status": [
+        {
+            "name": "declare",
+            "hex": "#F5A838",
+            "hsla": "HSLA(36, 90%, 59%, 1.00)",
+            "swatch": "bg-declare"
+        },
+        {
+            "name": "declare-light",
+            "hex": "#FCEACF",
+            "hsla": "HSLA(36, 88%, 90%, 1.00)",
+            "swatch": "bg-declare-light"
+        },
+        {
+            "name": "avert",
+            "hex": "#C3282D",
+            "hsla": "HSLA(358, 66%, 46%, 1.00)",
+            "swatch": "bg-avert"
+        },
+        {
+            "name": "avert-light",
+            "hex": "#F6D5D6",
+            "hsla": "HSLA(359, 65%, 90%, 1.00)",
+            "swatch": "bg-avert-light"
+        },
+        {
+            "name": "affirm",
+            "hex": "#3CC24C",
+            "hsla": "HSLA(127, 52%, 50%, 1.00)",
+            "swatch": "bg-affirm"
+        },
+        {
+            "name": "affirm-light",
+            "hex": "#D8F3DB",
+            "hsla": "HSLA(125, 53%, 90%, 1.00)",
+            "swatch": "bg-affirm-light"
+        },
+        {
+            "name": "inform",
+            "hex": "#056ED6",
+            "hsla": "HSLA(210, 96%, 43%, 1.00)",
+            "swatch": "bg-inform"
+        },
+        {
+            "name": "inform-light",
+            "hex": "#CDE6FE",
+            "hsla": "HSLA(209, 95%, 90%, 1.00)",
+            "swatch": "bg-inform-light"
+        }
+    ]
+}

@@ -1,10 +1,9 @@
 <nav id="nav" class="nav flex">
 
-    <ul class="menu flex flex-col md:flex-row items-center list-reset text-base">
+    <ul class="pt-6 md:flex md:flex-row md:pt-4 items-center list-reset text-base font-sans-demi">
         {% for item in navigation.main %}
-        <li class="level-1 mb-4 md:mr-4 md:mb-0">
-            <a href="{{ item.url | safe }}" class="text-grey-500 {% if page.section == item.label %}text-brand-primary{% endif %}
-            ">{{ item.label }}</a>
+        <li class="level-1 inline-block md:mb-4 mr-4 md:mr-8 md:mb-0">
+            <a href="{{ item.url | safe }}" class="{% if page.url == item.url %} text-brand-primary{% else %} text-grey-500{% endif %}">{{ item.label }}</a>
         </li>
         {% endfor %}
     </ul>

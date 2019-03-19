@@ -1,1 +1,1 @@
-// JS for a component
+// JS for a design system

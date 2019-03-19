@@ -4,16 +4,15 @@ layout: default
 
 {% if section == 'Brand' %}
     {% set collection = collections.brand %}
-{% elif section == 'Principles' %}
-    {% set collection = collections.princples %}
 {% elif section == 'Components' %}
-    {% set collection = collections.components %}
+    {% set collection = collections.componentsSorted %}
 {% endif %}
 
 <div class="flex items-stretch w-full max-w-2xl mx-auto bg-white pb-16 lg:pb-32 px-6 items-center">
     <div class="hidden lg:block lg:w-1/4 lg:pt-8">
-        {% for page in tag  %}
-            <a href="{{ page.url }}">{{ page.data.title }}</a><br>
+        <div class="font-sans-medium mb-2 uppercase text-grey-300">{{ section }}</div>
+        {% for entry in collection  %}
+            <a href="{{ entry.url }}" class="block py-1{% if page.url == entry.url %} text-brand-primary font-sans-demi{% else %} text-grey-500{% endif %}">{{ entry.data.title }}</a>
         {% endfor %}
     </div>
 

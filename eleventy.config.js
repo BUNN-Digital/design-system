@@ -12,16 +12,20 @@ module.exports = eleventyConfig => {
     eleventyConfig.addFilter("htmlDateDisplay", require("./filters/timestamp.js"))
 
     // Collections
-    eleventyConfig.addCollection('brand', collection => {
-        return collection.getFilteredByTag('brand').reverse()
+    eleventyConfig.addCollection('brandSorted', collection => {
+        return collection.getFilteredByTag('brand').sort((a, b) => {
+            if (a.data.title > b.data.title) return -1;
+            else if (a.data.title < b.data.title) return 1;
+            else return 0;
+        }).reverse()
     })
 
-    eleventyConfig.addCollection('principles', collection => {
-        return collection.getFilteredByTag('principles').reverse()
-    })
-
-    eleventyConfig.addCollection('components', collection => {
-        return collection.getFilteredByTag('components').reverse()
+    eleventyConfig.addCollection('componentsSorted', collection => {
+        return collection.getFilteredByTag('components').sort((a, b) => {
+            if (a.data.title > b.data.title) return -1;
+            else if (a.data.title < b.data.title) return 1;
+            else return 0;
+        }).reverse()
     })
 
     // Layout aliases

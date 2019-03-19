@@ -31,7 +31,7 @@
             @apply bg-grey-50;
         }
 
-        .panel__action--multiple {
+        .panel__action--bar {
             .panel__action__item {
                 @apply border-r border-grey-100;
 
@@ -74,7 +74,7 @@
     }
 
     // Multiple actions
-    &__action--multiple {
+    &__action--bar {
         display: flex;
         flex-wrap: nowrap;
         padding: 0;
@@ -108,7 +108,7 @@
             }
         }
 
-        .panel__action--multiple {
+        .panel__action--bar {
             .panel__action__item {
                 @apply border-r border-white;
 
@@ -142,7 +142,7 @@
             @apply text-white;
         }
 
-        .panel__action--multiple {
+        .panel__action--bar {
             .panel__action__item {
                 @apply text-white;
             }

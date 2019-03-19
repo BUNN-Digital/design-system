@@ -1,16 +1,8 @@
 {
     "main": [
         {
-            "label": "Home",
-            "url": "/"
-        },
-        {
             "label": "Brand",
             "url": "/brand/"
-        },
-        {
-            "label": "Principles",
-            "url": "/principles/"
         },
         {
             "label": "Components",

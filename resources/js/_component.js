@@ -1,1 +1,0 @@
-// JS for a component

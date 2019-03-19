@@ -1,6 +1,6 @@
 .b-card {
     @apply flex flex-col shadow-lg m-4 rounded rounded-t-none shadow-lg m-4 rounded rounded-t-none relative;
-    height: calc(100% - 40px);
+    // height: calc(100% - 40px);
 
     &--interactive {
         @apply cursor-pointer;
