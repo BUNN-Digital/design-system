@@ -1,8 +1,6 @@
-[![Netlify Status](https://api.netlify.com/api/v1/badges/f4455669-0ce8-40ea-8ff5-5c31f0aadfa5/deploy-status)](https://app.netlify.com/sites/skeleventy/deploys)
+# BUNN Design System
 
-# Skeleventy
-
-A skeleton boilerplate built with Eleventy. Check out [Skeleventy](https://skeleventy.netlify.com/)
+Design system for BUNN Digital, powered by Eleventy.
 
 ## Requirements
 
