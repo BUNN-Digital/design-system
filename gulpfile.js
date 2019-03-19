@@ -93,7 +93,7 @@ function compileDesignSystemCss() {
 /**
  * Minify the CSS
  */
-function minifyCss() {
+function minifyMainCss() {
     return gulp.src([
         './css/main.css',
         '!./css/*.min.css'
@@ -226,7 +226,7 @@ function watch(done) {
     var designSystemSassWatcher = gulp.watch('./resources/sass/_design-system/**/*.scss');
     var jsWatcher = gulp.watch('./resources/js/**/*.js');
 
-    // templateWatcher.on('change', gulp.series(compileMainCss, minifyCss));
+    // templateWatcher.on('change', gulp.series(compileMainCss, minifyMainCss));
     tailwindWatcher.on('change', compileMainCss);
     sassWatcher.on('change', compileMainCss);
     designSystemSassWatcher.on('change', compileDesignSystemCss);
@@ -251,7 +251,7 @@ function eleventy() {
 gulp.task('default', 
     gulp.parallel(
         gulp.series(compileJs, minifyJs),
-        gulp.series(compilePreflight, minifyPreflight, minifyCss),
+        gulp.series(compilePreflight, minifyPreflight, minifyMainCss),
         compileDesignSystemCss
     )
 );
@@ -277,7 +277,7 @@ gulp.task('dev',
 gulp.task('build', 
     gulp.parallel(
         gulp.series(compileJs, minifyJs),
-        gulp.series(compilePreflight, minifyPreflight, minifyCss),
+        gulp.series(compilePreflight, compileMainCss, minifyPreflight, minifyMainCss),
         compileDesignSystemCss
     )
 );
