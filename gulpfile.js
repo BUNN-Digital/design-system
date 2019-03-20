@@ -203,8 +203,8 @@ function compilePreflight() {
  */
 function minifyPreflight() {
     return gulp.src([
-        './css/*.css',
-        '!./css/*.min.css'
+        './css/main.css',
+        '!./css/main.min.css'
         ])
         .pipe(cleanCSS())
         .pipe(rename({
