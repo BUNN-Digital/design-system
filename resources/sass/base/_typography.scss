@@ -1,97 +1,127 @@
+/**
+ * HEADINGS
+ ========================================*/
+
+h1, h2, h3, h4, h5, h6 { 
+    @apply text-base; 
+}
+
 // Headings
-h1,
-.heading--alpha {
-    @apply font-sans-regular text-lg-2 my-6 mb-4;
+.heading-alpha {
+    @apply mb-4;
+    @apply text-lg-3;
     line-height: 2.5rem;
-
+    
     @screen lg {
-        @apply font-sans-light text-lg-4 mt-8 mb-6;
-        line-height: 4rem;
+        @apply text-lg-5;
+        @apply mb-6;
+        @apply font-sans-light;
+        line-height: 4.25rem;
     }
 }
 
-h2,
-.heading--beta {
-    @apply font-sans-regular text-lg-1 mt-6 mb-4;
-    line-height: 2rem;
+.heading-beta {
+    @apply mb-4;
+    @apply text-lg-2;
+    line-height: 2.125rem;
 
     @screen lg {
-        @apply font-sans-light text-lg-3 mt-8;
-        line-height: 3.25rem;
+        @apply mt-12;
+        @apply text-lg-4;
+        @apply font-sans-light;
+        line-height: 3.5rem;
     }
 }
 
-h3,
-.heading--gamma {
-    @apply font-sans-medium text-lg-1 mt-6 mb-4;
+.heading-gamma {
+    @apply mb-4;
+    @apply text-lg-1;
+    @apply font-sans-medium;
     line-height: 1.75rem;
 
     @screen lg {
-        @apply font-sans-regular text-lg-2 mt-8;
+        @apply text-lg-3;
+        @apply mt-10;
         line-height: 2.5rem;
     }
 }
 
-h4,
-.heading--delta,
-.section-heading {
-    @apply font-sans-demi text-base mt-6 mb-4;
+.heading-delta {
+    @apply mb-4;
+    @apply text-body;
+    @apply font-sans-medium;
     line-height: 1.5rem;
 
     @screen lg {
-        @apply font-sans-medium text-lg-1 mt-8;
-        line-height: 1.75rem;
+        @apply text-lg-2;
+        @apply mt-8;
+        line-height: 2.125rem;
     }
 }
 
-h5,
-.heading--epsilon {
-    @apply font-sans-medium text-base mt-6 mb-4;
+.heading-epsilon {
+    @apply mb-1;
+    @apply text-base;
+    @apply font-sans-demi;
     line-height: 1.5rem;
 
     @screen lg {
-        @apply font-sans-medium text-base mt-8;
+        @apply mb-2;
+        @apply mt-8;
+        @apply text-body;
         line-height: 1.5rem;
     }
 }
 
-.section-heading {
-    @apply pb-2 mt-4 border-b border-grey-100 mt-8;
-
+.heading-zeta {
+    @apply mb-1;
+    @apply text-sm-1;
+    @apply font-sans-demi;
+    
     @screen lg {
-        @apply pb-4 mt-12;
+        @apply mb-2;
+        @apply mt-6;
+        @apply text-base;
     }
 }
 
-//Additional sizes
+/**
+ * DISPLAY
+ ========================================*/
 .text-display {
-    @apply font-sans-light text-lg-3 mt-8 mb-6;
     line-height: 3rem;
 
     @screen lg {
-        @apply font-sans-light text-lg-5 mt-8 mb-6;
         line-height: 4.75rem;
     }
 }
 
-.milli {
-    @apply text-sm-1;
+.text-jumbo {
+    line-height: 3rem;
+
+    @screen lg {
+        line-height: 4.75rem;
+    }
 }
 
-// Text
-p {
-    @apply my-4;
+/**
+ * BODY TEXT
+ ========================================*/
+
+p,
+ul,
+ol {
+    margin-bottom: 1.5em;
 }
 
 .lede,
-p.lede,
-.large-text {
-    @apply text-base my-6;
-    line-height: 2rem;
+p.lede {
+    @apply text-body mb-6;
+    line-height: 1.75rem;
 
     @screen lg {
-        @apply text-lg-1 mt-8 mb-6;
-        line-height: 2.5rem;
+        @apply text-lg-1 mb-8;
+        line-height: 2rem;
     }
 }
 

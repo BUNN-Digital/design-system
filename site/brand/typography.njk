@@ -7,77 +7,223 @@ section: Brand
 tag: brand
 ---
 
-<p>Etiam non erat a nisi scelerisque dictum id auctor odio. Proin hendrerit a lectus sed fringilla. Donec in libero id metus dictum suscipit at et dolor. Praesent ut placerat nunc. Aenean laoreet enim id risus fringilla laoreet. Sed interdum gravida enim eu feugiat. Integer non porttitor lectus.</p>
+<h2 class="section-heading">Font weights</h2>
 
-<div class="panel panel--stroke">
+<div class="panel panel--stroke panel--rounded mb-8">
     <div class="panel__section">
-        <div class="flex justify-center">					
-            <div class="px-8">
-                <div class="font-sans-light my-1 text-center">Avenir Light</div>
-                <div class="font-sans-medium my-1 text-center">Avenir Medium</div>
-                <div class="font-sans-regular my-1 text-center">Avenir Regular</div>
-                <div class="font-sans-demi my-1 text-center">Avenir Demi</div>
-            </div>
-            <div class="px-8">
-                <div class="font-sans-light-ital my-1 text-center">Avenir Light Italic</div>
-                <div class="font-sans-medium-ital my-1 text-center">Avenir Medium Italic</div>
-                <div class="font-rsans-egular-ital my-1 text-center">Avenir Regular Italic</div>
-                <div class="font-sans-demi-ital my-1 text-center">Avenir Demi Italic</div>
-            </div>
-        </div>
+        <div class="font-sans-light">Avenir Light</div>
     </div>
+    {% highlight "html" %}<div class="font-sans-light">Avenir Light</div>{% endhighlight %}
 </div>
 
-{% highlight "css" %}
-/* Avenir Font Family */
-.font-sans-light   { font-family: "Avenir Next W01 Light"; }
-.font-sans-regular { font-family: "AvenirNextLTW01-Regular"; }
-.font-sans-medium  { font-family: "AvenirNextLTW01-Medium"; }
-.font-sans-demi    { font-family: "Avenir Next LT W01 Demi"; }
-.font-sans-light-ital    { font-family: "AvenirNextW01-LightItal"; }
-.font-sans-medium-ital   { font-family: "AvenirNextLTW01-MediumI_721278;" }
-.font-sans-regular-ital  { font-family: "AvenirNextLTW01-Italic"; }
-.font-sans-demi-ital     { font-family: "AvenirNextLTW01-DemiIta"; }
-{% endhighlight %}
+<div class="panel panel--stroke panel--rounded mb-8">
+    <div class="panel__section">
+        <div class="font-sans-light-ital">Avenir Light Italic</div>
+    </div>
+    {% highlight "html" %}<div class="font-sans-light-ital">Avenir Light Italic</div>{% endhighlight %}
+</div>
+
+<div class="panel panel--stroke panel--rounded mb-8">
+    <div class="panel__section">
+        <div class="font-sans-regular">Avenir Regular</div>
+    </div>
+    {% highlight "html" %}<div class="font-sans-regular">Avenir Regular</div>{% endhighlight %}
+</div>
+
+<div class="panel panel--stroke panel--rounded mb-8">
+    <div class="panel__section">
+        <div class="font-sans-regular-ital">Avenir Regular Italic</div>
+    </div>
+    {% highlight "html" %}<div class="font-sans-regular-ital">Avenir Regular Italic</div>{% endhighlight %}
+</div>
+
+<div class="panel panel--stroke panel--rounded mb-8">
+    <div class="panel__section">
+        <div class="font-sans-medium">Avenir Medium</div>
+    </div>
+    {% highlight "html" %}<div class="font-sans-light">Avenir Medium</div>{% endhighlight %}
+</div>
+
+<div class="panel panel--stroke panel--rounded mb-8">
+    <div class="panel__section">
+        <div class="font-sans-medium-ital">Avenir Medium Italic</div>
+    </div>
+    {% highlight "html" %}<div class="font-sans-light">Avenir Medium Italic</div>{% endhighlight %}
+</div>
+
+<div class="panel panel--stroke panel--rounded mb-8">
+    <div class="panel__section">
+        <div class="font-sans-demi">Avenir Demi</div>
+    </div>
+    {% highlight "html" %}<div class="font-sans-demi">Avenir Demi</div>{% endhighlight %}
+</div>
+
+<div class="panel panel--stroke panel--rounded mb-8">
+    <div class="panel__section">
+        <div class="font-sans-demi-ital">Avenir Demi Italic</div>
+    </div>
+    {% highlight "html" %}<div class="font-sans-demi-ital">Avenir Demi Italic</div>{% endhighlight %}
+</div>
+
 
 
 <h2 class="section-heading">Text Sizes</h2>
 
-<div class="text-lg-6 font-sans-light mb-0">Large 6</div>
-<div class="text-grey-500 mb-4">.text-lg-6</div>
-<div class="text-lg-5 mb-0">Large 5</div>
-<div class="text-grey-500 mb-4">.text-lg-5</div>
-<div class="text-lg-4 mb-0">Large 4</div>
-<div class="text-grey-500 mb-4">.text-lg-4</div>
-<div class="text-lg-3 mb-0">Large 3</div>
-<div class="text-grey-500 mb-4">.text-lg-3</div>
-<div class="text-lg-2 mb-0">Large 2</div>
-<div class="text-grey-500 mb-4">.text-lg-2</div>
-<div class="text-lg-1 mb-0">Large 1</div>
-<div class="text-grey-500 mb-4">.text-lg-1</div>
-<div class="text-base mb-0">Base</div>
-<div class="text-grey-500 mb-4">.text-base</div>
-
+<table class="border border-grey-200 w-full my-8 text-base">
+    <tr>
+        <th class="font-sans-medium text-left p-2 bg-grey-75 border-b border-grey-200">Utility class</th>
+        <th class="font-sans-medium text-left p-2 bg-grey-75 border-b border-grey-200">Rems</th>
+        <th class="font-sans-medium text-left p-2 bg-grey-75 border-b border-grey-200">Pixels</th>
+        <th class="font-sans-medium text-left p-2 bg-grey-75 border-b border-grey-200">Typography class</th>
+    </tr>
+    <tr>
+        <td class="text-left p-2 border-b border-grey-200">.text-sm-3</td>
+        <td class="text-left p-2 border-b border-grey-200">0.625rem</td>
+        <td class="text-left p-2 border-b border-grey-200">10px</td>
+        <td class="text-left p-2 border-b border-grey-200">.milli</td>
+    </tr>
+    <tr>
+        <td class="text-left p-2 border-b border-grey-200">.text-sm-2</td>
+        <td class="text-left p-2 border-b border-grey-200">0.75rem</td>
+        <td class="text-left p-2 border-b border-grey-200">12px</td>
+        <td class="text-left p-2 border-b border-grey-200">.tiny</td>
+    </tr>
+    <tr>
+        <td class="text-left p-2 border-b border-grey-200">.text-sm-1</td>
+        <td class="text-left p-2 border-b border-grey-200">0.875rem</td>
+        <td class="text-left p-2 border-b border-grey-200">14px</td>
+        <td class="text-left p-2 border-b border-grey-200">.small</td>
+    </tr>
+    <tr>
+        <td class="text-left p-2 border-b border-grey-200">.text-base</td>
+        <td class="text-left p-2 border-b border-grey-200">1rem</td>
+        <td class="text-left p-2 border-b border-grey-200">16px</td>
+        <td class="text-left p-2 border-b border-grey-200"></td>
+    </tr>
+    <tr>
+        <td class="text-left p-2 border-b border-grey-200">.text-body</td>
+        <td class="text-left p-2 border-b border-grey-200">1.125rem</td>
+        <td class="text-left p-2 border-b border-grey-200">18px</td>
+        <td class="text-left p-2 border-b border-grey-200">.heading-epsilon</td>
+    </tr>
+    <tr>
+        <td class="text-left p-2 border-b border-grey-200">.text-lg-1</td>
+        <td class="text-left p-2 border-b border-grey-200">1.25rem</td>
+        <td class="text-left p-2 border-b border-grey-200">20px</td>
+        <td class="text-left p-2 border-b border-grey-200"></td>
+    </tr>
+    <tr>
+        <td class="text-left p-2 border-b border-grey-200">.text-lg-2</td>
+        <td class="text-left p-2 border-b border-grey-200">1.75rem</td>
+        <td class="text-left p-2 border-b border-grey-200">28px</td>
+        <td class="text-left p-2 border-b border-grey-200">.heading-delta</td>
+    </tr>
+    <tr>
+        <td class="text-left p-2 border-b border-grey-200">.text-lg-3</td>
+        <td class="text-left p-2 border-b border-grey-200">2rem</td>
+        <td class="text-left p-2 border-b border-grey-200">36px</td>
+        <td class="text-left p-2 border-b border-grey-200">.heading-gamma</td>
+    </tr>
+    <tr>
+        <td class="text-left p-2 border-b border-grey-200">.text-lg-4</td>
+        <td class="text-left p-2 border-b border-grey-200">2.75rem</td>
+        <td class="text-left p-2 border-b border-grey-200">44px</td>
+        <td class="text-left p-2 border-b border-grey-200">.heading-beta</td>
+    </tr>
+    <tr>
+        <td class="text-left p-2 border-b border-grey-200">.text-display</td>
+        <td class="text-left p-2 border-b border-grey-200">4.25rem</td>
+        <td class="text-left p-2 border-b border-grey-200">68px</td>
+        <td class="text-left p-2 border-b border-grey-200"></td>
+    </tr>
+    <tr>
+        <td class="text-left p-2 border-b border-grey-200">.text-jumbo</td>
+        <td class="text-left p-2 border-b border-grey-200">5.375rem</td>
+        <td class="text-left p-2 border-b border-grey-200">86px</td>
+        <td class="text-left p-2 border-b border-grey-200"></td>
+    </tr>
+</table>
 
 <h2 class="section-heading">Headings</h2>
 
-<div class="text-display font-sans-light mb-0">Display</div>
-<div class="text-grey-500 mb-8">.text-display. or text-lg-3/.text-lg-5 (sm/lg)</div>
-<div class="heading--alpha mb-0">Headling level one</div>
-<div class="text-grey-500 mb-8">H1 - .heading--alpha or .text-lg-2/.text-lg-4 (sm/lg)</div>
-<div class="heading--beta mb-0">Headling level two</div>
-<div class="text-grey-500 mb-8">H2 - .heading--beta or .text-lg-1/.text-lg-3 (sm/lg)</div>
-<div class="heading--gamma mb-0">Headling level three</div>
-<div class="text-grey-500 mb-8">H3 - .heading--gamma or .text-lg-1/.text-lg-2 (sm/lg)</div>
-<div class="heading--delta mb-0">Headling level four</div>
-<div class="text-grey-500 mb-8">H4 - .heading--delta or .text-base/.text-lg-1 (sm/lg)</div>
-<div class="heading--epsilon mb-0">Headling level five</div>
-<div class="text-grey-500 mb-8">H5 - .heading--epsilon or .text-base/.text-base (sm/lg)</div>
+<div class="panel panel--stroke panel--rounded mb-8">
+    <div class="panel__section">
+        <h1 class="heading-alpha">Heading 1</h1>
+        <span class="text-sm text-grey-400">.text-lg-5/.text-lg-5 (small/large)</span>
+    </div>
+    {% highlight "html" %}<h1 class="heading-alpha">Heading 1</h1>{% endhighlight %}
+</div>
 
-<h2 class="section-heading">Other Text</h2>
+<div class="panel panel--stroke panel--rounded mb-8">
+    <div class="panel__section">
+        <h2 class="heading-beta">Heading 2</h2>
+        <span class="text-sm text-grey-400">.text-lg-3/.text-lg-5 (small/large)</span>
+    </div>
+    {% highlight "html" %}<h2 class="heading-beta">Heading 2</h2>{% endhighlight %}
+</div>
 
-<p class="text-lg-1 mb-2">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Excepturi doloremque hic sapiente animi natus iste eveniet impedit nobis totam voluptas. Minus, nisi, nulla. Incidunt, error, quam. Sit placeat mollitia quas.</p>
-<div class="text-grey-500 mb-8">p.lede</div>
+<div class="panel panel--stroke panel--rounded mb-8">
+    <div class="panel__section">
+        <h3 class="heading-gamma">Heading 3</h3>
+        <span class="text-sm text-grey-400">.text-lg-2/.text-lg-4 (small/large)</span>
+    </div>
+    {% highlight "html" %}<h3 class="heading-gamma">Heading 3</h3>{% endhighlight %}
+</div>
 
-<p class="milli">Some very small text</p>
-<div class="text-grey-500 mb-8">p.milli</div>
+<div class="panel panel--stroke panel--rounded mb-8">
+    <div class="panel__section">
+        <h4 class="heading-delta">Heading 4</h4>
+        <span class="text-sm text-grey-400">.text-lg-1/.text-lg-3 (small/large)</span>
+    </div>
+    {% highlight "html" %}<h4 class="heading-delta">Heading 4</h4>{% endhighlight %}
+</div>
+
+<div class="panel panel--stroke panel--rounded mb-8">
+    <div class="panel__section">
+        <h5 class="heading-epsilon">Heading 5</h5>
+        <span class="text-sm text-grey-400">.text-lg-body/.text-lg-2 (small/large)</span>
+    </div>
+    {% highlight "html" %}<h5 class="heading-epsilon">Heading 5</h5>{% endhighlight %}
+</div>
+
+<div class="panel panel--stroke panel--rounded mb-8">
+    <div class="panel__section">
+        <h6 class="heading-zeta">Heading 6</h6>
+        <span class="text-sm text-grey-400">.text-lg-base/.text-lg-body (small/large)</span>
+    </div>
+    {% highlight "html" %}<h6 class="heading-zeta">Heading 6</h6>{% endhighlight %}
+</div>
+
+<h2 class="section-heading">Text Margins</h2>
+
+<h1 class="heading-alpha">Lorem ipsum dolor sit amet consectetur adipisicing elit.</h1>
+
+<p class="lede">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit, aperiam reiciendis recusandae rem reprehenderit quos ipsam perspiciatis incidunt quisquam tenetur commodi ducimus consectetur consequuntur animi ratione.</p>
+
+<h2 class="heading-beta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eius vero.</h2>
+
+<p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Voluptatem saepe soluta eaque hic illo est velit animi dolor incidunt ea! Hic fugiat ab harum vitae a ullam tenetur fuga, accusamus vel! Eaque fugit iure ab laudantium repellat porro accusantium facere nesciunt dolores in, dicta debitis necessitatibus illum aut, vero, amet labore atque maiores! Ipsa quia, nisi illo minus accusamus quam tempora cumque distinctio officia non! Hic, fugiat. Architecto mollitia eligendi consequatur praesentium ipsum. Numquam eaque at ullam dolores iusto aspernatur non cum! Reprehenderit perspiciatis porro sint adipisci facilis explicabo, culpa, sit dolore error earum ea molestias exercitationem, placeat quaerat harum!</p>
+
+<h3 class="heading-gamma">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eius vero</h3>
+
+<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur quaerat magnam saepe. Omnis consequatur quasi dolorum obcaecati, aperiam expedita. Debitis?</p>
+
+<ul>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+    <li>Lorem ipsum dolor sit amet.</li>
+</ul>
+
+<h4 class="heading-delta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eius vero, vel deleniti cumque.</h4>
+
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat cupiditate, nihil sint natus quia quod ratione ipsum quis repellendus cum at distinctio dolores molestias, nemo quasi, ullam omnis nulla temporibus facere. Laboriosam, facilis eos? Ipsum blanditiis, asperiores explicabo beatae facere, quae repellat minima vero magni debitis nihil officia nobis distinctio molestias eius. Beatae commodi in, nam qui placeat ipsum quasi culpa perspiciatis vitae doloribus enim nesciunt facilis, error amet necessitatibus.</p>
+
+<h5 class="heading-epsilon">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eius vero, vel deleniti cumque dolore rem laborum obcaecati consequuntur aliquam.</h5>
+
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat cupiditate, nihil sint natus quia quod ratione ipsum quis repellendus cum at distinctio dolores molestias, nemo quasi, ullam omnis nulla temporibus facere. Laboriosam, facilis eos? Ipsum blanditiis, asperiores explicabo beatae facere, quae repellat minima vero magni debitis nihil officia nobis distinctio molestias eius. Beatae commodi in, nam qui placeat ipsum quasi culpa perspiciatis vitae doloribus enim nesciunt facilis, error amet necessitatibus.</p>
+
+<h6 class="heading-zeta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi eius vero, vel deleniti cumque dolore rem laborum obcaecati consequuntur aliquam.</h6>
+
+<p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Repellat cupiditate, nihil sint natus quia quod ratione ipsum quis repellendus cum at distinctio dolores molestias, nemo quasi, ullam omnis nulla temporibus facere. Laboriosam, facilis eos? Ipsum blanditiis, asperiores explicabo beatae facere, quae repellat minima vero magni debitis nihil officia nobis distinctio molestias eius. Beatae commodi in, nam qui placeat ipsum quasi culpa perspiciatis vitae doloribus enim nesciunt facilis, error amet necessitatibus.</p>

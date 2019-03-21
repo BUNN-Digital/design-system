@@ -12,7 +12,7 @@
         @apply border border-grey-75 cursor-pointer relative;
 
         &:before {
-            @apply absolute block pin-b pin-r text-lg-6 text-grey-100 mr-3 mb-3 cursor-pointer opacity-0;
+            @apply absolute block pin-b pin-r text-lg-5 text-grey-100 mr-3 mb-3 cursor-pointer opacity-0;
             font-family: "Font Awesome 5 Pro";
             content: "\f31d";
             pointer-events: none;

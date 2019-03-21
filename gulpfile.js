@@ -81,6 +81,9 @@ function compileDesignSystemCss() {
     return gulp.src(paths.sass.designSystem)
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sass())
+        .pipe(postcss([
+            tailwindcss('./tailwind.config.js')
+        ]))
         .pipe(rename({
             extname: '.css'
         }))

@@ -52,6 +52,25 @@
 
     &--rounded {
         @apply rounded;
+
+        > :first-child {
+            @apply rounded-t;
+        }
+
+        > :last-child {
+            @apply rounded-b;
+
+            .panel__action--single .panel__action__item {
+                @apply rounded-b;
+            }
+
+            .panel__action--bar {
+                > :first-child,
+                > :last-child {
+                    @apply rounded-b;
+                }
+            }
+        }
     }
 
     // Actions
@@ -134,7 +153,6 @@
     }
 
     // Handle dark filled panels
-    &--fill-dark,
     &--fill-contrast {
         @apply text-white;
 
@@ -153,7 +171,7 @@
         .panel__header,
         .panel__section,
         .panel__footer {
-            @apply bg-grey-800;
+            @apply bg-grey-200;
         }
     }
 

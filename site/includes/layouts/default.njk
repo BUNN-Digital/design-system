@@ -24,19 +24,19 @@
 	<link rel="apple-touch-icon" sizes="180x180" href="{{ site.images.appleTouch }}">
 </head>
 
-<body {% if body_class %} id="{{ body_class }}"{% endif %} class="font-sans-regular font-normal text-grey-900 leading-normal bg-white">
+<body>
 
-    <div class="main relative flex flex-col min-h-screen" role="main">
+    <div class="main relative bg-white" role="main">
 
         {% include "partials/header.njk" %}
 
-        <div class="main flex-1 md:pt-20">
+        <div class="main flex-1 pt-10 lg:pt-20">
             {{ content | safe }}
         </div>
 
-        {% include "partials/footer.njk" %}
-
     </div>
+    
+    {% include "partials/footer.njk" %}
 
     {# include scripts #}
     {% if helpers.environment == "development" %}

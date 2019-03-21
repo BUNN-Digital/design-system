@@ -252,39 +252,25 @@ module.exports = {
     | prefer, be it rems, ems, pixels or other.
     |
     | Class name: .text-{size}
-    | Based on Perfect Fourth Type Scale (1.333 ratio)
-    | https://type-scale.com/?size=16&scale=1.333&text=A%20Visual%20Type%20Scale&font=Poppins&fontweight=200&bodyfont=Poppins&bodyfontweight=400&lineheight=1.45&backgroundcolor=white&fontcolor=%23333&preview=false
     |
     */
 
     textSizes: {
+        'sm-3':     '0.625rem',     // 10px       milli
+        'sm-2':     '0.75rem',      // 12px       tiny
+        'sm-1':     '0.875rem',     // 14px       small
+        'base':     '1rem',         // 16px       
 
-        // 1.250
-
-        // 'sm-2': '.64rem',    // 9px      milli
-        // 'sm-1': '.8rem',   // 12px     small
-        // 'base': '1rem',      // 16.00px    base, h5
-        // 'lg-1': '1.25rem',   // 20px     h4
-        // 'lg-2': '1.563rem',    // 25px     h3
-        // 'lg-3': '1.953rem',  // 31.25px    h2
-        // 'lg-4': '2.441rem',    // 39.06px    h1
-        // 'lg-5': '3.052em',   // 48.83px    
-        // 'lg-6': '3.815rem',    // 61.04px    
-        // 'lg-7': '4.678rem',    // 76.29px    mega
-        // 'lg-8': '5.96rem',     // 95.37px    jumbo
-
-        // 1.333
-
-        'sm-2': '.563rem',    // 9px      milli
-        'sm-1': '.75rem',   // 12px     small
-        'base': '1rem',       // 16.00px    base, h5
-        'lg-1': '1.333rem',   // 21.333px   h4
-        'lg-2': '1.777rem',   // 28.48px    h3
-        'lg-3': '2.369rem',   // 37.90px    h2
-        'lg-4': '3.157rem',   // 50.52px    h1
-        'lg-5': '4.209em',    // 67.34px    display
-        'lg-6': '5.61rem',    // 89.76px    mega
-        'lg-7': '7.478rem',     // 119.66px   jumbo
+        // Body and Headings - Ratio: 1.25 @ 16
+        // https://www.modularscale.com/?18&px&1.25
+        'body':     '1.125rem',     // 18px       body, .heading-epsilon
+        'lg-1':     '1.25rem',      // 20px       
+        'lg-2':     '1.75rem',      // 28px       .heading-delta
+        'lg-3':     '2rem',         // 36px       .heading-gamma
+        'lg-4':     '2.75rem',      // 44px       .heading-beta
+        'lg-5':     '3.4375rem',    // 55px       .heading-alpha
+        'display':  '4.25rem',      // 68px       display
+        'jumbo':    '5.375rem',     // 86px       jumbo
     },
 
 

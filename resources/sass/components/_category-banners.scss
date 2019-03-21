@@ -28,10 +28,10 @@
     }
 
     &__heading-cta {
-        @apply text-lg-5 text-white mb-2 relative;
+        @apply text-lg-4 text-white mb-2 relative;
 
         @screen sm {
-            @apply text-lg-6;
+            @apply text-lg-5;
         }
 
         &.category-1116,

@@ -1,7 +1,7 @@
 .brand-logo {
     &__link {
         @apply block w-2/5 mx-auto;
-        max-width: 16rem;
+        max-width: 15rem;
     }
 }
 .box-wrapper {
@@ -58,18 +58,6 @@
 
         h1 {
             @apply font-sans-regular text-lg-5 text-white leading-tight relative;
-            @screen sm {
-                @apply text-lg-6;
-            }
-            @screen md {
-                @apply text-lg-6;
-            }
-            @screen lg {
-                @apply text-lg-6;
-            }
-            @screen xl {
-                @apply text-lg-5;
-            }
             span {
                 @apply block my-1 text-lg-3;
                 @screen sm {
@@ -88,16 +76,16 @@
         p {
             @apply text-white leading-normal mb-3;
             @screen sm {
-                @apply text-lg-4 mb-6;
+                @apply text-lg-4 mb-5;
             }
             @screen md {
                 @apply text-lg-3 mb-3;
             }
             @screen lg {
-                @apply text-lg-5 mb-6;
+                @apply text-lg-5 mb-5;
             }
             sup {
-                font-size: 0.6em;
+                font-size: 0.5em;
                 vertical-align: super;
             }
         }

@@ -1,8 +1,8 @@
-<nav id="nav" class="nav flex">
+<nav id="nav" class="nav flex md:ml-8">
 
-    <ul class="pt-6 md:flex md:flex-row md:pt-4 items-center list-reset text-base font-sans-demi">
+    <ul class="pt-6 md:flex mb-0 md:flex-row md:pt-0 items-center list-reset text-base font-sans-demi">
         {% for item in navigation.main %}
-        <li class="level-1 inline-block md:mb-4 mr-4 md:mr-8 md:mb-0">
+        <li class="level-1 inline-block mr-4 md:mr-8">
             <a href="{{ item.url | safe }}" class="{% if page.url == item.url %} text-brand-primary{% else %} text-grey-500{% endif %}">{{ item.label }}</a>
         </li>
         {% endfor %}
