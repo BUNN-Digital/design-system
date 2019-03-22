@@ -9,11 +9,13 @@ layout: default
 {% endif %}
 
 <div class="flex items-stretch w-full mx-auto bg-white pb-16 lg:pb-32">
-    <div class="hidden md:block md:w-1/4 lg:w-1/5 px-8 relative">
-        <div class="text-sm-1 font-sans-medium mb-2 uppercase text-grey-300 lg:pt-6">{{ section }}</div>
-        {% for entry in collection  %}
-            <a href="{{ entry.url }}" class="block py-1{% if page.url == entry.url %} text-brand-primary font-sans-demi{% else %} text-grey-500{% endif %}">{{ entry.data.title }}</a>
-        {% endfor %}
+    <div class="hidden justify-around md:flex md:block md:w-1/4 lg:w-1/5 px-8 relative">
+        <div>
+            <div class="text-sm-1 font-sans-medium mb-2 uppercase text-grey-300 lg:pt-6">{{ section }}</div>
+            {% for entry in collection  %}
+                <a href="{{ entry.url }}" class="block py-1{% if page.url == entry.url %} text-brand-primary font-sans-demi{% else %} text-grey-500{% endif %}">{{ entry.data.title }}</a>
+            {% endfor %}
+        </div>
     </div>
 
     <div class="w-full md:w-3/4 lg:w-4/5">
