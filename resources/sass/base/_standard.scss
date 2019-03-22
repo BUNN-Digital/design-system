@@ -11,7 +11,7 @@ body {
     min-width: 320px;
     @apply bg-black text-base font-sans-regular leading-normal;
 
-    @screen lg {
+    @screen md {
         @apply text-body;
     }
 }
