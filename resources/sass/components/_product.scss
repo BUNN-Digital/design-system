@@ -9,24 +9,24 @@
         }
 
         &.compact:hover {
-            @apply bg-grey-50 cursor-pointer;
+            @apply bg-gray-100 cursor-pointer;
             .product__item-title {
-                @apply text-grey-900;
+                @apply text-gray-900;
             }
         }
 
         &.compact:nth-child(even) {
-            // @apply bg-grey-50;
+            // @apply bg-gray-100;
         }
     }
 
     &__item-info {
         .grid & {
-            @apply flex flex-col text-grey-800 border border-grey-100 border-b-0;
+            @apply flex flex-col text-gray-800 border border-gray-100 border-b-0;
         }
 
         .stacked & {
-            @apply p-5 flex items-center text-grey-800 border border-grey-100 border-l-0;
+            @apply p-5 flex items-center text-gray-800 border border-gray-100 border-l-0;
             box-shadow: inset 8px 0 0 0 #dfdfdf;
 
             &:hover {
@@ -39,7 +39,7 @@
         }
 
         .compact & {
-            @apply px-2 py-4 flex items-center text-grey-800 border-none;
+            @apply px-2 py-4 flex items-center text-gray-800 border-none;
         }
     }
 
@@ -84,7 +84,7 @@
     }
 
     &__item-desc {
-        @apply text-sm-1 text-grey-400;
+        @apply text-sm-1 text-gray-400;
         .grid & {
             @apply px-5;
         }
@@ -95,7 +95,7 @@
     }
 
     &__item-number {
-        @apply text-sm-1 text-grey-400;
+        @apply text-sm-1 text-gray-400;
         .grid & {
             @apply px-5;
         }
@@ -103,7 +103,7 @@
 
     &__item-links {
         .grid & {
-            @apply border border-r-0 border-l-0 p-4 mt-3 border-grey-100 bg-grey-50 flex flex-wrap;
+            @apply border border-r-0 border-l-0 p-4 mt-3 border-gray-100 bg-gray-100 flex flex-wrap;
         }
 
         .stacked & {
@@ -116,9 +116,9 @@
     }
 
     &__item-link {
-        @apply text-grey-600 text-sm-1 cursor-pointer;
+        @apply text-gray-600 text-sm-1 cursor-pointer;
         &:hover {
-            @apply text-grey-800;
+            @apply text-gray-800;
         }
 
         .grid & {
@@ -141,6 +141,6 @@
     }
 
     &__item-footer {
-        @apply p-4 pb-2 border-grey-100;
+        @apply p-4 pb-2 border-gray-100;
     }
 }

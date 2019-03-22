@@ -1,11 +1,11 @@
 .parsley-errors-list {
-    @apply list-reset text-sm-1 text-avert;
+    @apply text-sm-1 text-avert;
 }
 
 .parsley-error {
-    @apply bg-grey-50;
+    @apply bg-gray-100;
     border-color: hsla(358, 66%, 85%, 1) !important;
 }
 select.parsley-error {
-    @apply bg-grey-50;
+    @apply bg-gray-100;
 }

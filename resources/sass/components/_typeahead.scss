@@ -11,7 +11,7 @@
         //transform: translateY(-20px);
         transition: all 0.2s ease-out;
         opacity: 0;
-        @apply hidden flex-col absolute pin-l pin-r p-4 mt-1 bg-white rounded-lg;
+        @apply hidden flex-col absolute left-0 right-0 p-4 mt-1 bg-white rounded-lg;
 
         @screen md {
             @apply flex-row items-stretch p-0;
@@ -19,7 +19,7 @@
 
         @screen lg {
             width: 800px;
-            @apply pin-none pin-t pin-r;
+            @apply inset-auto top-0 right-0;
         }
 
         &.active {

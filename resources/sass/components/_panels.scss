@@ -19,28 +19,28 @@
 
     // Alternative styles
     &--stroke {
-        @apply border border-grey-100;
+        @apply border border-gray-100;
 
         .panel__header,
         .panel__section,
         .panel__footer {
-            @apply border-b border-grey-100;
+            @apply border-b border-gray-100;
         }
 
         .panel__action--single:hover {
-            @apply bg-grey-50;
+            @apply bg-gray-100;
         }
 
         .panel__action--bar {
             .panel__action__item {
-                @apply border-r border-grey-100;
+                @apply border-r border-gray-100;
 
                 &:last-child {
                     border: none;
                 }
 
                 &:hover {
-                    @apply bg-grey-50;
+                    @apply bg-gray-100;
                 }
             }
         }
@@ -106,7 +106,7 @@
             @apply py-4 px-8 text-brand-primary;
 
             &:hover {
-                @apply bg-grey-50;
+                @apply bg-gray-100;
             }
         }
     }
@@ -148,7 +148,7 @@
         .panel__header,
         .panel__section,
         .panel__footer {
-            @apply bg-grey-50;
+            @apply bg-gray-100;
         }
     }
 
@@ -171,7 +171,7 @@
         .panel__header,
         .panel__section,
         .panel__footer {
-            @apply bg-grey-200;
+            @apply bg-gray-200;
         }
     }
 
@@ -200,11 +200,11 @@
     }
 
     &--fill-light {
-        @apply bg-grey-50;
+        @apply bg-gray-100;
     }
 
     &--fill-dark {
-        @apply bg-grey-800 text-white;
+        @apply bg-gray-800 text-white;
     }
 
     &--fill-contrast {

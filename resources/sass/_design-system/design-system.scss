@@ -1,7 +1,7 @@
 @import "syntax-highlighting";
 
 .section-heading {
-    @apply pb-2 mt-4 border-b border-grey-100 mt-10 mb-4;
+    @apply pb-2 mt-4 border-b border-gray-100 mt-10 mb-4;
     line-height: 1.5rem;
 
     @screen lg {

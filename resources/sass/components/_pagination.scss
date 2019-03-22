@@ -18,19 +18,19 @@
         }
 
         &-link {
-            @apply border border-grey-100 text-brand-primary;
+            @apply border border-gray-100 text-brand-primary;
 
             &:hover {
-                @apply bg-grey-100;
+                @apply bg-gray-100;
             }
 
             &--disabled {
-                @apply bg-grey-75 border-grey-75;
+                @apply bg-gray-100 border-gray-100;
                 color: #888;
 
                 &:hover {
                     color: #888;
-                    @apply bg-grey-75 border-grey-75;
+                    @apply bg-gray-100 border-gray-100;
                 }
             }
         }

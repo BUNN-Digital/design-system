@@ -1,7 +1,7 @@
 /* apply a natural box layout model to all elements, but allowing components to change */
 html {
     box-sizing: border-box;
-    @apply text-base;
+    @apply text-base font-sans-regular;
 }
 
 body {
@@ -9,7 +9,7 @@ body {
     -moz-osx-font-smoothing: antialiased;
     font-smoothing: antialiased;
     min-width: 320px;
-    @apply bg-black text-base font-sans-regular leading-normal;
+    @apply bg-black text-base;
 
     @screen md {
         @apply text-body;
@@ -44,5 +44,5 @@ button:disabled {
 
 // Horizontal rules
 hr {
-    @apply border-b border-grey-100 my-4;
+    @apply border-b border-gray-100 my-4;
 }

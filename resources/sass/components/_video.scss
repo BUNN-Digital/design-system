@@ -1,5 +1,5 @@
 .b-video {
-    @apply relative bg-cover bg-center bg-grey-200;
+    @apply relative bg-cover bg-center bg-gray-200;
     // video player aspect ratio
     padding-bottom: 56.25%;
 
@@ -8,7 +8,7 @@
     }
 
     &__play {
-        @apply absolute rounded-lg text-center no-underline;
+        @apply absolute rounded-lg text-center;
         left: 50%;
         top: 50%;
         transform: translate(-50%, -50%);

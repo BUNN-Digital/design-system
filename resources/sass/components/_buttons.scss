@@ -1,13 +1,13 @@
 .btn,
 a.btn {
-    @apply text-base py-3 px-6 inline-block text-center border border-transparent bg-grey-100 text-grey-600 rounded cursor-pointer;
+    @apply text-base py-3 px-6 inline-block text-center border border-transparent bg-gray-100 text-gray-600 rounded cursor-pointer;
 
     @screen md {
         @apply py-3 px-8 font-sans-medium;
     }
 
     &:hover {
-        @apply bg-grey-200;
+        @apply bg-gray-200;
     }
 
     &:disabled,
@@ -16,7 +16,7 @@ a.btn {
     }
 
     &:hover {
-        @apply bg-grey-200;
+        @apply bg-gray-200;
     }
 
     // Sizes
@@ -66,7 +66,7 @@ a.btn {
         &.disabled,
         &:disabled,
         &[disabled] {
-            @apply text-grey-400 bg-white border-grey-400;
+            @apply text-gray-400 bg-white border-gray-400;
         }
     }
 

@@ -36,7 +36,7 @@ body.drawer-open {
         color: white;
         background: #2d2d2d;
 
-        //@apply bg-grey-800;
+        //@apply bg-gray-800;
 
         .drawer__header,
         .drawer__content,
@@ -48,7 +48,7 @@ body.drawer-open {
             background: #2d2d2d;
             border-bottom: 1px solid #555;
 
-            //@apply bg-grey-800;
+            //@apply bg-gray-800;
         }
     }
 
@@ -115,7 +115,7 @@ body.drawer-open {
         width: 100%;
         background: white;
         border-bottom: 1px solid #ddd;
-        // @apply p-4 border-b border-grey-100 mb-2 fixed h-16 bg-white pin-t py-6 z-shell;
+        // @apply p-4 border-b border-gray-100 mb-2 fixed h-16 bg-white top-0 py-6 z-shell;
 
         + .drawer__content {
             padding-top: 4rem;

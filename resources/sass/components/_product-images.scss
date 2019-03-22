@@ -5,14 +5,14 @@
     }
 
     &__placeholder {
-        @apply border border-grey-75 p-2 min-w-full;
+        @apply border border-gray-100 p-2 min-w-full;
     }
 
     &__container {
-        @apply border border-grey-75 cursor-pointer relative;
+        @apply border border-gray-100 cursor-pointer relative;
 
         &:before {
-            @apply absolute block pin-b pin-r text-lg-5 text-grey-100 mr-3 mb-3 cursor-pointer opacity-0;
+            @apply absolute block bottom-0 right-0 text-lg-5 text-gray-100 mr-3 mb-3 cursor-pointer opacity-0;
             font-family: "Font Awesome 5 Pro";
             content: "\f31d";
             pointer-events: none;
@@ -31,7 +31,7 @@
         @apply mt-3 flex items-center justify-start w-full mx-auto;
 
         &-item {
-            @apply p-1 border border-grey-75 mr-4 h-auto cursor-pointer;
+            @apply p-1 border border-gray-100 mr-4 h-auto cursor-pointer;
             width: calc(33.33% - 0.65rem);
         }
     }
