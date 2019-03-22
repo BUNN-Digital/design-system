@@ -5,7 +5,7 @@
         // Compact accordion item
 
         &--compact {
-            @apply border-t border-grey-100;
+            @apply border-t border-gray-100;
             &.open {
                 @apply border-t-2 border-brand-primary;
             }
@@ -19,7 +19,7 @@
 
     &__title {
         // Standard title
-        @apply text-brand-primary border-b border-grey-100 font-sans-demi py-3 pr-12 relative cursor-pointer;
+        @apply text-brand-primary border-b border-gray-100 font-sans-demi py-3 pr-12 relative cursor-pointer;
         text-overflow: ellipsis;
         overflow: hidden;
         white-space: nowrap;
@@ -39,7 +39,7 @@
         }
 
         .open & {
-            @apply border-transparent text-grey-300;
+            @apply border-transparent text-gray-500;
             &:after {
                 content: '\f106';
             }
@@ -64,7 +64,7 @@
             }
 
             .open & {
-                @apply text-grey-500 bg-grey-50;
+                @apply text-gray-700 bg-gray-100;
 
                 &:before {
                     content: '\f146';
@@ -83,7 +83,7 @@
 
         // Compact content panel
         &--compact {
-            @apply text-grey-300 text-lg-1 py-24 text-center;
+            @apply text-gray-500 text-lg-1 py-24 text-center;
         }
     }
 
@@ -113,7 +113,7 @@
     max-height: 240px;
 
     &:after {
-        @apply absolute pin-b pin-l w-full h-24;
+        @apply absolute bottom-0 left-0 w-full h-24;
         content: '';
         background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.77) 45%, rgba(255, 255, 255, 1) 100%);
         filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);

@@ -2,7 +2,7 @@
     position: relative;
     display: flex;
     align-content: stretch;
-    @apply rounded bg-grey-100 text-base;
+    @apply rounded bg-gray-100 text-base;
 
     &__icon {
         min-width: 60px;
@@ -10,7 +10,7 @@
         display: flex;
         justify-content: center;
         align-items: center;
-        @apply bg-grey-200 text-white rounded-l;
+        @apply bg-gray-200 text-white rounded-l;
 
         &:before {
             font-family: "Font Awesome 5 Pro";

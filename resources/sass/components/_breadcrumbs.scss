@@ -33,7 +33,7 @@
         }
 
         &-label {
-            @apply inline-block text-grey-500 pl-1;
+            @apply inline-block text-gray-700 pl-1;
             &:before {
                 content: "/";
                 @apply pr-2 text-black;

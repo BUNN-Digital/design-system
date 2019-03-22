@@ -45,72 +45,72 @@
             "swatch": "bg-brand-gourmet-light-1"
         }
     ],
-    "greys": [
+    "grays": [
         {
-            "name": "grey-50",
+            "name": "gray-100",
             "hex": "#f9f9f9",
             "hsla": "",
-            "swatch": "bg-grey-50"
+            "swatch": "bg-gray-100"
         },
         {
-            "name": "grey-75",
+            "name": "gray-100",
             "hex": "#f0f0f0",
             "hsla": "",
-            "swatch": "bg-grey-75"
+            "swatch": "bg-gray-100"
         },
         {
-            "name": "grey-100",
+            "name": "gray-100",
             "hex": "#eaeaea",
             "hsla": "",
-            "swatch": "bg-grey-200"
+            "swatch": "bg-gray-200"
         },
         {
-            "name": "grey-200",
+            "name": "gray-200",
             "hex": "#dfdfdf",
             "hsla": "",
-            "swatch": "bg-grey-200"
+            "swatch": "bg-gray-200"
         },
         {
-            "name": "grey-300",
+            "name": "gray-300",
             "hex": "#c5c5ca",
             "hsla": "",
-            "swatch": "bg-grey-300"
+            "swatch": "bg-gray-300"
         },
         {
-            "name": "grey-400",
+            "name": "gray-400",
             "hex": "#acacac",
             "hsla": "",
-            "swatch": "bg-grey-400"
+            "swatch": "bg-gray-400"
         },
         {
-            "name": "grey-500",
+            "name": "gray-500",
             "hex": "#939393",
             "hsla": "",
-            "swatch": "bg-grey-500"
+            "swatch": "bg-gray-500"
         },
         {
-            "name": "grey-600",
+            "name": "gray-600",
             "hex": "#797979",
             "hsla": "",
-            "swatch": "bg-grey-600"
+            "swatch": "bg-gray-600"
         },
         {
-            "name": "grey-700",
+            "name": "gray-700",
             "hex": "#606060",
             "hsla": "",
-            "swatch": "bg-grey-700"
+            "swatch": "bg-gray-700"
         },
         {
-            "name": "grey-800",
+            "name": "gray-800",
             "hex": "#464646",
             "hsla": "",
-            "swatch": "bg-grey-800"
+            "swatch": "bg-gray-800"
         },
         {
-            "name": "grey-900",
+            "name": "gray-900",
             "hex": "#2d2d2d",
             "hsla": "",
-            "swatch": "bg-grey-900"
+            "swatch": "bg-gray-900"
         },
         {
             "name": "black",

@@ -16,7 +16,7 @@
     }
 
     &__content {
-        @apply flex flex-col justify-center items-center absolute pin;
+        @apply flex flex-col justify-center items-center absolute inset-0;
     }
 
     &__heading {

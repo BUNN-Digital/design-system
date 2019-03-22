@@ -2,10 +2,6 @@
  * HEADINGS
  ========================================*/
 
-h1, h2, h3, h4, h5, h6 { 
-    @apply text-base; 
-}
-
 // Headings
 .heading-alpha {
     @apply mb-4;
@@ -134,7 +130,7 @@ a {
     }
 
     &.link--neutral {
-        @apply text-grey-500;
+        @apply text-gray-700;
 
         &:hover {
             @apply text-brand-primary;

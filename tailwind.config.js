@@ -11,924 +11,261 @@ length of this file. It's really just a big JavaScript object and
 we've done our very best to explain each section.
 
 View the full documentation at https://tailwindcss.com.
-
-
-|-------------------------------------------------------------------------------
-| The default config
-|-------------------------------------------------------------------------------
-|
-| This variable contains the default Tailwind config. You don't have
-| to use it, but it can sometimes be helpful to have available. For
-| example, you may choose to merge your custom configuration
-| values with some of the Tailwind defaults.
-|
 */
-
-/* eslint-disable no-unused-vars */
-
-let defaultConfig = require('tailwindcss/defaultConfig')();
-
-
-/*
-|-------------------------------------------------------------------------------
-| Colors                                    https://tailwindcss.com/docs/colors
-|-------------------------------------------------------------------------------
-|
-| Here you can specify the colors used in your project. To get you started,
-| we've provided a generous palette of great looking colors that are perfect
-| for prototyping, but don't hesitate to change them for your project. You
-| own these colors, nothing will break if you change everything about them.
-|
-| We've used literal color names ("red", "blue", etc.) for the default
-| palette, but if you'd rather use functional names like "primary" and
-| "secondary", or even a numeric scale like "100" and "200", go for it.
-|
-*/
-
-let colors = {
-    'transparent': 'transparent',
-
-    'brand-primary-dark-2': 'HSLA(215, 85%, 20%, 1.00)',
-    'brand-primary-dark-1': 'HSLA(215, 72%, 28%, 1.00)',
-    'brand-primary': 'HSLA(215, 60%, 37%, 1)',
-    'brand-primary-light-1': 'HSLA(214, 44%, 44%, 1)',
-    'brand-primary-light-2': 'HSLA(215, 38%, 56%, 1)',
-
-    'brand-gourmet': 'HSLA(34, 24%, 42%, 1)',
-    'brand-gourmet-light-1': 'HSLA(34, 27%, 47%, 1)',
-
-    'black': '#0b0b0b',
-    'grey-900': '#2d2d2d',
-    'grey-800': '#464646',
-    'grey-700': '#606060',
-    'grey-600': '#797979',
-    'grey-500': '#939393',
-    'grey-400': '#acacac',
-    'grey-300': '#c5c5c5',
-    'grey-200': '#dfdfdf',
-    'grey-100': '#eaeaea',
-    'grey-75': '#f0f0f0',
-    'grey-50': '#f9f9f9',
-    'white': '#ffffff',
-
-    'declare': 'hsla(36, 90%, 59%, 1)',
-    'declare-light': 'hsla(36, 90%, 93%, 1)',
-    'avert': 'hsla(358, 66%, 46%, 1)',
-    'avert-light': 'hsla(358, 66%, 93%, 1)',
-    'affirm': 'hsla(127, 52%, 50%, 1)',
-    'affirm-light': 'hsla(127, 52%, 93%, 1)',
-    'inform': 'hsla(210, 95%, 43%, 1)',
-    'inform-light': 'hsla(210, 95%, 93%, 1)',
-};
 
 module.exports = {
 
-    /*
-    |-----------------------------------------------------------------------------
-    | Colors                                  https://tailwindcss.com/docs/colors
-    |-----------------------------------------------------------------------------
-    |
-    | The color palette defined above is also assigned to the "colors" key of
-    | your Tailwind config. This makes it easy to access them in your CSS
-    | using Tailwind's config helper. For example:
-    |
-    | .error { color: config('colors.red') }
-    |
-    */
+    theme: {
 
-    colors: colors,
+        colors: {
+            'transparent': 'transparent',
+            'black': '#0b0b0b',
+            'white': '#ffffff',
 
+            'brand-primary-dark-2': 'HSLA(215, 85%, 20%, 1.00)',
+            'brand-primary-dark-1': 'HSLA(215, 72%, 28%, 1.00)',
+            'brand-primary': 'HSLA(215, 60%, 37%, 1)',
+            'brand-primary-light-1': 'HSLA(214, 44%, 44%, 1)',
+            'brand-primary-light-2': 'HSLA(215, 38%, 56%, 1)',
 
-    /*
-    |-----------------------------------------------------------------------------
-    | Screens                      https://tailwindcss.com/docs/responsive-design
-    |-----------------------------------------------------------------------------
-    |
-    | Screens in Tailwind are translated to CSS media queries. They define the
-    | responsive breakpoints for your project. By default Tailwind takes a
-    | "mobile first" approach, where each screen size represents a minimum
-    | viewport width. Feel free to have as few or as many screens as you
-    | want, naming them in whatever way you'd prefer for your project.
-    |
-    | Tailwind also allows for more complex screen definitions, which can be
-    | useful in certain situations. Be sure to see the full responsive
-    | documentation for a complete list of options.
-    |
-    | Class name: .{screen}:{utility}
-    |
-    */
+            'brand-gourmet': 'HSLA(34, 24%, 42%, 1)',
+            'brand-gourmet-light-1': 'HSLA(34, 27%, 47%, 1)',
 
-    screens: {
-        'sm': '480px',
-        'md': '768px',
-        'lg': '1200px',
-        'xl': '1920px',
+            gray: {
+                100: '#f7fafc',
+                200: '#edf2f7',
+                300: '#e2e8f0',
+                400: '#cbd5e0',
+                500: '#a0aec0',
+                600: '#718096',
+                700: '#4a5568',
+                800: '#2d3748',
+                900: '#1a202c',
+            },
+
+            'declare': 'hsla(36, 90%, 59%, 1)',
+            'declare-light': 'hsla(36, 90%, 93%, 1)',
+            'avert': 'hsla(358, 66%, 46%, 1)',
+            'avert-light': 'hsla(358, 66%, 93%, 1)',
+            'affirm': 'hsla(127, 52%, 50%, 1)',
+            'affirm-light': 'hsla(127, 52%, 93%, 1)',
+            'inform': 'hsla(210, 95%, 43%, 1)',
+            'inform-light': 'hsla(210, 95%, 93%, 1)',
+        },
+
+        screens: {
+            'sm': '480px',
+            'md': '768px',
+            'lg': '1200px',
+            'xl': '1920px',
+        },
+
+        fontFamily: {
+            'sans-regular': [
+                '"AvenirNextLTW01-Regular"',
+                '-apple-system',
+                'BlinkMacSystemFont',
+                '"Segoe UI"',
+                'Roboto',
+                '"Helvetica Neue"',
+                'Arial',
+                'sans-serif',
+            ],
+            'sans-regular-ital': [
+                '"AvenirNextLTW01-Italic"',
+                '-apple-system',
+                'BlinkMacSystemFont',
+                '"Segoe UI"',
+                'Roboto',
+                '"Helvetica Neue"',
+                'Arial',
+                'sans-serif',
+            ],
+            'sans-demi': [
+                '"Avenir Next LT W01 Demi"',
+                '-apple-system',
+                'BlinkMacSystemFont',
+                '"Segoe UI"',
+                'Roboto',
+                '"Helvetica Neue"',
+                'Arial',
+                'sans-serif',
+            ],
+            'sans-demi-ital': [
+                '"AvenirNextLTW01-DemiIta"',
+                '-apple-system',
+                'BlinkMacSystemFont',
+                '"Segoe UI"',
+                'Roboto',
+                '"Helvetica Neue"',
+                'Arial',
+                'sans-serif',
+            ],
+            'sans-medium': [
+                '"AvenirNextLTW01-Medium"',
+                '-apple-system',
+                'BlinkMacSystemFont',
+                '"Segoe UI"',
+                'Roboto',
+                '"Helvetica Neue"',
+                'Arial',
+                'sans-serif',
+            ],
+            'sans-medium-ital': [
+                '"AvenirNextLTW01-MediumI_721278"',
+                '-apple-system',
+                'BlinkMacSystemFont',
+                '"Segoe UI"',
+                'Roboto',
+                '"Helvetica Neue"',
+                'Arial',
+                'sans-serif',
+            ],
+            'sans-light': [
+                '"Avenir Next W01 Light"',
+                '-apple-system',
+                'BlinkMacSystemFont',
+                '"Segoe UI"',
+                'Roboto',
+                '"Helvetica Neue"',
+                'Arial',
+                'sans-serif',
+            ],
+            'sans-light-ital': [
+                '"AvenirNextW01-LightItal"',
+                '-apple-system',
+                'BlinkMacSystemFont',
+                '"Segoe UI"',
+                'Roboto',
+                '"Helvetica Neue"',
+                'Arial',
+                'sans-serif',
+            ],
+            'mono': [
+                '"Menlo"',
+                '"Monaco"',
+                '"Consolas"',
+                '"Liberation Mono"',
+                '"Courier New"',
+                'monospace',
+            ]
+        },
+
+        fontSize: {
+            'sm-3':     '0.625rem',     // 10px       milli
+            'sm-2':     '0.75rem',      // 12px       tiny
+            'sm-1':     '0.875rem',     // 14px       small
+            'base':     '1rem',         // 16px       
+
+            // Body and Headings - Ratio: 1.25 @ 16
+            // https://www.modularscale.com/?18&px&1.25
+            'body':     '1.125rem',     // 18px       body, .heading-epsilon
+            'lg-1':     '1.25rem',      // 20px       
+            'lg-2':     '1.75rem',      // 28px       .heading-delta
+            'lg-3':     '2rem',         // 36px       .heading-gamma
+            'lg-4':     '2.75rem',      // 44px       .heading-beta
+            'lg-5':     '3.4375rem',    // 55px       .heading-alpha
+            'display':  '4.25rem',      // 68px       display
+            'jumbo':    '5.375rem',     // 86px       jumbo
+        },
+
+        fontWeight: {
+            'hairline': 100,
+            'thin': 200,
+            'light': 300,
+            'normal': 400,
+            'medium': 500,
+            'semibold': 600,
+            'bold': 700,
+            'extrabold': 800,
+            'black': 900,
+        },
+
+        borderColor: theme => {
+            return global.Object.assign({ default: theme('colors.gray.300', 'currentColor') }, theme('colors'))
+        },
+
+        zIndex: {
+            'negative': -1,
+            'auto': 'auto',
+            'page': 0,
+            'shell': 100,
+            'menu': 200,
+            'floating': 300,
+            'overlay': 400,
+            'modal': 500,
+        },
     },
 
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Fonts                                    https://tailwindcss.com/docs/fonts
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your project's font stack, or font families.
-    | Keep in mind that Tailwind doesn't actually load any fonts for you.
-    | If you're using custom fonts you'll need to import them prior to
-    | defining them here.
-    |
-    | By default we provide a native font stack that works remarkably well on
-    | any device or OS you're using, since it just uses the default fonts
-    | provided by the platform.
-    |
-    | Class name: .font-{name}
-    |
-    */
-
-    fonts: {
-        'sans-regular': [
-            '"AvenirNextLTW01-Regular"',
-            '"HelveticaNeue-Light"',
-            '"Helvetica Neue Light"',
-            '"Helvetica Neue"',
-            'Helvetica',
-            'Arial',
-            '"Lucida Grande"',
-            'sans-serif',
-        ],
-        'sans-regular-ital': [
-            '"AvenirNextLTW01-Italic"',
-            '"HelveticaNeue-Light"',
-            '"Helvetica Neue Light"',
-            '"Helvetica Neue"',
-            'Helvetica',
-            'Arial',
-            '"Lucida Grande"',
-            'sans-serif',
-        ],
-        'sans-demi': [
-            '"Avenir Next LT W01 Demi"',
-            '"HelveticaNeue-Light"',
-            '"Helvetica Neue Light"',
-            '"Helvetica Neue"',
-            'Helvetica',
-            'Arial',
-            '"Lucida Grande"',
-            'sans-serif',
-        ],
-        'sans-demi-ital': [
-            '"AvenirNextLTW01-DemiIta"',
-            '"HelveticaNeue-Light"',
-            '"Helvetica Neue Light"',
-            '"Helvetica Neue"',
-            'Helvetica',
-            'Arial',
-            '"Lucida Grande"',
-            'sans-serif',
-        ],
-        'sans-medium': [
-            '"AvenirNextLTW01-Medium"',
-            '"HelveticaNeue-Light"',
-            '"Helvetica Neue Light"',
-            '"Helvetica Neue"',
-            'Helvetica',
-            'Arial',
-            '"Lucida Grande"',
-            'sans-serif',
-        ],
-        'sans-medium-ital': [
-            '"AvenirNextLTW01-MediumI_721278"',
-            '"HelveticaNeue-Light"',
-            '"Helvetica Neue Light"',
-            '"Helvetica Neue"',
-            'Helvetica',
-            'Arial',
-            '"Lucida Grande"',
-            'sans-serif',
-        ],
-        'sans-light': [
-            '"Avenir Next W01 Light"',
-            '"HelveticaNeue-Light"',
-            '"Helvetica Neue Light"',
-            '"Helvetica Neue"',
-            'Helvetica',
-            'Arial',
-            '"Lucida Grande"',
-            'sans-serif',
-        ],
-        'sans-light-ital': [
-            '"AvenirNextW01-LightItal"',
-            '"HelveticaNeue-Light"',
-            '"Helvetica Neue Light"',
-            '"Helvetica Neue"',
-            'Helvetica',
-            'Arial',
-            '"Lucida Grande"',
-            'sans-serif',
-        ],
-        'mono': [
-            '"Menlo"',
-            '"Monaco"',
-            '"Consolas"',
-            '"Liberation Mono"',
-            '"Courier New"',
-            'monospace',
-        ]
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Text sizes                         https://tailwindcss.com/docs/text-sizing
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your text sizes. Name these in whatever way
-    | makes the most sense to you. We use size names by default, but
-    | you're welcome to use a numeric scale or even something else
-    | entirely.
-    |
-    | By default Tailwind uses the "rem" unit type for most measurements.
-    | This allows you to set a root font size which all other sizes are
-    | then based on. That said, you are free to use whatever units you
-    | prefer, be it rems, ems, pixels or other.
-    |
-    | Class name: .text-{size}
-    |
-    */
-
-    textSizes: {
-        'sm-3':     '0.625rem',     // 10px       milli
-        'sm-2':     '0.75rem',      // 12px       tiny
-        'sm-1':     '0.875rem',     // 14px       small
-        'base':     '1rem',         // 16px       
-
-        // Body and Headings - Ratio: 1.25 @ 16
-        // https://www.modularscale.com/?18&px&1.25
-        'body':     '1.125rem',     // 18px       body, .heading-epsilon
-        'lg-1':     '1.25rem',      // 20px       
-        'lg-2':     '1.75rem',      // 28px       .heading-delta
-        'lg-3':     '2rem',         // 36px       .heading-gamma
-        'lg-4':     '2.75rem',      // 44px       .heading-beta
-        'lg-5':     '3.4375rem',    // 55px       .heading-alpha
-        'display':  '4.25rem',      // 68px       display
-        'jumbo':    '5.375rem',     // 86px       jumbo
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Font weights                       https://tailwindcss.com/docs/font-weight
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your font weights. We've provided a list of
-    | common font weight names with their respective numeric scale values
-    | to get you started. It's unlikely that your project will require
-    | all of these, so we recommend removing those you don't need.
-    |
-    | Class name: .font-{weight}
-    |
-    */
-
-    fontWeights: {
-        'hairline': 100,
-        'thin': 200,
-        'light': 300,
-        'normal': 400,
-        'medium': 500,
-        'semibold': 600,
-        'bold': 700,
-        'extrabold': 800,
-        'black': 900,
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Leading (line height)              https://tailwindcss.com/docs/line-height
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your line height values, or as we call
-    | them in Tailwind, leadings.
-    |
-    | Class name: .leading-{size}
-    |
-    */
-
-    leading: {
-        'none': 1,
-        'tight': 1.25,
-        'normal': 1.5,
-        'loose': 2,
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Tracking (letter spacing)       https://tailwindcss.com/docs/letter-spacing
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your letter spacing values, or as we call
-    | them in Tailwind, tracking.
-    |
-    | Class name: .tracking-{size}
-    |
-    */
-
-    tracking: {
-        'tight': '-0.05em',
-        'normal': '0',
-        'wide': '0.075em',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Text colors                         https://tailwindcss.com/docs/text-color
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your text colors. By default these use the
-    | color palette we defined above, however you're welcome to set these
-    | independently if that makes sense for your project.
-    |
-    | Class name: .text-{color}
-    |
-    */
-
-    textColors: colors,
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Background colors             https://tailwindcss.com/docs/background-color
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your background colors. By default these use
-    | the color palette we defined above, however you're welcome to set
-    | these independently if that makes sense for your project.
-    |
-    | Class name: .bg-{color}
-    |
-    */
-
-    backgroundColors: colors,
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Background sizes               https://tailwindcss.com/docs/background-size
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your background sizes. We provide some common
-    | values that are useful in most projects, but feel free to add other sizes
-    | that are specific to your project here as well.
-    |
-    | Class name: .bg-{size}
-    |
-    */
-
-    backgroundSize: {
-        'auto': 'auto',
-        'cover': 'cover',
-        'contain': 'contain',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Border widths                     https://tailwindcss.com/docs/border-width
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your border widths. Take note that border
-    | widths require a special "default" value set as well. This is the
-    | width that will be used when you do not specify a border width.
-    |
-    | Class name: .border{-side?}{-width?}
-    |
-    */
-
-    borderWidths: {
-        default: '1px',
-        '0': '0',
-        '2': '2px',
-        '4': '4px',
-        '8': '8px',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Border colors                     https://tailwindcss.com/docs/border-color
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your border colors. By default these use the
-    | color palette we defined above, however you're welcome to set these
-    | independently if that makes sense for your project.
-    |
-    | Take note that border colors require a special "default" value set
-    | as well. This is the color that will be used when you do not
-    | specify a border color.
-    |
-    | Class name: .border-{color}
-    |
-    */
-
-    borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Border radius                    https://tailwindcss.com/docs/border-radius
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your border radius values. If a `default` radius
-    | is provided, it will be made available as the non-suffixed `.rounded`
-    | utility.
-    |
-    | If your scale includes a `0` value to reset already rounded corners, it's
-    | a good idea to put it first so other values are able to override it.
-    |
-    | Class name: .rounded{-side?}{-size?}
-    |
-    */
-
-    borderRadius: {
-        'none': '0',
-        'sm': '.125rem',
-        default: '.25rem',
-        'lg': '.5rem',
-        'full': '9999px',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Width                                    https://tailwindcss.com/docs/width
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your width utility sizes. These can be
-    | percentage based, pixels, rems, or any other units. By default
-    | we provide a sensible rem based numeric scale, a percentage
-    | based fraction scale, plus some other common use-cases. You
-    | can, of course, modify these values as needed.
-    |
-    |
-    | It's also worth mentioning that Tailwind automatically escapes
-    | invalid CSS class name characters, which allows you to have
-    | awesome classes like .w-2/3.
-    |
-    | Class name: .w-{size}
-    |
-    */
-
-    width: {
-        'auto': 'auto',
-        'px': '1px',
-        '1': '0.25rem',
-        '2': '0.5rem',
-        '3': '0.75rem',
-        '4': '1rem',
-        '5': '1.25rem',
-        '6': '1.5rem',
-        '8': '2rem',
-        '10': '2.5rem',
-        '12': '3rem',
-        '16': '4rem',
-        '24': '6rem',
-        '32': '8rem',
-        '48': '12rem',
-        '64': '16rem',
-        '1/2': '50%',
-        '1/3': '33.33333%',
-        '2/3': '66.66667%',
-        '1/4': '25%',
-        '3/4': '75%',
-        '1/5': '20%',
-        '2/5': '40%',
-        '3/5': '60%',
-        '4/5': '80%',
-        '1/6': '16.66667%',
-        '5/6': '83.33333%',
-        'full': '100%',
-        'screen': '100vw',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Height                                  https://tailwindcss.com/docs/height
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your height utility sizes. These can be
-    | percentage based, pixels, rems, or any other units. By default
-    | we provide a sensible rem based numeric scale plus some other
-    | common use-cases. You can, of course, modify these values as
-    | needed.
-    |
-    | Class name: .h-{size}
-    |
-    */
-
-    height: {
-        'auto': 'auto',
-        'px': '1px',
-        '1': '0.25rem',
-        '2': '0.5rem',
-        '3': '0.75rem',
-        '4': '1rem',
-        '5': '1.25rem',
-        '6': '1.5rem',
-        '8': '2rem',
-        '10': '2.5rem',
-        '12': '3rem',
-        '16': '4rem',
-        '24': '6rem',
-        '32': '8rem',
-        '48': '12rem',
-        '64': '16rem',
-        'full': '100%',
-        'screen': '100vh',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Minimum width                        https://tailwindcss.com/docs/min-width
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your minimum width utility sizes. These can
-    | be percentage based, pixels, rems, or any other units. We provide a
-    | couple common use-cases by default. You can, of course, modify
-    | these values as needed.
-    |
-    | Class name: .min-w-{size}
-    |
-    */
-
-    minWidth: {
-        '0': '0',
-        'full': '100%',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Minimum height                      https://tailwindcss.com/docs/min-height
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your minimum height utility sizes. These can
-    | be percentage based, pixels, rems, or any other units. We provide a
-    | few common use-cases by default. You can, of course, modify these
-    | values as needed.
-    |
-    | Class name: .min-h-{size}
-    |
-    */
-
-    minHeight: {
-        '0': '0',
-        'full': '100%',
-        'screen': '100vh',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Maximum width                        https://tailwindcss.com/docs/max-width
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your maximum width utility sizes. These can
-    | be percentage based, pixels, rems, or any other units. By default
-    | we provide a sensible rem based scale and a "full width" size,
-    | which is basically a reset utility. You can, of course,
-    | modify these values as needed.
-    |
-    | Class name: .max-w-{size}
-    |
-    */
-
-    maxWidth: {
-        'xxs': '15rem',    // 240px
-        'xs': '20rem',    // 320px
-        'sm': '30rem',    // 480px
-        'md': '40rem',    // 640px
-        'lg': '50rem',    // 800px
-        'xl': '60rem',    // 960px
-        '2xl': '70rem',   // 1120px
-        '3xl': '80rem',   // 1280px
-        '4xl': '90rem',   // 1440px
-        '5xl': '120rem',  // 1600px
-        'full': '100%',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Maximum height                      https://tailwindcss.com/docs/max-height
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your maximum height utility sizes. These can
-    | be percentage based, pixels, rems, or any other units. We provide a
-    | couple common use-cases by default. You can, of course, modify
-    | these values as needed.
-    |
-    | Class name: .max-h-{size}
-    |
-    */
-
-    maxHeight: {
-        'full': '100%',
-        'screen': '100vh',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Padding                                https://tailwindcss.com/docs/padding
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your padding utility sizes. These can be
-    | percentage based, pixels, rems, or any other units. By default we
-    | provide a sensible rem based numeric scale plus a couple other
-    | common use-cases like "1px". You can, of course, modify these
-    | values as needed.
-    |
-    | Class name: .p{side?}-{size}
-    |
-    */
-
-    padding: {
-        'px': '1px',
-        '0': '0',
-        '1': '0.25rem',
-        '2': '0.5rem',
-        '3': '0.75rem',
-        '4': '1rem',
-        '5': '1.25rem',
-        '6': '1.5rem',
-        '8': '2rem',
-        '10': '2.5rem',
-        '12': '3rem',
-        '16': '4rem',
-        '20': '5rem',
-        '24': '6rem',
-        '32': '8rem',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Margin                                  https://tailwindcss.com/docs/margin
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your margin utility sizes. These can be
-    | percentage based, pixels, rems, or any other units. By default we
-    | provide a sensible rem based numeric scale plus a couple other
-    | common use-cases like "1px". You can, of course, modify these
-    | values as needed.
-    |
-    | Class name: .m{side?}-{size}
-    |
-    */
-
-    margin: {
-        'auto': 'auto',
-        'px': '1px',
-        '0': '0',
-        '1': '0.25rem',
-        '2': '0.5rem',
-        '3': '0.75rem',
-        '4': '1rem',
-        '5': '1.25rem',
-        '6': '1.5rem',
-        '8': '2rem',
-        '10': '2.5rem',
-        '12': '3rem',
-        '16': '4rem',
-        '20': '5rem',
-        '24': '6rem',
-        '32': '8rem',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Negative margin                https://tailwindcss.com/docs/negative-margin
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your negative margin utility sizes. These can
-    | be percentage based, pixels, rems, or any other units. By default we
-    | provide matching values to the padding scale since these utilities
-    | generally get used together. You can, of course, modify these
-    | values as needed.
-    |
-    | Class name: .-m{side?}-{size}
-    |
-    */
-
-    negativeMargin: {
-        'px': '1px',
-        '0': '0',
-        '1': '0.25rem',
-        '2': '0.5rem',
-        '3': '0.75rem',
-        '4': '1rem',
-        '5': '1.25rem',
-        '6': '1.5rem',
-        '8': '2rem',
-        '10': '2.5rem',
-        '12': '3rem',
-        '16': '4rem',
-        '20': '5rem',
-        '24': '6rem',
-        '32': '8rem',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Shadows                                https://tailwindcss.com/docs/shadows
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your shadow utilities. As you can see from
-    | the defaults we provide, it's possible to apply multiple shadows
-    | per utility using comma separation.
-    |
-    | If a `default` shadow is provided, it will be made available as the non-
-    | suffixed `.shadow` utility.
-    |
-    | Class name: .shadow-{size?}
-    |
-    */
-
-    shadows: {
-        default: '0 2px 4px 0 rgba(0,0,0,0.10)',
-        'md': '0 4px 8px 0 rgba(0,0,0,0.12), 0 2px 4px 0 rgba(0,0,0,0.08)',
-        'lg': '0 15px 30px 0 rgba(0,0,0,0.11), 0 5px 15px 0 rgba(0,0,0,0.08)',
-        'inner': 'inset 0 2px 4px 0 rgba(0,0,0,0.06)',
-        'outline': '0 0 0 3px rgba(52,144,220,0.5)',
-        'none': 'none',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Z-index                                https://tailwindcss.com/docs/z-index
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your z-index utility values. By default we
-    | provide a sensible numeric scale. You can, of course, modify these
-    | values as needed.
-    |
-    | Class name: .z-{index}
-    |
-    */
-
-    zIndex: {
-        'negative': -1,
-        'auto': 'auto',
-        'page': 0,
-        'shell': 100,
-        'menu': 200,
-        'floating': 300,
-        'overlay': 400,
-        'modal': 500,
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Opacity                                https://tailwindcss.com/docs/opacity
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your opacity utility values. By default we
-    | provide a sensible numeric scale. You can, of course, modify these
-    | values as needed.
-    |
-    | Class name: .opacity-{name}
-    |
-    */
-
-    opacity: {
-        '0': '0',
-        '10': '.1',
-        '20': '.2',
-        '30': '.3',
-        '40': '.4',
-        '50': '.5',
-        '60': '.6',
-        '70': '.7',
-        '80': '.8',
-        '90': '.9',
-        '100': '1',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | SVG fill                                   https://tailwindcss.com/docs/svg
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your SVG fill colors. By default we just provide
-    | `fill-current` which sets the fill to the current text color. This lets you
-    | specify a fill color using existing text color utilities and helps keep the
-    | generated CSS file size down.
-    |
-    | Class name: .fill-{name}
-    |
-    */
-
-    svgFill: {
-        'current': 'currentColor',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | SVG stroke                                 https://tailwindcss.com/docs/svg
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you define your SVG stroke colors. By default we just provide
-    | `stroke-current` which sets the stroke to the current text color. This lets
-    | you specify a stroke color using existing text color utilities and helps
-    | keep the generated CSS file size down.
-    |
-    | Class name: .stroke-{name}
-    |
-    */
-
-    svgStroke: {
-        'current': 'currentColor',
-    },
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Modules                  https://tailwindcss.com/docs/configuration#modules
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you control which modules are generated and what variants are
-    | generated for each of those modules.
-    |
-    | Currently supported variants:
-    |   - responsive
-    |   - hover
-    |   - focus
-    |   - focus-within
-    |   - active
-    |   - group-hover
-    |
-    | To disable a module completely, use `false` instead of an array.
-    |
-    */
-
-    modules: {
+    variants: {
         appearance: ['responsive'],
         backgroundAttachment: ['responsive'],
-        backgroundColors: ['responsive', 'hover', 'focus'],
+        backgroundColor: ['responsive', 'hover', 'focus'],
         backgroundPosition: ['responsive'],
         backgroundRepeat: ['responsive'],
         backgroundSize: ['responsive'],
         borderCollapse: [],
-        borderColors: ['responsive', 'hover', 'focus'],
+        borderColor: ['responsive', 'hover', 'focus'],
         borderRadius: ['responsive'],
         borderStyle: ['responsive'],
-        borderWidths: ['responsive'],
+        borderWidth: ['responsive'],
         cursor: ['responsive'],
         display: ['responsive'],
-        flexbox: ['responsive'],
+        flexDirection: ['responsive'],
+        flexWrap: ['responsive'],
+        alignItems: ['responsive'],
+        alignSelf: ['responsive'],
+        justifyContent: ['responsive'],
+        alignContent: ['responsive'],
+        flex: ['responsive'],
+        flexGrow: ['responsive'],
+        flexShrink: ['responsive'],
         float: ['responsive'],
-        fonts: ['responsive'],
-        fontWeights: ['responsive', 'hover', 'focus'],
+        fontFamily: ['responsive'],
+        fontWeight: ['responsive', 'hover', 'focus'],
         height: ['responsive'],
-        leading: ['responsive'],
-        lists: ['responsive'],
+        lineHeight: ['responsive'],
+        listStylePosition: ['responsive'],
+        listStyleType: ['responsive'],
         margin: ['responsive'],
         maxHeight: ['responsive'],
         maxWidth: ['responsive'],
         minHeight: ['responsive'],
         minWidth: ['responsive'],
         negativeMargin: ['responsive'],
+        objectFit: ['responsive'],
+        objectPosition: ['responsive'],
         opacity: ['responsive'],
         outline: ['focus'],
         overflow: ['responsive'],
         padding: ['responsive'],
         pointerEvents: ['responsive'],
         position: ['responsive'],
+        inset: ['responsive'],
         resize: ['responsive'],
-        shadows: ['responsive', 'hover', 'focus'],
-        svgFill: [],
-        svgStroke: [],
+        boxShadow: ['responsive', 'hover', 'focus'],
+        fill: [],
+        stroke: [],
         tableLayout: ['responsive'],
         textAlign: ['responsive'],
-        textColors: ['responsive', 'hover', 'focus'],
-        textSizes: ['responsive'],
-        textStyle: ['responsive', 'hover', 'focus'],
-        tracking: ['responsive'],
+        textColor: ['responsive', 'hover', 'focus'],
+        fontSize: ['responsive'],
+        fontStyle: ['responsive'],
+        textTransform: ['responsive'],
+        textDecoration: ['responsive', 'hover', 'focus'],
+        fontSmoothing: ['responsive'],
+        letterSpacing: ['responsive'],
         userSelect: ['responsive'],
         verticalAlign: ['responsive'],
         visibility: ['responsive'],
         whitespace: ['responsive'],
+        wordBreak: ['responsive'],
         width: ['responsive'],
-        zIndex: ['responsive'],
+    
+    },
+
+    corePlugins: {
+        container: false
     },
 
 
@@ -946,39 +283,5 @@ module.exports = {
     |
     */
 
-    plugins: [
-        // require('tailwindcss/plugins/container')({
-        //   center: true,
-        //   padding: '2rem',
-        // }),
-        function ({ addUtilities }) {
-            // This function is your plugin
-            const bunnComponents = {
-                '.b-button': {
-                    padding: '.5rem 1rem',
-                    borderRadius: '.25rem',
-                    fontWeight: '600',
-                },
-            };
-            addUtilities(bunnComponents);
-        },
-    ],
-
-
-    /*
-    |-----------------------------------------------------------------------------
-    | Advanced Options         https://tailwindcss.com/docs/configuration#options
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you can tweak advanced configuration options. We recommend
-    | leaving these options alone unless you absolutely need to change them.
-    |
-    */
-
-    options: {
-        prefix: '',
-        important: false,
-        separator: ':',
-    },
-
+    plugins: []
 };
