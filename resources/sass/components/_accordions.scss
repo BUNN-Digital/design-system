@@ -1,5 +1,5 @@
 .b-accordion {
-    @apply py-4;
+
     &__item {
 
         // Compact accordion item
@@ -19,14 +19,22 @@
 
     &__title {
         // Standard title
-        @apply text-brand-primary border-b border-grey-100 font-sans-demi text-lg-2 py-3 relative cursor-pointer;
+        @apply text-brand-primary border-b border-grey-100 font-sans-demi py-3 pr-12 relative cursor-pointer;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+
+        @screen lg {
+            @apply  text-lg-1;
+        }
+
         &:after {
             font-family: "Font Awesome 5 Pro";
             content: '\f107';
             position: absolute;
             right: 20px;
-            font-size: 44px;
-            line-height: 40px;
+            font-size: 1.6em;
+            line-height: .75em;
             font-weight: 300;
         }
 
@@ -52,6 +60,7 @@
                 content: '\f0fe';
                 position: absolute;
                 left: 16px;
+                top:28px;
             }
 
             .open & {
@@ -66,10 +75,34 @@
 
     &__content {
         // Standard content panel
-        @apply pr-10 leading-loose text-lg-1 pb-6;
+        @apply hidden pr-8 leading-normal pb-6;
+
+        @screen lg {
+            @apply leading-loose;
+        }
+
         // Compact content panel
         &--compact {
             @apply text-grey-300 text-lg-1 py-24 text-center;
+        }
+    }
+
+    &__images {
+        @apply flex items-start pb-8;
+
+        @screen md {
+            @apply pt-4;
+        }
+
+        img {
+            display: none;
+            opacity: 0;
+            @include fadein(.5s);
+
+            &.active {
+                display: block;
+                opacity: 1;
+            }
         }
     }
 }
