@@ -1,24 +1,24 @@
 <!doctype html>
 <html lang="en" class="min-h-full antialiased">
 <head>
-    {# include our meta tags #}
-    {% include "partials/meta.njk" %}
+	{# include our meta tags #}
+	{% include "partials/meta.njk" %}
 
-    {# include main.css in development mode #}
-    {% if helpers.environment == "development" %}
-    <link rel="stylesheet" href="/css/main.css">
-    {% else %}
-    {# otherwise, use main.min.css #}
-    <link rel="stylesheet" href="/css/main.min.css">
-    {% endif %}
+	{# include main.css in development mode #}
+	{% if helpers.environment == "development" %}
+	<link rel="stylesheet" href="/css/main.css">
+	{% else %}
+	{# otherwise, use main.min.css #}
+	<link rel="stylesheet" href="/css/main.min.css">
+	{% endif %}
 
-    <link rel="stylesheet" href="//pro.fontawesome.com/releases/v5.3.1/css/all.css"
-	      integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
-    <link rel="stylesheet" href="/css/fonts.css"/>
-    <link rel="stylesheet" href="/css/design-system.css"/>
+	<link rel="stylesheet" href="//pro.fontawesome.com/releases/v5.3.1/css/all.css"
+		  integrity="sha384-9ralMzdK1QYsk4yBY680hmsb4/hJ98xK3w0TIaJ3ll4POWpWUYaA2bRjGGujGT8w" crossorigin="anonymous">
+	<link rel="stylesheet" href="/css/fonts.css"/>
+	<link rel="stylesheet" href="/css/design-system.css"/>
 
-    {# favicon #}
-    <link rel="icon" type="image/png" href="{{ site.images.favicon }}">
+	{# favicon #}
+	<link rel="icon" type="image/png" href="{{ site.images.favicon }}">
 	<link rel="icon" type="image/png" sizes="16x16" href="{{ site.images.favicon16 }}">
 	<link rel="icon" type="image/png" sizes="32x32" href="{{ site.images.favicon32 }}">
 	<link rel="apple-touch-icon" sizes="180x180" href="{{ site.images.appleTouch }}">
@@ -26,24 +26,24 @@
 
 <body>
 
-    <div class="main relative bg-white" role="main">
+	<div class="main relative bg-white" role="main">
 
-        {% include "partials/header.njk" %}
+		{% include "partials/header.njk" %}
 
-        <div class="main flex-1 pt-10 lg:pt-16">
-            {{ content | safe }}
-        </div>
+		<div class="main flex-1 pt-10 lg:pt-16">
+			{{ content | safe }}
+		</div>
 
-    </div>
-    
-    {% include "partials/footer.njk" %}
+	</div>
+	
+	{% include "partials/footer.njk" %}
 
-    {# include scripts #}
-    {% if helpers.environment == "development" %}
-    <script src="/javascript/main.js"></script>
-    {% else %}
-    <script src="/javascript/main.min.js"></script>
-    {% endif %}
+	{# include scripts #}
+	{% if helpers.environment == "development" %}
+	<script src="/javascript/main.js"></script>
+	{% else %}
+	<script src="/javascript/main.min.js"></script>
+	{% endif %}
 
 </body>
 </html>

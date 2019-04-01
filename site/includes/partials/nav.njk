@@ -1,11 +1,11 @@
 <nav id="nav" class="nav flex md:ml-8">
 
-    <ul class="pt-6 md:flex mb-0 md:flex-row md:pt-0 items-center text-base font-sans-demi">
-        {% for item in navigation.main %}
-        <li class="level-1 inline-block mr-4 md:mr-8">
-            <a href="{{ item.url | safe }}" class="{% if page.url == item.url %} text-brand-primary{% else %} text-gray-700{% endif %}">{{ item.label }}</a>
-        </li>
-        {% endfor %}
-    </ul>
+	<ul class="pt-6 md:flex mb-0 md:flex-row md:pt-0 items-center text-base font-sans-demi">
+		{% for item in navigation.main %}
+		<li class="level-1 inline-block mr-4 md:mr-8">
+			<a href="{{ item.url | safe }}" class="{% if page.url == item.url %} text-brand-primary{% else %} text-gray-700{% endif %}">{{ item.label }}</a>
+		</li>
+		{% endfor %}
+	</ul>
 
 </nav>
