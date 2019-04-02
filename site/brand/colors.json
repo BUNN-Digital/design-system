@@ -48,55 +48,55 @@
     "grays": [
         {
             "name": "gray-100",
-            "hex": "#f7fafc",
+            "hex": "#f7f7f7",
             "hsla": "",
-            "swatch": "bg-gray-200"
+            "swatch": "bg-gray-100"
         },
         {
             "name": "gray-200",
-            "hex": "#edf2f7",
+            "hex": "#e8e8e8",
             "hsla": "",
             "swatch": "bg-gray-200"
         },
         {
             "name": "gray-300",
-            "hex": "#e2e8f0",
+            "hex": "#e0e0e0",
             "hsla": "",
             "swatch": "bg-gray-300"
         },
         {
             "name": "gray-400",
-            "hex": "#cbd5e0",
+            "hex": "#cdcdcd",
             "hsla": "",
             "swatch": "bg-gray-400"
         },
         {
             "name": "gray-500",
-            "hex": "#a0aec0",
+            "hex": "#a0a0a0",
             "hsla": "",
             "swatch": "bg-gray-500"
         },
         {
             "name": "gray-600",
-            "hex": "#718096",
+            "hex": "#777777",
             "hsla": "",
             "swatch": "bg-gray-600"
         },
         {
             "name": "gray-700",
-            "hex": "#4a5568",
+            "hex": "#444444",
             "hsla": "",
             "swatch": "bg-gray-700"
         },
         {
             "name": "gray-800",
-            "hex": "#2d3748",
+            "hex": "#222222",
             "hsla": "",
             "swatch": "bg-gray-800"
         },
         {
             "name": "gray-900",
-            "hex": "#1a202c",
+            "hex": "#1a1a1a",
             "hsla": "",
             "swatch": "bg-gray-900"
         },
