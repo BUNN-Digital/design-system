@@ -1,0 +1,54 @@
+.hero {
+
+	&__banner {
+		@apply border-b-4 border-gray-300 mx-auto;
+		height: 300px;
+		background-position: center center;
+		background-size: auto 100%;
+		background-repeat: no-repeat;
+		max-width: 1906px;
+
+		@screen md {
+			height: 400px;
+		}
+
+		@screen lg {
+			height: 600px;
+		}
+
+		.content-right {
+			@apply flex flex-row justify-end;
+		}
+
+	}
+
+	&__banner--short {
+
+	}
+
+	&__body {
+		@apply flex flex-col items-start justify-center h-full px-4 text-white;
+
+		@screen sm {
+			@apply px-6;
+		}
+
+		@screen md {
+			@apply px-4;
+		}
+
+		@screen lg {
+			@apply px-8;
+		}
+	}
+
+	&__branding {
+		img, svg {
+			@apply block max-w-full;
+		}
+	}
+
+	&__tagline {
+		@apply  font-sans-light;
+	}
+}

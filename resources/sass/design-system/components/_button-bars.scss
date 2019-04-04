@@ -1,0 +1,46 @@
+.btn-bar {
+    @screen md {
+        @apply flex;
+    }
+
+
+    .btn {
+        @apply rounded mb-2 whitespace-no-wrap;
+
+        @screen md {
+            margin-right:1px;
+            @apply rounded-none;
+
+            &:first-child {
+                @apply rounded-l;
+            }
+
+            &:last-child {
+                @apply rounded-r;
+                margin-right: 0;
+            }
+        }
+
+    }
+
+    &--full {
+        .btn {
+            flex-grow: 1;
+
+            // mobile
+            width:100%;
+
+        }
+    }
+
+    // Tabbed
+    &--tabbed {
+        &--tabbed:first-child {
+            // border-right: solid 1px rgba(255, 255, 255, .2)
+        }
+
+        &--tabbed:last-child {
+            // border-left: solid 1px rgba(255, 255, 255, .2)
+        }
+    }
+}

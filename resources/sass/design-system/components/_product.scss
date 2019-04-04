@@ -1,0 +1,146 @@
+.product {
+    &__item {
+        transition: all 0.3s ease;
+
+        &:hover {
+            .product__item-title {
+                @apply text-brand-primary;
+            }
+        }
+
+        &.compact:hover {
+            @apply bg-gray-200 cursor-pointer;
+            .product__item-title {
+                @apply text-gray-900;
+            }
+        }
+
+        &.compact:nth-child(even) {
+            // @apply bg-gray-200;
+        }
+    }
+
+    &__item-info {
+        .grid & {
+            @apply flex flex-col text-gray-800 border border-gray-300 border-b-0;
+        }
+
+        .stacked & {
+            @apply p-5 flex items-center text-gray-800 border border-gray-300 border-l-0;
+            box-shadow: inset 8px 0 0 0 #dfdfdf;
+
+            &:hover {
+                box-shadow: inset 8px 0 0 0 #005cb9;
+            }
+        }
+
+        .add-to-cart & {
+            @apply border-b;
+        }
+
+        .compact & {
+            @apply px-2 py-4 flex items-center text-gray-800 border-none;
+        }
+    }
+
+    &__item-content {
+        .stacked & {
+        }
+
+        .compact & {
+        }
+    }
+
+    &__item-image {
+        @apply cursor-pointer;
+        .grid & {
+            @apply block mx-auto mt-5 mb-2;
+        }
+
+        .stacked & {
+            //max-height: 180px;
+        }
+
+        .compact & {
+        }
+    }
+
+    &__item-title {
+        @apply font-sans-demi leading-tight text-lg-1 my-2 cursor-pointer;
+        .grid & {
+            @apply px-5;
+        }
+
+        .stacked & {
+        }
+
+        .add-to-cart & {
+            @apply text-center;
+        }
+
+        .compact & {
+            @apply text-base my-0 mb-1;
+        }
+    }
+
+    &__item-desc {
+        @apply text-sm-1 text-gray-400;
+        .grid & {
+            @apply px-5;
+        }
+
+        .add-to-cart & {
+            @apply text-center;
+        }
+    }
+
+    &__item-number {
+        @apply text-sm-1 text-gray-400;
+        .grid & {
+            @apply px-5;
+        }
+    }
+
+    &__item-links {
+        .grid & {
+            @apply border border-r-0 border-l-0 p-4 mt-3 border-gray-300 bg-gray-200 flex flex-wrap;
+        }
+
+        .stacked & {
+            @apply mt-6;
+        }
+
+        .compact & {
+            @apply mt-0;
+        }
+    }
+
+    &__item-link {
+        @apply text-gray-600 text-sm-1 cursor-pointer;
+        &:hover {
+            @apply text-gray-800;
+        }
+
+        .grid & {
+            @apply w-1/2 text-center;
+            &:nth-child(3) {
+                @apply w-full;
+            }
+        }
+
+        .stacked & {
+            @apply mr-4;
+        }
+
+        .compact & {
+            @apply text-brand-primary;
+            &:hover {
+                @apply text-brand-primary;
+            }
+        }
+    }
+
+    &__item-footer {
+        @apply p-4 pb-2 border-gray-300;
+    }
+}

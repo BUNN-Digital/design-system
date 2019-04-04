@@ -1,0 +1,74 @@
+.category-media {
+    &__image {
+        @apply z-page min-w-full;
+        filter: brightness(65%);
+        object-fit: cover;
+        height: 12rem;
+
+        @screen lg {
+            height: 14rem;
+        }
+    }
+
+    &__content {
+        @apply flex flex-col justify-center items-center absolute inset-0;
+
+        .btn--small {
+            @apply px-6;
+        }
+    }
+
+    &__heading {
+        @apply text-lg-1 text-white uppercase;
+
+        @screen md {
+            @apply text-lg-2;
+        }
+
+        @screen lg {
+            @apply text-lg-3;
+        }
+    }
+
+    &__heading-cta {
+        @apply text-lg-2 text-white mb-2 relative;
+
+        @screen sm {
+            @apply text-lg-3;
+        }
+
+        &.category-1116,
+        &.category-1117,
+        &.category-1118,
+        &.category-1119,
+        &.category-1121,
+        &.category-1122,
+        &.category-1125,
+        &.category-1126 {
+            text-transform: uppercase;
+        }
+
+        &.category-1116:after,
+        &.category-1117:after,
+        &.category-1118:after,
+        &.category-1119:after,
+        &.category-1120:after,
+        &.category-1121:after,
+        &.category-1123:after,
+        &.category-1124:after,
+        &.category-1125:after,
+        &.category-1126:after {
+            content: "®";
+            font-size: 20px;
+            position: absolute;
+            top: 2px;
+        }
+
+        &.category-1122:after {
+            content: "™";
+            font-size: 18px;
+            position: absolute;
+            top: 2px;
+        }
+    }
+}

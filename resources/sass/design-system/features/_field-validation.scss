@@ -1,0 +1,25 @@
+.parsley-errors-list {
+    @apply text-sm-1 text-avert mb-0;
+
+    li {
+        @apply py-2;
+    }
+}
+
+.parsley-error {
+    @apply bg-gray-200;
+    border-color: hsla(358, 66%, 85%, 1) !important;
+}
+
+select.parsley-error {
+    @apply bg-gray-200;
+}
+
+label.parsley-error {
+    @apply bg-white;
+}
+
+#parsley-id-multiple-fulfillmentOptionId {
+    @apply absolute top-0;
+    display: none;
+}

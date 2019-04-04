@@ -1,11 +1,10 @@
 @tailwind base;
-@import "base/all";
+@import "design-system/base/all";
 @tailwind components;
 
 // Custom component styles
-@import "components/all";
-@import "features/all";
-@import "layouts/all";
+@import "design-system/components/all";
+@import "design-system/features/all";
 
 @import "node_modules/magnific-popup/src/css/main.scss";
 // Not sure what to do with these?

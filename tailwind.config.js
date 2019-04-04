@@ -152,21 +152,21 @@ module.exports = {
         },
 
         fontSize: {
-            'sm-3':     '0.625rem',     // 10px       milli
-            'sm-2':     '0.75rem',      // 12px       tiny
-            'sm-1':     '0.875rem',     // 14px       small
-            'base':     '1rem',         // 16px       
+            'sm-3': '0.625rem',     // 10px       milli
+            'sm-2': '0.75rem',      // 12px       tiny
+            'sm-1': '0.875rem',     // 14px       small
+            'base': '1rem',         // 16px
 
             // Body and Headings - Ratio: 1.25 @ 16
             // https://www.modularscale.com/?18&px&1.25
-            'body':     '1.125rem',     // 18px       body, .heading-epsilon
-            'lg-1':     '1.25rem',      // 20px       
-            'lg-2':     '1.75rem',      // 28px       .heading-delta
-            'lg-3':     '2rem',         // 36px       .heading-gamma
-            'lg-4':     '2.75rem',      // 44px       .heading-beta
-            'lg-5':     '3.4375rem',    // 55px       .heading-alpha
-            'display':  '4.25rem',      // 68px       display
-            'jumbo':    '5.375rem',     // 86px       jumbo
+            'body': '1.125rem',     // 18px       body, .heading-epsilon
+            'lg-1': '1.25rem',      // 20px
+            'lg-2': '1.75rem',      // 28px       .heading-delta
+            'lg-3': '2rem',         // 36px       .heading-gamma
+            'lg-4': '2.75rem',      // 44px       .heading-beta
+            'lg-5': '3.4375rem',    // 55px       .heading-alpha
+            'display': '4.25rem',   // 68px       display
+            'jumbo': '5.375rem',    // 86px       jumbo
         },
 
         fontWeight: {
@@ -182,7 +182,7 @@ module.exports = {
         },
 
         borderColor: theme => {
-            return global.Object.assign({ default: theme('colors.gray.300', 'currentColor') }, theme('colors'))
+            return global.Object.assign({default: theme('colors.gray.300', 'currentColor')}, theme('colors'))
         },
 
         zIndex: {
@@ -195,6 +195,14 @@ module.exports = {
             'overlay': 400,
             'modal': 500,
         },
+
+        extend: {
+            maxWidth: {
+                '7xl': '80rem',
+                '8xl': '90rem',
+                '9xl': '120rem',
+            }
+        }
     },
 
     variants: {
@@ -261,7 +269,7 @@ module.exports = {
         whitespace: ['responsive'],
         wordBreak: ['responsive'],
         width: ['responsive'],
-    
+
     },
 
     corePlugins: {
@@ -270,18 +278,18 @@ module.exports = {
 
 
     /*
-    |-----------------------------------------------------------------------------
-    | Plugins                                https://tailwindcss.com/docs/plugins
-    |-----------------------------------------------------------------------------
-    |
-    | Here is where you can register any plugins you'd like to use in your
-    | project. Tailwind's built-in `container` plugin is enabled by default to
-    | give you a Bootstrap-style responsive container component out of the box.
-    |
-    | Be sure to view the complete plugin documentation to learn more about how
-    | the plugin system works.
-    |
-    */
+	|-----------------------------------------------------------------------------
+	| Plugins                                https://tailwindcss.com/docs/plugins
+	|-----------------------------------------------------------------------------
+	|
+	| Here is where you can register any plugins you'd like to use in your
+	| project. Tailwind's built-in `container` plugin is enabled by default to
+	| give you a Bootstrap-style responsive container component out of the box.
+	|
+	| Be sure to view the complete plugin documentation to learn more about how
+	| the plugin system works.
+	|
+	*/
 
     plugins: []
 };

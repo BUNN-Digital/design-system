@@ -1,0 +1,136 @@
+.b-accordion {
+
+    &__item {
+
+        // Compact accordion item
+
+        &--compact {
+            @apply border-t border-gray-300;
+            &.open {
+                @apply border-t-2 border-brand-primary;
+            }
+
+            &:last-child {
+                @apply border-b;
+                border-bottom: solid 1px #dfdfdf;
+            }
+        }
+    }
+
+    &__title {
+        // Standard title
+        @apply text-brand-primary border-b border-gray-300 font-sans-demi py-3 pr-12 relative cursor-pointer;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        white-space: nowrap;
+
+        @screen lg {
+            @apply text-lg-1;
+        }
+
+        &:after {
+            font-family: "Font Awesome 5 Pro";
+            content: '\f107';
+            position: absolute;
+            right: 20px;
+            font-size: 1.6em;
+            line-height: .75em;
+            font-weight: 300;
+        }
+
+        .open & {
+            @apply border-transparent text-gray-500;
+            &:after {
+                content: '\f106';
+            }
+
+        }
+
+        // Compact title
+        &--compact {
+            @apply text-brand-primary font-sans-demi text-lg-1 py-3 relative cursor-pointer pl-12;
+            &:after {
+                content: '';
+            }
+
+            &:before {
+                font-family: "Font Awesome 5 Pro";
+                font-size: 20px;
+                line-height: 26px;
+                content: '\f0fe';
+                position: absolute;
+                left: 16px;
+                top: 28px;
+            }
+
+            .open & {
+                @apply text-gray-600 bg-gray-200;
+
+                &:before {
+                    content: '\f146';
+                }
+            }
+        }
+    }
+
+    &__content {
+        // Standard content panel
+        @apply hidden pr-8 leading-normal pb-6 text-left;
+
+        @screen lg {
+            @apply leading-loose;
+        }
+
+        // Compact content panel
+        &--compact {
+            @apply text-gray-600;
+        }
+    }
+
+    &__images {
+        @apply flex items-start pb-8;
+
+        @screen md {
+            @apply pt-4;
+        }
+
+        img {
+            display: none;
+            opacity: 0;
+            margin-right: auto;
+            margin-left: auto;
+            max-height: 420px;
+            @include fadein(.5s);
+
+            &.active {
+                display: block;
+                opacity: 1;
+            }
+        }
+    }
+}
+
+.content-expand {
+    @apply overflow-hidden relative mb-3;
+    transition: max-height 0.2s ease-out;
+    max-height: 240px;
+
+    &:after {
+        @apply absolute bottom-0 left-0 w-full h-24;
+        content: '';
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.77) 45%, rgba(255, 255, 255, 1) 100%);
+        filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00ffffff', endColorstr='#ffffff', GradientType=0);
+    }
+
+    &.open {
+        transition: max-height 0.2s ease-in;
+
+        &:after {
+            opacity: 0;
+        }
+    }
+}
+
+.content-expand-toggle {
+    @apply text-brand-primary font-sans-demi cursor-pointer;
+}

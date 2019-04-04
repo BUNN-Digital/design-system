@@ -1,0 +1,9 @@
+*[aria-invalid*="true"] {
+    @apply border border-avert text-avert bg-gray-200;
+}
+
+.required label:after {
+    content: "*";
+    @apply text-avert;
+    @apply ml-1;
+}
