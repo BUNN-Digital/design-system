@@ -10,11 +10,6 @@ a.btn {
         @apply bg-gray-200;
     }
 
-    &:disabled,
-    &[disabled] {
-        @apply cursor-not-allowed;
-    }
-
     &:hover {
         @apply bg-gray-200;
     }
@@ -43,33 +38,56 @@ a.btn {
 
         // Disabled
         &.disabled,
-        &[disabled],
-        &.disabled:hover,
-        &[disabled]:hover {
-            cursor: not-allowed;
+        &.disabled:hover {
             opacity: 0.85;
             @apply bg-brand-primary;
         }
     }
-
+    
     // Outline
     &--outline {
         background: transparent;
         @apply border-brand-primary text-brand-primary;
-
+        
         &:hover {
             background: transparent;
             @apply bg-brand-primary text-white;
         }
-
+        
         // Disabled
-        &.disabled,
-        &:disabled,
-        &[disabled] {
+        &.disabled {
             @apply text-gray-400 bg-white border-gray-400;
         }
     }
 
+    // Loading
+    .btn__spinner {
+        display: none;
+    }
+
+    &--loading {
+        .btn__text-container {
+            position: relative;
+        }
+
+        .btn__text {
+            visibility: hidden;
+        }
+
+        .btn__spinner {
+            display: block;
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+    }
+    
+    
     // Buttons appearing to be links (keeps padding)
     &--link {
         background: transparent;

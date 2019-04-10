@@ -23,10 +23,10 @@ $duration: 1.4s;
 
 @keyframes colors {
     0% {
-        stroke: #005cb9;
+        @apply stroke-current;
     }
     100% {
-        stroke: #066dd6;
+        @apply stroke-current;
     }
 }
 

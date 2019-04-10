@@ -62,28 +62,72 @@ tag: components
 </button>
 {% endhighlight %}
 
-<h2 class="section-heading">Disabled Buttons</h2>
+<h2 class="section-heading">Button States</h2>
+
+<h3>Disabled</h3>
 <div class="panel">
-	<button class="btn btn--outline w-full mb-4 md:mb-0 md:w-auto" disabled>
+	<button class="btn btn--outline disabled w-full mb-4 md:mb-0 md:w-auto" disabled>
 		Button outline disabled
 	</button>
-	<button class="btn btn--primary w-full mb-4 md:mb-0 md:w-auto" disabled>
-		Button primary disabled
-	</button>
-	<button class="btn btn--primary disabled w-full mb-4 md:mb-0 md:w-auto">
+	<button class="btn btn--primary disabled w-full mb-4 md:mb-0 md:w-auto" disabled>
 		Button primary disabled
 	</button>
 </div>
 
 {% highlight "html" %}
-<button class="btn btn--outline w-full mb-4 md:mb-0 md:w-auto" disabled>
+<button class="btn btn--outline disabled w-full mb-4 md:mb-0 md:w-auto" disabled>
 	Button outline disabled
 </button>
-<button class="btn btn--primary w-full mb-4 md:mb-0 md:w-auto" disabled>
+<button class="btn btn--primary disabled w-full mb-4 md:mb-0 md:w-auto" disabled>
 	Button primary disabled
 </button>
-<button class="btn btn--primary disabled w-full mb-4 md:mb-0 md:w-auto">
-	Button primary disabled
+{% endhighlight %}
+
+
+<h3>Loading</h3>
+<div class="panel">
+	<button class="btn btn--primary btn--loading w-full mb-4 md:mb-0 md:w-auto">
+		<div class="btn__text-container">
+			<div class="btn__text">This is the button text</div>
+			<div class="btn__spinner">
+				<svg class="spinner" width="28px" height="28px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+					<circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+				</svg>
+			</div>
+		</div>
+	</button>
+	<button class="btn btn--outline btn--loading w-full mb-4 md:mb-0 md:w-auto">
+		<div class="btn__text-container">
+			<div class="btn__text">This is the button text</div>
+			<div class="btn__spinner">
+				<svg class="spinner" width="28px" height="28px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+					<circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+				</svg>
+			</div>
+		</div>
+	</button>
+</div>
+
+{% highlight "html" %}
+<button class="btn btn--primary btn--loading w-full mb-4 md:mb-0 md:w-auto">
+	<div class="btn__text-container">
+		<div class="btn__text">This is the button text</div>
+		<div class="btn__spinner">
+			<svg class="spinner" width="28px" height="28px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+				<circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+			</svg>
+		</div>
+	</div>
+</button>
+<button class="btn btn--outline btn--loading w-full mb-4 md:mb-0 md:w-auto">
+	<div class="btn__text-container">
+		<div class="btn__text">This is the button text</div>
+		<div class="btn__spinner">
+			<svg class="spinner" width="28px" height="28px" viewBox="0 0 66 66" xmlns="http://www.w3.org/2000/svg">
+				<circle class="path" fill="none" stroke-width="6" stroke-linecap="round" cx="33" cy="33" r="30"></circle>
+			</svg>
+		</div>
+	</div>
 </button>
 {% endhighlight %}
 
