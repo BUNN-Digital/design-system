@@ -1,37 +1,151 @@
-.btn-bar {
-    @screen md {
-        @apply flex;
-    }
+/* Button Bar
+ * 
+ * Stacked on mobile, horizontal bar on desktop 
+ *
+ */
 
+.btn-bar {
+    @screen sm {
+        @apply flex;
+        overflow-x: auto;
+        -ms-overflow-style: none;  // IE 10+
+        overflow: -moz-scrollbars-none;  // Firefox
+        
+        &::-webkit-scrollbar {
+            display: none; // Safari and Chrome
+        }
+    }
 
     .btn {
-        @apply rounded mb-2 whitespace-no-wrap;
+        @apply whitespace-no-wrap mb-2 w-full;
+    }
 
-        @screen md {
-            margin-right:1px;
+    @screen sm {
+        .btn {
+            @apply rounded-none mb-0 mr-0 w-auto;
+        }
+
+        // Add some space between each button
+        .btn:not(:last-child) {
+            margin-right: 1px;
+        }
+    }
+
+    &--centered {
+        @apply justify-center;
+    }
+
+    // Rounded left and right button edges when not in flush button bar
+    &:not(.btn-bar--flush) {
+        @apply p-0;
+
+        @screen sm {
+            .btn {
+                
+                &:first-child {
+                    @apply rounded-t-none rounded-l;
+                }
+                
+                &:last-child {
+                    @apply rounded-b-none rounded-r;
+                }
+
+                &:only-child {
+                    @apply rounded;
+                }
+            }
+        }
+    }
+
+    // Button bars inside of panels
+    .panel & {
+        margin-left: -1px;
+        margin-right: -1px;
+
+        .btn {
             @apply rounded-none;
 
-            &:first-child {
-                @apply rounded-l;
-            }
-
             &:last-child {
-                @apply rounded-r;
-                margin-right: 0;
+                @apply mb-0;
+            }
+    
+            @screen sm {
+                @apply mb-0;
             }
         }
-
     }
 
-    &--full {
+    // Buton bars that should inherit panel section styles
+    &.panel__section {
+        
         .btn {
-            flex-grow: 1;
-
-            // mobile
-            width:100%;
-
+            background: inherit;
+            border-color: inherit;
+    
+            @screen sm {
+                @apply mb-0;
+            }
         }
     }
+
+    &--full,
+    &--flush {
+        .btn {
+            width: 100%;
+        }
+    
+        @screen sm {
+
+            .btn {
+                flex-grow: 1;
+                width: auto;
+            }
+        }
+    }
+
+    &--flush {
+        .panel & {
+            margin-bottom: -1px;
+        }
+    }
+
+    &--flush,
+    &.panel__section {
+        .btn {
+            border-radius: 0;
+            margin-bottom: 1px;
+        }
+    }
+
+    // Outlined button styles
+    &--outline,
+    &--stroke {
+        .btn {
+            margin-bottom: -1px;
+        }
+
+        @screen sm {
+            .btn {
+                margin-bottom: 0;
+            }
+
+            .btn:not(:last-child) {
+                margin-right: -1px;
+            }
+        }
+    }
+
+    &--stroke {
+
+        .panel & {
+            @apply border-none;
+
+            .btn {
+                @apply mb-0 border-t-0;
+            }
+        }
+    }
+
 
     // Tabbed
     &--tabbed {

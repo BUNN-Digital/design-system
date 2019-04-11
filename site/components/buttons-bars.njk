@@ -6,3 +6,235 @@ title: Button Bars
 section: Components
 tag: components
 ---
+
+<h2 class="section-heading">Button Bar</h2>
+
+<div class="btn-bar">
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+</div>
+
+{% highlight "html" %}
+<div class="btn-bar">
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+</div>
+{% endhighlight %}
+
+<h2 class="section-heading">Centered Button Bar</h2>
+
+<div class="btn-bar btn-bar--centered">
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+</div>
+
+{% highlight "html" %}
+<div class="btn-bar btn-bar--centered">
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+</div>
+{% endhighlight %}
+
+
+<h2 class="section-heading">Outline buttons</h2>
+
+<div class="btn-bar btn-bar--outline">
+	<a href="" class="btn btn--outline">Button Text</a>
+	<a href="" class="btn btn--outline">Button Text</a>
+	<a href="" class="btn btn--outline">Button Text</a>
+	<a href="" class="btn btn--outline">Button Text</a>
+</div>
+
+{% highlight "html" %}
+<div class="btn-bar btn-bar--outline">
+	<a href="" class="btn btn--outline">Button Text</a>
+	<a href="" class="btn btn--outline">Button Text</a>
+	<a href="" class="btn btn--outline">Button Text</a>
+	<a href="" class="btn btn--outline">Button Text</a>
+</div>
+{% endhighlight %}
+
+
+<h2 class="section-heading">Stroke buttons</h2>
+
+<div class="btn-bar btn-bar--stroke">
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+</div>
+
+{% highlight "html" %}
+<div class="btn-bar btn-bar--stroke">
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+</div>
+{% endhighlight %}
+
+
+<h2 class="section-heading">Full width</h2>
+
+<div class="btn-bar btn-bar--full">
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+</div>
+
+{% highlight "html" %}
+<div class="btn-bar btn-bar--full">
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+</div>
+{% endhighlight %}
+
+
+<h2 class="section-heading">Flush edges (no rounded buttons)</h2>
+
+<p>Tip: Great for using with Panels. See examples using panels below.</p>
+
+<div class="btn-bar btn-bar--flush">
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+</div>
+
+{% highlight "html" %}
+<div class="btn-bar btn-bar--flush">
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+</div>
+{% endhighlight %}
+
+<p>Works with single buttons too</p>
+
+<div class="btn-bar btn-bar--flush">
+	<a href="" class="btn btn--primary">Button Text</a>
+</div>
+
+{% highlight "html" %}
+<div class="btn-bar btn-bar--flush">
+	<a href="" class="btn btn--primary">Button Text</a>
+</div>
+{% endhighlight %}
+
+<h2 class="heading-beta">Use with Panels</h2>
+
+<h2 class="section-heading">Button Bar with Panels</h2>
+
+<div class="panel panel--stroke">
+	<div class="panel__header">
+		Panel Header
+	</div>
+	<div class="panel__section">
+		I'm a panel section
+	</div>
+	<div class="panel__section panel__section--flush">
+		<div class="btn-bar btn-bar--flush">
+			<a href="" class="btn btn--primary">Button Text</a>
+			<a href="" class="btn btn--primary">Button Text</a>
+			<a href="" class="btn btn--primary">Button Text</a>
+			<a href="" class="btn btn--primary">Button Text</a>
+		</div>
+	</div>
+</div>
+
+{% highlight "html" %}
+<div class="panel panel--stroke">
+	<div class="panel__header">
+		Panel Header
+	</div>
+	<div class="panel__section">
+		I'm a panel section
+	</div>
+	<div class="panel__section panel__section--flush">
+		<div class="btn-bar btn-bar--flush">
+			<a href="" class="btn btn--primary">Button Text</a>
+			<a href="" class="btn btn--primary">Button Text</a>
+			<a href="" class="btn btn--primary">Button Text</a>
+			<a href="" class="btn btn--primary">Button Text</a>
+		</div>
+	</div>
+</div>
+{% endhighlight %}
+
+<p>It's not really necessary to nest a button bar inside of a panel section.</p>
+
+<div class="panel panel--stroke">
+	<div class="panel__header">
+		Panel Header
+	</div>
+	<div class="panel__section">
+		I'm a panel section
+	</div>
+	<div class="btn-bar btn-bar--flush btn-bar--outline">
+		<a href="" class="btn btn--outline">Button Text</a>
+		<a href="" class="btn btn--outline">Button Text</a>
+		<a href="" class="btn btn--outline">Button Text</a>
+		<a href="" class="btn btn--outline">Button Text</a>
+	</div>
+</div>
+
+{% highlight "html" %}
+<div class="panel panel--stroke">
+	<div class="panel__header">
+		Panel Header
+	</div>
+	<div class="panel__section">
+		I'm a panel section
+	</div>
+	<div class="btn-bar btn-bar--flush btn-bar--outline">
+		<a href="" class="btn btn--outline">Button Text</a>
+		<a href="" class="btn btn--outline">Button Text</a>
+		<a href="" class="btn btn--outline">Button Text</a>
+		<a href="" class="btn btn--outline">Button Text</a>
+	</div>
+</div>
+{% endhighlight %}
+
+<div class="panel panel--stroke">
+	<div class="panel__header">
+		Panel Header
+	</div>
+	<div class="panel__section">
+		I'm a panel section
+	</div>
+	<div class="btn-bar btn-bar--flush btn-bar--stroke">
+		<a href="" class="btn btn--stroke">Button Text</a>
+		<a href="" class="btn btn--stroke">Button Text</a>
+		<a href="" class="btn btn--stroke">Button Text</a>
+		<a href="" class="btn btn--stroke">Button Text</a>
+	</div>
+</div>
+
+{% highlight "html" %}
+<div class="panel panel--stroke">
+	<div class="panel__header">
+		Panel Header
+	</div>
+	<div class="panel__section">
+		I'm a panel section
+	</div>
+	<div class="btn-bar btn-bar--flush btn-bar--stroke">
+		<a href="" class="btn btn--stroke">Button Text</a>
+		<a href="" class="btn btn--stroke">Button Text</a>
+		<a href="" class="btn btn--stroke">Button Text</a>
+		<a href="" class="btn btn--stroke">Button Text</a>
+	</div>
+</div>
+{% endhighlight %}
