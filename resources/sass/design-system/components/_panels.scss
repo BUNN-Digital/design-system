@@ -27,10 +27,6 @@
         .panel__action {
             @apply border-b border-gray-200;
         }
-
-        .panel__action:hover {
-            @apply bg-brand-primary text-white;
-        }
     }
 
     &--raise {
@@ -57,6 +53,8 @@
     &__action {
         display: flex;
         align-items: stretch;
+        cursor: pointer;
+        color: inherit;
         @apply py-2;
 
         .panel__action-text {
@@ -176,4 +174,24 @@
     &--fill-contrast {
         @apply bg-brand-primary-dark-2 text-white;
     }
+}
+
+
+
+// Collapsible Panels
+.collapsible {
+    
+    &.collapsed {
+        // Is this the only collapsible in a rounded panel, make it rounded on all edges when collapsed
+        &.panel--rounded.single-collapsible {
+            > .panel__action {
+                @apply rounded;
+            }
+        }
+        
+        .collapsible__icon {
+            transform: rotateX(180deg);
+        }
+    }
+
 }
