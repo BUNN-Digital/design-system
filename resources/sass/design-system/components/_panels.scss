@@ -3,7 +3,8 @@
     background: white;
     @apply mb-4;
 
-    &__header {
+    &__header,
+    &__action {
         @apply leading-none;
     }
 
@@ -51,20 +52,22 @@
 
     // Actions
     &__action {
-        display: flex;
-        align-items: stretch;
         cursor: pointer;
         color: inherit;
-        @apply py-2;
+        position: relative;
 
         .panel__action-text {
-            flex-grow: 1;
             text-align: left;
             display: flex;
             align-items: center;
         }
 
         .panel__action-icon {
+            position: absolute;
+            top: 50%;
+            margin-top: -22px;
+            right: 24px;
+            height: 44px;
             width: 44px;
             text-align: center;
             font-size: 2rem;
