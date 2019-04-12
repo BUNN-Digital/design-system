@@ -5,34 +5,46 @@
  */
 
 .btn-bar {
+    
     @screen sm {
-        @apply flex;
-        overflow-x: auto;
-        -ms-overflow-style: none;  // IE 10+
-        overflow: -moz-scrollbars-none;  // Firefox
-
-        &::-webkit-scrollbar {
-            display: none; // Safari and Chrome
-        }
+        display: flex;
     }
-
+    
     .btn {
-        @apply whitespace-no-wrap mb-2 w-full;
+        @apply mb-2 w-full;
     }
-
+    
     @screen sm {
         .btn {
             @apply rounded-none mb-0 mr-0 w-auto;
         }
-
+        
         // Add some space between each button
         .btn:not(:last-child) {
             margin-right: 1px;
         }
     }
-
+    
     &--centered {
-        @apply justify-center;
+        .btn {
+            flex-grow: 1;
+        }
+        
+        @screen sm {
+            @apply justify-center;
+        }
+        
+    }
+
+    &:not(.btn-bar--centered) {
+        overflow-x: auto;
+        -ms-overflow-style: none;  // IE 10+
+        overflow: -moz-scrollbars-none;  // Firefox
+        white-space: nowrap;
+
+        &::-webkit-scrollbar {
+            display: none; // Safari and Chrome
+        }
     }
 
     // Rounded left and right button edges when not in flush button bar

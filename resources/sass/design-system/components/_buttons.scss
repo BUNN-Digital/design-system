@@ -1,9 +1,9 @@
 .btn,
 a.btn {
-    @apply text-base py-3 px-6 inline-block text-center border border-transparent bg-gray-300 text-gray-600 cursor-pointer rounded;
+    @apply font-sans-medium text-base py-3 px-6 inline-block text-center border border-transparent bg-gray-300 text-gray-600 cursor-pointer rounded;
 
     @screen md {
-        @apply py-3 px-8 font-sans-medium;
+        @apply py-3 px-8;
     }
 
     &:hover {
