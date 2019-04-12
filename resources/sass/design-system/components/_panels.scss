@@ -44,7 +44,7 @@
         > :last-child {
             @apply rounded-b;
 
-            .panel__action {
+            .panel__action:only-child {
                 @apply rounded-b;
             }
         }
@@ -193,10 +193,22 @@
                 @apply rounded;
             }
         }
+        
+        .collapsible__content {
+            display: none;
+        }
 
         .collapsible__icon {
             transform: rotateX(180deg);
         }
     }
 
+}
+
+.panel--stroke .panel__section.collapsible.collapsed {
+    border: none;
+
+    // + .panel__section.collapsible.expanded {
+        
+    // }
 }
