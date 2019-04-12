@@ -255,8 +255,7 @@
 		flex-direction: row;
 	}
 	.data-column {
-		display: flex;
-		flex-direction: column;
+		@apply flex flex-grow flex-col;
 		cursor: ew-resize;
 		&:nth-child(1) {
 			cursor: default;

@@ -47,16 +47,16 @@ a.btn {
             @apply bg-brand-primary border-brand-primary text-white;
         }
     }
-    
+
     &--outline {
         background: transparent;
         @apply border-brand-primary text-brand-primary;
-        
+
         &:hover {
             background: transparent;
             @apply bg-brand-primary text-white;
         }
-        
+
         // Disabled
         &.disabled {
             @apply text-gray-400 bg-white border-gray-400;
@@ -97,8 +97,8 @@ a.btn {
             justify-content: center;
         }
     }
-    
-    
+
+
     // Buttons appearing to be links (keeps padding)
     &--link {
         background: transparent;

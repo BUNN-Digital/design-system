@@ -1,10 +1,18 @@
 .notification-bar {
-    @apply fixed top-0 left-0 right-0 flex items-center m-4 rounded font-sans-medium bg-white text-sm-1 shadow-lg py-5 pr-6 z-negative;
+    @apply fixed top-0 left-0 right-0 flex flex-col-reverse items-center mx-4 z-floating;
+
+    @screen lg {
+       @apply items-end;
+    }
+}
+.notification {
+    @apply font-sans-medium bg-white text-sm-1 rounded shadow-lg py-5 pr-6 relative w-full mt-4 hidden flex items-center max-w-2xl;
     padding-left: 5.425rem;
     min-height: 72px;
-    opacity: 0;
-    transition: all 0.4s;
-    transition-timing-function: ease-in;
+
+    @screen lg {
+        @apply max-w-md;
+    }
 
     &:before {
         @apply flex bg-gray-200 items-center justify-center px-6 absolute top-0 left-0 bottom-0 rounded-l text-white;
@@ -12,25 +20,6 @@
         font-weight: bold;
         font-size: 1.125rem;
         content: "\f05a";
-    }
-
-    @screen sm {
-        @apply w-2/3;
-        left: auto;
-    }
-
-    @screen md {
-        @apply w-1/2;
-    }
-
-    @screen md {
-        @apply w-auto;
-        max-width: 400px;
-    }
-
-    &.active {
-        @apply z-floating;
-        opacity: 1;
     }
 
     &.affirm {

@@ -1,6 +1,6 @@
 /* Button Bar
- * 
- * Stacked on mobile, horizontal bar on desktop 
+ *
+ * Stacked on mobile, horizontal bar on desktop
  *
  */
 
@@ -10,7 +10,7 @@
         overflow-x: auto;
         -ms-overflow-style: none;  // IE 10+
         overflow: -moz-scrollbars-none;  // Firefox
-        
+
         &::-webkit-scrollbar {
             display: none; // Safari and Chrome
         }
@@ -41,11 +41,11 @@
 
         @screen sm {
             .btn {
-                
+
                 &:first-child {
                     @apply rounded-t-none rounded-l;
                 }
-                
+
                 &:last-child {
                     @apply rounded-b-none rounded-r;
                 }
@@ -68,7 +68,7 @@
             &:last-child {
                 @apply mb-0;
             }
-    
+
             @screen sm {
                 @apply mb-0;
             }
@@ -77,11 +77,11 @@
 
     // Buton bars that should inherit panel section styles
     &.panel__section {
-        
+
         .btn {
             background: inherit;
             border-color: inherit;
-    
+
             @screen sm {
                 @apply mb-0;
             }
@@ -93,7 +93,7 @@
         .btn {
             width: 100%;
         }
-    
+
         @screen sm {
 
             .btn {

@@ -12,7 +12,7 @@
     &__section,
     &__action {
         @apply py-6 px-8;
-    
+
         &:last-child {
             border-bottom: none;
             margin-bottom: 0;
@@ -185,7 +185,7 @@
 
 // Collapsible Panels
 .collapsible {
-    
+
     &.collapsed {
         // Is this the only collapsible in a rounded panel, make it rounded on all edges when collapsed
         &.panel--rounded.single-collapsible {
@@ -193,7 +193,7 @@
                 @apply rounded;
             }
         }
-        
+
         .collapsible__icon {
             transform: rotateX(180deg);
         }
