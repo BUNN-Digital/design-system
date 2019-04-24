@@ -28,10 +28,6 @@ module.exports = eleventyConfig => {
         }).reverse()
     })
 
-    // Layout aliases
-    eleventyConfig.addLayoutAlias('default', 'layouts/default.njk')
-    eleventyConfig.addLayoutAlias('page', 'layouts/page.njk')
-
     // Include our static assets
     eleventyConfig.addPassthroughCopy("css")
     eleventyConfig.addPassthroughCopy("javascript")
@@ -47,8 +43,9 @@ module.exports = eleventyConfig => {
         dir: {
             input: 'site',
             output: 'dist',
-            includes: 'includes',
-            data: 'globals'
+            includes: '_includes',
+            layouts: '_layouts',
+            data: '_globals'
         }
     }
 

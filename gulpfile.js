@@ -163,7 +163,8 @@ function compilePreflight() {
             purgecss({
                 content: [
                     'site/*.njk',
-                    'site/includes/**/*.njk',
+                    'site/_includes/**/*.njk',
+                    'site/_layouts/**/*.njk',
                 ],
                 extractors: [
                     {

@@ -1,16 +1,16 @@
 {
-	"name": "skeleventy",
+	"name": "bunn-design-system",
 	"version": "1.0.0",
-	"description": "Skeleventy - A skeleton boilerplate built with Eleventy",
+	"description": "BUNN Design System",
 	"scripts": {
 		"dev": "rm -rf dist && gulp dev",
 		"build": "rm -rf dist && gulp build && eleventy --config=eleventy.config.js"
 	},
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/josephdyer/skeleventy.git"
+		"url": "https://github.com/BUNN-Digital/design-system"
 	},
-	"author": "Joseph Dyer",
+	"author": "BUNN Digital",
 	"license": "MIT",
 	"devDependencies": {
 		"@11ty/eleventy": "^0.8.2",
