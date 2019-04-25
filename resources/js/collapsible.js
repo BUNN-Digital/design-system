@@ -1,5 +1,19 @@
 ;(function(BUNN, $, undefined) {
 
+    // -- Global Methods -- //
+
+    BUNN.expandCollapsible = function($parent, $content) {
+        $parent.removeClass('collapsed').addClass('expanded');
+        $content.slideDown('fast');
+    };
+
+    BUNN.collapseCollapsible = function($parent, $content) {
+        $parent.removeClass('expanded').addClass('collapsed');
+        $content.slideUp('fast');
+    };
+
+    // -- Event Handlers -- //
+
     $(document).on('click', '[data-collapsible-trigger]', function(e) {
         var $trigger = $(this);
         var $parent = $trigger.closest('[data-collapsible]');
@@ -7,12 +21,10 @@
         var content = document.getElementById(target);
 
         if ($parent.hasClass('collapsed')) {
-            $parent.removeClass('collapsed').addClass('expanded');
-            $(content).slideDown('fast');
+            BUNN.expandCollapsible($parent, $(content));
         }
         else {
-            $parent.removeClass('expanded').addClass('collapsed');
-            $(content).slideUp('fast');
+            BUNN.collapseCollapsible($parent, $(content));
         }
     });
 

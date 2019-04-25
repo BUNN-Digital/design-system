@@ -1,0 +1,59 @@
+---
+layout: page
+meta_title: Drawers
+meta_description: Drawers
+title: Drawers
+section: Components
+tag: components
+---
+
+<p>Drawers can come from any direction of the document. Use the following classes on drawers to determine the direction they should be exposed from.</p>
+
+<ul class="list-disc pl-8">
+	<li><span class="inline-code">.drawer--left</span></li>
+	<li><span class="inline-code">.drawer--right</span></li>
+	<li><span class="inline-code">.drawer--top</span></li>
+	<li><span class="inline-code">.drawer--bottom</span></li>
+</ul>
+
+<h2 class="section-heading">Basic drawer from the left</h2>
+
+<div class="panel panel--stroke h-64 md:overflow-x-auto md:overflow-y-hidden md:resize md:max-w-full md:pr-3">
+	<div class="panel__section panel__section--flush h-full">
+		<div class="w-full h-full">
+			<iframe src="/components/drawers/drawer-from-left" frameborder="0" class="w-full h-full"></iframe>
+		</div>
+	</div>
+</div>
+
+Drawers are triggered by specifying the drawer ID in the <span class="inline-code">data-drawer</span> property.
+
+{% highlight "html" %}
+<!-- Drawer Trigger -->
+<div class="p-2">
+	<button class="js-drawer-trigger btn btn--outline" data-drawer="drawer-1">
+        <i class="fa fa-bars"></i>
+    </button>
+</div>
+{% endhighlight %}
+
+<p>Drawers should go near the closing body tag.</p>
+
+{% highlight "html" %}
+<!-- Drawer -->
+<div class="drawers js-drawers z-overlay">
+    <div id="drawer-1" class="nav-menu drawer drawer--left z-menu">
+        <div class="drawer__header p-4 fixed h-16 top-0 py-6 z-shell">
+            <div class="font-sans-demi">Drawer Header</div>
+            <i class="fal fa-times drawer__close-btn js-drawer-close-btn absolute p-6 top-0 right-0 cursor-pointer z-shell"></i>
+        </div>
+        <div class="drawer__content absolute h-full w-full overflow-y-scroll scrolling-touch">
+			<!-- Any content can go here -->
+			<div class="p-4">
+            	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet maiores, adipisci tempora non odit nam, numquam quam excepturi consectetur saepe illum culpa eaque nulla molestiae magnam? Quas consectetur explicabo tempore?</p>
+            	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet maiores, adipisci tempora non odit nam, numquam quam excepturi consectetur saepe illum culpa eaque nulla molestiae magnam? Quas consectetur explicabo tempore?</p>
+			</div>
+        </div>
+    </div>
+</div>
+{% endhighlight %}

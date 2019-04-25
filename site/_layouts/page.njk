@@ -2,25 +2,22 @@
 layout: default
 ---
 
-{% if section == 'Brand' %}
-	{% set collection = collections.brand %}
-{% elif section == 'Components' %}
-	{% set collection = collections.componentsSorted %}
-{% endif %}
-
-<div class="flex items-stretch w-full mx-auto bg-white relative">
-	<div class="hidden px-8 md:block md:border-r md:border-gray-200 md:flex-grow">
-		<div class="py-4 pb-16">
-			<div class="text-sm-2 font-sans-demi mb-2 uppercase tracking-wider text-gray-500 lg:pt-6">{{ section }}</div>
-			{% for entry in collection  %}
-				<a href="{{ entry.url }}" class="block py-1{% if page.url == entry.url %} text-brand-primary font-sans-demi{% else %} text-gray-700{% endif %}">{{ entry.data.title }}</a>
-			{% endfor %}
+<div class="w-full mx-auto bg-white md:flex md:items-stretch">
+	<div class="hidden md:block md:border-r md:border-gray-200 md:flex-grow">
+		<div class="js-topic-menu-sidebar">
+			<!-- enquire inserts topic menu here -->
 		</div>
 	</div>
 
 	<div class="w-full md:w-3/4 lg:w-4/5">
-		<div class="max-w-6xl w-full m-auto px-8 lg:py-8">
-			<h1 class="heading-alpha">{{ title }}</h1>
+		<div class="max-w-6xl w-full m-auto p-8">
+			
+			<div class="pl-12 relative md:p-0">
+				<button class="js-drawer-trigger md:hidden absolute py-2 px-3 border border-gray-200 leading-none mr-2 left-0 rounded" data-drawer="topic-menu">
+					<i class="fa fa-bars text-brand-primary"></i>
+				</button>
+				<h1 class="heading-alpha md:block">{{ title }}</h1>
+			</div>
 
 			{{ content | safe }}
 		</div>        

@@ -1,0 +1,27 @@
+---
+layout: iframe
+---
+
+<!-- Drawer Trigger -->
+<div class="p-2">
+	<button class="js-drawer-trigger btn btn--outline" data-drawer="drawer-1">
+        <i class="fa fa-bars"></i>
+    </button>
+</div>
+
+<!-- Drawer -->
+<div class="drawers js-drawers z-overlay">
+    <div id="drawer-1" class="nav-menu drawer drawer--left z-menu">
+        <div class="drawer__header p-4 fixed h-16 top-0 py-6 z-shell">
+            <div class="font-sans-demi">Drawer Header</div>
+            <i class="fal fa-times drawer__close-btn js-drawer-close-btn absolute p-6 top-0 right-0 cursor-pointer z-shell"></i>
+        </div>
+        <div class="drawer__content absolute h-full w-full overflow-y-scroll scrolling-touch">
+			<!-- Any content can go here -->
+			<div class="p-4">
+            	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet maiores, adipisci tempora non odit nam, numquam quam excepturi consectetur saepe illum culpa eaque nulla molestiae magnam? Quas consectetur explicabo tempore?</p>
+            	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Eveniet maiores, adipisci tempora non odit nam, numquam quam excepturi consectetur saepe illum culpa eaque nulla molestiae magnam? Quas consectetur explicabo tempore?</p>
+			</div>
+        </div>
+    </div>
+</div>

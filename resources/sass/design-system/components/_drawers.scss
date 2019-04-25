@@ -29,14 +29,11 @@ body.drawer-open {
     transition: all 0.2s ease-in;
     will-change: transform;
     background: white;
-    // @apply z-menu;
 
     //Drawer styles
     &--dark {
         color: white;
         background: #2d2d2d;
-
-        //@apply bg-gray-800;
 
         .drawer__header,
         .drawer__content,
@@ -46,9 +43,7 @@ body.drawer-open {
 
         .drawer__header {
             background: #2d2d2d;
-            border-bottom: 1px solid #555;
-
-            //@apply bg-gray-800;
+            @apply border-b border-gray-200;
         }
     }
 

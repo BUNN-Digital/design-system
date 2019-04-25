@@ -70,7 +70,7 @@ function compileDesignSystemCss() {
         }))
         .pipe(gulp.dest(paths.sass.dest))
         .pipe(notify({
-            message: 'Tailwind - Compile Success'
+            message: 'Components - Compile Success'
         }));
 }
 
@@ -89,7 +89,7 @@ function compileDocsCss() {
         }))
         .pipe(gulp.dest(paths.sass.dest))
         .pipe(notify({
-            message: 'Design System CSS - Compile Success'
+            message: 'Docs CSS - Compile Success'
         }));
 }
 
