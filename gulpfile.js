@@ -8,6 +8,8 @@ var gulp = require('gulp'),
     sass = require('gulp-sass'),
     postcss = require('gulp-postcss'),
     rename = require('gulp-rename'),
+    changed = require('gulp-changed'),
+    cached = require('gulp-cached'),
     del = require('del'),
     cleanCSS = require('gulp-clean-css'),
     notify = require('gulp-notify'),
@@ -31,8 +33,12 @@ var paths = {
     },
 
     javascript: {
-        source: './resources/js/**/*.js',
-        dest: 'javascript/'
+        docs: './resources/js/docs/**/*.js',
+        designSystem: './resources/js/design-system/*.js',
+        designSystemComponents: './resources/js/design-system/components/*.js',
+        docsDest: 'javascript/docs/',
+        designSystemDest: 'javascript/design-system/',
+        designSystemComponentsDest: 'javascript/design-system/components/',
     }
 
 }
@@ -112,41 +118,86 @@ function minifyDesignSystemCss() {
 }
 
 /**
- * Concatinate and Compile Scripts
+ * Compile Docs Scripts
  */
-function compileJs() {
-    return gulp.src(paths.javascript.source)
+function compileDocsJs() {
+    return gulp.src(paths.javascript.docs)
+        .pipe(cached('docsjs'))
         .pipe(plumber({ errorHandler: onError }))
         .pipe(babel({
             presets: ['@babel/env'],
             sourceType: 'script'
         }))
-        .pipe(concat('main.js'))
-        .pipe(gulp.dest(paths.javascript.dest))
+        .pipe(concat('docs.js'))
+        .pipe(gulp.dest(paths.javascript.docsDest))
         .pipe(notify({
-            message: 'Javascript - Compile Success'
+            message: 'Docs Javascript - Compile Success'
         }));
 }
 
 /**
- * Minify Scripts
- * This will be ran as part of our preflight task
+ * Compile Design System Scripts
  */
-function minifyJs() {
-    return gulp.src(paths.javascript.dest + 'main.js')
+function compileDesignSystemJs() {
+    return gulp.src(paths.javascript.designSystem)
+        .pipe(cached('dsJs'))
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(babel({
+            presets: ['@babel/env'],
+            sourceType: 'script'
+        }))
+        .pipe(gulp.dest(paths.javascript.designSystemDest))
+        .pipe(notify({
+            message: 'Design System Javascript - Compile Success'
+        }));
+}
+
+/**
+ * Compile Design System Components Scripts
+ */
+function compileDesignSystemComponentsJs() {
+    return gulp.src(paths.javascript.designSystemComponents)
+        .pipe(cached('componentsJs'))
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(babel({
+            presets: ['@babel/env'],
+            sourceType: 'script'
+        }))
+        .pipe(gulp.dest(paths.javascript.designSystemComponentsDest))
+        .pipe(concat('components.js'))
+        .pipe(gulp.dest(paths.javascript.designSystemDest))
+        .pipe(notify({
+            message: 'Design System Components Javascript - Compile Success'
+        }));
+}
+
+/**
+ * Minify Design System Components
+ */
+function minifyDesignSystemComponentsJs() {
+    return gulp.src(paths.javascript.designSystemDest + 'components.js')
+        .pipe(cached('componentsMinifier'))
         .pipe(rename({
             suffix: '.min'
         }))
         .pipe(uglify())
-        .pipe(gulp.dest(paths.javascript.dest))
+        .pipe(gulp.dest(paths.javascript.designSystemDest))
         .pipe(notify({
             message: 'Javascript - Minify Success'
         }));
 }
 
-/**
- * Run all JS tasks
-// gulp.task('js', ['js:minify']);
+var compileJs = gulp.series(
+    gulp.parallel(
+        compileDocsJs, 
+        compileDesignSystemJs, 
+        compileDesignSystemComponentsJs
+    ), 
+    minifyDesignSystemComponentsJs
+);
+
+gulp.task('js', compileJs);
+
 
 /**
  * CSS Preflight
@@ -228,13 +279,16 @@ function watch(done) {
         '!./resources/sass/docs/'
     ]);
     var docsSassWatcher = gulp.watch('./resources/sass/docs/**/*.scss');
-    var jsWatcher = gulp.watch('./resources/js/**/*.js');
+    
+    var docsJsWatcher = gulp.watch('./resources/js/docs/**/*.js');
+    var docsDesignSystemWatcher = gulp.watch('./resources/js/design-system/**/*.js');
 
     // templateWatcher.on('change', gulp.series(compileDesignSystemCss, minifyDesignSystemCss));
     tailwindWatcher.on('change', compileDesignSystemCss);
     sassWatcher.on('change', compileDesignSystemCss);
     docsSassWatcher.on('change', compileDocsCss);
-    jsWatcher.on('change', compileJs);
+    docsJsWatcher.on('change', compileJs);
+    docsDesignSystemWatcher.on('change', compileJs);
 
     done();
 }
@@ -254,7 +308,7 @@ function eleventy() {
  */
 gulp.task('default', 
     gulp.parallel(
-        gulp.series(compileJs, minifyJs),
+        compileJs,
         gulp.series(compilePreflight, minifyPreflight, minifyDesignSystemCss),
         compileDocsCss
     )
@@ -280,7 +334,7 @@ gulp.task('dev',
  */
 gulp.task('build', 
     gulp.parallel(
-        gulp.series(compileJs, minifyJs),
+        gulp.series(compileJs),
         gulp.series(compilePreflight, compileDesignSystemCss, minifyPreflight, minifyDesignSystemCss),
         compileDocsCss
     )

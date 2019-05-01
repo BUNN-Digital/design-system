@@ -20,6 +20,8 @@
 		"del": "^4.0.0",
 		"gulp": "^4.0.0",
 		"gulp-babel": "^8.0.0",
+		"gulp-cached": "^1.1.1",
+		"gulp-changed": "^3.2.0",
 		"gulp-clean-css": "^3.10.0",
 		"gulp-concat": "^2.6.1",
 		"gulp-notify": "^3.2.0",
