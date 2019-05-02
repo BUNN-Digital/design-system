@@ -3,50 +3,45 @@
 /**
  * Required Packages
  */
-var gulp = require('gulp'),
-    spawn = require('child_process').spawn,
-    sass = require('gulp-sass'),
-    postcss = require('gulp-postcss'),
-    rename = require('gulp-rename'),
-    changed = require('gulp-changed'),
-    cached = require('gulp-cached'),
-    del = require('del'),
-    cleanCSS = require('gulp-clean-css'),
-    notify = require('gulp-notify'),
-    run = require('gulp-run-command').default,
-    babel = require('gulp-babel'),
-    concat = require('gulp-concat'),
-    uglify = require('gulp-uglify'),
-    plumber = require('gulp-plumber'),
-    tailwindcss = require('tailwindcss'),
-    purgecss = require('@fullhuman/postcss-purgecss');
+const gulp = require('gulp');
+const child_process = require('child_process');
+const sass = require('gulp-sass');
+const postcss = require('gulp-postcss');
+const rename = require('gulp-rename');
+const changed = require('gulp-changed');
+const cached = require('gulp-cached');
+const cleanCSS = require('gulp-clean-css');
+const notify = require('gulp-notify');
+const babel = require('gulp-babel');
+const concat = require('gulp-concat');
+const uglify = require('gulp-uglify');
+const plumber = require('gulp-plumber');
+const tailwindcss = require('tailwindcss');
+const purgecss = require('@fullhuman/postcss-purgecss');
+// const del = require('del');
+// const run = require('gulp-run-command').default;
 
 /**
  * Resources paths
  */
-var paths = {
+const paths = {
 
-    sass: {
-        main: './resources/sass/main.scss',
-        docs: './resources/sass/docs/**/*.scss',
-        dest: 'css/'
+    designSystem: {
+        src: './resources/design-system/',
+        dest: 'design-system/'
     },
 
-    javascript: {
-        docs: './resources/js/docs/**/*.js',
-        designSystem: './resources/js/design-system/*.js',
-        designSystemComponents: './resources/js/design-system/components/*.js',
-        docsDest: 'javascript/docs/',
-        designSystemDest: 'javascript/design-system/',
-        designSystemComponentsDest: 'javascript/design-system/components/',
-    }
+    docs: {
+        src: './resources/docs/',
+        dest: 'docs/'
+    },
 
 }
 
 /**
  * Errors function
  */
-var onError = function (err) {
+const onError = function (err) {
     notify.onError({
         title: "Gulp Error - Compile Failed",
         message: "Error: <%= error.message %>"
@@ -62,10 +57,10 @@ class TailwindExtractor {
 }
 
 /**
- * Compile Tailwind
+ * Compile Design System CSS
  */
 function compileDesignSystemCss() {
-    return gulp.src(paths.sass.main)
+    return gulp.src(paths.designSystem.src + 'sass/design-system.scss')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sass())
         .pipe(postcss([
@@ -74,130 +69,137 @@ function compileDesignSystemCss() {
         .pipe(rename({
             extname: '.css'
         }))
-        .pipe(gulp.dest(paths.sass.dest))
+        .pipe(gulp.dest(paths.designSystem.dest + 'css/'))
         .pipe(notify({
-            message: 'Components - Compile Success'
+            message: 'Compiled design system CSS'
         }));
 }
 
-/**
- * Compile Other CSS
- */
-function compileDocsCss() {
-    return gulp.src(paths.sass.docs)
-        .pipe(plumber({ errorHandler: onError }))
-        .pipe(sass())
-        .pipe(postcss([
-            tailwindcss('./tailwind.config.js')
-        ]))
-        .pipe(rename({
-            extname: '.css'
-        }))
-        .pipe(gulp.dest(paths.sass.dest))
-        .pipe(notify({
-            message: 'Docs CSS - Compile Success'
-        }));
-}
+exports.compileDesignSystemCss = compileDesignSystemCss;
 
 /**
  * Minify the CSS
  */
 function minifyDesignSystemCss() {
-    return gulp.src([
-        './css/main.css',
-        '!./css/*.min.css'
-        ])
+    return gulp.src(paths.designSystem.dest + 'css/design-system.css')
         .pipe(cleanCSS())
         .pipe(rename({
             suffix: '.min'
         }))
-        .pipe(gulp.dest('./css'))
+        .pipe(gulp.dest(paths.designSystem.dest + 'css/'))
         .pipe(notify({
-            message: 'CSS - Minify Success'
+            message: 'Minified design system CSS'
         }));
 }
+
+exports.minifyDesignSystemCss = minifyDesignSystemCss;
+
+/**
+ * Compile Docs CSS
+ */
+function compileDocsCss() {
+    return gulp.src(paths.docs.src + 'sass/*.scss')
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(sass())
+        .pipe(postcss([
+            tailwindcss('./tailwind.config.js')
+        ]))
+        .pipe(rename({
+            extname: '.css'
+        }))
+        .pipe(gulp.dest(paths.docs.dest + 'css/'))
+        .pipe(notify({
+            message: 'Compiled docs CSS'
+        }));
+}
+
+exports.compileDocsCss = compileDocsCss;
+
+/**
+ * Compile Design System Components Scripts
+ */
+function compileDesignSystemComponentsJs() {
+    return gulp.src(paths.designSystem.src + 'js/components/*.js')
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(cached('designSystemComponents'))
+        .pipe(changed(paths.designSystem.dest + 'js/components/'))
+        .pipe(babel({
+            presets: ['@babel/env'],
+            sourceType: 'script'
+        }))
+        .pipe(gulp.dest(paths.designSystem.dest + 'js/components/'))
+        .pipe(concat('components_all.js'))
+        .pipe(gulp.dest(paths.designSystem.dest + 'js/'))
+        .pipe(notify({
+            message: 'Compiled design system components JS'
+        }));
+}
+
+exports.compileDesignSystemComponentsJs = compileDesignSystemComponentsJs;
+
+/**
+ * Minify Design System Components
+ */
+function minifyDesignSystemComponentsJs() {
+    return gulp.src(paths.designSystem.dest + 'js/components_all.js')
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(changed(paths.designSystem.dest + 'js/'))
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(uglify())
+        .pipe(gulp.dest(paths.designSystem.dest + 'js/'))
+        .pipe(notify({
+            message: 'Minified design system component JS'
+        }));
+}
+
+exports.minifyDesignSystemComponentsJs = minifyDesignSystemComponentsJs;
+
+/**
+ * Compile Design System Scripts
+ */
+function compileDesignSystemGlobalJs() {
+    return gulp.src(paths.designSystem.src + 'js/*.js')
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(changed(paths.designSystem.dest + 'js/'))
+        .pipe(babel({
+            presets: ['@babel/env'],
+            sourceType: 'script'
+        }))
+        .pipe(gulp.dest(paths.designSystem.dest + 'js/'))
+        .pipe(notify({
+            message: 'Compiled design system global JS'
+        }));
+}
+
+exports.compileDesignSystemGlobalJs = compileDesignSystemGlobalJs;
 
 /**
  * Compile Docs Scripts
  */
 function compileDocsJs() {
-    return gulp.src(paths.javascript.docs)
-        .pipe(cached('docsjs'))
+    return gulp.src(paths.docs.src + 'js/**/*.js')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(babel({
             presets: ['@babel/env'],
             sourceType: 'script'
         }))
         .pipe(concat('docs.js'))
-        .pipe(gulp.dest(paths.javascript.docsDest))
+        .pipe(gulp.dest(paths.docs.dest + 'js/'))
         .pipe(notify({
-            message: 'Docs Javascript - Compile Success'
+            message: 'Compiled Docs JS'
         }));
 }
 
-/**
- * Compile Design System Scripts
- */
-function compileDesignSystemJs() {
-    return gulp.src(paths.javascript.designSystem)
-        .pipe(cached('dsJs'))
-        .pipe(plumber({ errorHandler: onError }))
-        .pipe(babel({
-            presets: ['@babel/env'],
-            sourceType: 'script'
-        }))
-        .pipe(gulp.dest(paths.javascript.designSystemDest))
-        .pipe(notify({
-            message: 'Design System Javascript - Compile Success'
-        }));
-}
+exports.compileDocsJs = compileDocsJs;
 
-/**
- * Compile Design System Components Scripts
- */
-function compileDesignSystemComponentsJs() {
-    return gulp.src(paths.javascript.designSystemComponents)
-        .pipe(cached('componentsJs'))
-        .pipe(plumber({ errorHandler: onError }))
-        .pipe(babel({
-            presets: ['@babel/env'],
-            sourceType: 'script'
-        }))
-        .pipe(gulp.dest(paths.javascript.designSystemComponentsDest))
-        .pipe(concat('components.js'))
-        .pipe(gulp.dest(paths.javascript.designSystemDest))
-        .pipe(notify({
-            message: 'Design System Components Javascript - Compile Success'
-        }));
-}
-
-/**
- * Minify Design System Components
- */
-function minifyDesignSystemComponentsJs() {
-    return gulp.src(paths.javascript.designSystemDest + 'components.js')
-        .pipe(cached('componentsMinifier'))
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(uglify())
-        .pipe(gulp.dest(paths.javascript.designSystemDest))
-        .pipe(notify({
-            message: 'Javascript - Minify Success'
-        }));
-}
-
-var compileJs = gulp.series(
-    gulp.parallel(
-        compileDocsJs, 
-        compileDesignSystemJs, 
-        compileDesignSystemComponentsJs
-    ), 
+const compileJs = gulp.series(
+    gulp.parallel(compileDesignSystemComponentsJs, compileDesignSystemGlobalJs, compileDocsJs), 
     minifyDesignSystemComponentsJs
 );
 
-gulp.task('js', compileJs);
-
+exports.compileJs = compileJs;
 
 /**
  * CSS Preflight
@@ -207,7 +209,7 @@ gulp.task('js', compileJs);
  * Compile CSS [PREFLIGHT]
  */
 function compilePreflight() {
-    return gulp.src(paths.sass.main)
+    return gulp.src(paths.designSystem.src + 'sass/design-system.scss')
         .pipe(sass())
         .pipe(postcss([
             tailwindcss('./tailwind.config.js'),
@@ -247,72 +249,38 @@ function compilePreflight() {
         .pipe(rename({
             extname: '.css'
         }))
-        .pipe(gulp.dest('css/'))
+        .pipe(gulp.dest(paths.designSystem.dest + 'css/'))
         .pipe(notify({
             message: 'Tailwind Preflight Success'
         }));
 }
 
-/**
- * Minify the CSS [PREFLIGHT]
- */
-function minifyPreflight() {
-    return gulp.src([
-        './css/main.css',
-        '!./css/main.min.css'
-        ])
-        .pipe(cleanCSS())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest('./css'))
-        .pipe(notify({
-            message: 'CSS Preflight Success'
-        }));
-}
+exports.compilePreflight = compilePreflight;
 
 function watch(done) {
-    var templateWatcher = gulp.watch(['site/*.njk','site/includes/**/*.njk']);
-    var tailwindWatcher = gulp.watch('./tailwind.config.js');
-    var sassWatcher = gulp.watch([
-        './resources/sass/**/*.scss',
-        '!./resources/sass/docs/'
-    ]);
-    var docsSassWatcher = gulp.watch('./resources/sass/docs/**/*.scss');
+    // gulp.watch(['site/*.njk','site/includes/**/*.njk'], gulp.series(compileDesignSystemCss, minifyDesignSystemCss));
+    gulp.watch('./tailwind.config.js', compileDesignSystemCss);
     
-    var docsJsWatcher = gulp.watch('./resources/js/docs/**/*.js');
-    var docsDesignSystemWatcher = gulp.watch('./resources/js/design-system/**/*.js');
+    gulp.watch(paths.designSystem.src + 'sass/**/*.scss', compileDesignSystemCss);
+    
+    gulp.watch(paths.docs.src + 'sass/**/*.scss', compileDocsCss);
+    
+    gulp.watch(paths.designSystem.src + 'js/**/*.js', gulp.series(gulp.parallel(compileDesignSystemComponentsJs, compileDesignSystemGlobalJs), minifyDesignSystemComponentsJs));
 
-    // templateWatcher.on('change', gulp.series(compileDesignSystemCss, minifyDesignSystemCss));
-    tailwindWatcher.on('change', compileDesignSystemCss);
-    sassWatcher.on('change', compileDesignSystemCss);
-    docsSassWatcher.on('change', compileDocsCss);
-    docsJsWatcher.on('change', compileJs);
-    docsDesignSystemWatcher.on('change', compileJs);
+    gulp.watch(paths.docs.src + 'js/**/*.js', compileDocsJs);
 
     done();
 }
 
 function eleventy() {
-    var command = 'eleventy --config=eleventy.config.js --serve';
+    const command = 'eleventy --config=eleventy.config.js --serve';
     process.env.ELEVENTY_ENV='development';
 
-    var child = spawn(command, {
+    return child_process.spawn(command, {
         stdio: 'inherit',
         shell: true
     });
 }
-
-/**
- * Default Gulp task
- */
-gulp.task('default', 
-    gulp.parallel(
-        compileJs,
-        gulp.series(compilePreflight, minifyPreflight, minifyDesignSystemCss),
-        compileDocsCss
-    )
-);
 
 /**
  * Dev task
@@ -320,11 +288,7 @@ gulp.task('default',
  * This includes any html changes you make so that the purgecss file will be updated.
  */
 
-gulp.task('dev', 
-    gulp.series(
-        gulp.parallel(compileJs, compileDesignSystemCss, compileDocsCss), watch, eleventy
-    )
-);
+const dev = gulp.series(gulp.parallel(compileDesignSystemCss, compileDocsCss, compileJs), watch, eleventy);
 
 /**
  * Build task
@@ -332,10 +296,8 @@ gulp.task('dev',
  * This will run the CSS and Minify Script functions, as well as pass the CSS through purgecss to remove any unused CSS.
  * Always double check that everything is still working. If something isn't displaying correctly, it may be because you need to add it to the purgeCSS whitelist.
  */
-gulp.task('build', 
-    gulp.parallel(
-        gulp.series(compileJs),
-        gulp.series(compilePreflight, compileDesignSystemCss, minifyPreflight, minifyDesignSystemCss),
-        compileDocsCss
-    )
-);
+const build = gulp.parallel(gulp.series(compilePreflight, minifyDesignSystemCss, compileJs), compileDocsCss);
+
+exports.dev = dev;
+exports.build = build;
+exports.default = build;
