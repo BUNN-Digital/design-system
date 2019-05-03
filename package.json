@@ -36,6 +36,7 @@
 	},
 	"dependencies": {
 		"@11ty/eleventy-plugin-syntaxhighlight": "^2.0.1",
-		"magnific-popup": "^1.1.0"
+		"magnific-popup": "^1.1.0",
+		"tar": "^4.4.8"
 	}
 }
