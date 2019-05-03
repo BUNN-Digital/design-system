@@ -60,7 +60,7 @@ class TailwindExtractor {
  * Compile Design System CSS
  */
 function compileDesignSystemCss() {
-    return gulp.src(paths.designSystem.src + 'sass/design-system.scss')
+    return gulp.src(paths.designSystem.src + 'scss/design-system.scss')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sass())
         .pipe(postcss([
@@ -98,7 +98,7 @@ exports.minifyDesignSystemCss = minifyDesignSystemCss;
  * Compile Docs CSS
  */
 function compileDocsCss() {
-    return gulp.src(paths.docs.src + 'sass/*.scss')
+    return gulp.src(paths.docs.src + 'scss/*.scss')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sass())
         .pipe(postcss([
@@ -209,7 +209,7 @@ exports.compileJs = compileJs;
  * Compile CSS [PREFLIGHT]
  */
 function compilePreflight() {
-    return gulp.src(paths.designSystem.src + 'sass/design-system.scss')
+    return gulp.src(paths.designSystem.src + 'scss/design-system.scss')
         .pipe(sass())
         .pipe(postcss([
             tailwindcss('./tailwind.config.js'),
@@ -261,9 +261,9 @@ function watch(done) {
     // gulp.watch(['site/*.njk','site/includes/**/*.njk'], gulp.series(compileDesignSystemCss, minifyDesignSystemCss));
     gulp.watch('./tailwind.config.js', compileDesignSystemCss);
     
-    gulp.watch(paths.designSystem.src + 'sass/**/*.scss', compileDesignSystemCss);
+    gulp.watch(paths.designSystem.src + 'scss/**/*.scss', compileDesignSystemCss);
     
-    gulp.watch(paths.docs.src + 'sass/**/*.scss', compileDocsCss);
+    gulp.watch(paths.docs.src + 'scss/**/*.scss', compileDocsCss);
     
     gulp.watch(paths.designSystem.src + 'js/**/*.js', gulp.series(gulp.parallel(compileDesignSystemComponentsJs, compileDesignSystemGlobalJs), minifyDesignSystemComponentsJs));
 

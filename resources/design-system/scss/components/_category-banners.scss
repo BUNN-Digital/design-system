@@ -1,4 +1,6 @@
-.category-media {
+.region-media,
+.category-media,
+.search-media {
     &__image {
         @apply z-page min-w-full;
         filter: brightness(65%);
@@ -19,7 +21,7 @@
     }
 
     &__heading {
-        @apply text-lg-1 text-white uppercase;
+        @apply text-lg-1 text-white uppercase text-center;
 
         @screen md {
             @apply text-lg-2;
@@ -36,6 +38,11 @@
         @screen sm {
             @apply text-lg-3;
         }
+    }
+}
+.category-media {
+
+    &__heading-cta{
 
         &.category-1116,
         &.category-1117,
@@ -70,5 +77,24 @@
             position: absolute;
             top: 2px;
         }
+    }
+}
+.region-media {
+    height: 14rem;
+    @screen lg {
+        height: 20rem;
+    }
+    &__image {
+        -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein .5s; /* Firefox < 16 */
+        -ms-animation: fadein .5s; /* Internet Explorer */
+        -o-animation: fadein .5s; /* Opera < 12.1 */
+        animation: fadein .5s;
+        height: 14rem;
+
+        @screen lg {
+            height: 20rem;
+        }
+
     }
 }

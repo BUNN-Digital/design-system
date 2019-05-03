@@ -1,0 +1,81 @@
+.parsley-errors-list {
+    @apply text-sm-1 text-avert mb-0;
+
+    li {
+        @apply py-2;
+
+        &.parsley-special,
+        &.parsley-number,
+        &.parsley-uppercase
+        {
+            @apply pt-1 pb-0;
+        }
+    }
+}
+
+.parsley-error {
+    @apply bg-gray-200;
+    border-color: hsla(358, 66%, 85%, 1) !important;
+}
+
+select.parsley-error {
+    @apply bg-gray-200;
+}
+
+label.parsley-error {
+    @apply bg-white;
+}
+
+#parsley-id-multiple-fulfillmentOptionId {
+    @apply absolute top-0;
+    display: none;
+}
+
+meter.pw-strength {
+    /* Reset the default appearance */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+
+    margin: -4px auto 0;
+    width: calc(100% - 2px);
+    height: 3px;
+    background: none;
+    @apply rounded-bl rounded-br bg-gray-200;
+}
+
+meter.pw-strength::-webkit-meter-bar {
+    background: none;
+    @apply bg-gray-200;
+}
+
+.pw-warning-text {
+    padding-left: .25rem;
+}
+
+meter.pw-strength[value="0"] + div > strong { @apply text-avert; }
+meter.pw-strength[value="1"] + div > strong { color: #d0810b; }
+meter.pw-strength[value="2"] + div > strong { @apply text-inform;  }
+meter.pw-strength[value="3"] + div > strong { @apply text-affirm; }
+meter.pw-strength[value="4"] + div > strong { @apply text-affirm; }
+
+/* Webkit based browsers */
+meter.pw-strength[value="0"] { @apply bg-avert; }
+meter.pw-strength[value="1"] { @apply bg-declare; }
+meter.pw-strength[value="2"] { @apply bg-inform; }
+meter.pw-strength[value="3"] { @apply bg-affirm; }
+meter.pw-strength[value="4"] { @apply bg-affirm; }
+
+/* Webkit based browsers */
+meter.pw-strength[value="0"]::-webkit-meter-optimum-value { @apply bg-avert; }
+meter.pw-strength[value="1"]::-webkit-meter-optimum-value { @apply bg-declare; }
+meter.pw-strength[value="2"]::-webkit-meter-optimum-value { @apply bg-inform; }
+meter.pw-strength[value="3"]::-webkit-meter-optimum-value { @apply bg-affirm; }
+meter.pw-strength[value="4"]::-webkit-meter-optimum-value { @apply bg-affirm; }
+
+/* Gecko based browsers */
+meter.pw-strength[value="0"]::-moz-meter-bar { @apply bg-avert; }
+meter.pw-strength[value="1"]::-moz-meter-bar { @apply bg-declare;}
+meter.pw-strength[value="2"]::-moz-meter-bar { background: #d0810b; }
+meter.pw-strength[value="3"]::-moz-meter-bar { @apply bg-affirm; }
+meter.pw-strength[value="4"]::-moz-meter-bar { @apply bg-affirm; }
