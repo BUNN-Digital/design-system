@@ -288,7 +288,7 @@ function eleventy() {
  * This includes any html changes you make so that the purgecss file will be updated.
  */
 
-const dev = gulp.series(gulp.parallel(compileDesignSystemCss, compileDocsCss, compileJs), watch, eleventy);
+const dev = gulp.series(gulp.parallel(compilePreflight, compileDocsCss, compileJs), watch, eleventy);
 
 /**
  * Build task
@@ -296,7 +296,7 @@ const dev = gulp.series(gulp.parallel(compileDesignSystemCss, compileDocsCss, co
  * This will run the CSS and Minify Script functions, as well as pass the CSS through purgecss to remove any unused CSS.
  * Always double check that everything is still working. If something isn't displaying correctly, it may be because you need to add it to the purgeCSS whitelist.
  */
-const build = gulp.parallel(gulp.series(compilePreflight, minifyDesignSystemCss, compileJs), compileDocsCss);
+const build = gulp.series(gulp.parallel(compilePreflight, compileDocsCss, compileJs), minifyDesignSystemCss);
 
 exports.dev = dev;
 exports.build = build;
