@@ -215,9 +215,7 @@ function compilePreflight() {
             tailwindcss('./tailwind.config.js'),
             purgecss({
                 content: [
-                    'site/*.njk',
-                    'site/_includes/**/*.njk',
-                    'site/_layouts/**/*.njk',
+                    'site/**/*.njk',
                 ],
                 extractors: [
                     {
