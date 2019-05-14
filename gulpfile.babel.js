@@ -1,23 +1,21 @@
-'use strict';
-
 /**
  * Required Packages
  */
-const gulp = require('gulp');
-const child_process = require('child_process');
-const sass = require('gulp-sass');
-const postcss = require('gulp-postcss');
-const rename = require('gulp-rename');
-const cached = require('gulp-cached');
-const cleanCSS = require('gulp-clean-css');
-const notify = require('gulp-notify');
-const babel = require('gulp-babel');
-const concat = require('gulp-concat');
-const uglify = require('gulp-uglify');
-const plumber = require('gulp-plumber');
-const tailwindcss = require('tailwindcss');
-const purgecss = require('@fullhuman/postcss-purgecss');
-// const del = require('del');
+import gulp from 'gulp';
+import child_process from 'child_process';
+import sass from 'gulp-sass';
+import postcss from 'gulp-postcss';
+import rename from 'gulp-rename';
+import cached from 'gulp-cached';
+import cleanCSS from 'gulp-clean-css';
+import notify from 'gulp-notify';
+import babel from 'gulp-babel';
+import concat from 'gulp-concat';
+import uglify from 'gulp-uglify';
+import plumber from 'gulp-plumber';
+import tailwindcss from 'tailwindcss';
+import purgecss from '@fullhuman/postcss-purgecss';
+// import del from 'del';
 // const run = require('gulp-run-command').default;
 
 /**
@@ -58,7 +56,7 @@ class TailwindExtractor {
 /**
  * Compile Design System CSS
  */
-function compileDesignSystemCss() {
+const compileDesignSystemCss = () => {
     return gulp.src(paths.designSystem.src + 'scss/design-system.scss')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sass())
@@ -74,12 +72,10 @@ function compileDesignSystemCss() {
         }));
 }
 
-exports.compileDesignSystemCss = compileDesignSystemCss;
-
 /**
  * Minify the CSS
  */
-function minifyDesignSystemCss() {
+const minifyDesignSystemCss = () => {
     return gulp.src(paths.designSystem.dest + 'css/design-system.css')
         .pipe(cleanCSS())
         .pipe(rename({
@@ -91,12 +87,10 @@ function minifyDesignSystemCss() {
         }));
 }
 
-exports.minifyDesignSystemCss = minifyDesignSystemCss;
-
 /**
  * Compile Docs CSS
  */
-function compileDocsCss() {
+const compileDocsCss = () => {
     return gulp.src(paths.docs.src + 'scss/*.scss')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(sass())
@@ -112,15 +106,13 @@ function compileDocsCss() {
         }));
 }
 
-exports.compileDocsCss = compileDocsCss;
-
 /**
  * Compile Design System Components Scripts
  */
-function compileDesignSystemComponentsJs() {
+const compileDesignSystemComponentsJs = () => {
     return gulp.src(paths.designSystem.src + 'js/components/*.js')
         .pipe(plumber({ errorHandler: onError }))
-        .pipe(cached('designSystemComponents'))
+        // .pipe(cached('designSystemComponents'))
         .pipe(babel({
             presets: ['@babel/env'],
             sourceType: 'script'
@@ -133,15 +125,13 @@ function compileDesignSystemComponentsJs() {
         }));
 }
 
-exports.compileDesignSystemComponentsJs = compileDesignSystemComponentsJs;
-
 /**
  * Minify Design System Components
  */
-function minifyDesignSystemComponentsJs() {
+const minifyDesignSystemComponentsJs = () => {
     return gulp.src(paths.designSystem.dest + 'js/components_all.js')
         .pipe(plumber({ errorHandler: onError }))
-        .pipe(cached('designSystemComponentsMinifiedJs'))
+        // .pipe(cached('designSystemComponentsMinifiedJs'))
         .pipe(rename({
             suffix: '.min'
         }))
@@ -152,15 +142,13 @@ function minifyDesignSystemComponentsJs() {
         }));
 }
 
-exports.minifyDesignSystemComponentsJs = minifyDesignSystemComponentsJs;
-
 /**
  * Compile Design System Scripts
  */
-function compileDesignSystemGlobalJs() {
+const compileDesignSystemGlobalJs = () => {
     return gulp.src(paths.designSystem.src + 'js/*.js')
         .pipe(plumber({ errorHandler: onError }))
-        .pipe(cached('designSystemGlobalJs'))
+        // .pipe(cached('designSystemGlobalJs'))
         .pipe(babel({
             presets: ['@babel/env'],
             sourceType: 'script'
@@ -171,12 +159,10 @@ function compileDesignSystemGlobalJs() {
         }));
 }
 
-exports.compileDesignSystemGlobalJs = compileDesignSystemGlobalJs;
-
 /**
  * Compile Docs Scripts
  */
-function compileDocsJs() {
+const compileDocsJs = () => {
     return gulp.src(paths.docs.src + 'js/**/*.js')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(babel({
@@ -190,71 +176,12 @@ function compileDocsJs() {
         }));
 }
 
-exports.compileDocsJs = compileDocsJs;
-
 const compileJs = gulp.series(
     gulp.parallel(compileDesignSystemComponentsJs, compileDesignSystemGlobalJs, compileDocsJs), 
     minifyDesignSystemComponentsJs
 );
 
-exports.compileJs = compileJs;
-
-/**
- * CSS Preflight
- * Unfortunately, it isn't possible to pass in parameters to gulp tasks.
- * As such, we need to replicate the code.
- *
- * Compile CSS [PREFLIGHT]
- */
-function compilePreflight() {
-    return gulp.src(paths.designSystem.src + 'scss/design-system.scss')
-        .pipe(sass())
-        .pipe(postcss([
-            tailwindcss('./tailwind.config.js'),
-            purgecss({
-                content: [
-                    'site/**/*.njk',
-                ],
-                extractors: [
-                    {
-                        extractor: TailwindExtractor,
-                        extensions: ['html', 'njk'],
-                    }
-                ],
-                /**
-                 * You can whitelist selectors to stop purgecss from removing them from your CSS.
-                 * see: https://www.purgecss.com/whitelisting
-                 *
-                 * Any selectors defined below will not be stripped from the min.css file.
-                 * PurgeCSS will not purge the standard app.css file as this is useful for development.
-                 *
-                 * @since 1.0.0
-                 */
-                whitelist: [
-                    'body',
-                    'html',
-                    'h1',
-                    'h2',
-                    'h3',
-                    'p',
-                    'blockquote',
-                    'intro'
-                ],
-            })
-        ]))
-        .pipe(rename({
-            extname: '.css'
-        }))
-        .pipe(gulp.dest(paths.designSystem.dest + 'css/'))
-        .pipe(notify({
-            message: 'Tailwind Preflight Success'
-        }));
-}
-
-exports.compilePreflight = compilePreflight;
-
-function watch(done) {
-    // gulp.watch(['site/*.njk','site/includes/**/*.njk'], gulp.series(compileDesignSystemCss, minifyDesignSystemCss));
+const watch = (done) => {
     gulp.watch('./tailwind.config.js', compileDesignSystemCss);
     
     gulp.watch(paths.designSystem.src + 'scss/**/*.scss', compileDesignSystemCss);
@@ -268,7 +195,7 @@ function watch(done) {
     done();
 }
 
-function eleventy() {
+const eleventy = () => {
     const command = 'eleventy --config=eleventy.config.js --serve';
     process.env.ELEVENTY_ENV='development';
 
@@ -278,22 +205,16 @@ function eleventy() {
     });
 }
 
-/**
- * Dev task
- * This will run while you're building the theme and automatically compile any changes.
- * This includes any html changes you make so that the purgecss file will be updated.
- */
 
-const dev = gulp.series(gulp.parallel(compilePreflight, compileDocsCss, compileJs), watch, eleventy);
+export {
+    compileDesignSystemComponentsJs
+}
 
-/**
- * Build task
- * Run this once you're happy with your site and you want to prep the files for production.
- * This will run the CSS and Minify Script functions, as well as pass the CSS through purgecss to remove any unused CSS.
- * Always double check that everything is still working. If something isn't displaying correctly, it may be because you need to add it to the purgeCSS whitelist.
- */
-const build = gulp.series(gulp.parallel(compilePreflight, compileDocsCss, compileJs), minifyDesignSystemCss);
 
-exports.dev = dev;
-exports.build = build;
-exports.default = build;
+export const dev = gulp.series(gulp.parallel(compileDesignSystemCss, compileDocsCss, compileJs), watch, eleventy);
+
+
+export const build = gulp.series(gulp.parallel(compileDesignSystemCss, compileDocsCss, compileJs), minifyDesignSystemCss);
+
+
+export default build

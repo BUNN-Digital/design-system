@@ -6,7 +6,26 @@
 
     // -- Global Methods -- //
 
-    $(".js-popup-menu__content").css("display", "none");
+    $(".js-popup-menu__content-container").css("display", "none");
+
+    // Append to body on load
+    enquire.register("screen and (min-width: " + BUNN.screens.md + "px)", {
+        setup: function() {
+            $(".js-popup-menu--hybrid").appendTo("body");
+        },
+        match: function() {
+            $("body > .js-popup-menu__content-container").each(function() {
+                var menuId = $(this).attr('id');
+                var $parent = $('[data-popup-menu="' + menuId + '"]');
+
+                $(this).appendTo($parent);
+                $('body').removeClass('h-full overflow-hidden');
+            });
+        },
+        unmatch: function() {
+            $(".js-popup-menu--hybrid").appendTo("body");
+        }
+    });
 
     BUNN.closePopupMenu = function() {
         var $popupMenuToggle = $('.js-popup-menu__toggle.dropdown-open');
@@ -14,25 +33,8 @@
 
         $popupMenuToggle.removeClass("dropdown-open");
         $('#' + popupMenuId).removeClass("visible").css("display", "none");
+        $('body').removeClass('h-full overflow-hidden');
     }
-
-    // Append to body on load
-    enquire.register("screen and (min-width: " + 768 + "px)", {
-        setup: function() {
-            $(".js-popup-menu--hybrid").appendTo("body");
-        },
-        match: function() {
-            $("body > .js-popup-menu__content").each(function() {
-                var menuId = $(this).attr('id');
-                var $parent = $('[data-popup-menu="' + menuId + '"]');
-
-                $(this).appendTo($parent);
-            });
-        },
-        unmatch: function() {
-            $(".js-popup-menu--hybrid").appendTo("body");
-        }
-    });
 
     // -- Event Handlers -- //
 
@@ -44,10 +46,10 @@
 
     // Show/hide menu when clicking menu toggle trigger
     $(".js-popup-menu__toggle").on("click", function(e) {
-        console.log('clicked');
         var $popupMenuToggle = $(this);
         var popupMenuId = $popupMenuToggle.closest('.popup-menu').data("popup-menu");
         var $popupMenu = $("#" + popupMenuId);
+        var menuIsHybrid = $popupMenu.hasClass('js-popup-menu--hybrid');
         var dropdownIsOpen = $popupMenuToggle.hasClass("dropdown-open");
 
         e.preventDefault();
@@ -59,6 +61,12 @@
         if (!dropdownIsOpen) {
             $popupMenu.css("display", "block").addClass("visible");
             $(this).addClass("dropdown-open");
+
+            console.log(window.innerWidth < BUNN.screens.md);
+            
+            if (menuIsHybrid && window.innerWidth < BUNN.screens.md) {
+                $('body').addClass('h-full overflow-hidden');
+            }
         } else {
             $popupMenu.css("display", "none").removeClass("visible");
             $(this).removeClass("dropdown-open");
