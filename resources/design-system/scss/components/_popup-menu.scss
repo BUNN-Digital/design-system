@@ -13,6 +13,7 @@
 .popup-menu__content-container {
     transform: translate3d(0, -10px, 0);
     opacity: 0;
+    min-width: 280px;
 
     &.visible {
         animation: fadeInSlideDown 0.15s;
