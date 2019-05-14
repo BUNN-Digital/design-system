@@ -3073,11 +3073,6 @@ body > .popup-menu--hybrid {
   margin: 1.5rem;
 }
 
-body > .popup-menu--hybrid .popup-menu__content {
-  height: 100%;
-  overflow: hidden;
-}
-
 body > .popup-menu--hybrid .popup-menu__content-body {
   max-height: none;
 }

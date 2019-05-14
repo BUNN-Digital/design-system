@@ -34,11 +34,6 @@
 body > .popup-menu--hybrid {
     @apply fixed z-menu inset-0 top-0 m-6;
 
-    .popup-menu__content {
-        height: 100%;
-        overflow: hidden;
-    }
-
     .popup-menu__content-body {
         max-height: none;
     }

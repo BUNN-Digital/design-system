@@ -15,7 +15,7 @@ tag: components
 		<span class="text-left flex-grow">John Done</span>
 		<i class="fal fa-angle-down px-4"></i>
 	</button>
-	<div class="popup-menu__content-container js-popup-menu__content-container absolute z-shell" id="popup-menu-id-1">
+	<div class="popup-menu__content-container js-popup-menu__content-container absolute z-menu" id="popup-menu-id-1">
 		<div class="popup-menu__content rounded bg-white">
 			<div class="border-b border-gray-100 flex items-center leading-none">
 				<div class="font-sans-medium flex-grow px-6 py-4">My Account</div>
@@ -47,7 +47,7 @@ tag: components
 		<span class="text-left flex-grow">John Done</span>
 		<i class="fal fa-angle-down px-4"></i>
 	</button>
-	<div class="popup-menu__content-container js-popup-menu__content-container absolute z-shell" id="popup-menu-id-1">
+	<div class="popup-menu__content-container js-popup-menu__content-container absolute z-menu" id="popup-menu-id-1">
 		<div class="popup-menu__content rounded bg-white">
 			<div class="border-b border-gray-100 flex items-center leading-none">
 				<div class="font-sans-medium flex-grow px-6 py-4">My Account</div>
@@ -74,15 +74,17 @@ tag: components
 
 <h2 class="section-heading">Hybrid Popup Menu</h2>
 
-<p>Hybrid Popup Menu will show as a full screen menu on small screens and a dropdown on large screens.</p>
+<p>Hybrid Popup Menu will show as a full screen menu on small screens and a dropdown on large screens. Use utility classes to control the height of the <span class="inline-code">.popup-menu__content</span> container when on small screens.</p>
+
+<p>For example: <span class="inline-code">.h-full.overflow-hidden</span> will allow the container to use the full height of the screen. If you want the content to dictate the height, don't use these classes.</p>
 
 <div class="popup-menu relative md:max-w-sm" data-popup-menu="popup-menu-id-2">
 	<button class="js-popup-menu__toggle p-2 leading-none w-full flex items-center">
 		<span class="text-left flex-grow">Hybrid Popup Menu</span>
 		<i class="fal fa-angle-down px-4"></i>
 	</button>
-	<div class="popup-menu__content-container js-popup-menu__content-container absolute z-shell popup-menu--hybrid js-popup-menu--hybrid" id="popup-menu-id-2">
-		<div class="popup-menu__content rounded bg-white flex flex-col">
+	<div class="popup-menu__content-container js-popup-menu__content-container absolute z-menu popup-menu--hybrid js-popup-menu--hybrid" id="popup-menu-id-2">
+		<div class="popup-menu__content rounded bg-white flex flex-col h-full overflow-hidden">
 			<div class="border-b border-gray-100 flex items-center leading-none">
 				<div class="font-sans-medium flex-grow px-6 py-4">Hybrid Popup Menu</div>
 				<a href="#" class="js-popup-menu-close text-base px-6 py-4"><i class="fal fa-times"></i></a>
@@ -180,8 +182,8 @@ tag: components
 		<span class="text-left flex-grow">Hybrid Popup Menu</span>
 		<i class="fal fa-angle-down px-4"></i>
 	</button>
-	<div class="popup-menu__content-container js-popup-menu__content-container absolute z-shell popup-menu--hybrid js-popup-menu--hybrid" id="popup-menu-id-2">
-		<div class="popup-menu__content rounded bg-white flex flex-col">
+	<div class="popup-menu__content-container js-popup-menu__content-container absolute z-menu popup-menu--hybrid js-popup-menu--hybrid" id="popup-menu-id-2">
+		<div class="popup-menu__content rounded bg-white flex flex-col h-full overflow-hidden">
 			<div class="border-b border-gray-100 flex items-center leading-none">
 				<div class="font-sans-medium flex-grow px-6 py-4">Hybrid Popup Menu</div>
 				<a href="#" class="js-popup-menu-close text-base px-6 py-4"><i class="fal fa-times"></i></a>
