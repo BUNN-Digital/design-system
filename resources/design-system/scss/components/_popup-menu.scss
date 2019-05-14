@@ -9,20 +9,52 @@
     }
 }
 
-// Hybrid popup menus get appended to their link container at 680px
-// See popup-menu.js
+// Default styles for popup menus and when attached directly to body
+.popup-menu__content-container {
+    transform: translate3d(0, -10px, 0);
+    opacity: 0;
+
+    &.visible {
+        animation: fadeInSlideDown 0.15s;
+        animation-fill-mode: forwards;
+        animation-timing-function: ease-out;
+    }
+}
+
+.popup-menu__content {
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.25);
+
+    &-body {
+        max-height: 420px;
+        @apply overflow-y-scroll;
+    }
+}
+
+// Hybrid popup menus get appended to the body on mobile
+body > .popup-menu--hybrid {
+    @apply fixed z-menu inset-0 top-0 m-6;
+
+    .popup-menu__content {
+        height: 100%;
+        overflow: hidden;
+    }
+
+    .popup-menu__content-body {
+        max-height: none;
+    }
+}
+
+// Additional styles when attached to the trigger's containing element
 .popup-menu {
 
     .dropdown-open {
         text-decoration: none;
     }
 
-    .popup-menu__content {
+    .popup-menu__content-container {
         left: auto;
-        top: 100%;
         right: 0;
         transform: translate3d(0, 0, 0);
-        @apply mt-2 m-0;
 
         @screen md {
             width: auto;
@@ -53,27 +85,6 @@
             }
         }
     }
-}
-
-.popup-menu__content {
-    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.25);
-    transform: translate3d(0, -10px, 0);
-    opacity: 0;
-
-    &.visible {
-        animation: fadeInSlideDown 0.15s;
-        animation-fill-mode: forwards;
-        animation-timing-function: ease-out;
-    }
-
-    &-body {
-        @apply overflow-y-scroll;
-    }
-}
-
-// Hybrid popup menus get appended to the body on mobile
-body > .popup-menu--hybrid {
-    @apply z-menu inset-x-0 top-0 m-4;
 }
 
 .link-menu {

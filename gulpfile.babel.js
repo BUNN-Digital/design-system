@@ -112,7 +112,7 @@ const compileDocsCss = () => {
 const compileDesignSystemComponentsJs = () => {
     return gulp.src(paths.designSystem.src + 'js/components/*.js')
         .pipe(plumber({ errorHandler: onError }))
-        .pipe(cached('designSystemComponents'))
+        // .pipe(cached('designSystemComponents'))
         .pipe(babel({
             presets: ['@babel/env'],
             sourceType: 'script'
@@ -131,7 +131,7 @@ const compileDesignSystemComponentsJs = () => {
 const minifyDesignSystemComponentsJs = () => {
     return gulp.src(paths.designSystem.dest + 'js/components_all.js')
         .pipe(plumber({ errorHandler: onError }))
-        .pipe(cached('designSystemComponentsMinifiedJs'))
+        // .pipe(cached('designSystemComponentsMinifiedJs'))
         .pipe(rename({
             suffix: '.min'
         }))
@@ -148,7 +148,7 @@ const minifyDesignSystemComponentsJs = () => {
 const compileDesignSystemGlobalJs = () => {
     return gulp.src(paths.designSystem.src + 'js/*.js')
         .pipe(plumber({ errorHandler: onError }))
-        .pipe(cached('designSystemGlobalJs'))
+        // .pipe(cached('designSystemGlobalJs'))
         .pipe(babel({
             presets: ['@babel/env'],
             sourceType: 'script'
@@ -181,58 +181,6 @@ const compileJs = gulp.series(
     minifyDesignSystemComponentsJs
 );
 
-/**
- * CSS Preflight
- * Unfortunately, it isn't possible to pass in parameters to gulp tasks.
- * As such, we need to replicate the code.
- *
- * Compile CSS [PREFLIGHT]
- */
- const compilePreflight = () => {
-    return gulp.src(paths.designSystem.src + 'scss/design-system.scss')
-        .pipe(sass())
-        .pipe(postcss([
-            tailwindcss('./tailwind.config.js'),
-            purgecss({
-                content: [
-                    'site/**/*.njk',
-                ],
-                extractors: [
-                    {
-                        extractor: TailwindExtractor,
-                        extensions: ['html', 'njk'],
-                    }
-                ],
-                /**
-                 * You can whitelist selectors to stop purgecss from removing them from your CSS.
-                 * see: https://www.purgecss.com/whitelisting
-                 *
-                 * Any selectors defined below will not be stripped from the min.css file.
-                 * PurgeCSS will not purge the standard app.css file as this is useful for development.
-                 *
-                 * @since 1.0.0
-                 */
-                whitelist: [
-                    'body',
-                    'html',
-                    'h1',
-                    'h2',
-                    'h3',
-                    'p',
-                    'blockquote',
-                    'intro'
-                ],
-            })
-        ]))
-        .pipe(rename({
-            extname: '.css'
-        }))
-        .pipe(gulp.dest(paths.designSystem.dest + 'css/'))
-        .pipe(notify({
-            message: 'Tailwind Preflight Success'
-        }));
-}
-
 const watch = (done) => {
     gulp.watch('./tailwind.config.js', compileDesignSystemCss);
     
@@ -258,10 +206,15 @@ const eleventy = () => {
 }
 
 
-export const dev = gulp.series(gulp.parallel(compilePreflight, compileDocsCss, compileJs), watch, eleventy);
+export {
+    compileDesignSystemComponentsJs
+}
 
 
-export const build = gulp.series(gulp.parallel(compilePreflight, compileDocsCss, compileJs), minifyDesignSystemCss);
+export const dev = gulp.series(gulp.parallel(compileDesignSystemCss, compileDocsCss, compileJs), watch, eleventy);
+
+
+export const build = gulp.series(gulp.parallel(compileDesignSystemCss, compileDocsCss, compileJs), minifyDesignSystemCss);
 
 
 export default build
