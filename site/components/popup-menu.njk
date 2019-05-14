@@ -1,0 +1,188 @@
+---
+layout: page
+meta_title: Popup Menu
+meta_description: Popup Menu
+title: Popup Menu
+section: Components
+tag: components
+---
+
+<h2 class="section-heading">Popup Menu</h2>
+
+<div class="popup-menu relative md:max-w-sm" data-popup-menu="popup-menu-id-1">
+	<button class="js-popup-menu__toggle p-2 leading-none w-full flex items-center">
+		<i class="fal fa-user mr-2"></i>
+		<span class="text-left flex-grow">John Done</span>
+		<i class="fal fa-angle-down px-4"></i>
+	</button>
+	<div class="popup-menu__content js-popup-menu__content caret-top-right rounded absolute bg-white" id="popup-menu-id-1">
+		<div class="border-b border-gray-100 flex items-center leading-none">
+			<div class="font-sans-medium flex-grow px-6 py-4">My Account</div>
+			<a href="#" class="js-popup-menu-close text-base px-6 py-4"><i class="fal fa-times"></i></a>
+		</div>
+		<div class="text-base my-4 text-base">
+			<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+				<span class="flex-grow">Profile</span>
+				<i class="fal fa-angle-right text-gray-600"></i>
+			</a>
+			<a class="px-6 py-1 flex items-center" href="">
+				<span class="flex-grow">Order History</span>
+				<i class="fal fa-angle-right text-gray-600"></i>
+			</a>
+			<a class="px-6 py-1 flex items-center" href="">
+				<span class="flex-grow">Logout</span>
+				<i class="fal fa-angle-right text-gray-600"></i>
+			</a>
+		</div>
+	</div>
+</div>
+
+
+{% highlight "html" %}
+<div class="popup-menu relative md:max-w-sm" data-popup-menu="popup-menu-id-1">
+	<button class="js-popup-menu__toggle p-2 leading-none w-full flex items-center">
+		<i class="fal fa-user mr-2"></i>
+		<span class="text-left flex-grow">John Done</span>
+		<i class="fal fa-angle-down px-4"></i>
+	</button>
+	<div class="popup-menu__content js-popup-menu__content caret-top-right rounded absolute bg-white" id="popup-menu-id-1">
+		<div class="border-b border-gray-100 flex items-center leading-none">
+			<div class="font-sans-medium flex-grow px-6 py-4">My Account</div>
+			<a href="#" class="js-popup-menu-close text-base px-6 py-4"><i class="fal fa-times"></i></a>
+		</div>
+		<div class="text-base my-4 text-base">
+			<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+				<span class="flex-grow">Profile</span>
+				<i class="fal fa-angle-right text-gray-600"></i>
+			</a>
+			<a class="px-6 py-1 flex items-center" href="">
+				<span class="flex-grow">Order History</span>
+				<i class="fal fa-angle-right text-gray-600"></i>
+			</a>
+			<a class="px-6 py-1 flex items-center" href="">
+				<span class="flex-grow">Logout</span>
+				<i class="fal fa-angle-right text-gray-600"></i>
+			</a>
+		</div>
+	</div>
+</div>
+{% endhighlight %}
+
+<h2 class="section-heading">Hybrid Popup Menu</h2>
+
+<p>Hybrid Popup Menu will show as a full screen menu on small screens and a dropdown on large screens.</p>
+
+<div class="popup-menu relative md:max-w-sm" data-popup-menu="popup-menu-id-2">
+	<button class="js-popup-menu__toggle p-2 leading-none w-full flex items-center">
+		<span class="text-left flex-grow">Hybrid Popup Menu</span>
+		<i class="fal fa-angle-down px-4"></i>
+	</button>
+	<div class="popup-menu__content js-popup-menu__content popup-menu--hybrid js-popup-menu--hybrid caret-top-right rounded absolute bg-white" id="popup-menu-id-2">
+		<div class="border-b border-gray-100 flex items-center leading-none">
+			<div class="font-sans-medium flex-grow px-6 py-4">Hybrid Popup Menu</div>
+			<a href="#" class="js-popup-menu-close text-base px-6 py-4"><i class="fal fa-times"></i></a>
+		</div>
+		<div class="popup-menu__content-body">
+			<div class="text-base my-4 text-base">
+				<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+					<span class="flex-grow">Menu Link</span>
+					<i class="fal fa-angle-right text-gray-600"></i>
+				</a>
+				<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+					<span class="flex-grow">Menu Link</span>
+					<i class="fal fa-angle-right text-gray-600"></i>
+				</a>
+				<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+					<span class="flex-grow">Menu Link</span>
+					<i class="fal fa-angle-right text-gray-600"></i>
+				</a>
+				<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+					<span class="flex-grow">Menu Link</span>
+					<i class="fal fa-angle-right text-gray-600"></i>
+				</a>
+				<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+					<span class="flex-grow">Menu Link</span>
+					<i class="fal fa-angle-right text-gray-600"></i>
+				</a>
+				<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+					<span class="flex-grow">Menu Link</span>
+					<i class="fal fa-angle-right text-gray-600"></i>
+				</a>
+				<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+					<span class="flex-grow">Menu Link</span>
+					<i class="fal fa-angle-right text-gray-600"></i>
+				</a>
+				<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+					<span class="flex-grow">Menu Link</span>
+					<i class="fal fa-angle-right text-gray-600"></i>
+				</a>
+				<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+					<span class="flex-grow">Menu Link</span>
+					<i class="fal fa-angle-right text-gray-600"></i>
+				</a>
+				<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+					<span class="flex-grow">Menu Link</span>
+					<i class="fal fa-angle-right text-gray-600"></i>
+				</a>
+			</div>
+		</div>
+	</div>
+</div>
+
+
+{% highlight "html" %}
+<div class="popup-menu relative md:max-w-sm" data-popup-menu="popup-menu-id-2">
+	<button class="js-popup-menu__toggle p-2 leading-none w-full flex items-center">
+		<span class="text-left flex-grow">Hybrid Popup Menu</span>
+		<i class="fal fa-angle-down px-4"></i>
+	</button>
+	<div class="popup-menu__content js-popup-menu__content popup-menu--hybrid js-popup-menu--hybrid caret-top-right rounded absolute bg-white" id="popup-menu-id-2">
+		<div class="border-b border-gray-100 flex items-center leading-none">
+			<div class="font-sans-medium flex-grow px-6 py-4">Hybrid Popup Menu</div>
+			<a href="#" class="js-popup-menu-close text-base px-6 py-4"><i class="fal fa-times"></i></a>
+		</div>
+		<div class="text-base my-4 text-base">
+			<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+				<span class="flex-grow">Menu Link</span>
+				<i class="fal fa-angle-right text-gray-600"></i>
+			</a>
+			<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+				<span class="flex-grow">Menu Link</span>
+				<i class="fal fa-angle-right text-gray-600"></i>
+			</a>
+			<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+				<span class="flex-grow">Menu Link</span>
+				<i class="fal fa-angle-right text-gray-600"></i>
+			</a>
+			<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+				<span class="flex-grow">Menu Link</span>
+				<i class="fal fa-angle-right text-gray-600"></i>
+			</a>
+			<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+				<span class="flex-grow">Menu Link</span>
+				<i class="fal fa-angle-right text-gray-600"></i>
+			</a>
+			<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+				<span class="flex-grow">Menu Link</span>
+				<i class="fal fa-angle-right text-gray-600"></i>
+			</a>
+			<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+				<span class="flex-grow">Menu Link</span>
+				<i class="fal fa-angle-right text-gray-600"></i>
+			</a>
+			<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+				<span class="flex-grow">Menu Link</span>
+				<i class="fal fa-angle-right text-gray-600"></i>
+			</a>
+			<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+				<span class="flex-grow">Menu Link</span>
+				<i class="fal fa-angle-right text-gray-600"></i>
+			</a>
+			<a class="px-6 py-1 flex items-center" href="" title="Email Address">
+				<span class="flex-grow">Menu Link</span>
+				<i class="fal fa-angle-right text-gray-600"></i>
+			</a>
+		</div>
+	</div>
+</div>
+{% endhighlight %}

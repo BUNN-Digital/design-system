@@ -8,7 +8,6 @@ const child_process = require('child_process');
 const sass = require('gulp-sass');
 const postcss = require('gulp-postcss');
 const rename = require('gulp-rename');
-const changed = require('gulp-changed');
 const cached = require('gulp-cached');
 const cleanCSS = require('gulp-clean-css');
 const notify = require('gulp-notify');
@@ -122,7 +121,6 @@ function compileDesignSystemComponentsJs() {
     return gulp.src(paths.designSystem.src + 'js/components/*.js')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(cached('designSystemComponents'))
-        .pipe(changed(paths.designSystem.dest + 'js/components/'))
         .pipe(babel({
             presets: ['@babel/env'],
             sourceType: 'script'
@@ -143,7 +141,7 @@ exports.compileDesignSystemComponentsJs = compileDesignSystemComponentsJs;
 function minifyDesignSystemComponentsJs() {
     return gulp.src(paths.designSystem.dest + 'js/components_all.js')
         .pipe(plumber({ errorHandler: onError }))
-        .pipe(changed(paths.designSystem.dest + 'js/'))
+        .pipe(cached('designSystemComponentsMinifiedJs'))
         .pipe(rename({
             suffix: '.min'
         }))
@@ -162,7 +160,7 @@ exports.minifyDesignSystemComponentsJs = minifyDesignSystemComponentsJs;
 function compileDesignSystemGlobalJs() {
     return gulp.src(paths.designSystem.src + 'js/*.js')
         .pipe(plumber({ errorHandler: onError }))
-        .pipe(changed(paths.designSystem.dest + 'js/'))
+        .pipe(cached('designSystemGlobalJs'))
         .pipe(babel({
             presets: ['@babel/env'],
             sourceType: 'script'
@@ -263,7 +261,7 @@ function watch(done) {
     
     gulp.watch(paths.docs.src + 'scss/**/*.scss', compileDocsCss);
     
-    gulp.watch(paths.designSystem.src + 'js/**/*.js', gulp.series(gulp.parallel(compileDesignSystemComponentsJs, compileDesignSystemGlobalJs), minifyDesignSystemComponentsJs));
+    gulp.watch(paths.designSystem.src + 'js/**/*.js', gulp.series(compileJs, minifyDesignSystemComponentsJs));
 
     gulp.watch(paths.docs.src + 'js/**/*.js', compileDocsJs);
 
