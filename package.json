@@ -1,6 +1,6 @@
 {
 	"name": "bunn-design-system",
-	"version": "0.1.2",
+	"version": "0.1.3",
 	"description": "BUNN Design System",
 	"scripts": {
 		"dev": "rm -rf dist && gulp dev",
