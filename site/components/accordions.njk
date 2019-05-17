@@ -10,95 +10,254 @@ tag: components
 <h2 class="section-heading">Default Accordions</h2>
 
 <div class="accordion js-accordion">
-	<div id="accordion-item-1a" class="accordion__item js-accordion-item">
+	<div class="accordion__item js-accordion-item">
 		<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
 			<div class="flex-grow">Accordion Title</div>
-			<div class="js-accordion-icon fal fa-angle-down p-4 text-lg-2 text-gray-400" data-closed-icon="fa-angle-down" data-open-icon="fa-angle-up"></div>
+			<div class="js-accordion-icon fal fa-angle-down p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
 		</div>
-		<div class="accordion__content js-accordion-content hidden py-6">
+		<div class="accordion__content js-accordion-content py-4">
 			Accordion Content
 		</div>
 	</div>
-	<div id="accordion-item-1b" class="accordion__item js-accordion-item">
+	<div class="accordion__item js-accordion-item">
 		<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
 			<div class="flex-grow">Accordion Title</div>
-			<div class="js-accordion-icon fal fa-angle-down p-4 text-lg-2 text-gray-400" data-closed-icon="fa-angle-down" data-open-icon="fa-angle-up"></div>
+			<div class="js-accordion-icon fal fa-angle-down p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
 		</div>
-		<div class="accordion__content js-accordion-content hidden py-6">
+		<div class="accordion__content js-accordion-content py-4">
 			Accordion Content
 		</div>
 	</div>
 </div>
+
+{% highlight "html" %}
+<div class="accordion js-accordion">
+	<div class="accordion__item js-accordion-item">
+		<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
+			<div class="flex-grow">Accordion Title</div>
+			<div class="js-accordion-icon fal fa-angle-down p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
+		</div>
+		<div class="accordion__content js-accordion-content py-4">
+			Accordion Content
+		</div>
+	</div>
+	<div class="accordion__item js-accordion-item">
+		<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
+			<div class="flex-grow">Accordion Title</div>
+			<div class="js-accordion-icon fal fa-angle-down p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
+		</div>
+		<div class="accordion__content js-accordion-content py-4">
+			Accordion Content
+		</div>
+	</div>
+</div>
+{% endhighlight %}
 
 <h2 class="section-heading">Icons on the left, and different icons</h2>
 
 <div class="accordion js-accordion">
-	<div id="accordion-item-1a" class="accordion__item js-accordion-item">
+	<div class="accordion__item js-accordion-item">
 		<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
-			<div class="js-accordion-icon fal fa-plus p-4 -ml-4 text-lg-1 text-gray-700" data-closed-icon="fa-plus" data-open-icon="fa-minus"></div>
+			<div class="js-accordion-icon fal fa-plus p-2 -ml-2 text-gray-400" data-inactive-icon="fa-plus" data-active-icon="fa-minus"></div>
 			<div class="flex-grow">Accordion Title</div>
 		</div>
-		<div class="accordion__content js-accordion-content hidden py-6">
+		<div class="accordion__content js-accordion-content py-4">
 			Accordion Content
 		</div>
 	</div>
-	<div id="accordion-item-1b" class="accordion__item js-accordion-item">
+	<div class="accordion__item js-accordion-item">
 		<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
-			<div class="js-accordion-icon fal fa-plus p-4 -ml-4 text-lg-1 text-gray-700" data-closed-icon="fa-plus" data-open-icon="fa-minus"></div>
+			<div class="js-accordion-icon fal fa-plus p-2 -ml-2 text-gray-400" data-inactive-icon="fa-plus" data-active-icon="fa-minus"></div>
 			<div class="flex-grow">Accordion Title</div>
 		</div>
-		<div class="accordion__content js-accordion-content hidden py-6">
+		<div class="accordion__content js-accordion-content py-4">
 			Accordion Content
 		</div>
 	</div>
 </div>
+
+{% highlight "html" %}
+<div class="accordion js-accordion">
+	<div class="accordion__item js-accordion-item">
+		<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
+			<div class="js-accordion-icon fal fa-plus p-2 -ml-2 text-gray-400" data-inactive-icon="fa-plus" data-active-icon="fa-minus"></div>
+			<div class="flex-grow">Accordion Title</div>
+		</div>
+		<div class="accordion__content js-accordion-content py-4">
+			Accordion Content
+		</div>
+	</div>
+	<div class="accordion__item js-accordion-item">
+		<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
+			<div class="js-accordion-icon fal fa-plus p-2 -ml-2 text-gray-400" data-inactive-icon="fa-plus" data-active-icon="fa-minus"></div>
+			<div class="flex-grow">Accordion Title</div>
+		</div>
+		<div class="accordion__content js-accordion-content py-4">
+			Accordion Content
+		</div>
+	</div>
+</div>
+{% endhighlight %}
 
 <h2 class="section-heading">Accordions with dividers</h2>
 
 <p>Example: adding border utility classes to each <span class="inline-code">accordion__item</span></p>
 
 <div class="accordion js-accordion">
-	<div id="accordion-item-2a" class="accordion__item js-accordion-item border-b border-gray-300">
+	<div class="accordion__item js-accordion-item border-b border-gray-300">
 		<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
 			<div class="flex-grow">Accordion Title</div>
-			<div class="js-accordion-icon fal fa-angle-down p-4 text-lg-2 text-gray-400" data-closed-icon="fa-angle-down" data-open-icon="fa-angle-up"></div>
+			<div class="js-accordion-icon fal fa-angle-down p-4 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
 		</div>
-		<div class="accordion__content js-accordion-content hidden py-6">
+		<div class="accordion__content js-accordion-content py-6">
 			Accordion Content
 		</div>
 	</div>
-	<div id="accordion-item-2b" class="accordion__item js-accordion-item border-b border-gray-300">
+	<div class="accordion__item js-accordion-item border-b border-gray-300">
 		<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
 			<div class="flex-grow">Accordion Title</div>
-			<div class="js-accordion-icon fal fa-angle-down p-4 text-lg-2 text-gray-400" data-closed-icon="fa-angle-down" data-open-icon="fa-angle-up"></div>
+			<div class="js-accordion-icon fal fa-angle-down p-4 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
 		</div>
-		<div class="accordion__content js-accordion-content hidden py-6">
+		<div class="accordion__content js-accordion-content py-6">
 			Accordion Content
 		</div>
 	</div>
 </div>
+
+{% highlight "html" %}
+<div class="accordion js-accordion">
+	<div class="accordion__item js-accordion-item border-b border-gray-300">
+		<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
+			<div class="flex-grow">Accordion Title</div>
+			<div class="js-accordion-icon fal fa-angle-down p-4 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
+		</div>
+		<div class="accordion__content js-accordion-content py-6">
+			Accordion Content
+		</div>
+	</div>
+	<div class="accordion__item js-accordion-item border-b border-gray-300">
+		<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
+			<div class="flex-grow">Accordion Title</div>
+			<div class="js-accordion-icon fal fa-angle-down p-4 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
+		</div>
+		<div class="accordion__content js-accordion-content py-6">
+			Accordion Content
+		</div>
+	</div>
+</div>
+{% endhighlight %}
 
 <h2 class="section-heading">Accordions with slightly more robust selected styles</h2>
 
 <p>This one is more opinionated and needs a class of <span class="inline-code">accordion--variantA</span></p>
 
 <div class="accordion accordion--variantA js-accordion">
-	<div id="accordion-item-3a" class="accordion__item js-accordion-item">
+	<div class="accordion__item js-accordion-item">
 		<div class="accordion__title js-accordion-title text-gray-700 font-sans-demi cursor-pointer font-sans-medium flex items-center">
 			<div class="flex-grow">Accordion Title</div>
-			<div class="js-accordion-icon fal fa-angle-down p-4 -mr-4 text-lg-2 text-gray-500" data-closed-icon="fa-angle-down" data-open-icon="fa-angle-up"></div>
+			<div class="js-accordion-icon fal fa-angle-down p-4 -mr-4 text-lg-2 text-gray-500" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
 		</div>
-		<div class="accordion__content js-accordion-content hidden py-6 pl-4">
+		<div class="accordion__content js-accordion-content py-6 pl-4">
 			Accordion Content
 		</div>
 	</div>
-	<div id="accordion-item-3b" class="accordion__item js-accordion-item">
+	<div class="accordion__item js-accordion-item">
 		<div class="accordion__title js-accordion-title text-gray-700 font-sans-demi cursor-pointer font-sans-medium flex items-center">
 			<div class="flex-grow">Accordion Title</div>
-			<div class="js-accordion-icon fal fa-angle-down p-4 -mr-4 text-lg-2 text-gray-500" data-closed-icon="fa-angle-down" data-open-icon="fa-angle-up"></div>
+			<div class="js-accordion-icon fal fa-angle-down p-4 -mr-4 text-lg-2 text-gray-500" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
 		</div>
-		<div class="accordion__content js-accordion-content hidden py-6 pl-4">
+		<div class="accordion__content js-accordion-content py-6 pl-4">
 			Accordion Content
 		</div>
 	</div>
 </div>
+
+{% highlight "html" %}
+<div class="accordion accordion--variantA js-accordion">
+	<div class="accordion__item js-accordion-item">
+		<div class="accordion__title js-accordion-title text-gray-700 font-sans-demi cursor-pointer font-sans-medium flex items-center">
+			<div class="flex-grow">Accordion Title</div>
+			<div class="js-accordion-icon fal fa-angle-down p-4 -mr-4 text-lg-2 text-gray-500" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
+		</div>
+		<div class="accordion__content js-accordion-content py-6 pl-4">
+			Accordion Content
+		</div>
+	</div>
+	<div class="accordion__item js-accordion-item">
+		<div class="accordion__title js-accordion-title text-gray-700 font-sans-demi cursor-pointer font-sans-medium flex items-center">
+			<div class="flex-grow">Accordion Title</div>
+			<div class="js-accordion-icon fal fa-angle-down p-4 -mr-4 text-lg-2 text-gray-500" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
+		</div>
+		<div class="accordion__content js-accordion-content py-6 pl-4">
+			Accordion Content
+		</div>
+	</div>
+</div>
+{% endhighlight %}
+
+<h2 class="section-heading">Accordions with images</h2>
+
+<p>Some accordions are paired with a related image. These require a separate container of images, each with a unique ID. Each <span class="inline-code">accordion__title</span> will need to have a referene to an ID for the image it should show. Example: <span class="inline-code">data-accordion-img="some-img-ID"</span>.</p>
+
+<p>The images container and accordion container can be placed independently of each other. In the example below, they are laid out to show images on the left of the accordion when viewed on a large screen.</p>
+
+
+<div class="lg:flex">
+	<div class="accordion-images">
+		<img src="https://via.placeholder.com/300&text=image+1" alt="sample image" id="accordion1-img1" class="js-featured-image active">
+		<img src="https://via.placeholder.com/300&text=image+2" alt="sample image" id="accordion1-img2" class="js-featured-image">
+	</div>
+	<div class="pl-8 flex-grow">
+		<div class="accordion js-accordion">
+			<div class="accordion__item js-accordion-item border-b border-gray-300 open" data-accordion-img="accordion1-img1">
+				<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
+					<div class="flex-grow font-sans-demi">Accordion Title</div>
+					<div class="js-accordion-icon fal fa-angle-down p-4 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
+				</div>
+				<div class="accordion__content js-accordion-content py-6">
+					Accordion Content
+				</div>
+			</div>
+			<div class="accordion__item js-accordion-item border-b border-gray-300" data-accordion-img="accordion1-img2">
+				<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
+					<div class="flex-grow font-sans-demi">Accordion Title</div>
+					<div class="js-accordion-icon fal fa-angle-down p-4 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
+				</div>
+				<div class="accordion__content js-accordion-content py-6">
+					Accordion Content
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% highlight "html" %}
+<div class="lg:flex">
+	<div class="accordion-images">
+		<img src="https://via.placeholder.com/300&text=image+1" alt="sample image" id="accordion1-img1" class="js-featured-image active">
+		<img src="https://via.placeholder.com/300&text=image+2" alt="sample image" id="accordion1-img2" class="js-featured-image">
+	</div>
+	<div class="pl-8 flex-grow">
+		<div class="accordion js-accordion">
+			<div class="accordion__item js-accordion-item border-b border-gray-300 open" data-accordion-img="accordion1-img1">
+				<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
+					<div class="flex-grow font-sans-demi">Accordion Title</div>
+					<div class="js-accordion-icon fal fa-angle-down p-4 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
+				</div>
+				<div class="accordion__content js-accordion-content py-6">
+					Accordion Content
+				</div>
+			</div>
+			<div class="accordion__item js-accordion-item border-b border-gray-300" data-accordion-img="accordion1-img2">
+				<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
+					<div class="flex-grow font-sans-demi">Accordion Title</div>
+					<div class="js-accordion-icon fal fa-angle-down p-4 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
+				</div>
+				<div class="accordion__content js-accordion-content py-6">
+					Accordion Content
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+{% endhighlight %}

@@ -2,37 +2,64 @@
 
 (function (BUNN, $, undefined) {
   // -- Global Methods -- //
-  BUNN.initAccordion = function (e) {
-    $('[class*=js-accordion].first .js-accordion-item:first-child').addClass('open');
-    $('[class*=js-accordion].first .js-accordion-item:first-child .js-accordion-content').slideDown('fast');
+  BUNN.initAccordion = function () {
+    // If any accordion titles load with a class of "open", make sure their content displays and icons are set accordingly
+    $('.js-accordion-item.open').each(function () {
+      BUNN.openAccordion($(this));
+    });
   };
 
-  BUNN.accordionToggle = function ($target) {
-    if ($target.parent().hasClass('open')) {
-      $target.next().slideUp('fast');
-      $target.parent().removeClass('open');
-    } else {
-      $target.next().slideToggle('fast');
-      $target.parent().toggleClass('open');
-      $('.js-accordion .js-accordion-content').not($target.next()).slideUp('fast');
-      $('.js-accordion .js-accordion-item').not($target.parent()).removeClass('open');
+  BUNN.openAccordion = function ($target) {
+    var $content = $target.find('.js-accordion-content');
+    var $icon = $target.find('.js-accordion-icon');
+    var iconInactiveClass = $icon.data('inactive-icon');
+    var iconActiveClass = $icon.data('active-icon');
+    var accordionImg = $target.data('accordion-img');
+    $content.slideDown('fast');
+    $target.addClass('open');
+    $icon.removeClass(iconInactiveClass).addClass(iconActiveClass); // if this accordion has an image, show it
+
+    if (accordionImg != null) {
+      $('.js-featured-image').removeClass('active');
+      $('#' + accordionImg).addClass('active');
     }
   };
 
-  BUNN.accordionImgToggle = function ($target) {
-    var $activePanel = $target.attr('id');
-    var $activeImage = 'img-' + $activePanel;
+  BUNN.closeAccordion = function ($target) {
+    var $content = $target.find('.js-accordion-content');
+    var $icon = $target.find('.js-accordion-icon');
+    var iconInactiveClass = $icon.data('inactive-icon');
+    var iconActiveClass = $icon.data('active-icon');
+    var accordionImg = $target.data('accordion-img');
+    console.log($target);
+    console.log($content);
+    $content.slideUp('fast');
+    $target.removeClass('open');
+    $icon.removeClass(iconActiveClass).addClass(iconInactiveClass);
+  };
+  /* 
+   * @param $target $(.js-accordion-title)
+   */
 
-    if ($target.parent().hasClass('open')) {// Do nothing...keep panel open
+
+  BUNN.toggleAccordion = function ($target) {
+    var $accordion = $target.closest('.js-accordion');
+    var $openAccordionItem = $accordion.find('.js-accordion-item.open');
+    var accordionImg = $target.data('accordion-img'); // if this item is not already open...
+
+    if (!$target.hasClass('open')) {
+      // close any siblings
+      if ($openAccordionItem) {
+        BUNN.closeAccordion($openAccordionItem);
+      } // and open the target item
+
+
+      BUNN.openAccordion($target); // if it IS already open...
     } else {
-      $target.next().slideToggle('fast');
-      $target.parent().toggleClass('open');
-      $('.js-featured-image').each(function (index) {
-        $(this).removeClass('active');
-      });
-      $('#' + $activeImage).addClass('active');
-      $('.js-accordion-img .js-accordion-content').not($target.next()).slideUp('fast');
-      $('.js-accordion-img .js-accordion-item').not($target.parent()).removeClass('open');
+      //and doesn't have an image, close it
+      if (!accordionImg) {
+        BUNN.closeAccordion($target);
+      }
     }
   };
 
@@ -47,13 +74,9 @@
   }; // -- Event Handlers -- //
 
 
-  $('.js-accordion .js-accordion-title').click(function () {
-    var $target = $(this);
-    BUNN.accordionToggle($target);
-  });
-  $('.js-accordion-img .js-accordion-title').click(function () {
-    var $target = $(this);
-    BUNN.accordionImgToggle($target);
+  BUNN.initAccordion();
+  $('.js-accordion-title').click(function () {
+    BUNN.toggleAccordion($(this).parent());
   });
   $('.js-content-expand-toggle').click(function () {
     var $content = $('.js-content-expand');

@@ -9,26 +9,8 @@
         }
     }
 
-    &__images {
-        @apply flex items-start pb-8;
-
-        @screen md {
-            @apply pt-4;
-        }
-
-        img {
-            display: none;
-            opacity: 0;
-            margin-right: auto;
-            margin-left: auto;
-            max-height: 420px;
-            @include fadein(.5s);
-
-            &.active {
-                display: block;
-                opacity: 1;
-            }
-        }
+    &__content {
+        display: none;
     }
 }
 
@@ -41,6 +23,28 @@
 
     .open .accordion__title {
         @apply bg-gray-100 border-brand-primary text-brand-primary;
+    }
+}
+
+.accordion-images {
+    @apply flex items-start pb-8;
+
+    @screen md {
+        @apply pt-4;
+    }
+
+    img {
+        display: none;
+        opacity: 0;
+        margin-right: auto;
+        margin-left: auto;
+        max-height: 420px;
+        @include fadein(.5s);
+
+        &.active {
+            display: block;
+            opacity: 1;
+        }
     }
 }
 
