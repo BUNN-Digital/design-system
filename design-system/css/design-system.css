@@ -972,126 +972,29 @@ a.link--neutral:hover {
     Unique, transportable components
     ----------------------------- */
 
-.b-accordion__item--compact {
-  border-top-width: 1px;
-  border-color: #e0e0e0;
-}
-
-.b-accordion__item--compact.open {
-  border-top-width: 2px;
-  border-color: HSLA(215, 60%, 37%, 1);
-}
-
-.b-accordion__item--compact:last-child {
-  border-bottom-width: 1px;
-  border-bottom: solid 1px #dfdfdf;
-}
-
-.b-accordion__title {
-  color: HSLA(215, 60%, 37%, 1);
-  border-bottom-width: 1px;
-  border-color: #e0e0e0;
-  font-family: "Avenir Next LT W01 Demi", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  padding-right: 3rem;
-  position: relative;
-  cursor: pointer;
+.accordion__title {
   text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
 }
 
-@media (min-width: 1200px) {
-  .b-accordion__title {
-    font-size: 1.25rem;
-  }
+.open .accordion__title {
+  color: HSLA(215, 38%, 56%, 1);
+  border-color: HSLA(215, 60%, 37%, 1);
 }
 
-.b-accordion__title:after {
-  font-family: "Font Awesome 5 Pro";
-  content: '\f107';
-  position: absolute;
-  right: 20px;
-  font-size: 1.6em;
-  line-height: .75em;
-  font-weight: 300;
-}
-
-.open .b-accordion__title {
-  border-color: transparent;
-  color: #a0a0a0;
-}
-
-.open .b-accordion__title:after {
-  content: '\f106';
-}
-
-.b-accordion__title--compact {
-  color: HSLA(215, 60%, 37%, 1);
-  font-family: "Avenir Next LT W01 Demi", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-  font-size: 1.25rem;
-  padding-top: 0.75rem;
-  padding-bottom: 0.75rem;
-  position: relative;
-  cursor: pointer;
-  padding-left: 3rem;
-}
-
-.b-accordion__title--compact:after {
-  content: '';
-}
-
-.b-accordion__title--compact:before {
-  font-family: "Font Awesome 5 Pro";
-  font-size: 20px;
-  line-height: 26px;
-  content: '\f0fe';
-  position: absolute;
-  left: 16px;
-  top: 28px;
-}
-
-.open .b-accordion__title--compact {
-  color: #777777;
-  background-color: #e8e8e8;
-}
-
-.open .b-accordion__title--compact:before {
-  content: '\f146';
-}
-
-.b-accordion__content {
-  display: none;
-  padding-right: 2rem;
-  line-height: 1.5;
-  padding-bottom: 1.5rem;
-  text-align: left;
-}
-
-@media (min-width: 1200px) {
-  .b-accordion__content {
-    line-height: 2;
-  }
-}
-
-.b-accordion__content--compact {
-  color: #777777;
-}
-
-.b-accordion__images {
+.accordion__images {
   display: flex;
   align-items: flex-start;
   padding-bottom: 2rem;
 }
 
 @media (min-width: 768px) {
-  .b-accordion__images {
+  .accordion__images {
     padding-top: 1rem;
   }
 }
 
-.b-accordion__images img {
+.accordion__images img {
   display: none;
   opacity: 0;
   margin-right: auto;
@@ -1101,9 +1004,27 @@ a.link--neutral:hover {
   animation: fadein 0.5s;
 }
 
-.b-accordion__images img.active {
+.accordion__images img.active {
   display: block;
   opacity: 1;
+}
+
+.accordion--variantA {
+  border-bottom-width: 2px;
+  border-color: #e0e0e0;
+}
+
+.accordion--variantA .accordion__title {
+  border-top-width: 2px;
+  border-color: #e0e0e0;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+.accordion--variantA .open .accordion__title {
+  background-color: #f7f7f7;
+  border-color: HSLA(215, 60%, 37%, 1);
+  color: HSLA(215, 60%, 37%, 1);
 }
 
 .content-expand {
