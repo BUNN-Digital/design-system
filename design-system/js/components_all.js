@@ -3,7 +3,7 @@
 (function (BUNN, $, undefined) {
   // -- Global Methods -- //
   BUNN.initAccordion = function () {
-    // If any accordion titles load with a class of "open", make sure their content displays and icons are set accordingly
+    // If any accordion items load with a class of "open", make sure their content displays and icons are set accordingly
     $('.js-accordion-item.open').each(function () {
       BUNN.openAccordion($(this));
     });
