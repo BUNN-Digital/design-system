@@ -29,10 +29,8 @@ module.exports = eleventyConfig => {
     })
 
     // Include our static assets
-    eleventyConfig.addPassthroughCopy("design-system/css")
-    eleventyConfig.addPassthroughCopy("design-system/js")
-    eleventyConfig.addPassthroughCopy("docs/css")
-    eleventyConfig.addPassthroughCopy("docs/js")
+    eleventyConfig.addPassthroughCopy("design-system/")
+    eleventyConfig.addPassthroughCopy("docs/")
     eleventyConfig.addPassthroughCopy("images")
     eleventyConfig.addPassthroughCopy("fonts")
 

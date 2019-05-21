@@ -57,7 +57,7 @@ button:disabled {
     opacity: 0.85;
 }
 
-// Horizontal rules
+/* Horizontal rules */
 hr {
     @apply border-b border-gray-300 my-4;
 }

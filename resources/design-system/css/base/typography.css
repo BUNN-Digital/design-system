@@ -2,7 +2,7 @@
  * HEADINGS
  ========================================*/
 
-// Headings
+/* Headings */
 .heading-alpha,
 .cms-content h1 {
     @apply mb-4;
@@ -136,7 +136,7 @@ p.emphasis {
     }
 }
 
-// Links
+/* Links */
 a {
     @apply text-brand-primary;
 

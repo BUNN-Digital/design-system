@@ -16,7 +16,7 @@
         }
 
         &.compact:nth-child(even) {
-            // @apply bg-gray-200;
+            /* @apply bg-gray-200; */
         }
     }
 
@@ -58,7 +58,7 @@
         }
 
         .stacked & {
-            //max-height: 180px;
+            /* max-height: 180px; */
         }
 
         .compact & {

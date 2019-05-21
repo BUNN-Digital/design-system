@@ -2,7 +2,7 @@
     a {
         text-decoration: none;
         color: black;
-        //apply text-black;
+        /* apply text-black; */
     }
 }
 
@@ -50,7 +50,7 @@
     }
 }
 
-//hybrid menus (mobile accordions and desktop dropdowns)
+/* hybrid menus (mobile accordions and desktop dropdowns) */
 .nav-menu--hybrid {
     @screen lg {
         .nav-menu-dropdown-content {
@@ -67,7 +67,7 @@
         }
     }
 
-    //Dropdown as a list
+    /* Dropdown as a list */
     .nav-menu-dropdown-content--list {
         @screen lg {
             padding: 16px 0;
@@ -75,7 +75,7 @@
         }
     }
 
-    //Dropdown as a mega menu
+    /* Dropdown as a mega menu */
     .nav-menu-dropdown-content--mega {
         @screen lg {
             padding: 48px 0;
@@ -90,7 +90,7 @@
     }
 }
 
-//States
+/* States */
 .nav-menu--active {
     .nav-menu-item-icon {
         transform: rotateX(180deg);
@@ -111,7 +111,7 @@
     }
 }
 
-//Families
+/* Families */
 .nav-menu-equipment-families {
     @screen lg {
         columns: 2;
@@ -122,7 +122,7 @@
     }
 }
 
-//List items
+/* List items */
 .nav-menu-list-item-label {
     letter-spacing: 0.05em;
 }

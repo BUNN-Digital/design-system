@@ -9,7 +9,7 @@
     }
 }
 
-// Default styles for popup menus and when attached directly to body
+/* Default styles for popup menus and when attached directly to body */
 .popup-menu__content-container {
     transform: translate3d(0, -10px, 0);
     opacity: 0;
@@ -31,7 +31,7 @@
     }
 }
 
-// Hybrid popup menus get appended to the body on mobile
+/* Hybrid popup menus get appended to the body on mobile */
 body > .popup-menu--hybrid {
     @apply fixed z-menu inset-0 top-0 m-6;
 
@@ -40,7 +40,7 @@ body > .popup-menu--hybrid {
     }
 }
 
-// Additional styles when attached to the trigger's containing element
+/* Additional styles when attached to the trigger's containing element */
 .popup-menu {
 
     .dropdown-open {
@@ -61,7 +61,7 @@ body > .popup-menu--hybrid {
             max-width: 90%;
         }
     
-        //modifiers
+        /* modifiers */
         &[class*="caret"] {
             &:before {
                 content: "";

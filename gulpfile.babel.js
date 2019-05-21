@@ -8,6 +8,7 @@ import postcss from 'gulp-postcss';
 import rename from 'gulp-rename';
 import cached from 'gulp-cached';
 import cleanCSS from 'gulp-clean-css';
+import sourcemaps from 'gulp-sourcemaps';
 import notify from 'gulp-notify';
 import babel from 'gulp-babel';
 import concat from 'gulp-concat';
@@ -33,6 +34,14 @@ const paths = {
         dest: 'docs/'
     },
 
+    vendorCss: [
+        './node_modules/owl.carousel/dist/assets/owl.carousel.css'
+    ],
+
+    vendorScripts: [
+        './node_modules/owl.carousel/dist/owl.carousel.js'
+    ]
+
 }
 
 /**
@@ -54,17 +63,34 @@ class TailwindExtractor {
 }
 
 /**
+ * Compile Vendor CSS
+ */
+const compileVendorCss = () => {
+    return gulp.src(paths.vendorCss)
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(concat('vendor.css'))
+        .pipe(gulp.dest(paths.designSystem.dest + 'css/'))
+        .pipe(cleanCSS())
+        .pipe(rename({
+            suffix: '.min'
+        }))
+        .pipe(gulp.dest(paths.designSystem.dest + 'css/'))
+        .pipe(notify({
+            message: 'Compiled Vendor CSS'
+        }));
+}
+
+/**
  * Compile Design System CSS
  */
 const compileDesignSystemCss = () => {
-    return gulp.src(paths.designSystem.src + 'scss/design-system.scss')
+    return gulp.src(paths.designSystem.src + 'css/design-system.css')
         .pipe(plumber({ errorHandler: onError }))
-        .pipe(sass())
-        .pipe(postcss([
-            tailwindcss('./tailwind.config.js')
-        ]))
+        .pipe(postcss())
+        .pipe(gulp.dest(paths.designSystem.dest + 'css/'))
+        .pipe(cleanCSS())
         .pipe(rename({
-            extname: '.css'
+            suffix: '.min'
         }))
         .pipe(gulp.dest(paths.designSystem.dest + 'css/'))
         .pipe(notify({
@@ -73,36 +99,36 @@ const compileDesignSystemCss = () => {
 }
 
 /**
- * Minify the CSS
+ * Compile Docs CSS
  */
-const minifyDesignSystemCss = () => {
-    return gulp.src(paths.designSystem.dest + 'css/design-system.css')
-        .pipe(cleanCSS())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest(paths.designSystem.dest + 'css/'))
+const compileDocsCss = () => {
+    return gulp.src([
+            paths.docs.src + 'css/docs.css',
+            paths.docs.src + 'css/fonts.css',
+        ])
+        .pipe(plumber({ errorHandler: onError }))
+        .pipe(postcss())
+        .pipe(gulp.dest(paths.docs.dest + 'css/'))
         .pipe(notify({
-            message: 'Minified design system CSS'
+            message: 'Compiled docs CSS'
         }));
 }
 
 /**
- * Compile Docs CSS
+ * Compile Vendor JS
  */
-const compileDocsCss = () => {
-    return gulp.src(paths.docs.src + 'scss/*.scss')
+const compileVendorJs = () => {
+    return gulp.src(paths.vendorScripts)
         .pipe(plumber({ errorHandler: onError }))
-        .pipe(sass())
-        .pipe(postcss([
-            tailwindcss('./tailwind.config.js')
-        ]))
+        .pipe(concat('vendor.js'))
+        .pipe(gulp.dest(paths.designSystem.dest + 'js/'))
+        .pipe(uglify())
         .pipe(rename({
-            extname: '.css'
+            suffix: '.min'
         }))
-        .pipe(gulp.dest(paths.docs.dest + 'css/'))
+        .pipe(gulp.dest(paths.designSystem.dest + 'js/'))
         .pipe(notify({
-            message: 'Compiled docs CSS'
+            message: 'Compiled vendor JS'
         }));
 }
 
@@ -120,25 +146,13 @@ const compileDesignSystemComponentsJs = () => {
         .pipe(gulp.dest(paths.designSystem.dest + 'js/components/'))
         .pipe(concat('components_all.js'))
         .pipe(gulp.dest(paths.designSystem.dest + 'js/'))
-        .pipe(notify({
-            message: 'Compiled design system components JS'
-        }));
-}
-
-/**
- * Minify Design System Components
- */
-const minifyDesignSystemComponentsJs = () => {
-    return gulp.src(paths.designSystem.dest + 'js/components_all.js')
-        .pipe(plumber({ errorHandler: onError }))
-        // .pipe(cached('designSystemComponentsMinifiedJs'))
         .pipe(rename({
             suffix: '.min'
         }))
         .pipe(uglify())
         .pipe(gulp.dest(paths.designSystem.dest + 'js/'))
         .pipe(notify({
-            message: 'Minified design system component JS'
+            message: 'Compiled design system components JS'
         }));
 }
 
@@ -176,45 +190,49 @@ const compileDocsJs = () => {
         }));
 }
 
-const compileJs = gulp.series(
-    gulp.parallel(compileDesignSystemComponentsJs, compileDesignSystemGlobalJs, compileDocsJs), 
-    minifyDesignSystemComponentsJs
-);
-
 const watch = (done) => {
     gulp.watch('./tailwind.config.js', compileDesignSystemCss);
     
-    gulp.watch(paths.designSystem.src + 'scss/**/*.scss', compileDesignSystemCss);
+    gulp.watch(paths.designSystem.src + 'css/**/*.css', compileDesignSystemCss);
     
-    gulp.watch(paths.docs.src + 'scss/**/*.scss', compileDocsCss);
+    gulp.watch(paths.docs.src + 'css/**/*.css', compileDocsCss);
     
-    gulp.watch(paths.designSystem.src + 'js/**/*.js', gulp.series(compileJs, minifyDesignSystemComponentsJs));
-
+    gulp.watch(paths.designSystem.src + 'js/**/*.js', gulp.series(compileJs));
+    
     gulp.watch(paths.docs.src + 'js/**/*.js', compileDocsJs);
-
+    
     done();
 }
 
 const eleventy = () => {
     const command = 'eleventy --config=eleventy.config.js --serve';
     process.env.ELEVENTY_ENV='development';
-
+    
     return child_process.spawn(command, {
         stdio: 'inherit',
         shell: true
     });
 }
 
+const compileJs = gulp.series(
+    gulp.parallel(compileVendorJs, compileDesignSystemComponentsJs, compileDesignSystemGlobalJs, compileDocsJs)
+)
+
+const compileCss = gulp.parallel(compileVendorCss, compileDesignSystemCss, compileDocsCss)
+
+const compileAssets = gulp.parallel(compileCss, compileJs)
 
 export {
-    compileDesignSystemComponentsJs
+    compileDesignSystemCss,
+    compileDocsCss,
+    compileJs,
+    compileCss,
+    compileAssets
 }
 
+export const build = gulp.parallel(compileCss, compileJs);
+export const dev = gulp.series(build, watch, eleventy);
 
-export const dev = gulp.series(gulp.parallel(compileDesignSystemCss, compileDocsCss, compileJs), watch, eleventy);
-
-
-export const build = gulp.series(gulp.parallel(compileDesignSystemCss, compileDocsCss, compileJs), minifyDesignSystemCss);
 
 
 export default build

@@ -1,6 +1,6 @@
 .b-video {
     @apply relative bg-cover bg-center bg-gray-200;
-    // video player aspect ratio
+    /* video player aspect ratio */
     padding-bottom: 52.25%;
 
     &.featured {
@@ -18,7 +18,7 @@
             color: rgba(255, 255, 255, 1);
         }
 
-        // Play icon
+        /* Play icon */
         &:before {
             content: "\f144";
             font-family: "Font Awesome 5 Pro";
@@ -31,11 +31,11 @@
             }
         }
 
-        // Play icon w/ Watch video text
+        /* Play icon w/ Watch video text */
         .featured & {
             padding: 1rem;
             background: rgba(0, 0, 0, 0.5);
-            // Solid play button
+            /* Solid play button */
             &:before {
                 content: "\f144";
                 font-family: "Font Awesome 5 Pro";

@@ -10,7 +10,7 @@ a.btn {
         @apply bg-gray-300;
     }
 
-    // Sizes
+    /* Sizes */
     &--small {
         @apply text-sm-1 py-2 px-3;
     }
@@ -23,7 +23,7 @@ a.btn {
         }
     }
 
-    // Colors
+    /* Colors */
     &--primary,
     &.active {
         @apply bg-brand-primary border-brand-primary text-white;
@@ -32,7 +32,7 @@ a.btn {
             @apply bg-brand-primary-light-1 border-brand-primary-light-1 text-white;
         }
 
-        // Disabled
+        /* Disabled */
         &.disabled,
         &.disabled:hover {
             opacity: 0.85;
@@ -57,7 +57,7 @@ a.btn {
             @apply bg-brand-primary text-white;
         }
 
-        // Disabled
+        /* Disabled */
         &.disabled {
             @apply text-gray-400 bg-white border-gray-400;
         }
@@ -71,7 +71,7 @@ a.btn {
         }
     }
 
-    // Loading
+    /* Loading */
     .btn__spinner {
         display: none;
     }
@@ -99,7 +99,7 @@ a.btn {
     }
 
 
-    // Buttons appearing to be links (keeps padding)
+    /* Buttons appearing to be links (keeps padding) */
     &--link {
         background: transparent;
 

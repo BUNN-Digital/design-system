@@ -19,7 +19,7 @@
             @apply rounded-none mb-0 mr-0 w-auto;
         }
         
-        // Add some space between each button
+        /* Add some space between each button */
         .btn:not(:last-child) {
             margin-right: 1px;
         }
@@ -38,16 +38,16 @@
 
     &:not(.btn-bar--centered) {
         overflow-x: auto;
-        -ms-overflow-style: none;  // IE 10+
-        overflow: -moz-scrollbars-none;  // Firefox
+        -ms-overflow-style: none;  /* IE 10+ */
+        overflow: -moz-scrollbars-none;  /* Firefox */
         white-space: nowrap;
 
         &::-webkit-scrollbar {
-            display: none; // Safari and Chrome
+            display: none; /* Safari and Chrome */
         }
     }
 
-    // Rounded left and right button edges when not in flush button bar
+    /* Rounded left and right button edges when not in flush button bar */
     &:not(.btn-bar--flush) {
         @apply p-0;
 
@@ -69,7 +69,7 @@
         }
     }
 
-    // Button bars inside of panels
+    /* Button bars inside of panels */
     .panel & {
         margin-left: -1px;
         margin-right: -1px;
@@ -87,7 +87,7 @@
         }
     }
 
-    // Buton bars that should inherit panel section styles
+    /* Buton bars that should inherit panel section styles */
     &.panel__section {
 
         .btn {
@@ -129,7 +129,7 @@
         }
     }
 
-    // Outlined button styles
+    /* Outlined button styles */
     &--outline,
     &--stroke {
         .btn {
@@ -159,14 +159,14 @@
     }
 
 
-    // Tabbed
+    /* Tabbed */
     &--tabbed {
         &--tabbed:first-child {
-            // border-right: solid 1px rgba(255, 255, 255, .2)
+            /* border-right: solid 1px rgba(255, 255, 255, .2) */
         }
 
         &--tabbed:last-child {
-            // border-left: solid 1px rgba(255, 255, 255, .2)
+            /* border-left: solid 1px rgba(255, 255, 255, .2) */
         }
     }
 }

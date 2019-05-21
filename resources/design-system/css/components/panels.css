@@ -1,5 +1,5 @@
 .panel {
-    // Defaults
+    /* Defaults */
     background: white;
     @apply mb-4;
 
@@ -19,7 +19,7 @@
         }
     }
 
-    // Alternative panel styles
+    /* Alternative panel styles */
     &--stroke {
         @apply border border-gray-200;
 
@@ -50,7 +50,7 @@
         }
     }
 
-    // Actions
+    /* Actions */
     &__action {
         display: block;
         cursor: pointer;
@@ -76,7 +76,7 @@
         }
     }
 
-    // Headers and sections in different panel styles
+    /* Headers and sections in different panel styles */
     &--fill-light,
     &--fill-dark,
     &--fill-contrast {
@@ -93,7 +93,7 @@
         }
     }
 
-    // Fill all sections in a panel with the same background color
+    /* Fill all sections in a panel with the same background color */
     &--fill-light {
         .panel__header,
         .panel__section,
@@ -102,7 +102,7 @@
         }
     }
 
-    // Handle dark filled panels
+    /* Handle dark filled panels */
     &--fill-contrast {
         @apply text-white;
 
@@ -144,11 +144,11 @@
     }
 }
 
-// Individual panel sections
+/* Individual panel sections */
 .panel__header,
 .panel__section,
 .panel__action {
-    // Section density
+    /* Section density */
     &--flush {
         @apply p-0;
     }
@@ -158,7 +158,7 @@
         @apply p-8;
     }
 
-    // Styles
+    /* Styles */
     &--stroke {
         @apply border border-gray-200;
     }
@@ -183,11 +183,11 @@
 
 
 
-// Collapsible Panels
+/* Collapsible Panels */
 .collapsible {
 
     &.collapsed {
-        // Is this the only collapsible in a rounded panel, make it rounded on all edges when collapsed
+        /* Is this the only collapsible in a rounded panel, make it rounded on all edges when collapsed */
         &.panel--rounded.single-collapsible {
             > .panel__action {
                 @apply rounded;
