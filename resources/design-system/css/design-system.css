@@ -2,44 +2,17 @@
 @import "tailwindcss/base";
 
 /* DESIGN SYSTEM BASE */
-@import "base/interactions";
-@import "base/keyframes";
-@import "base/layout";
-@import "base/rules";
-@import "base/standard";
-@import "base/typography";
+@import "base/all";
+
 
 /* TAILWIND COMPONENTS */
 @import "tailwindcss/components";
 
 /* DESIGN SYSTEM COMPONENTS */
-@import "components/accordions";
-@import "components/breadcrumbs";
-@import "components/buttons";
-@import "components/button-bars";
-@import "components/cards";
-@import "components/category-banners";
-@import "components/checkout";
-@import "components/drawers";
-@import "components/hero";
-@import "components/icon-link";
-@import "components/menus";
-@import "components/messages";
-@import "components/model-tables";
-@import "components/notifications";
-@import "components/pagination";
-@import "components/panels";
-@import "components/popup-menu";
-@import "components/product";
-@import "components/product-images";
-@import "components/spinner";
-@import "components/typeahead";
-@import "components/video";
-@import "components/videos";
+@import "components/all";
 
 /* DESIGN SYSTEM FEATURES  */
-@import "features/notifications";
-@import "features/field-validation";
+@import "features/all";
 
 /* VENDOR */
 @import "magnific-popup/dist/magnific-popup";

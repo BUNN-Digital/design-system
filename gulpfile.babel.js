@@ -3,18 +3,14 @@
  */
 import gulp from 'gulp';
 import child_process from 'child_process';
-import sass from 'gulp-sass';
 import postcss from 'gulp-postcss';
 import rename from 'gulp-rename';
-import cached from 'gulp-cached';
 import cleanCSS from 'gulp-clean-css';
-import sourcemaps from 'gulp-sourcemaps';
 import notify from 'gulp-notify';
 import babel from 'gulp-babel';
 import concat from 'gulp-concat';
 import uglify from 'gulp-uglify';
 import plumber from 'gulp-plumber';
-import tailwindcss from 'tailwindcss';
 import purgecss from '@fullhuman/postcss-purgecss';
 // import del from 'del';
 // const run = require('gulp-run-command').default;
