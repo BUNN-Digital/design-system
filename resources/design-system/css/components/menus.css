@@ -55,7 +55,7 @@
     @screen lg {
         .nav-menu-dropdown-content {
             background: white;
-            box-shadow: 0 4px 12px 0 rgba(black, 0.2);
+            box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
             top: 100%;
             margin-top: 1px;
         }

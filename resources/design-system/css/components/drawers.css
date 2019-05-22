@@ -61,7 +61,7 @@ body.drawer-open {
         transform: translateX(-100%);
 
         &.drawer--open {
-            box-shadow: 0 10px 20px 0 rgba(black, 0.3);
+            box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
         }
     }
 
@@ -70,7 +70,7 @@ body.drawer-open {
         transform: translateX(100%);
 
         &.drawer--open {
-            box-shadow: 0 -10px 20px 0 rgba(black, 0.3);
+            box-shadow: 0 -10px 20px 0 rgba(0, 0, 0, 0.3);
         }
     }
 
@@ -86,7 +86,7 @@ body.drawer-open {
         transform: translateY(-100%);
 
         &.drawer--open {
-            box-shadow: 10px 0 20px 0 rgba(black, 0.3);
+            box-shadow: 10px 0 20px 0 rgba(0, 0, 0, 0.3);
         }
     }
 
@@ -95,7 +95,7 @@ body.drawer-open {
         transform: translateY(100%);
 
         &.drawer--open {
-            box-shadow: -10px 0 20px 0 rgba(black, 0.3);
+            box-shadow: -10px 0 20px 0 rgba(0, 0, 0, 0.3);
         }
     }
 
