@@ -3388,13 +3388,9 @@ body > .popup-menu--hybrid .popup-menu__content-body {
     border-color: #e0e0e0;
   }
 
-$offset: 187;
-
-$duration: 1.4s;
-
 .spinner {
-  -webkit-animation: rotator $duration linear infinite;
-          animation: rotator $duration linear infinite;
+  -webkit-animation: rotator 1.4s linear infinite;
+          animation: rotator 1.4s linear infinite;
 }
 
 @-webkit-keyframes rotator {
@@ -3422,12 +3418,12 @@ $duration: 1.4s;
 }
 
 .path {
-  stroke-dasharray: $offset;
+  stroke-dasharray: 187;
   stroke-dashoffset: 0;
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-animation: dash $duration ease-in-out infinite, colors ($duration * 4) ease-in-out infinite;
-          animation: dash $duration ease-in-out infinite, colors ($duration * 4) ease-in-out infinite;
+  -webkit-animation: dash 1.4s ease-in-out infinite, colors calc(1.4s * 4) ease-in-out infinite;
+          animation: dash 1.4s ease-in-out infinite, colors calc(1.4s * 4) ease-in-out infinite;
 }
 
 @-webkit-keyframes colors {
@@ -3452,17 +3448,17 @@ $duration: 1.4s;
 
 @-webkit-keyframes dash {
   0% {
-    stroke-dashoffset: $offset;
+    stroke-dashoffset: 187;
   }
 
   50% {
-    stroke-dashoffset: $offset/4;
+    stroke-dashoffset: calc(187/4);
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
   }
 
   100% {
-    stroke-dashoffset: $offset;
+    stroke-dashoffset: 187;
     -webkit-transform: rotate(450deg);
             transform: rotate(450deg);
   }
@@ -3470,17 +3466,17 @@ $duration: 1.4s;
 
 @keyframes dash {
   0% {
-    stroke-dashoffset: $offset;
+    stroke-dashoffset: 187;
   }
 
   50% {
-    stroke-dashoffset: $offset/4;
+    stroke-dashoffset: calc(187/4);
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
   }
 
   100% {
-    stroke-dashoffset: $offset;
+    stroke-dashoffset: 187;
     -webkit-transform: rotate(450deg);
             transform: rotate(450deg);
   }
