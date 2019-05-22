@@ -3422,8 +3422,9 @@ body > .popup-menu--hybrid .popup-menu__content-body {
   stroke-dashoffset: 0;
   -webkit-transform-origin: center;
           transform-origin: center;
-  -webkit-animation: dash 1.4s ease-in-out infinite, colors calc(1.4s * 4) ease-in-out infinite;
-          animation: dash 1.4s ease-in-out infinite, colors calc(1.4s * 4) ease-in-out infinite;
+  -webkit-animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+          animation: dash 1.4s ease-in-out infinite, colors 5.6s ease-in-out infinite;
+  /*  5.6 = 1.4s * 4 */
 }
 
 @-webkit-keyframes colors {
@@ -3452,7 +3453,7 @@ body > .popup-menu--hybrid .popup-menu__content-body {
   }
 
   50% {
-    stroke-dashoffset: calc(187/4);
+    stroke-dashoffset: 46.75; /* 187 / 4 */
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
   }
@@ -3470,7 +3471,7 @@ body > .popup-menu--hybrid .popup-menu__content-body {
   }
 
   50% {
-    stroke-dashoffset: calc(187/4);
+    stroke-dashoffset: 46.75; /* 187 / 4 */
     -webkit-transform: rotate(135deg);
             transform: rotate(135deg);
   }
