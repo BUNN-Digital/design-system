@@ -25,9 +25,18 @@ a.btn {
 
     /* Colors */
     &--primary,
-    &.active {
+    &.active,
+    &.active:hover,
+    &--white.active,
+    &--white.active:hover,
+    &--stroke.active,
+    &--stroke.active:hover,
+    &--outline.active,
+    &--outline.active:hover {
         @apply bg-brand-primary border-brand-primary text-white;
+    }
 
+    &--primary {
         &:hover {
             @apply bg-brand-primary-light-1 border-brand-primary-light-1 text-white;
         }
@@ -48,7 +57,8 @@ a.btn {
         }
     }
 
-    &--outline {
+    &--outline,
+    &--primary.active {
         background: transparent;
         @apply border-brand-primary text-brand-primary;
 

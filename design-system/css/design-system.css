@@ -1211,14 +1211,28 @@ a.btn {
 
 .btn--primary,
     .btn.active,
+    .btn.active:hover,
+    .btn--white.active,
+    .btn--white.active:hover,
+    .btn--stroke.active,
+    .btn--stroke.active:hover,
+    .btn--outline.active,
+    .btn--outline.active:hover,
     a.btn--primary,
-    a.btn.active {
+    a.btn.active,
+    a.btn.active:hover,
+    a.btn--white.active,
+    a.btn--white.active:hover,
+    a.btn--stroke.active,
+    a.btn--stroke.active:hover,
+    a.btn--outline.active,
+    a.btn--outline.active:hover {
     background-color: HSLA(215, 60%, 37%, 1);
     border-color: HSLA(215, 60%, 37%, 1);
     color: #ffffff;
   }
 
-.btn--primary:hover, .btn.active:hover, a.btn--primary:hover, a.btn.active:hover {
+.btn--primary:hover, a.btn--primary:hover {
       background-color: HSLA(214, 44%, 44%, 1);
       border-color: HSLA(214, 44%, 44%, 1);
       color: #ffffff;
@@ -1228,12 +1242,8 @@ a.btn {
 
 .btn--primary.disabled,
         .btn--primary.disabled:hover,
-        .btn.active.disabled,
-        .btn.active.disabled:hover,
         a.btn--primary.disabled,
-        a.btn--primary.disabled:hover,
-        a.btn.active.disabled,
-        a.btn.active.disabled:hover {
+        a.btn--primary.disabled:hover {
       opacity: 0.85;
       background-color: HSLA(215, 60%, 37%, 1);
     }
@@ -1250,13 +1260,16 @@ a.btn {
       color: #ffffff;
     }
 
-.btn--outline, a.btn--outline {
+.btn--outline,
+    .btn--primary.active,
+    a.btn--outline,
+    a.btn--primary.active {
     background: transparent;
     border-color: HSLA(215, 60%, 37%, 1);
     color: HSLA(215, 60%, 37%, 1);
   }
 
-.btn--outline:hover, a.btn--outline:hover {
+.btn--outline:hover, .btn--primary.active:hover, a.btn--outline:hover, a.btn--primary.active:hover {
       background: transparent;
       background-color: HSLA(215, 60%, 37%, 1);
       color: #ffffff;
@@ -1264,7 +1277,7 @@ a.btn {
 
 /* Disabled */
 
-.btn--outline.disabled, a.btn--outline.disabled {
+.btn--outline.disabled, .btn--primary.active.disabled, a.btn--outline.disabled, a.btn--primary.active.disabled {
       color: #cdcdcd;
       background-color: #ffffff;
       border-color: #cdcdcd;
