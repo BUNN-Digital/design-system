@@ -1210,8 +1210,6 @@ a.btn {
 /* Colors */
 
 .btn--primary,
-    .btn.active,
-    .btn.active:hover,
     .btn--white.active,
     .btn--white.active:hover,
     .btn--stroke.active,
@@ -1219,8 +1217,6 @@ a.btn {
     .btn--outline.active,
     .btn--outline.active:hover,
     a.btn--primary,
-    a.btn.active,
-    a.btn.active:hover,
     a.btn--white.active,
     a.btn--white.active:hover,
     a.btn--stroke.active,
@@ -1236,6 +1232,15 @@ a.btn {
       background-color: HSLA(214, 44%, 44%, 1);
       border-color: HSLA(214, 44%, 44%, 1);
       color: #ffffff;
+    }
+
+.btn--primary.active,
+        .btn--primary.active:hover,
+        a.btn--primary.active,
+        a.btn--primary.active:hover {
+      background-color: #ffffff;
+      color: HSLA(215, 60%, 37%, 1);
+      border-color: HSLA(215, 60%, 37%, 1);
     }
 
 /* Disabled */
@@ -1260,16 +1265,13 @@ a.btn {
       color: #ffffff;
     }
 
-.btn--outline,
-    .btn--primary.active,
-    a.btn--outline,
-    a.btn--primary.active {
+.btn--outline, a.btn--outline {
     background: transparent;
     border-color: HSLA(215, 60%, 37%, 1);
     color: HSLA(215, 60%, 37%, 1);
   }
 
-.btn--outline:hover, .btn--primary.active:hover, a.btn--outline:hover, a.btn--primary.active:hover {
+.btn--outline:hover, a.btn--outline:hover {
       background: transparent;
       background-color: HSLA(215, 60%, 37%, 1);
       color: #ffffff;
@@ -1277,7 +1279,7 @@ a.btn {
 
 /* Disabled */
 
-.btn--outline.disabled, .btn--primary.active.disabled, a.btn--outline.disabled, a.btn--primary.active.disabled {
+.btn--outline.disabled, a.btn--outline.disabled {
       color: #cdcdcd;
       background-color: #ffffff;
       border-color: #cdcdcd;
