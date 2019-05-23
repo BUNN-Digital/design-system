@@ -1,7 +1,6 @@
 .panel {
     /* Defaults */
     background: white;
-    @apply mb-4;
 
     &__header,
     &__action {
@@ -15,7 +14,6 @@
 
         &:last-child {
             border-bottom: none;
-            margin-bottom: 0;
         }
     }
 

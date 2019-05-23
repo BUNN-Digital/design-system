@@ -25,9 +25,9 @@ tag: components
 </div>
 {% endhighlight %}
 
-<h2 class="section-heading">Centered Button Bar</h2>
+<h2 class="section-heading">Scrolling Button Bars</h2>
 
-<div class="btn-bar btn-bar--centered">
+<div class="btn-bar btn-bar--scroll">
 	<a href="" class="btn btn--primary">Button Text</a>
 	<a href="" class="btn btn--primary">Button Text</a>
 	<a href="" class="btn btn--primary">Button Text</a>
@@ -35,7 +35,41 @@ tag: components
 </div>
 
 {% highlight "html" %}
-<div class="btn-bar btn-bar--centered">
+<div class="btn-bar btn-bar--scroll">
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+</div>
+{% endhighlight %}
+
+<div class="btn-bar btn-bar--flush btn-bar--scroll">
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+</div>
+
+{% highlight "html" %}
+<div class="btn-bar btn-bar--flush btn-bar--scroll">
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+</div>
+{% endhighlight %}
+
+<h2 class="section-heading">Centered Button Bar</h2>
+
+<div class="btn-bar justify-center">
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+	<a href="" class="btn btn--primary">Button Text</a>
+</div>
+
+{% highlight "html" %}
+<div class="btn-bar justify-center">
 	<a href="" class="btn btn--primary">Button Text</a>
 	<a href="" class="btn btn--primary">Button Text</a>
 	<a href="" class="btn btn--primary">Button Text</a>
@@ -46,7 +80,7 @@ tag: components
 
 <h2 class="section-heading">Outline buttons</h2>
 
-<div class="btn-bar btn-bar--outline">
+<div class="btn-bar btn-bar--">
 	<a href="" class="btn btn--outline">Button Text</a>
 	<a href="" class="btn btn--outline">Button Text</a>
 	<a href="" class="btn btn--outline">Button Text</a>
@@ -54,7 +88,7 @@ tag: components
 </div>
 
 {% highlight "html" %}
-<div class="btn-bar btn-bar--outline">
+<div class="btn-bar btn-bar--">
 	<a href="" class="btn btn--outline">Button Text</a>
 	<a href="" class="btn btn--outline">Button Text</a>
 	<a href="" class="btn btn--outline">Button Text</a>
@@ -135,8 +169,6 @@ tag: components
 
 <h2 class="heading-beta">Use with Panels</h2>
 
-<h2 class="section-heading">Button Bar with Panels</h2>
-
 <div class="panel panel--stroke">
 	<div class="panel__header">
 		Panel Header
@@ -144,14 +176,12 @@ tag: components
 	<div class="panel__section">
 		I'm a panel section
 	</div>
-	<div class="panel__section panel__section--flush">
-		<div class="btn-bar btn-bar--flush">
-			<a href="" class="btn btn--primary">Button Text</a>
-			<a href="" class="btn btn--primary">Button Text</a>
-			<a href="" class="btn btn--primary">Button Text</a>
-			<a href="" class="btn btn--primary">Button Text</a>
-		</div>
-	</div>
+</div>
+<div class="btn-bar btn-bar--flush btn-bar--stroke -mt-px">
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
 </div>
 
 {% highlight "html" %}
@@ -162,48 +192,12 @@ tag: components
 	<div class="panel__section">
 		I'm a panel section
 	</div>
-	<div class="panel__section panel__section--flush">
-		<div class="btn-bar btn-bar--flush">
-			<a href="" class="btn btn--primary">Button Text</a>
-			<a href="" class="btn btn--primary">Button Text</a>
-			<a href="" class="btn btn--primary">Button Text</a>
-			<a href="" class="btn btn--primary">Button Text</a>
-		</div>
-	</div>
 </div>
-{% endhighlight %}
-
-<p>It's not really necessary to nest a button bar inside of a panel section.</p>
-
-<div class="panel panel--stroke">
-	<div class="panel__header">
-		Panel Header
-	</div>
-	<div class="panel__section">
-		I'm a panel section
-	</div>
-	<div class="btn-bar btn-bar--flush btn-bar--outline">
-		<a href="" class="btn btn--outline">Button Text</a>
-		<a href="" class="btn btn--outline">Button Text</a>
-		<a href="" class="btn btn--outline">Button Text</a>
-		<a href="" class="btn btn--outline">Button Text</a>
-	</div>
-</div>
-
-{% highlight "html" %}
-<div class="panel panel--stroke">
-	<div class="panel__header">
-		Panel Header
-	</div>
-	<div class="panel__section">
-		I'm a panel section
-	</div>
-	<div class="btn-bar btn-bar--flush btn-bar--outline">
-		<a href="" class="btn btn--outline">Button Text</a>
-		<a href="" class="btn btn--outline">Button Text</a>
-		<a href="" class="btn btn--outline">Button Text</a>
-		<a href="" class="btn btn--outline">Button Text</a>
-	</div>
+<div class="btn-bar btn-bar--flush btn-bar--stroke -mt-px">
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
 </div>
 {% endhighlight %}
 
@@ -214,12 +208,16 @@ tag: components
 	<div class="panel__section">
 		I'm a panel section
 	</div>
-	<div class="btn-bar btn-bar--flush btn-bar--stroke">
-		<a href="" class="btn btn--stroke">Button Text</a>
-		<a href="" class="btn btn--stroke">Button Text</a>
-		<a href="" class="btn btn--stroke">Button Text</a>
-		<a href="" class="btn btn--stroke">Button Text</a>
-	</div>
+</div>
+<div class="btn-bar btn-bar--flush btn-bar--scroll btn-bar--stroke -mt-px">
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
 </div>
 
 {% highlight "html" %}
@@ -230,11 +228,15 @@ tag: components
 	<div class="panel__section">
 		I'm a panel section
 	</div>
-	<div class="btn-bar btn-bar--flush btn-bar--stroke">
-		<a href="" class="btn btn--stroke">Button Text</a>
-		<a href="" class="btn btn--stroke">Button Text</a>
-		<a href="" class="btn btn--stroke">Button Text</a>
-		<a href="" class="btn btn--stroke">Button Text</a>
-	</div>
+</div>
+<div class="btn-bar btn-bar--flush btn-bar---scroll btn-bar--stroke -mt-px">
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
+	<a href="" class="btn btn--stroke">Button Text</a>
 </div>
 {% endhighlight %}

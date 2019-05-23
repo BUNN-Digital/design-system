@@ -1358,25 +1358,40 @@ a.btn {
     }
   }
 
-.btn-bar--centered .btn {
-      flex-grow: 1;
-    }
-
-@media (min-width: 480px) {
-
-.btn-bar--centered {
-      justify-content: center
-  }
-    }
-
-.btn-bar:not(.btn-bar--centered) {
+.btn-bar--scroll {
+    display: flex;
+    white-space: nowrap;
     overflow-x: auto;
     -ms-overflow-style: none;  /* IE 10+ */
-    overflow: -moz-scrollbars-none;  /* Firefox */
-    white-space: nowrap;
+    overflow: -moz-scrollbars-none;
   }
 
-.btn-bar:not(.btn-bar--centered)::-webkit-scrollbar {
+/* Firefox */
+
+.btn-bar--scroll .btn {
+      border-radius: 0;
+      margin-right: 1px;
+    }
+
+.btn-bar--scroll .btn:first-child {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        border-top-left-radius: 0.25rem;
+        border-bottom-left-radius: 0.25rem;
+      }
+
+.btn-bar--scroll .btn:last-child {
+        border-bottom-right-radius: 0;
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.25rem;
+        border-bottom-right-radius: 0.25rem;
+      }
+
+.btn-bar--scroll .btn:only-child {
+        border-radius: 0.25rem;
+      }
+
+.btn-bar--scroll::-webkit-scrollbar {
       display: none; /* Safari and Chrome */
     }
 
@@ -1404,45 +1419,31 @@ a.btn {
         }
     }
 
-/* Button bars inside of panels */
-
-.panel .btn-bar {
-    margin-left: -1px;
-    margin-right: -1px;
+.btn-bar--full {
+    border: none;
   }
-
-.panel .btn-bar .btn {
-      border-radius: 0;
-    }
-
-.panel .btn-bar .btn:last-child {
-        margin-bottom: 0;
-      }
-
-@media (min-width: 480px) {
-
-.panel .btn-bar .btn {
-        margin-bottom: 0
-    }
-      }
-
-/* Buton bars that should inherit panel section styles */
-
-.btn-bar.panel__section .btn {
-      background: inherit;
-      border-color: inherit;
-    }
-
-@media (min-width: 480px) {
-
-.btn-bar.panel__section .btn {
-        margin-bottom: 0
-    }
-      }
 
 .btn-bar--full .btn, .btn-bar--flush .btn {
       width: 100%;
     }
+
+.btn-bar--full .btn--stroke,
+            .btn-bar--full .btn--outline,
+            .btn-bar--flush .btn--stroke,
+            .btn-bar--flush .btn--outline {
+        margin-bottom: 0;
+      }
+
+.btn-bar--full .btn--stroke + .btn, .btn-bar--full .btn--outline + .btn, .btn-bar--flush .btn--stroke + .btn, .btn-bar--flush .btn--outline + .btn {
+          margin-top: -1px;
+        }
+
+@media (min-width: 480px) {
+
+.btn-bar--full .btn--stroke + .btn, .btn-bar--full .btn--outline + .btn, .btn-bar--flush .btn--stroke + .btn, .btn-bar--flush .btn--outline + .btn {
+            margin-top: 0
+        }
+          }
 
 @media (min-width: 480px) {
       .btn-bar--full .btn, .btn-bar--flush .btn {
@@ -1451,48 +1452,47 @@ a.btn {
       }
     }
 
-.panel .btn-bar--flush {
-      margin-bottom: -1px;
-    }
-
-.btn-bar--flush .btn, .btn-bar.panel__section .btn {
-      border-radius: 0;
+.btn-bar--flush .btn {
       margin-bottom: 1px;
     }
 
-/* Outlined button styles */
-
-.btn-bar--outline .btn, .btn-bar--stroke .btn {
-      margin-bottom: -1px;
-    }
-
-@media (min-width: 480px) {
-      .btn-bar--outline .btn, .btn-bar--stroke .btn {
-        margin-bottom: 0;
+.btn-bar--flush.btn-bar--outline .btn, .btn-bar--flush.btn-bar--stroke .btn {
+        margin-bottom:  0;
       }
 
+.btn-bar--flush.btn-bar--outline.btn-bar--scroll .btn:first-child, .btn-bar--flush.btn-bar--stroke.btn-bar--scroll .btn:first-child {
+          border-left: 0;
+        }
+
+.btn-bar--flush.btn-bar--outline.btn-bar--scroll .btn:last-child, .btn-bar--flush.btn-bar--stroke.btn-bar--scroll .btn:last-child {
+          border-right: 0;
+        }
+
+.btn-bar--flush.btn-bar--outline.btn-bar--scroll {
+      border-left-width: 1px;
+      border-right-width: 1px;
+      border-color: HSLA(215, 60%, 37%, 1);
+    }
+
+.btn-bar--flush.btn-bar--stroke.btn-bar--scroll {
+      border-left-width: 1px;
+      border-right-width: 1px;
+      border-color: #e8e8e8;
+    }
+
+.btn-bar--flush .btn,
+        .btn-bar--flush.btn-bar--scroll .btn {
+      border-radius: 0;
+    }
+
+.btn-bar--outline.btn-bar--scroll .btn:not(:last-child), .btn-bar--stroke.btn-bar--scroll .btn:not(:last-child) {
+        margin-right: -1px;
+      }
+
+@media (min-width: 480px) {
       .btn-bar--outline .btn:not(:last-child), .btn-bar--stroke .btn:not(:last-child) {
         margin-right: -1px;
       }
-    }
-
-.panel .btn-bar--stroke {
-      border-style: none;
-    }
-
-.panel .btn-bar--stroke .btn {
-        margin-bottom: 0;
-        border-top-width: 0;
-      }
-
-/* Tabbed */
-
-.btn-bar--tabbed--tabbed:first-child {
-      /* border-right: solid 1px rgba(255, 255, 255, .2) */
-    }
-
-.btn-bar--tabbed--tabbed:last-child {
-      /* border-left: solid 1px rgba(255, 255, 255, .2) */
     }
 
 .b-card {
@@ -2842,7 +2842,6 @@ a.icon-link {
 .panel {
   /* Defaults */
   background: white;
-  margin-bottom: 1rem;
 }
 
 .panel__header,
@@ -2861,7 +2860,6 @@ a.icon-link {
 
 .panel__header:last-child, .panel__section:last-child, .panel__action:last-child {
       border-bottom: none;
-      margin-bottom: 0;
     }
 
 /* Alternative panel styles */
