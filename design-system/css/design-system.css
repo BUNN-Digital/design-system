@@ -1343,13 +1343,6 @@ a.btn {
  *
  */
 
-@media (min-width: 480px) {
-
-.btn-bar {
-    display: flex
-}
-  }
-
 .btn-bar .btn {
     margin-bottom: 0.5rem;
     width: 100%;
@@ -1358,9 +1351,11 @@ a.btn {
 @media (min-width: 480px) {
 
 .btn-bar {
+    display: flex
 
     /* Add some space between each button */
 }
+
     .btn-bar .btn {
       border-radius: 0;
       margin-bottom: 0;
@@ -1996,6 +1991,99 @@ a.icon-link {
 
 .icon-link:hover > span, a.icon-link:hover > span {
       text-decoration: underline;
+    }
+
+/* Link Bar
+ *
+ * Stacked on mobile, horizontal bar on desktop
+ *
+ */
+
+.link-bar .link-bar__link {
+    color: inherit;
+    display: block;
+    text-align: center;
+    margin-bottom: 0.5rem;
+    width: 100%;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 0.75rem;
+    padding-bottom: 0.75rem;
+  }
+
+.link-bar .link-bar__link:hover,
+        .link-bar .link-bar__link:hover {
+      color: HSLA(215, 60%, 37%, 1)
+    }
+
+@media (min-width: 768px) {
+
+.link-bar {
+    display: flex
+}
+
+    .link-bar .link-bar__link {
+      margin-right: 1px;
+      display: inline-block;
+      width: auto;
+      border-bottom-width: 4px;
+      border-color: transparent;
+    }
+      .link-bar .link-bar__link:last-child {
+        margin-right: 0;
+      }
+      .link-bar .link-bar__link:hover {
+        border-color: HSLA(215, 38%, 56%, 1);
+      }
+      .link-bar .link-bar__link.active {
+        border-color: HSLA(215, 60%, 37%, 1);
+        color: HSLA(215, 60%, 37%, 1);
+      }
+  }
+
+.link-bar--scroll {
+    display: flex;
+    white-space: nowrap;
+    overflow-x: auto;
+    -ms-overflow-style: none;  /* IE 10+ */
+    overflow: -moz-scrollbars-none;
+  }
+
+/* Firefox */
+
+.link-bar--scroll::-webkit-scrollbar {
+      display: none; /* Safari and Chrome */
+    }
+
+.link-bar--scroll .link-bar__link {
+      display: inline-block;
+      margin-right: 1px;
+      border-bottom-width: 4px;
+      border-color: transparent;
+    }
+
+.link-bar--scroll .link-bar__link:last-child {
+        margin-right: 0;
+      }
+
+.link-bar--scroll .link-bar__link:hover {
+        border-color: HSLA(215, 38%, 56%, 1);
+      }
+
+.link-bar--scroll .link-bar__link.active {
+        border-color: HSLA(215, 60%, 37%, 1);
+        color: HSLA(215, 60%, 37%, 1);
+      }
+
+.link-bar--full .link-bar__link {
+      width: 100%;
+    }
+
+@media (min-width: 768px) {
+      .link-bar--full .link-bar__link {
+        flex-grow: 1;
+        width: auto;
+      }
     }
 
 .nav-menu-item a {

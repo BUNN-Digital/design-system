@@ -1,0 +1,89 @@
+/* Link Bar
+ *
+ * Stacked on mobile, horizontal bar on desktop
+ *
+ */
+
+ .link-bar {
+    
+    .link-bar__link {
+        color: inherit;
+        display: block;
+        text-align: center;
+        @apply mb-2 w-full px-8 py-3;
+
+        &:hover,
+        &:hover {
+            @apply text-brand-primary
+        }
+    }
+    
+    @screen md {
+        display: flex;
+        
+        .link-bar__link {
+            margin-right: 1px;
+            display: inline-block;
+            width: auto;
+            @apply border-b-4 border-transparent;
+
+            &:last-child {
+                margin-right: 0;
+            }
+            
+            &:hover {
+                @apply border-brand-primary-light-2;
+            }
+            
+            &.active {
+                @apply border-brand-primary text-brand-primary;
+            }
+        }
+    }
+
+    &--scroll {
+        display: flex;
+        white-space: nowrap;
+        overflow-x: auto;
+        -ms-overflow-style: none;  /* IE 10+ */
+        overflow: -moz-scrollbars-none;  /* Firefox */
+
+        &::-webkit-scrollbar {
+            display: none; /* Safari and Chrome */
+        }
+
+        .link-bar__link {
+            display: inline-block;
+            margin-right: 1px;
+            @apply border-b-4 border-transparent;
+
+            &:last-child {
+                margin-right: 0;
+            }
+            
+            &:hover {
+                @apply border-brand-primary-light-2;
+            }
+            
+            &.active {
+                @apply border-brand-primary text-brand-primary;
+            }
+        }
+    }
+    
+    &--full {
+        
+        .link-bar__link {
+            width: 100%;
+        }
+        
+        @screen md {
+            
+            .link-bar__link {
+                flex-grow: 1;
+                width: auto;
+            }
+        }
+    }
+
+}

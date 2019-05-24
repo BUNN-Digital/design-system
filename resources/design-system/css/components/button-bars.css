@@ -6,15 +6,13 @@
 
 .btn-bar {
     
-    @screen sm {
-        display: flex;
-    }
-    
     .btn {
         @apply mb-2 w-full;
     }
     
     @screen sm {
+        display: flex;
+
         .btn {
             border-radius: 0;
             margin-bottom: 0;
