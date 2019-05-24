@@ -2011,8 +2011,9 @@ a.icon-link {
   }
 
 .link-bar .link-bar__link:hover,
-        .link-bar .link-bar__link:hover {
-      color: HSLA(215, 60%, 37%, 1)
+        .link-bar .link-bar__link.active {
+      background-color: HSLA(215, 60%, 37%, 1);
+      color: #ffffff;
     }
 
 @media (min-width: 768px) {
@@ -2024,7 +2025,6 @@ a.icon-link {
     .link-bar .link-bar__link {
       margin-right: 1px;
       display: inline-block;
-      width: auto;
       border-bottom-width: 4px;
       border-color: transparent;
     }
@@ -2066,10 +2066,13 @@ a.icon-link {
       }
 
 .link-bar--scroll .link-bar__link:hover {
+        background-color: #ffffff;
         border-color: HSLA(215, 38%, 56%, 1);
+        color: HSLA(215, 60%, 37%, 1);
       }
 
 .link-bar--scroll .link-bar__link.active {
+        background-color: #ffffff;
         border-color: HSLA(215, 60%, 37%, 1);
         color: HSLA(215, 60%, 37%, 1);
       }

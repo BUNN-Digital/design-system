@@ -12,8 +12,8 @@
         @apply mb-2 w-full px-8 py-3;
 
         &:hover,
-        &:hover {
-            @apply text-brand-primary
+        &.active {
+            @apply bg-brand-primary text-white;
         }
     }
     
@@ -23,7 +23,6 @@
         .link-bar__link {
             margin-right: 1px;
             display: inline-block;
-            width: auto;
             @apply border-b-4 border-transparent;
 
             &:last-child {
@@ -61,11 +60,11 @@
             }
             
             &:hover {
-                @apply border-brand-primary-light-2;
+                @apply bg-white border-brand-primary-light-2 text-brand-primary;
             }
             
             &.active {
-                @apply border-brand-primary text-brand-primary;
+                @apply bg-white border-brand-primary text-brand-primary;
             }
         }
     }
