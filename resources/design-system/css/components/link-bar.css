@@ -30,11 +30,11 @@
             }
             
             &:hover {
-                @apply border-brand-primary-light-2;
+                @apply border-brand-primary-light-2 bg-transparent ;
             }
             
             &.active {
-                @apply border-brand-primary text-brand-primary;
+                @apply border-brand-primary  bg-transparent text-brand-primary;
             }
         }
     }

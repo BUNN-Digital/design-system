@@ -1352,20 +1352,17 @@ a.btn {
 
 .btn-bar {
     display: flex
-
-    /* Add some space between each button */
 }
 
     .btn-bar .btn {
       border-radius: 0;
       margin-bottom: 0;
-      margin-right: 0;
+      margin-right: 1px;
       width: auto;
     }
-
-    .btn-bar .btn:not(:last-child) {
-      margin-right: 1px;
-    }
+      .btn-bar .btn:last-child {
+        margin-right: 0;
+      }
   }
 
 .btn-bar--scroll {
@@ -2033,9 +2030,11 @@ a.icon-link {
       }
       .link-bar .link-bar__link:hover {
         border-color: HSLA(215, 38%, 56%, 1);
+        background-color: transparent;
       }
       .link-bar .link-bar__link.active {
         border-color: HSLA(215, 60%, 37%, 1);
+        background-color: transparent;
         color: HSLA(215, 60%, 37%, 1);
       }
   }
