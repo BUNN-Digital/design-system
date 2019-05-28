@@ -2287,73 +2287,16 @@ a.btn {
       }
     }
 
-.b-card {
-  display: flex;
-  flex-direction: column;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  margin: 1rem;
-  border-radius: 0.25rem;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
-  margin: 1rem;
-  border-radius: 0.25rem;
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  position: relative;
-}
-
-/* height: calc(100% - 40px); */
-
-.b-card--interactive {
-    cursor: pointer;
+.card--interactive {
     transition: all 0.2s ease;
   }
 
-.b-card--interactive:hover {
+.card--interactive:hover {
     -webkit-transform: scale(1.05);
             transform: scale(1.05);
   }
 
-.b-card__media {
-    height: 12rem;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
-    border-radius: 0.25rem;
-    border-bottom-right-radius: 0;
-    border-bottom-left-radius: 0;
-  }
-
-.b-card__content {
-    padding-left: 2rem;
-    padding-right: 2rem;
-    padding-top: 1.5rem;
-    padding-bottom: 1.5rem;
-    padding-right: 4rem;
-    font-size: 1.25rem;
-    position: relative;
-  }
-
-.b-card__icon {
-    border-radius: 9999px;
-    background-color: #ffffff;
-    border-width: 4px;
-    border-color: #ffffff;
-    font-size: 2.75rem;
-    color: HSLA(215, 60%, 37%, 1);
-    position: absolute;
-    top: 0;
-    right: 0;
-    margin-top: -1.5rem;
-    margin-right: 1.5rem;
-  }
-
-.b-card__link {
-    color: #1a1a1a;
-  }
-
-.b-card__saved {
+.card__saved {
     position: relative;
     padding-top: 1.25rem;
     padding-bottom: 1.25rem;
@@ -2369,15 +2312,15 @@ a.btn {
     line-height: 1.5;
   }
 
-.b-card__saved:hover {
+.card__saved:hover {
       border-color: #e0e0e0;
     }
 
-.active .b-card__saved {
+.active .card__saved {
       border-color: #e0e0e0;
     }
 
-.active .b-card__saved:after {
+.active .card__saved:after {
         font-family: "Font Awesome 5 Pro";
         content: "\f00c";
         position: absolute;

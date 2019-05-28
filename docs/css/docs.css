@@ -170,7 +170,9 @@ pre[class*="language-"] {
 }
   }
 
-.inline-code {
+p code,
+ul code,
+ol code {
   display: inline-block;
   padding: 2px 4px;
   border-radius: 3px;

@@ -7,76 +7,133 @@ section: Components
 tag: components
 ---
 
-<h2 class="section-heading">Media cards</h2>
+<h2 class="section-heading">Basic card with different border and shadow options</h2>
 
-
-<div class="flex flex-wrap -mx-4">
+<div class="flex flex-wrap py-8 -mx-2">
 	<div class="w-full sm:w-1/2">
-		<div class="b-card b-card--interactive">
-			<a href="https://player.vimeo.com/video/267449763?autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0" class="b-card__link js-video-popup">
-				<div class="b-card__media" style="background-image: url(&quot;//resource.bunn.com/assets/web/hybris/img/brewing-basics/Cherry_or_Bean.png&quot;);"></div> 
-				<div class="b-card__content">
-					<i class="b-card__icon fas fa-play-circle"></i> 
-					<span>Is it a Coffee Cherry or a Coffee Bean?</span>
-				</div>
-			</a>
+		<div class="card m-2 flex justify-center items-center rounded p-12 border border-gray-200">
+			<div>Card content</div>
 		</div>
 	</div>
 	<div class="w-full sm:w-1/2">
-		<div class="b-card b-card--interactive">
-			<a href="https://player.vimeo.com/video/267449763?autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0" class="b-card__link js-video-popup">
-				<div class="b-card__media" style="background-image: url(&quot;//resource.bunn.com/assets/web/hybris/img/brewing-basics/Cherry_or_Bean.png&quot;);"></div> 
-				<div class="b-card__content">
-					<i class="b-card__icon fas fa-play-circle"></i> 
-					<span>Is it a Coffee Cherry or a Coffee Bean?</span>
-				</div>
-			</a>
+		<div class="card m-2 flex justify-center items-center rounded p-12 shadow">
+			<div>Card content</div>
+		</div>
+	</div>
+	<div class="w-full sm:w-1/2">
+		<div class="card m-2 flex justify-center items-center rounded p-12 shadow-md">
+			<div>Card content</div>
+		</div>
+	</div>
+	<div class="w-full sm:w-1/2">
+		<div class="card m-2 flex justify-center items-center rounded p-12 shadow-lg">
+			<div>Card content</div>
 		</div>
 	</div>
 </div>
 
 {% highlight "html" %}
-<div class="b-card b-card--interactive">
-	<a href="https://player.vimeo.com/video/267449763?autoplay=1&amp;title=0&amp;byline=0&amp;portrait=0" class="b-card__link js-video-popup">
-		<div class="b-card__media" style="background-image: url(&quot;//resource.bunn.com/assets/web/hybris/img/brewing-basics/Cherry_or_Bean.png&quot;);"></div> 
-		<div class="b-card__content">
-			<i class="b-card__icon fas fa-play-circle"></i> 
-			<span>Is it a Coffee Cherry or a Coffee Bean?</span>
-		</div>
-	</a>
+<div class="card m-2 flex justify-center items-center p-12 border border-gray-200 rounded relative">
+	<div>Card content</div>
+</div>
+
+<div class="card m-2 flex justify-center items-center p-12 shadow rounded relative">
+	<div>Card content</div>
+</div>
+
+<div class="card m-2 flex justify-center items-center p-12 shadow-md rounded relative">
+	<div>Card content</div>
+</div>
+
+<div class="card m-2 flex justify-center items-center rounded p-12 shadow-lg">
+	<div>Card content</div>
 </div>
 {% endhighlight %}
 
-<div class="flex flex-wrap -mx-4">
-	<div class="w-full sm:w-1/2">
-		<div class="b-card">
-			<div class="b-card__media" style="background-image: url(&quot;//resource.bunn.com/assets/web/hybris/img/events/nacufs_2018.png&quot;);"></div> 
-			<div class="p-6 relative">
-				<span class="absolute top-0 left-0 bg-black text-white rounded-full uppercase font-sans-medium py-1 px-4 -mt-4 ml-4">July 12-13 2018</span> 
-				<div class="font-sans-medium">INACUFS National Conference 2018</div> 
-				<div>Providence, RI</div> 
-				<div>Booth 266</div>
-			</div>
-		</div>
+
+<h2 class="section-heading">Interactive cards</h2>
+
+<p>You can add any custom <code>:hover</code> classes you want to custom card elements, but using the <code>.card--interactive</code> modifier will apply a nice hover transition to the card.</p>
+
+<div class="max-w-sm -mx-2">
+	<div class="card card--interactive cursor-pointer flex justify-center items-center rounded p-12 shadow-lg">
+		<div>Card content</div>
 	</div>
-	<div class="w-full sm:w-1/2">
-		<div class="b-card">
-			<div class="b-card__media" style="background-image: url(&quot;//resource.bunn.com/assets/web/hybris/img/events/nacufs_2018.png&quot;);"></div> 
-			<div class="p-6 relative">
-				<span class="absolute top-0 left-0 bg-black text-white rounded-full uppercase font-sans-medium py-1 px-4 -mt-4 ml-4">July 12-13 2018</span> 
-				<div class="font-sans-medium">INACUFS National Conference 2018</div> 
-				<div>Providence, RI</div> 
-				<div>Booth 266</div>
-			</div>
+</div>
+
+{% highlight "html" %}
+<div class="card card--interactive cursor-pointer flex justify-center items-center rounded p-12 shadow-lg">
+	<div>Card content</div>
+</div>
+{% endhighlight %}
+
+
+<h2 class="section-heading">Card with image and unique hover effects</h2>
+
+<p>Notice how this card uses <code>.rounded</code> on the parent and <code>.rounded-sm</code> on the inner container to make sure the border radius of the inner container fits into the parent container radius.</p>
+
+<div class="max-w-sm -mx-2">
+	<a href="" class="card cursor-pointer flex flex-col items-center shadow rounded border-2 border-transparent hover:border-brand-primary m-2">
+		<div class="w-full h-48 bg-no-repeat bg-center bg-cover rounded-sm rounded-b-none" style="background-image: url(https://source.unsplash.com/640x400/?tech)">&nbsp;</div>
+		<div class="px-8 py-6 text-lg-1 text-black hover:text-brand-primary relative">
+			Card title <i class="fal fa-arrow-right"></i>
+		</div>
+	</a>
+</div>
+
+
+{% highlight "html" %}
+<a href="" class="card cursor-pointer flex flex-col items-center shadow rounded border-2 border-transparent hover:border-brand-primary m-2">
+	<div class="w-full h-48 bg-no-repeat bg-center bg-cover rounded-sm rounded-b-none" style="background-image: url(https://source.unsplash.com/640x400/?tech)">&nbsp;</div>
+	<div class="px-8 py-6 text-lg-1 text-black hover:text-brand-primary relative">
+		Card title <i class="fal fa-arrow-right"></i>
+	</div>
+</a>
+{% endhighlight %}
+
+
+<h2 class="section-heading">Interactive card with image and icon</h2>
+
+<div class="max-w-sm -mx-2">
+	<a href="" class="card card--interactive cursor-pointer m-2 flex flex-col items-center shadow-lg rounded">
+		<div class="w-full h-48 bg-no-repeat bg-center bg-cover rounded rounded-b-none" style="background-image: url(https://source.unsplash.com/640x400/?nature)">&nbsp;</div>
+		<div class="px-8 py-6 pr-20 text-lg-1 text-black relative w-full text-left">
+			<span class="fas fa-play-circle rounded-full bg-white border-4 border-white text-lg-4 text-brand-primary absolute top-0 right-0 -mt-6 mr-6"></span>
+			Card title
+		</div>
+	</a>
+</div>
+
+{% highlight "html" %}
+<a href="" class="card card--interactive cursor-pointer m-2 flex flex-col items-center shadow-lg rounded">
+	<div class="w-full h-48 bg-no-repeat bg-center bg-cover rounded rounded-b-none" style="background-image: url(https://source.unsplash.com/640x400/?nature)">&nbsp;</div>
+	<div class="px-8 py-6 pr-20 text-lg-1 text-black relative w-full text-left">
+		<span class="fas fa-play-circle rounded-full bg-white border-4 border-white text-lg-4 text-brand-primary absolute top-0 right-0 -mt-6 mr-6"></span>
+		Card title
+	</div>
+</a>
+{% endhighlight %}
+
+
+<h2 class="section-heading">Card with image and label</h2>
+
+<div class="max-w-sm -mx-2">
+	<div class="card cursor-pointer m-2 flex flex-col items-center border border-gray-200 rounded">
+		<div class="w-full h-48 bg-no-repeat bg-center bg-cover rounded rounded-b-none" style="background-image: url(https://source.unsplash.com/640x400/?buildings)">&nbsp;</div>
+		<div class="px-8 pt-8 pb-6 text-black relative w-full text-left">
+			<span class="absolute top-0 left-0 bg-black text-white rounded-full uppercase font-sans-medium py-2 px-4 -mt-4 ml-6 leading-none">July 12-13 2018</span> 
+			<div class="font-sans-medium">INACUFS National Conference 2018</div> 
+			<div>Providence, RI</div> 
+			<div>Booth 266</div>
 		</div>
 	</div>
 </div>
 
 {% highlight "html" %}
-<div class="b-card">
-	<div class="b-card__media" style="background-image: url(&quot;//resource.bunn.com/assets/web/hybris/img/events/nacufs_2018.png&quot;);"></div> 
-	<div class="p-6 relative">
-		<span class="absolute top-0 left-0 bg-black text-white rounded-full uppercase font-sans-medium py-1 px-4 -mt-4 ml-4">July 12-13 2018</span> 
+<div class="card cursor-pointer m-2 flex flex-col items-center border border-gray-200 rounded">
+	<div class="w-full h-48 bg-no-repeat bg-center bg-cover rounded rounded-b-none" style="background-image: url(https://source.unsplash.com/640x400/?buildings)">&nbsp;</div>
+	<div class="px-8 pt-8 pb-6 text-black relative w-full text-left">
+		<span class="absolute top-0 left-0 bg-black text-white rounded-full uppercase font-sans-medium py-2 px-4 -mt-4 ml-6 leading-none">July 12-13 2018</span> 
 		<div class="font-sans-medium">INACUFS National Conference 2018</div> 
 		<div>Providence, RI</div> 
 		<div>Booth 266</div>
