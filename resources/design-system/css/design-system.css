@@ -1,6 +1,11 @@
 /* TAILWIND BASE */
 @import "tailwindcss/base";
 
+/* VENDOR CSS */
+@import "magnific-popup/dist/magnific-popup";
+@import "owl.carousel/dist/assets/owl.carousel";
+@import "owl.carousel/dist/assets/owl.theme.default";
+
 /* DESIGN SYSTEM BASE */
 @import "base/all";
 
