@@ -30,10 +30,6 @@ const paths = {
         dest: 'docs/'
     },
 
-    vendorCss: [
-        './node_modules/owl.carousel/dist/assets/owl.carousel.css'
-    ],
-
     vendorScripts: [
         './node_modules/owl.carousel/dist/owl.carousel.js'
     ]
@@ -59,28 +55,10 @@ class TailwindExtractor {
 }
 
 /**
- * Compile Vendor CSS
- */
-const compileVendorCss = () => {
-    return gulp.src(paths.vendorCss)
-        .pipe(plumber({ errorHandler: onError }))
-        .pipe(concat('vendor.css'))
-        .pipe(gulp.dest(paths.designSystem.dest + 'css/'))
-        .pipe(cleanCSS())
-        .pipe(rename({
-            suffix: '.min'
-        }))
-        .pipe(gulp.dest(paths.designSystem.dest + 'css/'))
-        .pipe(notify({
-            message: 'Compiled Vendor CSS'
-        }));
-}
-
-/**
  * Compile Design System CSS
  */
 const compileDesignSystemCss = () => {
-    return gulp.src(paths.designSystem.src + 'css/design-system.css')
+    return gulp.src(paths.designSystem.src + 'css/*.css')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(postcss())
         .pipe(gulp.dest(paths.designSystem.dest + 'css/'))
@@ -214,7 +192,7 @@ const compileJs = gulp.series(
     gulp.parallel(compileVendorJs, compileDesignSystemComponentsJs, compileDesignSystemGlobalJs, compileDocsJs)
 )
 
-const compileCss = gulp.parallel(compileVendorCss, compileDesignSystemCss, compileDocsCss)
+const compileCss = gulp.parallel(compileDesignSystemCss, compileDocsCss)
 
 const compileAssets = gulp.parallel(compileCss, compileJs)
 

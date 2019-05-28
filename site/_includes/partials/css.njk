@@ -1,8 +1,8 @@
-{# include main.css in development mode #}
+<link rel="stylesheet" href="/design-system/css/vendor.css">
+
 {% if helpers.environment == "development" %}
 <link rel="stylesheet" href="/design-system/css/design-system.css">
 {% else %}
-{# otherwise, use main.min.css #}
 <link rel="stylesheet" href="/design-system/css/design-system.min.css">
 {% endif %}
 

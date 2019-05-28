@@ -62,7 +62,52 @@
     });
 </script>
 
-{{ closingBody | safe }}
+<script>
+	$(function() {
+		$('.js-carousel1').owlCarousel({
+			center: true,
+			loop: true,
+			margin: 10,
+			nav: true,
+			dotsClass: 'owl-dots h-8 flex items-center justify-center',
+			dotClass: 'owl-dot',
+			navContainer: '.js-carousel1-nav-container',
+			navClass: [
+				'owl-prev flex items-center px-4',
+				'owl-next flex items-center px-4'
+			],
+			navText: [
+				'<i class="fal fa-angle-left text-lg-2 md:text-lg-4"></i>',
+				'<i class="fal fa-angle-right text-lg-2 md:text-lg-4"></i>'
+			],
+			responsive: {
+				0: {
+					items: 3,		
+				},
+				[BUNN.screens.md]: {
+					items: 5,
+				}
+			}
+		});
+
+		$('.js-carousel2').owlCarousel({
+			items: 1,
+			loop: true,
+			dotsClass: 'owl-dots absolute bottom-0 w-full h-8 flex items-center justify-center',
+			dotClass: 'owl-dot',
+			nav: true,
+			navContainer: '.js-carousel2-nav-container',
+			navClass: [
+				'owl-prev flex items-center px-4',
+				'owl-next flex items-center px-4'
+			],
+			navText: [
+				'<i class="fal fa-angle-left text-lg-2 text-white md:text-lg-4"></i>',
+				'<i class="fal fa-angle-right text-lg-2 text-white md:text-lg-4"></i>'
+			],
+		});
+	});
+</script>
 
 </body>
 </html>

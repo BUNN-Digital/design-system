@@ -1,0 +1,14 @@
+.owl-carousel button.owl-dot {
+    @apply rounded-full bg-gray-300 m-1 w-2 h-2;
+
+    &.active {
+        @apply bg-gray-500;
+    }
+}
+
+.owl-dots--variantA button.owl-dot {
+
+    &.active {
+        @apply bg-gray-300;
+    }
+}

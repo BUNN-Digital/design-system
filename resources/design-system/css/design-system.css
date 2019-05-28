@@ -4,7 +4,6 @@
 /* DESIGN SYSTEM BASE */
 @import "base/all";
 
-
 /* TAILWIND COMPONENTS */
 @import "tailwindcss/components";
 
@@ -14,17 +13,15 @@
 /* DESIGN SYSTEM FEATURES  */
 @import "features/all";
 
-/* VENDOR */
-@import "magnific-popup/dist/magnific-popup";
-
 /* TAILWIND UTILITIES */
 @import "tailwindcss/utilities";
-
 
 /* Not sure what to do with these? */
 .mfp-bg {
     @apply z-overlay;
-}
-.mfp-wrap {
-    @apply z-modal;
-}
+    opacity:.7;
+  }
+  .mfp-wrap {
+   @apply z-modal;
+  }
+  
