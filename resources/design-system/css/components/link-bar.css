@@ -9,7 +9,7 @@
     .link-bar__link {
         display: block;
         text-align: center;
-        @apply mb-2 w-full px-8 py-3;
+        @apply py-2 text-gray-600;
 
         &:hover,
         &.active {
@@ -21,20 +21,15 @@
         display: flex;
         
         .link-bar__link {
-            margin-right: 1px;
-            display: inline-block;
-            @apply border-b-4 border-transparent;
+            @apply border-b-4 border-transparent mr-6;
 
             &:last-child {
                 margin-right: 0;
             }
             
-            &:hover {
-                @apply border-brand-primary-light-2 bg-transparent ;
-            }
-            
+            &:hover,
             &.active {
-                @apply border-brand-primary  bg-transparent text-brand-primary;
+                @apply border-brand-primary bg-transparent text-brand-primary;
             }
         }
     }
@@ -51,37 +46,16 @@
         }
 
         .link-bar__link {
-            display: inline-block;
-            margin-right: 1px;
-            @apply border-b-4 border-transparent;
+            @apply border-b-4 border-transparent mr-6;
 
             &:last-child {
                 margin-right: 0;
             }
             
-            &:hover {
-                @apply bg-white border-brand-primary-light-2 text-brand-primary;
-            }
-            
+            &:hover,
             &.active {
                 @apply bg-white border-brand-primary text-brand-primary;
             }
         }
     }
-    
-    &--full {
-        
-        .link-bar__link {
-            width: 100%;
-        }
-        
-        @screen md {
-            
-            .link-bar__link {
-                flex-grow: 1;
-                width: auto;
-            }
-        }
-    }
-
 }
