@@ -1750,7 +1750,7 @@ p.lede {
 
 p.emphasis:before {
     display: block;
-    background-color: HSLA(215, 60%, 37%, 1);
+    background-color: HSLA(210, 100%, 36%, 1);
     margin-bottom: 0.75rem;
     content: '';
     height: 4px;
@@ -1760,11 +1760,11 @@ p.emphasis:before {
 /* Links */
 
 a {
-  color: HSLA(215, 60%, 37%, 1);
+  color: HSLA(210, 100%, 36%, 1);
 }
 
 a:hover {
-    color: HSLA(215, 60%, 37%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
 a.link--neutral {
@@ -1772,7 +1772,7 @@ a.link--neutral {
   }
 
 a.link--neutral:hover {
-      color: HSLA(215, 60%, 37%, 1);
+      color: HSLA(210, 100%, 36%, 1);
     }
 
 /* TAILWIND COMPONENTS */
@@ -1785,8 +1785,8 @@ a.link--neutral:hover {
   }
 
 .open .accordion__title {
-      color: HSLA(215, 38%, 56%, 1);
-      border-color: HSLA(215, 60%, 37%, 1);
+      color: HSLA(210, 57%, 52%, 1);
+      border-color: HSLA(210, 100%, 36%, 1);
     }
 
 .accordion__content {
@@ -1807,8 +1807,8 @@ a.link--neutral:hover {
 
 .accordion--variantA .open .accordion__title {
     background-color: #f7f7f7;
-    border-color: HSLA(215, 60%, 37%, 1);
-    color: HSLA(215, 60%, 37%, 1);
+    border-color: HSLA(210, 100%, 36%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
 .accordion-images {
@@ -1867,7 +1867,7 @@ a.link--neutral:hover {
     }
 
 .content-expand-toggle {
-  color: HSLA(215, 60%, 37%, 1);
+  color: HSLA(210, 100%, 36%, 1);
   font-family: "Avenir Next LT W01 Demi", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
   cursor: pointer;
 }
@@ -2008,14 +2008,14 @@ a.btn {
     a.btn--stroke.active:hover,
     a.btn--outline.active,
     a.btn--outline.active:hover {
-    background-color: HSLA(215, 60%, 37%, 1);
-    border-color: HSLA(215, 60%, 37%, 1);
+    background-color: HSLA(210, 100%, 36%, 1);
+    border-color: HSLA(210, 100%, 36%, 1);
     color: #ffffff;
   }
 
 .btn--primary:hover, a.btn--primary:hover {
-      background-color: HSLA(214, 44%, 44%, 1);
-      border-color: HSLA(214, 44%, 44%, 1);
+      background-color: HSLA(210, 67%, 46%, 1);
+      border-color: HSLA(210, 67%, 46%, 1);
       color: #ffffff;
     }
 
@@ -2024,8 +2024,8 @@ a.btn {
         a.btn--primary.active,
         a.btn--primary.active:hover {
       background-color: #ffffff;
-      color: HSLA(215, 60%, 37%, 1);
-      border-color: HSLA(215, 60%, 37%, 1);
+      color: HSLA(210, 100%, 36%, 1);
+      border-color: HSLA(210, 100%, 36%, 1);
     }
 
 /* Disabled */
@@ -2035,30 +2035,30 @@ a.btn {
         a.btn--primary.disabled,
         a.btn--primary.disabled:hover {
       opacity: 0.85;
-      background-color: HSLA(215, 60%, 37%, 1);
+      background-color: HSLA(210, 100%, 36%, 1);
     }
 
 .btn--white, a.btn--white {
     background-color: #ffffff;
     border-color: #ffffff;
-    color: HSLA(215, 60%, 37%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
 .btn--white:hover, a.btn--white:hover {
-      background-color: HSLA(215, 60%, 37%, 1);
-      border-color: HSLA(215, 60%, 37%, 1);
+      background-color: HSLA(210, 100%, 36%, 1);
+      border-color: HSLA(210, 100%, 36%, 1);
       color: #ffffff;
     }
 
 .btn--outline, a.btn--outline {
     background: transparent;
-    border-color: HSLA(215, 60%, 37%, 1);
-    color: HSLA(215, 60%, 37%, 1);
+    border-color: HSLA(210, 100%, 36%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
 .btn--outline:hover, a.btn--outline:hover {
       background: transparent;
-      background-color: HSLA(215, 60%, 37%, 1);
+      background-color: HSLA(210, 100%, 36%, 1);
       color: #ffffff;
     }
 
@@ -2074,12 +2074,12 @@ a.btn {
     background-color: transparent;
     border-width: 1px;
     border-color: #e0e0e0;
-    color: HSLA(215, 60%, 37%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
 .btn--stroke:hover, a.btn--stroke:hover {
-      background-color: HSLA(215, 60%, 37%, 1);
-      border-color: HSLA(215, 60%, 37%, 1);
+      background-color: HSLA(210, 100%, 36%, 1);
+      border-color: HSLA(210, 100%, 36%, 1);
       color: #ffffff;
     }
 
@@ -2263,7 +2263,7 @@ a.btn {
 .btn-bar--flush.btn-bar--outline.btn-bar--scroll {
       border-left-width: 1px;
       border-right-width: 1px;
-      border-color: HSLA(215, 60%, 37%, 1);
+      border-color: HSLA(210, 100%, 36%, 1);
     }
 
 .btn-bar--flush.btn-bar--stroke.btn-bar--scroll {
@@ -2492,7 +2492,7 @@ a.btn {
   }
 
 .bunn-tabs a.active {
-      border-color: HSLA(215, 60%, 37%, 1);
+      border-color: HSLA(210, 100%, 36%, 1);
     }
 
 body.drawer-open {
@@ -2527,25 +2527,6 @@ body.drawer-open {
   will-change: transform;
   background: white;
 }
-
-/* Drawer styles */
-
-.drawer--dark {
-    color: white;
-    background: #2d2d2d;
-  }
-
-.drawer--dark .drawer__header,
-        .drawer--dark .drawer__content,
-        .drawer--dark .drawer__footer {
-      color: white;
-    }
-
-.drawer--dark .drawer__header {
-      background: #2d2d2d;
-      border-bottom-width: 1px;
-      border-color: #e8e8e8;
-    }
 
 /* Drawer positions */
 
@@ -2606,27 +2587,14 @@ body.drawer-open {
 
 /* Drawer sizes */
 
+.drawer--full-width {
+    max-width: 100%;
+    width: 100%;
+  }
+
 .drawer--full-height {
     max-height: 100%;
     height: 100%;
-  }
-
-/* Drawer contents */
-
-.drawer__header {
-    width: 100%;
-    background: white;
-    border-bottom: 1px solid #ddd;
-  }
-
-/* @apply p-4 border-b border-gray-300 mb-2 fixed h-16 bg-white top-0 py-6 z-shell; */
-
-.drawer__header + .drawer__content {
-      padding-top: 4rem;
-    }
-
-.drawer__content {
-    overflow-y: scroll;
   }
 
 /* Drawer states */
@@ -2750,7 +2718,7 @@ a.icon-link {
 
 .link-bar .link-bar__link:hover,
         .link-bar .link-bar__link.active {
-      background-color: HSLA(215, 60%, 37%, 1);
+      background-color: HSLA(210, 100%, 36%, 1);
       color: #ffffff;
     }
 
@@ -2770,9 +2738,9 @@ a.icon-link {
       }
       .link-bar .link-bar__link:hover,
             .link-bar .link-bar__link.active {
-        border-color: HSLA(215, 60%, 37%, 1);
+        border-color: HSLA(210, 100%, 36%, 1);
         background-color: transparent;
-        color: HSLA(215, 60%, 37%, 1);
+        color: HSLA(210, 100%, 36%, 1);
       }
   }
 
@@ -2803,34 +2771,9 @@ a.icon-link {
 .link-bar--scroll .link-bar__link:hover,
             .link-bar--scroll .link-bar__link.active {
         background-color: #ffffff;
-        border-color: HSLA(215, 60%, 37%, 1);
-        color: HSLA(215, 60%, 37%, 1);
+        border-color: HSLA(210, 100%, 36%, 1);
+        color: HSLA(210, 100%, 36%, 1);
       }
-
-.nav-menu-item a {
-    text-decoration: none;
-    color: black;
-    /* apply text-black; */
-  }
-
-.nav-menu-list-items {
-  margin-bottom: 0;
-}
-
-.nav-menu-trigger > i {
-    float: right;
-  }
-
-@media (min-width: 1200px) {
-
-.nav-menu-trigger > i {
-      float: none
-  }
-    }
-
-.nav-menu-item-icon {
-  float: right;
-}
 
 .nav-menu-dropdown-content {
   display: none;
@@ -3348,7 +3291,7 @@ a.icon-link {
 
 .table-wrapper .table-title {
     /* background: darken($gray-100, 2%); */
-    color: HSLA(215, 60%, 37%, 1);
+    color: HSLA(210, 100%, 36%, 1);
     background-color: #e8e8e8;
     border-bottom-width: 2px;
     border-color: #222222;
@@ -3629,9 +3572,9 @@ a.icon-link {
   }
 
 .pagination__item.active .pagination__item-link {
-      background-color: HSLA(215, 60%, 37%, 1);
+      background-color: HSLA(210, 100%, 36%, 1);
       color: #ffffff;
-      border-color: HSLA(215, 60%, 37%, 1);
+      border-color: HSLA(210, 100%, 36%, 1);
     }
 
 .pagination__item-label,
@@ -3644,7 +3587,7 @@ a.icon-link {
 .pagination__item-link {
       border-width: 1px;
       border-color: #e0e0e0;
-      color: HSLA(215, 60%, 37%, 1);
+      color: HSLA(210, 100%, 36%, 1);
     }
 
 .pagination__item-link:hover {
@@ -3795,7 +3738,7 @@ a.icon-link {
 .panel--fill-brand .panel__header,
         .panel--fill-brand .panel__section,
         .panel--fill-brand .panel__action {
-      background-color: HSLA(215, 60%, 37%, 1);
+      background-color: HSLA(210, 100%, 36%, 1);
     }
 
 .panel--fill-brand-gourmet .panel__header,
@@ -3807,7 +3750,7 @@ a.icon-link {
 .panel--fill-contrast .panel__header,
         .panel--fill-contrast .panel__section,
         .panel--fill-contrast .panel__action {
-      background-color: HSLA(215, 85%, 20%, 1.00);
+      background-color: HSLA(210, 100%, 27%, 1);
     }
 
 /* Individual panel sections */
@@ -3849,7 +3792,7 @@ a.icon-link {
   }
 
 .panel__header--fill-contrast, .panel__section--fill-contrast, .panel__action--fill-contrast {
-    background-color: HSLA(215, 85%, 20%, 1.00);
+    background-color: HSLA(210, 100%, 27%, 1);
     color: #ffffff;
   }
 
@@ -4011,9 +3954,10 @@ body > .popup-menu--hybrid .popup-menu__content-body {
       }
 
 .link-menu--block-links li a:hover {
-          border-color: #005cb9;
           color: white;
-          background: #005cb9;
+          color: #ffffff;
+          border-color: HSLA(210, 100%, 36%, 1);
+          background-color: HSLA(210, 100%, 36%, 1);
         }
 
 .product__item {
@@ -4021,7 +3965,7 @@ body > .popup-menu--hybrid .popup-menu__content-body {
   }
 
 .product__item:hover .product__item-title {
-        color: HSLA(215, 60%, 37%, 1);
+        color: HSLA(210, 100%, 36%, 1);
       }
 
 .product__item.compact:hover {
@@ -4058,7 +4002,7 @@ body > .popup-menu--hybrid .popup-menu__content-body {
     }
 
 .stacked .product__item-info:hover {
-        box-shadow: inset 8px 0 0 0 #005cb9;
+        box-shadow: inset 8px 0 0 0 HSLA(210, 100%, 36%, 1);
       }
 
 .add-to-cart .product__item-info {
@@ -4076,12 +4020,6 @@ body > .popup-menu--hybrid .popup-menu__content-body {
       border-style: none;
     }
 
-.stacked .product__item-content {
-    }
-
-.compact .product__item-content {
-    }
-
 .product__item-image {
     cursor: pointer;
   }
@@ -4092,13 +4030,6 @@ body > .popup-menu--hybrid .popup-menu__content-body {
       margin-right: auto;
       margin-top: 1.25rem;
       margin-bottom: 0.5rem;
-    }
-
-.stacked .product__item-image {
-      /* max-height: 180px; */
-    }
-
-.compact .product__item-image {
     }
 
 .product__item-title {
@@ -4197,11 +4128,11 @@ body > .popup-menu--hybrid .popup-menu__content-body {
     }
 
 .compact .product__item-link {
-      color: HSLA(215, 60%, 37%, 1);
+      color: HSLA(210, 100%, 36%, 1);
     }
 
 .compact .product__item-link:hover {
-        color: HSLA(215, 60%, 37%, 1);
+        color: HSLA(210, 100%, 36%, 1);
       }
 
 .product__item-footer {
@@ -4407,7 +4338,7 @@ body > .popup-menu--hybrid .popup-menu__content-body {
 
 .b-video.featured {
     border-top-width: 8px;
-    border-color: HSLA(214, 44%, 44%, 1);
+    border-color: HSLA(210, 67%, 46%, 1);
   }
 
 .b-video__play {
@@ -4824,24 +4755,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
   background-color: #ffffff;
 }
 
-.bg-brand-primary-dark-2 {
-  background-color: HSLA(215, 85%, 20%, 1.00);
-}
-
-.bg-brand-primary-dark-1 {
-  background-color: HSLA(215, 72%, 28%, 1.00);
-}
-
 .bg-brand-primary {
-  background-color: HSLA(215, 60%, 37%, 1);
+  background-color: HSLA(210, 100%, 36%, 1);
 }
 
 .bg-brand-primary-light-1 {
-  background-color: HSLA(214, 44%, 44%, 1);
+  background-color: HSLA(210, 67%, 46%, 1);
 }
 
 .bg-brand-primary-light-2 {
-  background-color: HSLA(215, 38%, 56%, 1);
+  background-color: HSLA(210, 57%, 52%, 1);
+}
+
+.bg-brand-primary-dark-1 {
+  background-color: HSLA(210, 100%, 31%, 1);
+}
+
+.bg-brand-primary-dark-2 {
+  background-color: HSLA(210, 100%, 27%, 1);
 }
 
 .bg-brand-gourmet {
@@ -4932,24 +4863,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
   background-color: #ffffff;
 }
 
-.hover\:bg-brand-primary-dark-2:hover {
-  background-color: HSLA(215, 85%, 20%, 1.00);
-}
-
-.hover\:bg-brand-primary-dark-1:hover {
-  background-color: HSLA(215, 72%, 28%, 1.00);
-}
-
 .hover\:bg-brand-primary:hover {
-  background-color: HSLA(215, 60%, 37%, 1);
+  background-color: HSLA(210, 100%, 36%, 1);
 }
 
 .hover\:bg-brand-primary-light-1:hover {
-  background-color: HSLA(214, 44%, 44%, 1);
+  background-color: HSLA(210, 67%, 46%, 1);
 }
 
 .hover\:bg-brand-primary-light-2:hover {
-  background-color: HSLA(215, 38%, 56%, 1);
+  background-color: HSLA(210, 57%, 52%, 1);
+}
+
+.hover\:bg-brand-primary-dark-1:hover {
+  background-color: HSLA(210, 100%, 31%, 1);
+}
+
+.hover\:bg-brand-primary-dark-2:hover {
+  background-color: HSLA(210, 100%, 27%, 1);
 }
 
 .hover\:bg-brand-gourmet:hover {
@@ -5040,24 +4971,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
   background-color: #ffffff;
 }
 
-.focus\:bg-brand-primary-dark-2:focus {
-  background-color: HSLA(215, 85%, 20%, 1.00);
-}
-
-.focus\:bg-brand-primary-dark-1:focus {
-  background-color: HSLA(215, 72%, 28%, 1.00);
-}
-
 .focus\:bg-brand-primary:focus {
-  background-color: HSLA(215, 60%, 37%, 1);
+  background-color: HSLA(210, 100%, 36%, 1);
 }
 
 .focus\:bg-brand-primary-light-1:focus {
-  background-color: HSLA(214, 44%, 44%, 1);
+  background-color: HSLA(210, 67%, 46%, 1);
 }
 
 .focus\:bg-brand-primary-light-2:focus {
-  background-color: HSLA(215, 38%, 56%, 1);
+  background-color: HSLA(210, 57%, 52%, 1);
+}
+
+.focus\:bg-brand-primary-dark-1:focus {
+  background-color: HSLA(210, 100%, 31%, 1);
+}
+
+.focus\:bg-brand-primary-dark-2:focus {
+  background-color: HSLA(210, 100%, 27%, 1);
 }
 
 .focus\:bg-brand-gourmet:focus {
@@ -5228,24 +5159,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
   border-color: #ffffff;
 }
 
-.border-brand-primary-dark-2 {
-  border-color: HSLA(215, 85%, 20%, 1.00);
-}
-
-.border-brand-primary-dark-1 {
-  border-color: HSLA(215, 72%, 28%, 1.00);
-}
-
 .border-brand-primary {
-  border-color: HSLA(215, 60%, 37%, 1);
+  border-color: HSLA(210, 100%, 36%, 1);
 }
 
 .border-brand-primary-light-1 {
-  border-color: HSLA(214, 44%, 44%, 1);
+  border-color: HSLA(210, 67%, 46%, 1);
 }
 
 .border-brand-primary-light-2 {
-  border-color: HSLA(215, 38%, 56%, 1);
+  border-color: HSLA(210, 57%, 52%, 1);
+}
+
+.border-brand-primary-dark-1 {
+  border-color: HSLA(210, 100%, 31%, 1);
+}
+
+.border-brand-primary-dark-2 {
+  border-color: HSLA(210, 100%, 27%, 1);
 }
 
 .border-brand-gourmet {
@@ -5336,24 +5267,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
   border-color: #ffffff;
 }
 
-.hover\:border-brand-primary-dark-2:hover {
-  border-color: HSLA(215, 85%, 20%, 1.00);
-}
-
-.hover\:border-brand-primary-dark-1:hover {
-  border-color: HSLA(215, 72%, 28%, 1.00);
-}
-
 .hover\:border-brand-primary:hover {
-  border-color: HSLA(215, 60%, 37%, 1);
+  border-color: HSLA(210, 100%, 36%, 1);
 }
 
 .hover\:border-brand-primary-light-1:hover {
-  border-color: HSLA(214, 44%, 44%, 1);
+  border-color: HSLA(210, 67%, 46%, 1);
 }
 
 .hover\:border-brand-primary-light-2:hover {
-  border-color: HSLA(215, 38%, 56%, 1);
+  border-color: HSLA(210, 57%, 52%, 1);
+}
+
+.hover\:border-brand-primary-dark-1:hover {
+  border-color: HSLA(210, 100%, 31%, 1);
+}
+
+.hover\:border-brand-primary-dark-2:hover {
+  border-color: HSLA(210, 100%, 27%, 1);
 }
 
 .hover\:border-brand-gourmet:hover {
@@ -5444,24 +5375,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
   border-color: #ffffff;
 }
 
-.focus\:border-brand-primary-dark-2:focus {
-  border-color: HSLA(215, 85%, 20%, 1.00);
-}
-
-.focus\:border-brand-primary-dark-1:focus {
-  border-color: HSLA(215, 72%, 28%, 1.00);
-}
-
 .focus\:border-brand-primary:focus {
-  border-color: HSLA(215, 60%, 37%, 1);
+  border-color: HSLA(210, 100%, 36%, 1);
 }
 
 .focus\:border-brand-primary-light-1:focus {
-  border-color: HSLA(214, 44%, 44%, 1);
+  border-color: HSLA(210, 67%, 46%, 1);
 }
 
 .focus\:border-brand-primary-light-2:focus {
-  border-color: HSLA(215, 38%, 56%, 1);
+  border-color: HSLA(210, 57%, 52%, 1);
+}
+
+.focus\:border-brand-primary-dark-1:focus {
+  border-color: HSLA(210, 100%, 31%, 1);
+}
+
+.focus\:border-brand-primary-dark-2:focus {
+  border-color: HSLA(210, 100%, 27%, 1);
 }
 
 .focus\:border-brand-gourmet:focus {
@@ -8613,24 +8544,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
   color: #ffffff;
 }
 
-.text-brand-primary-dark-2 {
-  color: HSLA(215, 85%, 20%, 1.00);
-}
-
-.text-brand-primary-dark-1 {
-  color: HSLA(215, 72%, 28%, 1.00);
-}
-
 .text-brand-primary {
-  color: HSLA(215, 60%, 37%, 1);
+  color: HSLA(210, 100%, 36%, 1);
 }
 
 .text-brand-primary-light-1 {
-  color: HSLA(214, 44%, 44%, 1);
+  color: HSLA(210, 67%, 46%, 1);
 }
 
 .text-brand-primary-light-2 {
-  color: HSLA(215, 38%, 56%, 1);
+  color: HSLA(210, 57%, 52%, 1);
+}
+
+.text-brand-primary-dark-1 {
+  color: HSLA(210, 100%, 31%, 1);
+}
+
+.text-brand-primary-dark-2 {
+  color: HSLA(210, 100%, 27%, 1);
 }
 
 .text-brand-gourmet {
@@ -8721,24 +8652,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
   color: #ffffff;
 }
 
-.hover\:text-brand-primary-dark-2:hover {
-  color: HSLA(215, 85%, 20%, 1.00);
-}
-
-.hover\:text-brand-primary-dark-1:hover {
-  color: HSLA(215, 72%, 28%, 1.00);
-}
-
 .hover\:text-brand-primary:hover {
-  color: HSLA(215, 60%, 37%, 1);
+  color: HSLA(210, 100%, 36%, 1);
 }
 
 .hover\:text-brand-primary-light-1:hover {
-  color: HSLA(214, 44%, 44%, 1);
+  color: HSLA(210, 67%, 46%, 1);
 }
 
 .hover\:text-brand-primary-light-2:hover {
-  color: HSLA(215, 38%, 56%, 1);
+  color: HSLA(210, 57%, 52%, 1);
+}
+
+.hover\:text-brand-primary-dark-1:hover {
+  color: HSLA(210, 100%, 31%, 1);
+}
+
+.hover\:text-brand-primary-dark-2:hover {
+  color: HSLA(210, 100%, 27%, 1);
 }
 
 .hover\:text-brand-gourmet:hover {
@@ -8829,24 +8760,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
   color: #ffffff;
 }
 
-.focus\:text-brand-primary-dark-2:focus {
-  color: HSLA(215, 85%, 20%, 1.00);
-}
-
-.focus\:text-brand-primary-dark-1:focus {
-  color: HSLA(215, 72%, 28%, 1.00);
-}
-
 .focus\:text-brand-primary:focus {
-  color: HSLA(215, 60%, 37%, 1);
+  color: HSLA(210, 100%, 36%, 1);
 }
 
 .focus\:text-brand-primary-light-1:focus {
-  color: HSLA(214, 44%, 44%, 1);
+  color: HSLA(210, 67%, 46%, 1);
 }
 
 .focus\:text-brand-primary-light-2:focus {
-  color: HSLA(215, 38%, 56%, 1);
+  color: HSLA(210, 57%, 52%, 1);
+}
+
+.focus\:text-brand-primary-dark-1:focus {
+  color: HSLA(210, 100%, 31%, 1);
+}
+
+.focus\:text-brand-primary-dark-2:focus {
+  color: HSLA(210, 100%, 27%, 1);
 }
 
 .focus\:text-brand-gourmet:focus {
@@ -9432,24 +9363,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     background-color: #ffffff;
   }
 
-  .sm\:bg-brand-primary-dark-2 {
-    background-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .sm\:bg-brand-primary-dark-1 {
-    background-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .sm\:bg-brand-primary {
-    background-color: HSLA(215, 60%, 37%, 1);
+    background-color: HSLA(210, 100%, 36%, 1);
   }
 
   .sm\:bg-brand-primary-light-1 {
-    background-color: HSLA(214, 44%, 44%, 1);
+    background-color: HSLA(210, 67%, 46%, 1);
   }
 
   .sm\:bg-brand-primary-light-2 {
-    background-color: HSLA(215, 38%, 56%, 1);
+    background-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .sm\:bg-brand-primary-dark-1 {
+    background-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .sm\:bg-brand-primary-dark-2 {
+    background-color: HSLA(210, 100%, 27%, 1);
   }
 
   .sm\:bg-brand-gourmet {
@@ -9540,24 +9471,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     background-color: #ffffff;
   }
 
-  .sm\:hover\:bg-brand-primary-dark-2:hover {
-    background-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .sm\:hover\:bg-brand-primary-dark-1:hover {
-    background-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .sm\:hover\:bg-brand-primary:hover {
-    background-color: HSLA(215, 60%, 37%, 1);
+    background-color: HSLA(210, 100%, 36%, 1);
   }
 
   .sm\:hover\:bg-brand-primary-light-1:hover {
-    background-color: HSLA(214, 44%, 44%, 1);
+    background-color: HSLA(210, 67%, 46%, 1);
   }
 
   .sm\:hover\:bg-brand-primary-light-2:hover {
-    background-color: HSLA(215, 38%, 56%, 1);
+    background-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .sm\:hover\:bg-brand-primary-dark-1:hover {
+    background-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .sm\:hover\:bg-brand-primary-dark-2:hover {
+    background-color: HSLA(210, 100%, 27%, 1);
   }
 
   .sm\:hover\:bg-brand-gourmet:hover {
@@ -9648,24 +9579,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     background-color: #ffffff;
   }
 
-  .sm\:focus\:bg-brand-primary-dark-2:focus {
-    background-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .sm\:focus\:bg-brand-primary-dark-1:focus {
-    background-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .sm\:focus\:bg-brand-primary:focus {
-    background-color: HSLA(215, 60%, 37%, 1);
+    background-color: HSLA(210, 100%, 36%, 1);
   }
 
   .sm\:focus\:bg-brand-primary-light-1:focus {
-    background-color: HSLA(214, 44%, 44%, 1);
+    background-color: HSLA(210, 67%, 46%, 1);
   }
 
   .sm\:focus\:bg-brand-primary-light-2:focus {
-    background-color: HSLA(215, 38%, 56%, 1);
+    background-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .sm\:focus\:bg-brand-primary-dark-1:focus {
+    background-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .sm\:focus\:bg-brand-primary-dark-2:focus {
+    background-color: HSLA(210, 100%, 27%, 1);
   }
 
   .sm\:focus\:bg-brand-gourmet:focus {
@@ -9828,24 +9759,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     border-color: #ffffff;
   }
 
-  .sm\:border-brand-primary-dark-2 {
-    border-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .sm\:border-brand-primary-dark-1 {
-    border-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .sm\:border-brand-primary {
-    border-color: HSLA(215, 60%, 37%, 1);
+    border-color: HSLA(210, 100%, 36%, 1);
   }
 
   .sm\:border-brand-primary-light-1 {
-    border-color: HSLA(214, 44%, 44%, 1);
+    border-color: HSLA(210, 67%, 46%, 1);
   }
 
   .sm\:border-brand-primary-light-2 {
-    border-color: HSLA(215, 38%, 56%, 1);
+    border-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .sm\:border-brand-primary-dark-1 {
+    border-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .sm\:border-brand-primary-dark-2 {
+    border-color: HSLA(210, 100%, 27%, 1);
   }
 
   .sm\:border-brand-gourmet {
@@ -9936,24 +9867,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     border-color: #ffffff;
   }
 
-  .sm\:hover\:border-brand-primary-dark-2:hover {
-    border-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .sm\:hover\:border-brand-primary-dark-1:hover {
-    border-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .sm\:hover\:border-brand-primary:hover {
-    border-color: HSLA(215, 60%, 37%, 1);
+    border-color: HSLA(210, 100%, 36%, 1);
   }
 
   .sm\:hover\:border-brand-primary-light-1:hover {
-    border-color: HSLA(214, 44%, 44%, 1);
+    border-color: HSLA(210, 67%, 46%, 1);
   }
 
   .sm\:hover\:border-brand-primary-light-2:hover {
-    border-color: HSLA(215, 38%, 56%, 1);
+    border-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .sm\:hover\:border-brand-primary-dark-1:hover {
+    border-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .sm\:hover\:border-brand-primary-dark-2:hover {
+    border-color: HSLA(210, 100%, 27%, 1);
   }
 
   .sm\:hover\:border-brand-gourmet:hover {
@@ -10044,24 +9975,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     border-color: #ffffff;
   }
 
-  .sm\:focus\:border-brand-primary-dark-2:focus {
-    border-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .sm\:focus\:border-brand-primary-dark-1:focus {
-    border-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .sm\:focus\:border-brand-primary:focus {
-    border-color: HSLA(215, 60%, 37%, 1);
+    border-color: HSLA(210, 100%, 36%, 1);
   }
 
   .sm\:focus\:border-brand-primary-light-1:focus {
-    border-color: HSLA(214, 44%, 44%, 1);
+    border-color: HSLA(210, 67%, 46%, 1);
   }
 
   .sm\:focus\:border-brand-primary-light-2:focus {
-    border-color: HSLA(215, 38%, 56%, 1);
+    border-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .sm\:focus\:border-brand-primary-dark-1:focus {
+    border-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .sm\:focus\:border-brand-primary-dark-2:focus {
+    border-color: HSLA(210, 100%, 27%, 1);
   }
 
   .sm\:focus\:border-brand-gourmet:focus {
@@ -13197,24 +13128,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     color: #ffffff;
   }
 
-  .sm\:text-brand-primary-dark-2 {
-    color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .sm\:text-brand-primary-dark-1 {
-    color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .sm\:text-brand-primary {
-    color: HSLA(215, 60%, 37%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
   .sm\:text-brand-primary-light-1 {
-    color: HSLA(214, 44%, 44%, 1);
+    color: HSLA(210, 67%, 46%, 1);
   }
 
   .sm\:text-brand-primary-light-2 {
-    color: HSLA(215, 38%, 56%, 1);
+    color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .sm\:text-brand-primary-dark-1 {
+    color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .sm\:text-brand-primary-dark-2 {
+    color: HSLA(210, 100%, 27%, 1);
   }
 
   .sm\:text-brand-gourmet {
@@ -13305,24 +13236,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     color: #ffffff;
   }
 
-  .sm\:hover\:text-brand-primary-dark-2:hover {
-    color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .sm\:hover\:text-brand-primary-dark-1:hover {
-    color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .sm\:hover\:text-brand-primary:hover {
-    color: HSLA(215, 60%, 37%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
   .sm\:hover\:text-brand-primary-light-1:hover {
-    color: HSLA(214, 44%, 44%, 1);
+    color: HSLA(210, 67%, 46%, 1);
   }
 
   .sm\:hover\:text-brand-primary-light-2:hover {
-    color: HSLA(215, 38%, 56%, 1);
+    color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .sm\:hover\:text-brand-primary-dark-1:hover {
+    color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .sm\:hover\:text-brand-primary-dark-2:hover {
+    color: HSLA(210, 100%, 27%, 1);
   }
 
   .sm\:hover\:text-brand-gourmet:hover {
@@ -13413,24 +13344,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     color: #ffffff;
   }
 
-  .sm\:focus\:text-brand-primary-dark-2:focus {
-    color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .sm\:focus\:text-brand-primary-dark-1:focus {
-    color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .sm\:focus\:text-brand-primary:focus {
-    color: HSLA(215, 60%, 37%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
   .sm\:focus\:text-brand-primary-light-1:focus {
-    color: HSLA(214, 44%, 44%, 1);
+    color: HSLA(210, 67%, 46%, 1);
   }
 
   .sm\:focus\:text-brand-primary-light-2:focus {
-    color: HSLA(215, 38%, 56%, 1);
+    color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .sm\:focus\:text-brand-primary-dark-1:focus {
+    color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .sm\:focus\:text-brand-primary-dark-2:focus {
+    color: HSLA(210, 100%, 27%, 1);
   }
 
   .sm\:focus\:text-brand-gourmet:focus {
@@ -14006,24 +13937,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     background-color: #ffffff;
   }
 
-  .md\:bg-brand-primary-dark-2 {
-    background-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .md\:bg-brand-primary-dark-1 {
-    background-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .md\:bg-brand-primary {
-    background-color: HSLA(215, 60%, 37%, 1);
+    background-color: HSLA(210, 100%, 36%, 1);
   }
 
   .md\:bg-brand-primary-light-1 {
-    background-color: HSLA(214, 44%, 44%, 1);
+    background-color: HSLA(210, 67%, 46%, 1);
   }
 
   .md\:bg-brand-primary-light-2 {
-    background-color: HSLA(215, 38%, 56%, 1);
+    background-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .md\:bg-brand-primary-dark-1 {
+    background-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .md\:bg-brand-primary-dark-2 {
+    background-color: HSLA(210, 100%, 27%, 1);
   }
 
   .md\:bg-brand-gourmet {
@@ -14114,24 +14045,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     background-color: #ffffff;
   }
 
-  .md\:hover\:bg-brand-primary-dark-2:hover {
-    background-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .md\:hover\:bg-brand-primary-dark-1:hover {
-    background-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .md\:hover\:bg-brand-primary:hover {
-    background-color: HSLA(215, 60%, 37%, 1);
+    background-color: HSLA(210, 100%, 36%, 1);
   }
 
   .md\:hover\:bg-brand-primary-light-1:hover {
-    background-color: HSLA(214, 44%, 44%, 1);
+    background-color: HSLA(210, 67%, 46%, 1);
   }
 
   .md\:hover\:bg-brand-primary-light-2:hover {
-    background-color: HSLA(215, 38%, 56%, 1);
+    background-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .md\:hover\:bg-brand-primary-dark-1:hover {
+    background-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .md\:hover\:bg-brand-primary-dark-2:hover {
+    background-color: HSLA(210, 100%, 27%, 1);
   }
 
   .md\:hover\:bg-brand-gourmet:hover {
@@ -14222,24 +14153,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     background-color: #ffffff;
   }
 
-  .md\:focus\:bg-brand-primary-dark-2:focus {
-    background-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .md\:focus\:bg-brand-primary-dark-1:focus {
-    background-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .md\:focus\:bg-brand-primary:focus {
-    background-color: HSLA(215, 60%, 37%, 1);
+    background-color: HSLA(210, 100%, 36%, 1);
   }
 
   .md\:focus\:bg-brand-primary-light-1:focus {
-    background-color: HSLA(214, 44%, 44%, 1);
+    background-color: HSLA(210, 67%, 46%, 1);
   }
 
   .md\:focus\:bg-brand-primary-light-2:focus {
-    background-color: HSLA(215, 38%, 56%, 1);
+    background-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .md\:focus\:bg-brand-primary-dark-1:focus {
+    background-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .md\:focus\:bg-brand-primary-dark-2:focus {
+    background-color: HSLA(210, 100%, 27%, 1);
   }
 
   .md\:focus\:bg-brand-gourmet:focus {
@@ -14402,24 +14333,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     border-color: #ffffff;
   }
 
-  .md\:border-brand-primary-dark-2 {
-    border-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .md\:border-brand-primary-dark-1 {
-    border-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .md\:border-brand-primary {
-    border-color: HSLA(215, 60%, 37%, 1);
+    border-color: HSLA(210, 100%, 36%, 1);
   }
 
   .md\:border-brand-primary-light-1 {
-    border-color: HSLA(214, 44%, 44%, 1);
+    border-color: HSLA(210, 67%, 46%, 1);
   }
 
   .md\:border-brand-primary-light-2 {
-    border-color: HSLA(215, 38%, 56%, 1);
+    border-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .md\:border-brand-primary-dark-1 {
+    border-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .md\:border-brand-primary-dark-2 {
+    border-color: HSLA(210, 100%, 27%, 1);
   }
 
   .md\:border-brand-gourmet {
@@ -14510,24 +14441,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     border-color: #ffffff;
   }
 
-  .md\:hover\:border-brand-primary-dark-2:hover {
-    border-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .md\:hover\:border-brand-primary-dark-1:hover {
-    border-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .md\:hover\:border-brand-primary:hover {
-    border-color: HSLA(215, 60%, 37%, 1);
+    border-color: HSLA(210, 100%, 36%, 1);
   }
 
   .md\:hover\:border-brand-primary-light-1:hover {
-    border-color: HSLA(214, 44%, 44%, 1);
+    border-color: HSLA(210, 67%, 46%, 1);
   }
 
   .md\:hover\:border-brand-primary-light-2:hover {
-    border-color: HSLA(215, 38%, 56%, 1);
+    border-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .md\:hover\:border-brand-primary-dark-1:hover {
+    border-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .md\:hover\:border-brand-primary-dark-2:hover {
+    border-color: HSLA(210, 100%, 27%, 1);
   }
 
   .md\:hover\:border-brand-gourmet:hover {
@@ -14618,24 +14549,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     border-color: #ffffff;
   }
 
-  .md\:focus\:border-brand-primary-dark-2:focus {
-    border-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .md\:focus\:border-brand-primary-dark-1:focus {
-    border-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .md\:focus\:border-brand-primary:focus {
-    border-color: HSLA(215, 60%, 37%, 1);
+    border-color: HSLA(210, 100%, 36%, 1);
   }
 
   .md\:focus\:border-brand-primary-light-1:focus {
-    border-color: HSLA(214, 44%, 44%, 1);
+    border-color: HSLA(210, 67%, 46%, 1);
   }
 
   .md\:focus\:border-brand-primary-light-2:focus {
-    border-color: HSLA(215, 38%, 56%, 1);
+    border-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .md\:focus\:border-brand-primary-dark-1:focus {
+    border-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .md\:focus\:border-brand-primary-dark-2:focus {
+    border-color: HSLA(210, 100%, 27%, 1);
   }
 
   .md\:focus\:border-brand-gourmet:focus {
@@ -17771,24 +17702,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     color: #ffffff;
   }
 
-  .md\:text-brand-primary-dark-2 {
-    color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .md\:text-brand-primary-dark-1 {
-    color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .md\:text-brand-primary {
-    color: HSLA(215, 60%, 37%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
   .md\:text-brand-primary-light-1 {
-    color: HSLA(214, 44%, 44%, 1);
+    color: HSLA(210, 67%, 46%, 1);
   }
 
   .md\:text-brand-primary-light-2 {
-    color: HSLA(215, 38%, 56%, 1);
+    color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .md\:text-brand-primary-dark-1 {
+    color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .md\:text-brand-primary-dark-2 {
+    color: HSLA(210, 100%, 27%, 1);
   }
 
   .md\:text-brand-gourmet {
@@ -17879,24 +17810,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     color: #ffffff;
   }
 
-  .md\:hover\:text-brand-primary-dark-2:hover {
-    color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .md\:hover\:text-brand-primary-dark-1:hover {
-    color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .md\:hover\:text-brand-primary:hover {
-    color: HSLA(215, 60%, 37%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
   .md\:hover\:text-brand-primary-light-1:hover {
-    color: HSLA(214, 44%, 44%, 1);
+    color: HSLA(210, 67%, 46%, 1);
   }
 
   .md\:hover\:text-brand-primary-light-2:hover {
-    color: HSLA(215, 38%, 56%, 1);
+    color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .md\:hover\:text-brand-primary-dark-1:hover {
+    color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .md\:hover\:text-brand-primary-dark-2:hover {
+    color: HSLA(210, 100%, 27%, 1);
   }
 
   .md\:hover\:text-brand-gourmet:hover {
@@ -17987,24 +17918,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     color: #ffffff;
   }
 
-  .md\:focus\:text-brand-primary-dark-2:focus {
-    color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .md\:focus\:text-brand-primary-dark-1:focus {
-    color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .md\:focus\:text-brand-primary:focus {
-    color: HSLA(215, 60%, 37%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
   .md\:focus\:text-brand-primary-light-1:focus {
-    color: HSLA(214, 44%, 44%, 1);
+    color: HSLA(210, 67%, 46%, 1);
   }
 
   .md\:focus\:text-brand-primary-light-2:focus {
-    color: HSLA(215, 38%, 56%, 1);
+    color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .md\:focus\:text-brand-primary-dark-1:focus {
+    color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .md\:focus\:text-brand-primary-dark-2:focus {
+    color: HSLA(210, 100%, 27%, 1);
   }
 
   .md\:focus\:text-brand-gourmet:focus {
@@ -18580,24 +18511,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     background-color: #ffffff;
   }
 
-  .lg\:bg-brand-primary-dark-2 {
-    background-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .lg\:bg-brand-primary-dark-1 {
-    background-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .lg\:bg-brand-primary {
-    background-color: HSLA(215, 60%, 37%, 1);
+    background-color: HSLA(210, 100%, 36%, 1);
   }
 
   .lg\:bg-brand-primary-light-1 {
-    background-color: HSLA(214, 44%, 44%, 1);
+    background-color: HSLA(210, 67%, 46%, 1);
   }
 
   .lg\:bg-brand-primary-light-2 {
-    background-color: HSLA(215, 38%, 56%, 1);
+    background-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .lg\:bg-brand-primary-dark-1 {
+    background-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .lg\:bg-brand-primary-dark-2 {
+    background-color: HSLA(210, 100%, 27%, 1);
   }
 
   .lg\:bg-brand-gourmet {
@@ -18688,24 +18619,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     background-color: #ffffff;
   }
 
-  .lg\:hover\:bg-brand-primary-dark-2:hover {
-    background-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .lg\:hover\:bg-brand-primary-dark-1:hover {
-    background-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .lg\:hover\:bg-brand-primary:hover {
-    background-color: HSLA(215, 60%, 37%, 1);
+    background-color: HSLA(210, 100%, 36%, 1);
   }
 
   .lg\:hover\:bg-brand-primary-light-1:hover {
-    background-color: HSLA(214, 44%, 44%, 1);
+    background-color: HSLA(210, 67%, 46%, 1);
   }
 
   .lg\:hover\:bg-brand-primary-light-2:hover {
-    background-color: HSLA(215, 38%, 56%, 1);
+    background-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .lg\:hover\:bg-brand-primary-dark-1:hover {
+    background-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .lg\:hover\:bg-brand-primary-dark-2:hover {
+    background-color: HSLA(210, 100%, 27%, 1);
   }
 
   .lg\:hover\:bg-brand-gourmet:hover {
@@ -18796,24 +18727,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     background-color: #ffffff;
   }
 
-  .lg\:focus\:bg-brand-primary-dark-2:focus {
-    background-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .lg\:focus\:bg-brand-primary-dark-1:focus {
-    background-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .lg\:focus\:bg-brand-primary:focus {
-    background-color: HSLA(215, 60%, 37%, 1);
+    background-color: HSLA(210, 100%, 36%, 1);
   }
 
   .lg\:focus\:bg-brand-primary-light-1:focus {
-    background-color: HSLA(214, 44%, 44%, 1);
+    background-color: HSLA(210, 67%, 46%, 1);
   }
 
   .lg\:focus\:bg-brand-primary-light-2:focus {
-    background-color: HSLA(215, 38%, 56%, 1);
+    background-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .lg\:focus\:bg-brand-primary-dark-1:focus {
+    background-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .lg\:focus\:bg-brand-primary-dark-2:focus {
+    background-color: HSLA(210, 100%, 27%, 1);
   }
 
   .lg\:focus\:bg-brand-gourmet:focus {
@@ -18976,24 +18907,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     border-color: #ffffff;
   }
 
-  .lg\:border-brand-primary-dark-2 {
-    border-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .lg\:border-brand-primary-dark-1 {
-    border-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .lg\:border-brand-primary {
-    border-color: HSLA(215, 60%, 37%, 1);
+    border-color: HSLA(210, 100%, 36%, 1);
   }
 
   .lg\:border-brand-primary-light-1 {
-    border-color: HSLA(214, 44%, 44%, 1);
+    border-color: HSLA(210, 67%, 46%, 1);
   }
 
   .lg\:border-brand-primary-light-2 {
-    border-color: HSLA(215, 38%, 56%, 1);
+    border-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .lg\:border-brand-primary-dark-1 {
+    border-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .lg\:border-brand-primary-dark-2 {
+    border-color: HSLA(210, 100%, 27%, 1);
   }
 
   .lg\:border-brand-gourmet {
@@ -19084,24 +19015,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     border-color: #ffffff;
   }
 
-  .lg\:hover\:border-brand-primary-dark-2:hover {
-    border-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .lg\:hover\:border-brand-primary-dark-1:hover {
-    border-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .lg\:hover\:border-brand-primary:hover {
-    border-color: HSLA(215, 60%, 37%, 1);
+    border-color: HSLA(210, 100%, 36%, 1);
   }
 
   .lg\:hover\:border-brand-primary-light-1:hover {
-    border-color: HSLA(214, 44%, 44%, 1);
+    border-color: HSLA(210, 67%, 46%, 1);
   }
 
   .lg\:hover\:border-brand-primary-light-2:hover {
-    border-color: HSLA(215, 38%, 56%, 1);
+    border-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .lg\:hover\:border-brand-primary-dark-1:hover {
+    border-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .lg\:hover\:border-brand-primary-dark-2:hover {
+    border-color: HSLA(210, 100%, 27%, 1);
   }
 
   .lg\:hover\:border-brand-gourmet:hover {
@@ -19192,24 +19123,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     border-color: #ffffff;
   }
 
-  .lg\:focus\:border-brand-primary-dark-2:focus {
-    border-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .lg\:focus\:border-brand-primary-dark-1:focus {
-    border-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .lg\:focus\:border-brand-primary:focus {
-    border-color: HSLA(215, 60%, 37%, 1);
+    border-color: HSLA(210, 100%, 36%, 1);
   }
 
   .lg\:focus\:border-brand-primary-light-1:focus {
-    border-color: HSLA(214, 44%, 44%, 1);
+    border-color: HSLA(210, 67%, 46%, 1);
   }
 
   .lg\:focus\:border-brand-primary-light-2:focus {
-    border-color: HSLA(215, 38%, 56%, 1);
+    border-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .lg\:focus\:border-brand-primary-dark-1:focus {
+    border-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .lg\:focus\:border-brand-primary-dark-2:focus {
+    border-color: HSLA(210, 100%, 27%, 1);
   }
 
   .lg\:focus\:border-brand-gourmet:focus {
@@ -22345,24 +22276,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     color: #ffffff;
   }
 
-  .lg\:text-brand-primary-dark-2 {
-    color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .lg\:text-brand-primary-dark-1 {
-    color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .lg\:text-brand-primary {
-    color: HSLA(215, 60%, 37%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
   .lg\:text-brand-primary-light-1 {
-    color: HSLA(214, 44%, 44%, 1);
+    color: HSLA(210, 67%, 46%, 1);
   }
 
   .lg\:text-brand-primary-light-2 {
-    color: HSLA(215, 38%, 56%, 1);
+    color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .lg\:text-brand-primary-dark-1 {
+    color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .lg\:text-brand-primary-dark-2 {
+    color: HSLA(210, 100%, 27%, 1);
   }
 
   .lg\:text-brand-gourmet {
@@ -22453,24 +22384,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     color: #ffffff;
   }
 
-  .lg\:hover\:text-brand-primary-dark-2:hover {
-    color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .lg\:hover\:text-brand-primary-dark-1:hover {
-    color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .lg\:hover\:text-brand-primary:hover {
-    color: HSLA(215, 60%, 37%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
   .lg\:hover\:text-brand-primary-light-1:hover {
-    color: HSLA(214, 44%, 44%, 1);
+    color: HSLA(210, 67%, 46%, 1);
   }
 
   .lg\:hover\:text-brand-primary-light-2:hover {
-    color: HSLA(215, 38%, 56%, 1);
+    color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .lg\:hover\:text-brand-primary-dark-1:hover {
+    color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .lg\:hover\:text-brand-primary-dark-2:hover {
+    color: HSLA(210, 100%, 27%, 1);
   }
 
   .lg\:hover\:text-brand-gourmet:hover {
@@ -22561,24 +22492,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     color: #ffffff;
   }
 
-  .lg\:focus\:text-brand-primary-dark-2:focus {
-    color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .lg\:focus\:text-brand-primary-dark-1:focus {
-    color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .lg\:focus\:text-brand-primary:focus {
-    color: HSLA(215, 60%, 37%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
   .lg\:focus\:text-brand-primary-light-1:focus {
-    color: HSLA(214, 44%, 44%, 1);
+    color: HSLA(210, 67%, 46%, 1);
   }
 
   .lg\:focus\:text-brand-primary-light-2:focus {
-    color: HSLA(215, 38%, 56%, 1);
+    color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .lg\:focus\:text-brand-primary-dark-1:focus {
+    color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .lg\:focus\:text-brand-primary-dark-2:focus {
+    color: HSLA(210, 100%, 27%, 1);
   }
 
   .lg\:focus\:text-brand-gourmet:focus {
@@ -23154,24 +23085,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     background-color: #ffffff;
   }
 
-  .xl\:bg-brand-primary-dark-2 {
-    background-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .xl\:bg-brand-primary-dark-1 {
-    background-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .xl\:bg-brand-primary {
-    background-color: HSLA(215, 60%, 37%, 1);
+    background-color: HSLA(210, 100%, 36%, 1);
   }
 
   .xl\:bg-brand-primary-light-1 {
-    background-color: HSLA(214, 44%, 44%, 1);
+    background-color: HSLA(210, 67%, 46%, 1);
   }
 
   .xl\:bg-brand-primary-light-2 {
-    background-color: HSLA(215, 38%, 56%, 1);
+    background-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .xl\:bg-brand-primary-dark-1 {
+    background-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .xl\:bg-brand-primary-dark-2 {
+    background-color: HSLA(210, 100%, 27%, 1);
   }
 
   .xl\:bg-brand-gourmet {
@@ -23262,24 +23193,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     background-color: #ffffff;
   }
 
-  .xl\:hover\:bg-brand-primary-dark-2:hover {
-    background-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .xl\:hover\:bg-brand-primary-dark-1:hover {
-    background-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .xl\:hover\:bg-brand-primary:hover {
-    background-color: HSLA(215, 60%, 37%, 1);
+    background-color: HSLA(210, 100%, 36%, 1);
   }
 
   .xl\:hover\:bg-brand-primary-light-1:hover {
-    background-color: HSLA(214, 44%, 44%, 1);
+    background-color: HSLA(210, 67%, 46%, 1);
   }
 
   .xl\:hover\:bg-brand-primary-light-2:hover {
-    background-color: HSLA(215, 38%, 56%, 1);
+    background-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .xl\:hover\:bg-brand-primary-dark-1:hover {
+    background-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .xl\:hover\:bg-brand-primary-dark-2:hover {
+    background-color: HSLA(210, 100%, 27%, 1);
   }
 
   .xl\:hover\:bg-brand-gourmet:hover {
@@ -23370,24 +23301,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     background-color: #ffffff;
   }
 
-  .xl\:focus\:bg-brand-primary-dark-2:focus {
-    background-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .xl\:focus\:bg-brand-primary-dark-1:focus {
-    background-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .xl\:focus\:bg-brand-primary:focus {
-    background-color: HSLA(215, 60%, 37%, 1);
+    background-color: HSLA(210, 100%, 36%, 1);
   }
 
   .xl\:focus\:bg-brand-primary-light-1:focus {
-    background-color: HSLA(214, 44%, 44%, 1);
+    background-color: HSLA(210, 67%, 46%, 1);
   }
 
   .xl\:focus\:bg-brand-primary-light-2:focus {
-    background-color: HSLA(215, 38%, 56%, 1);
+    background-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .xl\:focus\:bg-brand-primary-dark-1:focus {
+    background-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .xl\:focus\:bg-brand-primary-dark-2:focus {
+    background-color: HSLA(210, 100%, 27%, 1);
   }
 
   .xl\:focus\:bg-brand-gourmet:focus {
@@ -23550,24 +23481,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     border-color: #ffffff;
   }
 
-  .xl\:border-brand-primary-dark-2 {
-    border-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .xl\:border-brand-primary-dark-1 {
-    border-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .xl\:border-brand-primary {
-    border-color: HSLA(215, 60%, 37%, 1);
+    border-color: HSLA(210, 100%, 36%, 1);
   }
 
   .xl\:border-brand-primary-light-1 {
-    border-color: HSLA(214, 44%, 44%, 1);
+    border-color: HSLA(210, 67%, 46%, 1);
   }
 
   .xl\:border-brand-primary-light-2 {
-    border-color: HSLA(215, 38%, 56%, 1);
+    border-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .xl\:border-brand-primary-dark-1 {
+    border-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .xl\:border-brand-primary-dark-2 {
+    border-color: HSLA(210, 100%, 27%, 1);
   }
 
   .xl\:border-brand-gourmet {
@@ -23658,24 +23589,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     border-color: #ffffff;
   }
 
-  .xl\:hover\:border-brand-primary-dark-2:hover {
-    border-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .xl\:hover\:border-brand-primary-dark-1:hover {
-    border-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .xl\:hover\:border-brand-primary:hover {
-    border-color: HSLA(215, 60%, 37%, 1);
+    border-color: HSLA(210, 100%, 36%, 1);
   }
 
   .xl\:hover\:border-brand-primary-light-1:hover {
-    border-color: HSLA(214, 44%, 44%, 1);
+    border-color: HSLA(210, 67%, 46%, 1);
   }
 
   .xl\:hover\:border-brand-primary-light-2:hover {
-    border-color: HSLA(215, 38%, 56%, 1);
+    border-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .xl\:hover\:border-brand-primary-dark-1:hover {
+    border-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .xl\:hover\:border-brand-primary-dark-2:hover {
+    border-color: HSLA(210, 100%, 27%, 1);
   }
 
   .xl\:hover\:border-brand-gourmet:hover {
@@ -23766,24 +23697,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     border-color: #ffffff;
   }
 
-  .xl\:focus\:border-brand-primary-dark-2:focus {
-    border-color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .xl\:focus\:border-brand-primary-dark-1:focus {
-    border-color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .xl\:focus\:border-brand-primary:focus {
-    border-color: HSLA(215, 60%, 37%, 1);
+    border-color: HSLA(210, 100%, 36%, 1);
   }
 
   .xl\:focus\:border-brand-primary-light-1:focus {
-    border-color: HSLA(214, 44%, 44%, 1);
+    border-color: HSLA(210, 67%, 46%, 1);
   }
 
   .xl\:focus\:border-brand-primary-light-2:focus {
-    border-color: HSLA(215, 38%, 56%, 1);
+    border-color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .xl\:focus\:border-brand-primary-dark-1:focus {
+    border-color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .xl\:focus\:border-brand-primary-dark-2:focus {
+    border-color: HSLA(210, 100%, 27%, 1);
   }
 
   .xl\:focus\:border-brand-gourmet:focus {
@@ -26919,24 +26850,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     color: #ffffff;
   }
 
-  .xl\:text-brand-primary-dark-2 {
-    color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .xl\:text-brand-primary-dark-1 {
-    color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .xl\:text-brand-primary {
-    color: HSLA(215, 60%, 37%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
   .xl\:text-brand-primary-light-1 {
-    color: HSLA(214, 44%, 44%, 1);
+    color: HSLA(210, 67%, 46%, 1);
   }
 
   .xl\:text-brand-primary-light-2 {
-    color: HSLA(215, 38%, 56%, 1);
+    color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .xl\:text-brand-primary-dark-1 {
+    color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .xl\:text-brand-primary-dark-2 {
+    color: HSLA(210, 100%, 27%, 1);
   }
 
   .xl\:text-brand-gourmet {
@@ -27027,24 +26958,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     color: #ffffff;
   }
 
-  .xl\:hover\:text-brand-primary-dark-2:hover {
-    color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .xl\:hover\:text-brand-primary-dark-1:hover {
-    color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .xl\:hover\:text-brand-primary:hover {
-    color: HSLA(215, 60%, 37%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
   .xl\:hover\:text-brand-primary-light-1:hover {
-    color: HSLA(214, 44%, 44%, 1);
+    color: HSLA(210, 67%, 46%, 1);
   }
 
   .xl\:hover\:text-brand-primary-light-2:hover {
-    color: HSLA(215, 38%, 56%, 1);
+    color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .xl\:hover\:text-brand-primary-dark-1:hover {
+    color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .xl\:hover\:text-brand-primary-dark-2:hover {
+    color: HSLA(210, 100%, 27%, 1);
   }
 
   .xl\:hover\:text-brand-gourmet:hover {
@@ -27135,24 +27066,24 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: hsla(127, 52%, 
     color: #ffffff;
   }
 
-  .xl\:focus\:text-brand-primary-dark-2:focus {
-    color: HSLA(215, 85%, 20%, 1.00);
-  }
-
-  .xl\:focus\:text-brand-primary-dark-1:focus {
-    color: HSLA(215, 72%, 28%, 1.00);
-  }
-
   .xl\:focus\:text-brand-primary:focus {
-    color: HSLA(215, 60%, 37%, 1);
+    color: HSLA(210, 100%, 36%, 1);
   }
 
   .xl\:focus\:text-brand-primary-light-1:focus {
-    color: HSLA(214, 44%, 44%, 1);
+    color: HSLA(210, 67%, 46%, 1);
   }
 
   .xl\:focus\:text-brand-primary-light-2:focus {
-    color: HSLA(215, 38%, 56%, 1);
+    color: HSLA(210, 57%, 52%, 1);
+  }
+
+  .xl\:focus\:text-brand-primary-dark-1:focus {
+    color: HSLA(210, 100%, 31%, 1);
+  }
+
+  .xl\:focus\:text-brand-primary-dark-2:focus {
+    color: HSLA(210, 100%, 27%, 1);
   }
 
   .xl\:focus\:text-brand-gourmet:focus {

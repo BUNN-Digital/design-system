@@ -1,29 +1,3 @@
-.nav-menu-item {
-    a {
-        text-decoration: none;
-        color: black;
-        /* apply text-black; */
-    }
-}
-
-.nav-menu-list-items {
-    @apply mb-0;
-}
-
-.nav-menu-trigger {
-    > i {
-        float: right;
-
-        @screen lg {
-            float: none;
-        }
-    }
-}
-
-.nav-menu-item-icon {
-    float: right;
-}
-
 .nav-menu-dropdown-content {
     display: none;
     padding-bottom: 24px;

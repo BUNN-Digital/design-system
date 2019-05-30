@@ -30,7 +30,7 @@
             box-shadow: inset 8px 0 0 0 #dfdfdf;
 
             &:hover {
-                box-shadow: inset 8px 0 0 0 #005cb9;
+                box-shadow: inset 8px 0 0 0 theme('colors.brand-primary');
             }
         }
 
@@ -43,25 +43,10 @@
         }
     }
 
-    &__item-content {
-        .stacked & {
-        }
-
-        .compact & {
-        }
-    }
-
     &__item-image {
         @apply cursor-pointer;
         .grid & {
             @apply block mx-auto mt-5 mb-2;
-        }
-
-        .stacked & {
-            /* max-height: 180px; */
-        }
-
-        .compact & {
         }
     }
 

@@ -22,11 +22,13 @@ module.exports = {
             'black': '#0b0b0b',
             'white': '#ffffff',
 
-            'brand-primary-dark-2': 'HSLA(215, 85%, 20%, 1.00)',
-            'brand-primary-dark-1': 'HSLA(215, 72%, 28%, 1.00)',
-            'brand-primary': 'HSLA(215, 60%, 37%, 1)',
-            'brand-primary-light-1': 'HSLA(214, 44%, 44%, 1)',
-            'brand-primary-light-2': 'HSLA(215, 38%, 56%, 1)',
+            'brand-primary': 'HSLA(210, 100%, 36%, 1)',
+            
+            'brand-primary-light-1': 'HSLA(210, 67%, 46%, 1)',
+            'brand-primary-light-2': 'HSLA(210, 57%, 52%, 1)',
+
+            'brand-primary-dark-1': 'HSLA(210, 100%, 31%, 1)',
+            'brand-primary-dark-2': 'HSLA(210, 100%, 27%, 1)',
 
             'brand-gourmet': 'HSLA(34, 24%, 42%, 1)',
             'brand-gourmet-light-1': 'HSLA(34, 27%, 47%, 1)',

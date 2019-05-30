@@ -101,9 +101,8 @@ body > .popup-menu--hybrid {
                 border-bottom: 1px solid #eaeaea;
 
                 &:hover {
-                    border-color: #005cb9;
                     color: white;
-                    background: #005cb9;
+                    @apply text-white border-brand-primary bg-brand-primary;
                 }
             }
         }
