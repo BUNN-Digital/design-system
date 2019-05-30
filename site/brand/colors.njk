@@ -8,14 +8,50 @@ tag: brand
 ---
 
 <h2 class="section-heading">BUNN Corporate</h2>
+
 <div class="sm:flex flex-wrap mb-4 pb-8 -mx-2">
 	{% for color in corporate %}
 	<div class="w-full sm:w-1/2 md:w-1/3 my-4 px-2">
 		<div class="mx-auto rounded shadow">
 			<div class="h-32 w-full rounded-t {{ color.swatch }}"></div>
 			<div class="rounded-b text-center text-sm-1 p-2">
-				{{color.hex}}<br>
-				{{color.hsla}}
+				{{color.hex}}
+			</div>
+		</div>
+		<div class="font-mono text-sm-1 text-gray-500 block text-center py-2">
+			{{color.name}}
+		</div>
+	</div>
+	{% endfor %}
+</div>
+
+<p class="font-sans-medium">Tints</p>
+
+<div class="sm:flex flex-wrap mb-4 pb-8 -mx-2">
+	{% for color in corporateTints %}
+	<div class="w-full sm:w-1/2 md:w-1/3 my-4 px-2">
+		<div class="mx-auto rounded shadow">
+			<div class="h-32 w-full rounded-t {{ color.swatch }}"></div>
+			<div class="rounded-b text-center text-sm-1 p-2">
+				{{color.hex}}
+			</div>
+		</div>
+		<div class="font-mono text-sm-1 text-gray-500 block text-center py-2">
+			{{color.name}}
+		</div>
+	</div>
+	{% endfor %}
+</div>
+
+<p class="font-sans-medium">Shades</p>
+
+<div class="sm:flex flex-wrap mb-4 pb-8 -mx-2">
+	{% for color in corporateShades %}
+	<div class="w-full sm:w-1/2 md:w-1/3 my-4 px-2">
+		<div class="mx-auto rounded shadow">
+			<div class="h-32 w-full rounded-t {{ color.swatch }}"></div>
+			<div class="rounded-b text-center text-sm-1 p-2">
+				{{color.hex}}
 			</div>
 		</div>
 		<div class="font-mono text-sm-1 text-gray-500 block text-center py-2">
@@ -32,8 +68,7 @@ tag: brand
 		<div class="mx-auto rounded shadow">
 			<div class="h-32 w-full rounded-t {{ color.swatch }}"></div>
 			<div class="rounded-b text-center text-sm-1 p-2">
-				{{color.hex}}<br>
-				{{color.hsla}}
+				{{color.hex}}
 			</div>
 		</div>
 		<div class="font-mono text-sm-1 text-gray-500 block text-center py-2">
@@ -50,8 +85,7 @@ tag: brand
 		<div class="mx-auto rounded shadow">
 			<div class="h-32 w-full rounded-t {{ color.swatch }}"></div>
 			<div class="rounded-b text-center text-sm-1 p-2">
-				{{color.hex}}<br>
-				{{color.hsla}}
+				{{color.hex}}
 			</div>
 		</div>
 		<div class="font-mono text-sm-1 text-gray-500 block text-center py-2">
@@ -68,8 +102,7 @@ tag: brand
 		<div class="mx-auto rounded shadow">
 			<div class="h-32 w-full rounded-t {{ color.swatch }}"></div>
 			<div class="rounded-b text-center text-sm-1 p-2">
-				{{color.hex}}<br>
-				{{color.hsla}}
+				{{color.hex}}
 			</div>
 		</div>
 		<div class="font-mono text-sm-1 text-gray-500 block text-center py-2">
