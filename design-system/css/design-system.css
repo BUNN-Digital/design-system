@@ -2605,6 +2605,29 @@ body.drawer-open {
     transition: all 0.3s ease-out;
   }
 
+/* hybrid menus (mobile accordions and desktop dropdowns) */
+
+/* Dropdown as a mega menu */
+
+.dropdown-menu-item-icon {
+  transition: all ease 0.2s;
+}
+
+/* States */
+
+.dropdown-menu-item.active .dropdown-menu-item-icon {
+    -webkit-transform: rotateZ(180deg);
+            transform: rotateZ(180deg);
+  }
+
+@media (min-width: 1200px) {
+
+.dropdown-menu-item.active .dropdown-menu-item-icon {
+      -webkit-transform: rotateX(180deg);
+              transform: rotateX(180deg)
+  }
+    }
+
 .hero__banner {
     border-bottom-width: 4px;
     border-color: #e0e0e0;
@@ -2774,129 +2797,6 @@ a.icon-link {
         border-color: #005CB9;
         color: #005CB9;
       }
-
-.nav-menu-dropdown-content {
-  display: none;
-  padding-bottom: 24px;
-  text-align: left;
-  z-index: 200;
-}
-
-@media (min-width: 1200px) {
-
-.nav-menu-dropdown-content .nav-menu-list-item-label > span {
-      display: block;
-
-      padding-right: 32px;
-
-      margin-bottom: 8px;
-
-      font-weight: 600;
-
-      font-size: 0.8em
-  }
-    }
-
-.nav-menu-dropdown-content .nav-menu-list-item-link > a {
-    display: block;
-    padding: 8px 16px;
-  }
-
-@media (min-width: 1200px) {
-
-.nav-menu-dropdown-content .nav-menu-list-item-link > a {
-      padding: 6px 32px 6px 16px
-  }
-    }
-
-/* hybrid menus (mobile accordions and desktop dropdowns) */
-
-@media (min-width: 1200px) {
-    .nav-menu--hybrid .nav-menu-dropdown-content {
-      background: white;
-      box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.2);
-      top: 100%;
-      margin-top: 1px;
-    }
-  }
-
-@media (min-width: 1200px) {
-
-.nav-menu--hybrid .nav-menu-item-icon {
-      float: none
-  }
-    }
-
-/* Dropdown as a list */
-
-@media (min-width: 1200px) {
-
-.nav-menu--hybrid .nav-menu-dropdown-content--list {
-      padding: 16px 0;
-
-      min-width: 240px
-  }
-    }
-
-/* Dropdown as a mega menu */
-
-@media (min-width: 1200px) {
-
-.nav-menu--hybrid .nav-menu-dropdown-content--mega {
-      padding: 48px 0;
-
-      justify-content: center
-  }
-
-      .nav-menu--hybrid .nav-menu-dropdown-content--mega .nav-menu-list-item-label > span,
-            .nav-menu--hybrid .nav-menu-dropdown-content--mega .nav-menu-list-item-link > a {
-        padding-right: 32px;
-        padding-left: 16px;
-      }
-    }
-
-/* States */
-
-.nav-menu--active .nav-menu-item-icon {
-    -webkit-transform: rotateX(180deg);
-            transform: rotateX(180deg);
-  }
-
-.nav-menu--active .nav-menu-dropdown-content {
-    display: block;
-  }
-
-.nav-menu--active .nav-menu-dropdown-content--list {
-      display: block;
-    }
-
-@media (min-width: 1200px) {
-
-.nav-menu--active .nav-menu-dropdown-content--mega {
-        display: flex
-    }
-      }
-
-/* Families */
-
-@media (min-width: 1200px) {
-
-.nav-menu-equipment-families {
-    -webkit-columns: 2;
-       -moz-columns: 2;
-            columns: 2
-}
-
-    .nav-menu-equipment-families li {
-      -webkit-column-break-inside: avoid;
-    }
-  }
-
-/* List items */
-
-.nav-menu-list-item-label {
-  letter-spacing: 0.05em;
-}
 
 .message {
   position: relative;

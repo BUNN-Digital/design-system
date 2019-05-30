@@ -31,8 +31,6 @@
     var iconInactiveClass = $icon.data('inactive-icon');
     var iconActiveClass = $icon.data('active-icon');
     var accordionImg = $target.data('accordion-img');
-    console.log($target);
-    console.log($content);
     $content.slideUp('fast');
     $target.removeClass('open');
     $icon.removeClass(iconActiveClass).addClass(iconInactiveClass);

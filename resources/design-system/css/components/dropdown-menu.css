@@ -1,0 +1,16 @@
+/* hybrid menus (mobile accordions and desktop dropdowns) */
+/* Dropdown as a mega menu */
+.dropdown-menu-item-icon {
+    transition: all ease 0.2s;
+}
+
+/* States */
+.dropdown-menu-item.active {
+    .dropdown-menu-item-icon {
+        transform: rotateZ(180deg);
+        
+        @screen lg {
+            transform: rotateX(180deg);
+        }
+    }
+}

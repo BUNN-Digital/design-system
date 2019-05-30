@@ -31,8 +31,6 @@
     var iconInactiveClass = $icon.data('inactive-icon');
     var iconActiveClass = $icon.data('active-icon');
     var accordionImg = $target.data('accordion-img');
-    console.log($target);
-    console.log($content);
     $content.slideUp('fast');
     $target.removeClass('open');
     $icon.removeClass(iconActiveClass).addClass(iconInactiveClass);
@@ -153,6 +151,55 @@
     }
   });
 })(window.BUNN = window.BUNN || {}, jQuery);
+;
+
+(function (window, $, undefined) {
+  var $navItemTrigger = $('.js-dropdown-menu-trigger');
+  var $navMenuItems = $('.js-dropdown-menu-item');
+  var $navMenuItemsContent = $('.js-dropdown-menu-content');
+
+  BUNN.closeDropdown = function ($menu) {
+    if (window.innerWidth < BUNN.screens.lg) {
+      $menu.slideUp('fast');
+    } else {
+      $menu.fadeOut('fast');
+    }
+  };
+
+  BUNN.openDropdown = function ($menu) {
+    if (window.innerWidth < BUNN.screens.lg) {
+      $menu.slideDown('fast');
+    } else {
+      $menu.fadeIn('fast');
+    }
+  }; //Trigger on click
+
+
+  $navItemTrigger.on('click', function (e) {
+    e.preventDefault();
+    var $navMenuItem = $(this).closest('.js-dropdown-menu-item');
+    var $navMenuItemContent = $navMenuItem.find('.js-dropdown-menu-content');
+
+    if ($navMenuItem.hasClass('active')) {
+      $navMenuItem.removeClass('active');
+      BUNN.closeDropdown($navMenuItemContent);
+    } else {
+      $navMenuItems.removeClass('active');
+      $navMenuItem.addClass('active');
+      BUNN.closeDropdown($navMenuItemsContent);
+      BUNN.openDropdown($navMenuItemContent);
+    }
+  });
+  $(document).on('mousedown', function (e) {
+    var $activeDropdown = $('.js-dropdown-menu-item.active');
+
+    if ($activeDropdown.length && e.target.closest('.js-dropdown-menu-item') == null && e.target.closest('.js-drawer') == null) {
+      var $activeMenuContent = $activeDropdown.find('.js-dropdown-menu-content');
+      $navMenuItems.removeClass('active');
+      BUNN.closeDropdown($activeMenuContent);
+    }
+  });
+})(window, jQuery);
 // JS Popup Menu
 // Menu that acts like a popup/modal on mobile and a dropdown on desktop
 // ==========================================================================================
@@ -208,7 +255,6 @@
     if (!dropdownIsOpen) {
       $popupMenu.css("display", "block").addClass("visible");
       $(this).addClass("dropdown-open");
-      console.log(window.innerWidth < BUNN.screens.md);
 
       if (menuIsHybrid && window.innerWidth < BUNN.screens.md) {
         $('body').addClass('h-full overflow-hidden');

@@ -53,7 +53,6 @@
     if (!dropdownIsOpen) {
       $popupMenu.css("display", "block").addClass("visible");
       $(this).addClass("dropdown-open");
-      console.log(window.innerWidth < BUNN.screens.md);
 
       if (menuIsHybrid && window.innerWidth < BUNN.screens.md) {
         $('body').addClass('h-full overflow-hidden');

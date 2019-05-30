@@ -1,0 +1,246 @@
+---
+layout: page
+meta_title: Dropdown Menus
+meta_description: Dropdown Menus
+title: Dropdown Menus
+section: Components
+tag: components
+---
+
+<p>These dropdown menus start as accordion-style menus on small screens and become dropdown menus on large screens. Dropdowns widths can be specified with utility classes if necessary, and even be customized to be full-width mega menus.</p>
+
+<h2 class="section-heading">Dropdown Menus</h2>
+
+<div class="dropdown-menu text-base lg:border lg:border-gray-400 lg:relative lg:flex lg:justify-center">
+	<div class="dropdown-menu-item js-dropdown-menu-item lg:mx-6">
+		<a href="#" class="js-dropdown-menu-trigger flex items-center py-3 font-sans-demi text-black lg:py-4">
+			<span class="flex-grow lg:flex-grow-0">Dropdown Menu</span>
+			<i class="dropdown-menu-item-icon fal fa-chevron-down pt-1 lg:pt-0 lg:ml-2"></i>
+		</a>
+		<div class="dropdown-menu-content js-dropdown-menu-content hidden z-menu pb-2 text-left lg:absolute lg:py-4 lg:max-w-sm lg:bg-white lg:shadow-md lg:mt-px">
+			<span class="block font-sans-demi uppercase text-gray-500 text-sm-2 tracking-wide pt-4 lg:px-6 lg:pr-12 lg:pl-4 lg:block lg:pr-12 lg:mb-2">Menu Group Label</span>
+
+			<ul class="mb-0">
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+			</ul>
+
+			<span class="block font-sans-demi uppercase text-gray-500 text-sm-2 tracking-wide pt-4 lg:px-6 lg:pr-12 lg:pl-4 lg:block lg:pr-12 lg:mb-2">Menu Group Label</span>
+
+			<ul class="mb-0">
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="dropdown-menu-item js-dropdown-menu-item lg:mx-6">
+		<a href="#" class="js-dropdown-menu-trigger flex items-center py-3 font-sans-demi text-black lg:py-4">
+			<span class="flex-grow lg:flex-grow-0">Dropdown Menu</span>
+			<i class="dropdown-menu-item-icon fal fa-chevron-down pt-1 lg:pt-0 lg:ml-2"></i>
+		</a>
+		<div class="dropdown-menu-content js-dropdown-menu-content hidden z-menu pb-2 text-left lg:absolute lg:py-4 lg:max-w-sm lg:bg-white lg:shadow-md lg:mt-px">
+			<ul class="mb-0">
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+
+<div class="accordion js-accordion py-6">
+	<div class="accordion__item js-accordion-item">
+		<div class="accordion__title js-accordion-title text-brand-primary hover:text-brand-primary-light-2 font-sans-demi cursor-pointer font-sans-medium flex items-center">
+			<div class="font-sans-medium">View Code</div>
+			<div class="js-accordion-icon fal fa-angle-down p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"></div>
+		</div>
+		<div class="accordion__content js-accordion-content">
+{% highlight "html" %}
+<div class="dropdown-menu text-base lg:border lg:border-gray-400 lg:relative lg:flex lg:justify-center">
+	<div class="dropdown-menu-item js-dropdown-menu-item lg:mx-6">
+		<a href="#" class="js-dropdown-menu-trigger flex items-center py-3 font-sans-demi text-black lg:py-4">
+			<span class="flex-grow lg:flex-grow-0">Dropdown Menu</span>
+			<i class="dropdown-menu-item-icon fal fa-chevron-down pt-1 lg:pt-0 lg:ml-2"></i>
+		</a>
+		<div class="dropdown-menu-content js-dropdown-menu-content hidden z-menu pb-2 text-left lg:absolute lg:py-4 lg:max-w-sm lg:bg-white lg:shadow-md lg:mt-px">
+			<span class="block font-sans-demi uppercase text-gray-500 text-sm-2 tracking-wide pt-4 lg:px-6 lg:pr-12 lg:pl-4 lg:block lg:pr-12 lg:mb-2">Menu Group Label</span>
+
+			<ul class="mb-0">
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+			</ul>
+
+			<span class="block font-sans-demi uppercase text-gray-500 text-sm-2 tracking-wide pt-4 lg:px-6 lg:pr-12 lg:pl-4 lg:block lg:pr-12 lg:mb-2">Menu Group Label</span>
+
+			<ul class="mb-0">
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="dropdown-menu-item js-dropdown-menu-item lg:mx-6">
+		<a href="#" class="js-dropdown-menu-trigger flex items-center py-3 font-sans-demi text-black lg:py-4">
+			<span class="flex-grow lg:flex-grow-0">Dropdown Menu</span>
+			<i class="dropdown-menu-item-icon fal fa-chevron-down pt-1 lg:pt-0 lg:ml-2"></i>
+		</a>
+		<div class="dropdown-menu-content js-dropdown-menu-content hidden z-menu pb-2 text-left lg:absolute lg:py-4 lg:max-w-sm lg:bg-white lg:shadow-md lg:mt-px">
+			<ul class="mb-0">
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+</div>
+{% endhighlight %}
+		</div>
+	</div>
+</div>
+
+
+
+<h2 class="section-heading">Dropdown Menus with Mega Menu</h2>
+
+<p>Note: The last column in the mega menu demonstrates how to flow the items into 2 columns. A height must be set on the parent container in order for the items to flow into multiple columns.</p>
+
+<div class="dropdown-menu text-base lg:border lg:border-gray-400 lg:relative lg:flex lg:justify-center">
+	<div class="dropdown-menu-item js-dropdown-menu-item lg:mx-6">
+		<a href="#" class="js-dropdown-menu-trigger flex items-center py-3 font-sans-demi text-black lg:py-4">
+			<span class="flex-grow lg:flex-grow-0">Dropdown Menu</span>
+			<i class="dropdown-menu-item-icon fal fa-chevron-down pt-1 lg:pt-0 lg:ml-2"></i>
+		</a>
+		<div class="dropdown-menu-content js-dropdown-menu-content hidden z-menu pb-2 text-left lg:absolute lg:py-4 lg:max-w-sm lg:bg-white lg:shadow-md lg:mt-px">
+			
+			<span class="block font-sans-demi uppercase text-gray-500 text-sm-2 tracking-wide pt-4 lg:px-6 lg:pr-12 lg:pl-4 lg:block lg:pr-12 lg:mb-2">Menu Group Label</span>
+			<ul class="mb-0">
+				<li>
+				</li>
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+				<li>
+					<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+				</li>
+			</ul>
+		</div>
+	</div>
+	<div class="dropdown-menu-item js-dropdown-menu-item lg:mx-6">
+		<a href="#" class="js-dropdown-menu-trigger flex items-center py-3 font-sans-demi text-black lg:py-4">
+			<span class="flex-grow lg:flex-grow-0">Mega Menu</span>
+			<i class="dropdown-menu-item-icon fal fa-chevron-down pt-1 lg:pt-0 lg:ml-2"></i>
+		</a>
+		<div class="dropdown-menu-content js-dropdown-menu-content hidden z-menu pb-2 text-left lg:w-full lg:absolute lg:inset-x-0 lg:p-8 lg:bg-white lg:shadow-md lg:mt-px">
+			<div class="lg:flex lg:justify-center">
+				<div>
+					<span class="block font-sans-demi uppercase text-gray-500 text-sm-2 tracking-wide pt-4 lg:px-6 lg:pr-12 lg:pl-4 lg:block lg:pr-12 lg:mb-2">Menu Group Label</span>
+
+					<ul class="mb-0">
+						<li>
+						</li>
+						<li>
+							<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+						</li>
+						<li>
+							<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+						</li>
+						<li>
+							<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<span class="block font-sans-demi uppercase text-gray-500 text-sm-2 tracking-wide pt-4 lg:px-6 lg:pr-12 lg:pl-4 lg:block lg:pr-12 lg:mb-2">Menu Group Label</span>
+
+					<ul class="mb-0">
+						<li>
+						</li>
+						<li>
+							<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+						</li>
+						<li>
+							<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+						</li>
+						<li>
+							<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<span class="block font-sans-demi uppercase text-gray-500 text-sm-2 tracking-wide pt-4 lg:px-6 lg:pr-12 lg:pl-4 lg:block lg:pr-12 lg:mb-2">Menu Group Label</span>
+
+					<ul class="mb-0">
+						<li>
+						</li>
+						<li>
+							<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+						</li>
+						<li>
+							<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+						</li>
+						<li>
+							<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item</a>
+						</li>
+					</ul>
+				</div>
+				<div>
+					<span class="block font-sans-demi uppercase text-gray-500 text-sm-2 tracking-wide pt-4 lg:px-6 lg:pr-12 lg:pl-4 lg:block lg:pr-12 lg:mb-2">Menu with items in 2 columns</span>
+
+					<ul class="mb-0 lg:flex lg:flex-wrap lg:flex-col lg:h-20">
+						<li class="flex-auto">
+							<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item 1</a>
+						</li>
+						<li class="flex-auto">
+							<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item 2</a>
+						</li>
+						<li class="flex-auto">
+							<a href="#" class="block py-2 text-black hover:text-brand-primary lg:px-6 lg:pr-12 lg:pl-4">Menu Item 3</a>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
