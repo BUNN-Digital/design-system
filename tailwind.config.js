@@ -22,16 +22,14 @@ module.exports = {
             'black': '#0b0b0b',
             'white': '#ffffff',
 
-            'brand-primary': 'HSLA(210, 100%, 36%, 1)',
-            
-            'brand-primary-light-1': 'HSLA(210, 67%, 46%, 1)',
-            'brand-primary-light-2': 'HSLA(210, 57%, 52%, 1)',
+            'brand-primary': '#005CB9',
+            'brand-primary-light-1': '#2674C3',
+            'brand-primary-light-2': '#4084CA',
+            'brand-primary-dark-1': '#004E9D',
+            'brand-primary-dark-2': '#00448A',
 
-            'brand-primary-dark-1': 'HSLA(210, 100%, 31%, 1)',
-            'brand-primary-dark-2': 'HSLA(210, 100%, 27%, 1)',
-
-            'brand-gourmet': 'HSLA(34, 24%, 42%, 1)',
-            'brand-gourmet-light-1': 'HSLA(34, 27%, 47%, 1)',
+            'brand-gourmet': '#856F51',
+            'brand-gourmet-light-1': '#8E7C63',
 
             gray: {
                 100: '#f7f7f7',
@@ -45,14 +43,14 @@ module.exports = {
                 900: '#1a1a1a',
             },
 
-            'declare': 'hsla(36, 90%, 59%, 1)',
-            'declare-light': 'hsla(36, 90%, 93%, 1)',
-            'avert': 'hsla(358, 66%, 46%, 1)',
-            'avert-light': 'hsla(358, 66%, 93%, 1)',
-            'affirm': 'hsla(127, 52%, 50%, 1)',
-            'affirm-light': 'hsla(127, 52%, 93%, 1)',
-            'inform': 'hsla(210, 95%, 43%, 1)',
-            'inform-light': 'hsla(210, 95%, 93%, 1)',
+            'declare': '#F5AA38',
+            'declare-light': '#FDEACE',
+            'avert': '#C5282D',
+            'avert-light': '#F6D5D6',
+            'affirm': '#3DC04D',
+            'affirm-light': '#D8F3DC',
+            'inform': '#005CB9',
+            'inform-light': '#CCE5FF',
         },
 
         screens: {
