@@ -1,11 +1,19 @@
 /* hybrid menus (mobile accordions and desktop dropdowns) */
-/* Dropdown as a mega menu */
-.dropdown-menu-item-icon {
-    transition: all ease 0.2s;
+
+.dropdown-menu-item.open {
+    @apply text-brand-primary border-brand-primary;
 }
 
+
+/* Commenting out for now. This creates a noticeable inconsistency since we don't do the same with accordion arrows. */
+
+/* Dropdown as a mega menu */
+/* .dropdown-menu-item-icon {
+    transition: all ease 0.2s;
+} */
+
 /* States */
-.dropdown-menu-item.active {
+.dropdown-menu-item.open {
     .dropdown-menu-item-icon {
         transform: rotateZ(180deg);
         

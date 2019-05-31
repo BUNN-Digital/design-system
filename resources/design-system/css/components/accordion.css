@@ -1,17 +1,14 @@
-.accordion {
+.accordion__title {
+    text-overflow: ellipsis;
+    white-space: nowrap;
 
-    &__title {
-        text-overflow: ellipsis;
-        white-space: nowrap;
-
-        .open & {
-            @apply text-brand-primary-light-2 border-brand-primary;
-        }
+    .open & {
+        @apply text-brand-primary border-brand-primary;
     }
+}
 
-    &__content {
-        display: none;
-    }
+.accordion__content {
+    display: none;
 }
 
 .accordion--variantA {

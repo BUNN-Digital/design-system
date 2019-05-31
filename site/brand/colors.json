@@ -2,31 +2,31 @@
     "corporate": [
         {
             "name": "brand-primary",
-            "hex": "#005CB9",
+            "hex": "#005EB8",
             "swatch": "bg-brand-primary"
         }
     ],
     "corporateTints": [
         {
             "name": "brand-primary-light-1",
-            "hex": "#2674C3",
+            "hex": "#2776C2",
             "swatch": "bg-brand-primary-light-1"
         },
         {
             "name": "brand-primary-light-2",
-            "hex": "#4084CA",
+            "hex": "#4086C9",
             "swatch": "bg-brand-primary-light-2"
         }
     ],
     "corporateShades": [
         {
             "name": "brand-primary-dark-1",
-            "hex": "#004E9D",
+            "hex": "#004F9B",
             "swatch": "bg-brand-primary-dark-1"
         },
         {
             "name": "brand-primary-dark-2",
-            "hex": "#00448A",
+            "hex": "#004689",
             "swatch": "bg-brand-primary-dark-2"
         }
     ],

@@ -22,11 +22,11 @@ module.exports = {
             'black': '#0b0b0b',
             'white': '#ffffff',
 
-            'brand-primary': '#005CB9',
-            'brand-primary-light-1': '#2674C3',
-            'brand-primary-light-2': '#4084CA',
-            'brand-primary-dark-1': '#004E9D',
-            'brand-primary-dark-2': '#00448A',
+            'brand-primary': '#005EB8',
+            'brand-primary-light-1': '#2776C2',
+            'brand-primary-light-2': '#4086C9',
+            'brand-primary-dark-1': '#004F9B',
+            'brand-primary-dark-2': '#004689',
 
             'brand-gourmet': '#856F51',
             'brand-gourmet-light-1': '#8E7C63',
@@ -49,7 +49,7 @@ module.exports = {
             'avert-light': '#F6D5D6',
             'affirm': '#3DC04D',
             'affirm-light': '#D8F3DC',
-            'inform': '#005CB9',
+            'inform': '#005EB8',
             'inform-light': '#CCE5FF',
         },
 

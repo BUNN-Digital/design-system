@@ -6,7 +6,7 @@
 	{% include "partials/css.njk" %}
 </head>
 
-<body class="bg-black">
+<body class="bg-white">
 	
 <div class="main relative bg-white" role="main">
 	{% include "partials/header.njk" %}
@@ -29,16 +29,15 @@
 {% endif %}
 
 <div class="drawers js-drawers z-overlay">
-    <div id="topic-menu" class="nav-menu drawer drawer--left z-menu">
-        <div class="drawer__header p-4 fixed h-16 top-0 py-6 z-shell">
-            <div class="font-sans-demi">{{ section }}</div>
-            <i class="fal fa-times drawer__close-btn js-drawer-close-btn absolute p-6 top-0 right-0 cursor-pointer z-shell"></i>
+    <div id="topic-menu" class="drawer js-drawer drawer--left z-menu">
+        <div class="pl-6 fixed bg-white w-full h-16 top-0 z-shell flex justify-between items-center border-b border-gray-200">
+            <div class="font-sans-medium leading-none flex-grow">{{ section }}</div>
+            <button class="js-drawer-close-btn self-stretch h-16 px-6 flex items-center cursor-pointer z-shell"><i class="fal fa-times"></i></button>
         </div>
-        <div class="js-topic-menu-drawer drawer__content absolute h-full w-full overflow-y-scroll scrolling-touch">
+        <div class="js-topic-menu-drawer absolute h-full pt-16 w-full overflow-y-scroll scrolling-touch">
 			<!-- Any content can go here -->
-			<div class="js-topic-menu md:max-h-screen md:w-full md:overflow-y-scroll">
-				<div class="p-8">
-					<div class="text-sm-2 font-sans-demi mb-2 uppercase tracking-wider text-gray-500">{{ section }}</div>
+			<div class="js-topic-menu">
+				<div class="p-6">
 					{% for entry in collection  %}
 						<a href="{{ entry.url }}" class="block py-1{% if page.url == entry.url %} text-brand-primary font-sans-demi{% else %} text-gray-700{% endif %}">{{ entry.data.title }}</a>
 					{% endfor %}
