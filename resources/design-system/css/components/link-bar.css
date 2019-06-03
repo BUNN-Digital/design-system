@@ -7,9 +7,7 @@
  .link-bar {
     
     .link-bar__link {
-        display: block;
-        text-align: center;
-        @apply py-2 text-gray-600;
+        @apply block text-center;
 
         &:hover,
         &.active {
@@ -21,7 +19,7 @@
         display: flex;
         
         .link-bar__link {
-            @apply border-b-4 border-transparent mr-6;
+            @apply border-b-4 border-transparent mr-6 flex items-center justify-center;
 
             &:last-child {
                 margin-right: 0;
