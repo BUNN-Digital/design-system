@@ -25,8 +25,7 @@
 .mfp-bg {
     @apply z-overlay;
     opacity:.7;
-  }
-  .mfp-wrap {
-   @apply z-modal;
-  }
-  
+}
+.mfp-wrap {
+    @apply z-modal;
+}

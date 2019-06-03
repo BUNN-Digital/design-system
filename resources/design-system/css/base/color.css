@@ -1,0 +1,31 @@
+:root {
+    --color-brand-primary: #005EB8;
+    --color-brand-primary-light-1: #2776C2;
+    --color-brand-primary-light-2: #4086C9;
+    --color-brand-primary-dark-1: #004F9B;
+    --color-brand-primary-dark-2: #004689;
+
+    --color-gray-100: #f7f7f7;
+    --color-gray-200: #e8e8e8;
+    --color-gray-300: #e0e0e0;
+    --color-gray-400: #cdcdcd;
+    --color-gray-500: #a0a0a0;
+    --color-gray-600: #777777;
+    --color-gray-700: #444444;
+    --color-gray-800: #222222;
+    --color-gray-900: #1a1a1a;
+
+    --color-declare: #F5AA38;
+    --color-declare-light: #FDEACE;
+    --color-avert: #C5282D;
+    --color-avert-light: #F6D5D6;
+    --color-affirm: #3DC04D;
+    --color-affirm-light: #D8F3DC;
+    --color-inform: #005EB8;
+    --color-inform-light: #CCE5FF;
+}
+
+:root.gourmet {
+    --color-brand-primary: #856F51;
+    --color-brand-primary-light-1: #8e7c63;
+}

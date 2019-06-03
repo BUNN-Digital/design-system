@@ -125,14 +125,6 @@
         }
     }
 
-    &--fill-brand-gourmet {
-        .panel__header,
-        .panel__section,
-        .panel__action {
-            @apply bg-brand-gourmet;
-        }
-    }
-
     &--fill-contrast {
         .panel__header,
         .panel__section,
