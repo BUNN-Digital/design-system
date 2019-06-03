@@ -180,7 +180,6 @@ const watch = (done) => {
 
 const eleventy = () => {
     const command = 'eleventy --config=eleventy.config.js --serve';
-    process.env.ELEVENTY_ENV='development';
     
     return child_process.spawn(command, {
         stdio: 'inherit',

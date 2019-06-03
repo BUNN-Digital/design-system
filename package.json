@@ -3,7 +3,7 @@
 	"version": "0.8.5",
 	"description": "BUNN Design System",
 	"scripts": {
-		"dev": "rm -rf dist && gulp dev",
+		"dev": "cross-env ELEVENTY_ENV=development rm -rf dist && gulp dev",
 		"build": "rm -rf dist && gulp build && eleventy --config=eleventy.config.js"
 	},
 	"repository": {
@@ -19,6 +19,7 @@
 		"@babel/register": "^7.4.4",
 		"@fullhuman/postcss-purgecss": "^1.1.0",
 		"autoprefixer": "^9.5.1",
+		"cross-env": "^5.2.0",
 		"cssnano": "^4.1.10",
 		"del": "^4.0.0",
 		"gulp": "^4.0.0",
