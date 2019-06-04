@@ -1415,8 +1415,11 @@ img.mfp-img {
 }
 
 :root.gourmet {
-  --color-brand-primary: #856F51;
-  --color-brand-primary-light-1: #8e7c63;
+  --color-brand-primary: #8c734a;
+  --color-brand-primary-light-1: #9E8865;
+  --color-brand-primary-light-2: #A99677;
+  --color-brand-primary-dark-1: #705C3B;
+  --color-brand-primary-dark-2: #463A2D;
 }
 
 a,
