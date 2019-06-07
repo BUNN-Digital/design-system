@@ -1,6 +1,6 @@
 {
 	"name": "bunn-design-system",
-	"version": "0.8.7",
+	"version": "0.8.8",
 	"description": "BUNN Design System",
 	"scripts": {
 		"dev": "cross-env ELEVENTY_ENV=development rm -rf dist && gulp dev",
@@ -47,6 +47,6 @@
 		"owl.carousel": "^2.3.4",
 		"postcss-preset-env": "^6.6.0",
 		"tar": "^4.4.8"
-  },
-  "browserslist": "> 0.25%, not dead"
+	},
+	"browserslist": "> 0.25%, not dead"
 }
