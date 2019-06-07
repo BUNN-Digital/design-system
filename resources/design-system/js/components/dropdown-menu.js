@@ -40,8 +40,8 @@
         var $activeDropdown = $('.js-dropdown-menu-item.open');
 
         if ($activeDropdown.length &&
-            e.target.closest('.js-dropdown-menu-item') == null &&
-            e.target.closest('.js-drawer') == null
+            $(e.target).closest('.js-dropdown-menu-item') == null &&
+            $(e.target).closest('.js-drawer') == null
         ) {
             var $activeMenuContent = $activeDropdown.find('.js-dropdown-menu-content');
             $navMenuItems.removeClass('open');

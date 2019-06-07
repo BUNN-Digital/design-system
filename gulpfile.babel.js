@@ -114,7 +114,6 @@ const compileDesignSystemComponentsJs = () => {
         .pipe(plumber({ errorHandler: onError }))
         // .pipe(cached('designSystemComponents'))
         .pipe(babel({
-            presets: ['@babel/env'],
             sourceType: 'script'
         }))
         .pipe(gulp.dest(paths.designSystem.dest + 'js/components/'))
@@ -138,7 +137,6 @@ const compileDesignSystemGlobalJs = () => {
         .pipe(plumber({ errorHandler: onError }))
         // .pipe(cached('designSystemGlobalJs'))
         .pipe(babel({
-            presets: ['@babel/env'],
             sourceType: 'script'
         }))
         .pipe(gulp.dest(paths.designSystem.dest + 'js/'))
@@ -154,7 +152,6 @@ const compileDocsJs = () => {
     return gulp.src(paths.docs.src + 'js/**/*.js')
         .pipe(plumber({ errorHandler: onError }))
         .pipe(babel({
-            presets: ['@babel/env'],
             sourceType: 'script'
         }))
         .pipe(concat('docs.js'))

@@ -32,14 +32,14 @@
     ],
     "gourmet": [
         {
-            "name": "brand-gourmet",
+            "name": ".gourmet brand-primary",
             "hex": "#856F51",
-            "swatch": "bg-brand-gourmet"
+            "swatch": ""
         },
         {
-            "name": "brand-gourmet-light-1",
+            "name": ".gourmet brand-primary-light-1",
             "hex": "#8e7c63",
-            "swatch": "bg-brand-gourmet-light-1"
+            "swatch": ""
         }
     ],
     "grays": [

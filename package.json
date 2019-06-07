@@ -47,5 +47,6 @@
 		"owl.carousel": "^2.3.4",
 		"postcss-preset-env": "^6.6.0",
 		"tar": "^4.4.8"
-	}
+  },
+  "browserslist": "> 0.25%, not dead"
 }
