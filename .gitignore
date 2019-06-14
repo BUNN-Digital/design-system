@@ -4,3 +4,4 @@ dist
 css/*
 javascript/*
 !.gitkeep
+.vscode
