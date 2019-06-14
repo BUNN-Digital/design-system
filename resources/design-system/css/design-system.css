@@ -15,6 +15,9 @@
 /* DESIGN SYSTEM COMPONENTS */
 @import "components/all";
 
+/* DESIGN SYSTEM MODULES */
+@import "modules/all";
+
 /* DESIGN SYSTEM FEATURES  */
 @import "features/all";
 

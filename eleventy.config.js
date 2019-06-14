@@ -28,6 +28,10 @@ module.exports = eleventyConfig => {
         }).reverse()
     })
 
+    eleventyConfig.addCollection('modules', collection => {
+        return collection.getFilteredByTag('modules');
+    })
+
     // Include our static assets
     eleventyConfig.addPassthroughCopy("design-system/")
     eleventyConfig.addPassthroughCopy("docs/")
