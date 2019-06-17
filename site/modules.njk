@@ -1,0 +1,21 @@
+---
+layout: default
+meta_title: Modules
+meta_description: Modules
+title: Modules
+section: Modules
+---
+
+<div class="section">
+	<div class="container">
+		Modules are usually collections of components. However, some modules may be custom-designed pieces of functionality that don't use components.
+
+		<div class="py-12">
+			<div class="heading-beta">Modules</div>	
+			{% for entry in collections.modules  %}
+				<a href="{{ entry.url }}" class="block py-1 text-brand-primary hover:text-brand-primary-light-1">{{ entry.data.title }}</a>
+			{% endfor %}
+		</div>
+	</div>
+</div>
+
