@@ -22,6 +22,9 @@
 {% include "partials/scripts.njk" %}
 
 
+
+{% set collection = collections.utilities %}
+
 {% if section == 'Brand' %}
 	{% set collection = collections.brandSorted %}
 {% elif section == 'Components' %}

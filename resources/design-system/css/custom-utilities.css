@@ -1,10 +1,17 @@
 /* Scale */
 @variants group-hover, hover, focus {
+    /* Default scale */
     .scale-100 {
         transform: scale3d(1,1,1);
     }
 
     /* Scale Down */
+    .scale-050 {
+        transform: scale3d(0.5,0.5,0.5);
+    }
+    .scale-060 {
+        transform: scale3d(0.6,0.6,0.6);
+    }
     .scale-070 {
         transform: scale3d(0.7,0.7,0.7);
     }
