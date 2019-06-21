@@ -11,6 +11,10 @@
         {
             "label": "Modules",
             "url": "/modules/"
+        },
+        {
+            "label": "Utilities",
+            "url": "/utilities/"
         }
     ]
 }

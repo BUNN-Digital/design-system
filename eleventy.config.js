@@ -32,6 +32,10 @@ module.exports = eleventyConfig => {
         return collection.getFilteredByTag('modules');
     })
 
+    eleventyConfig.addCollection('utilities', collection => {
+        return collection.getFilteredByTag('utilities');
+    })
+
     // Include our static assets
     eleventyConfig.addPassthroughCopy("design-system/")
     eleventyConfig.addPassthroughCopy("docs/")

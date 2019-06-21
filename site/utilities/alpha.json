@@ -1,0 +1,140 @@
+{     
+  "alphasBlack": [
+      {
+          "name": "black-rgba-0",
+          "swatch": "black-rgba-0"
+      },
+      {
+          "name": "black-rgba-10",
+          "swatch": "black-rgba-10"
+      },
+      {
+          "name": "black-rgba-20",
+          "swatch": "black-rgba-20"
+      },
+      {
+          "name": "black-rgba-30",
+          "swatch": "black-rgba-30"
+      },
+      {
+          "name": "black-rgba-40",
+          "swatch": "black-rgba-40"
+      },
+      {
+          "name": "black-rgba-50",
+          "swatch": "black-rgba-50"
+      },
+      {
+          "name": "black-rgba-60",
+          "swatch": "black-rgba-60"
+      },
+      {
+          "name": "black-rgba-70",
+          "swatch": "black-rgba-70"
+      },
+      {
+          "name": "black-rgba-80",
+          "swatch": "black-rgba-80"
+      },
+      {
+          "name": "black-rgba-90",
+          "swatch": "black-rgba-90"
+      },
+      {
+          "name": "black-rgba-100",
+          "swatch": "black-rgba-100"
+      }
+  ],
+  "alphasWhite": [
+      {
+          "name": "white-rgba-0",
+          "swatch": "white-rgba-0"
+      },
+      {
+          "name": "white-rgba-10",
+          "swatch": "white-rgba-10"
+      },
+      {
+          "name": "white-rgba-20",
+          "swatch": "white-rgba-20"
+      },
+      {
+          "name": "white-rgba-30",
+          "swatch": "white-rgba-30"
+      },
+      {
+          "name": "white-rgba-40",
+          "swatch": "white-rgba-40"
+      },
+      {
+          "name": "white-rgba-50",
+          "swatch": "white-rgba-50"
+      },
+      {
+          "name": "white-rgba-60",
+          "swatch": "white-rgba-60"
+      },
+      {
+          "name": "white-rgba-70",
+          "swatch": "white-rgba-70"
+      },
+      {
+          "name": "white-rgba-80",
+          "swatch": "white-rgba-80"
+      },
+      {
+          "name": "white-rgba-90",
+          "swatch": "white-rgba-90"
+      },
+      {
+          "name": "white-rgba-100",
+          "swatch": "white-rgba-100"
+      }
+  ],
+  "alphasBrand": [
+      {
+          "name": "brand-primary-rgba-0",
+          "swatch": "brand-primary-rgba-0"
+      },
+      {
+          "name": "brand-primary-rgba-10",
+          "swatch": "brand-primary-rgba-10"
+      },
+      {
+          "name": "brand-primary-rgba-20",
+          "swatch": "brand-primary-rgba-20"
+      },
+      {
+          "name": "brand-primary-rgba-30",
+          "swatch": "brand-primary-rgba-30"
+      },
+      {
+          "name": "brand-primary-rgba-40",
+          "swatch": "brand-primary-rgba-40"
+      },
+      {
+          "name": "brand-primary-rgba-50",
+          "swatch": "brand-primary-rgba-50"
+      },
+      {
+          "name": "brand-primary-rgba-60",
+          "swatch": "brand-primary-rgba-60"
+      },
+      {
+          "name": "brand-primary-rgba-70",
+          "swatch": "brand-primary-rgba-70"
+      },
+      {
+          "name": "brand-primary-rgba-80",
+          "swatch": "brand-primary-rgba-80"
+      },
+      {
+          "name": "brand-primary-rgba-90",
+          "swatch": "brand-primary-rgba-90"
+      },
+      {
+          "name": "brand-primary-rgba-100",
+          "swatch": "brand-primary-rgba-100"
+      }
+  ]
+}

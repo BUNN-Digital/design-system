@@ -1,0 +1,53 @@
+---
+layout: page
+meta_title: Alpha
+meta_description: Alpha
+title: Alpha
+section: Utilities
+tag: Utilities
+---
+
+<h2 class="section-heading">Alphas</h2>
+
+<p class="font-sans-demi">Black</p>
+<div class="sm:flex flex-wrap mb-8 p-4 -mx-2">
+	{% for color in alphasBlack %}
+	<div class="flex-1 text-center">
+		<div class="w-full h-16 bg-{{color.swatch}} text-black">
+			&nbsp;
+		</div>
+		<div class="text-sm-1 text-gray-500 py-2">
+			{{loop.index0}}
+		</div>
+	</div>
+	{% endfor %}
+</div>
+
+<p class="font-sans-demi">White</p>
+<div class="sm:flex flex-wrap mb-8 p-4 -mx-2 bg-black">
+	{% for color in alphasWhite %}
+	<div class="flex-1 text-center">
+		<div class="w-full h-16 bg-{{color.swatch}} text-black">
+			&nbsp;
+		</div>
+		<div class="text-sm-1 text-gray-500 py-2">
+			{{loop.index0}}
+		</div>
+	</div>
+	{% endfor %}
+</div>
+
+<p class="font-sans-demi">Brand</p>
+<div class="sm:flex flex-wrap mb-8 p-4 -mx-2">
+	{% for color in alphasBrand %}
+	<div class="flex-1 text-center">
+		<div class="w-full h-16 bg-{{color.swatch}} text-black">
+			&nbsp;
+		</div>
+		<div class="text-sm-1 text-gray-500 py-2">
+			{{loop.index0}}
+		</div>
+	</div>
+	{% endfor %}
+</div>
+
