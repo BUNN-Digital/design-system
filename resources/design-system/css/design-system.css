@@ -21,6 +21,9 @@
 /* DESIGN SYSTEM FEATURES  */
 @import "features/all";
 
+/* CUSTOM UTILITIES */
+@import "custom-utilities";
+
 /* TAILWIND UTILITIES */
 @import "tailwindcss/utilities";
 

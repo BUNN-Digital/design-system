@@ -1,0 +1,6 @@
+/* Transparent backgrounds */
+@responsive {
+    @variants group-hover, hover, focus {
+
+    }
+}

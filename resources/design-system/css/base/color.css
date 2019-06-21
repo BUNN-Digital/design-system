@@ -1,4 +1,6 @@
 :root {
+    --color-brand-primary-RGB: 0,94,184;
+
     --color-brand-primary: #005EB8;
     --color-brand-primary-light-1: #2776C2;
     --color-brand-primary-light-2: #4086C9;
@@ -26,6 +28,7 @@
 }
 
 :root.gourmet {
+    --color-brand-primary-RGB: 141,115,74;
     --color-brand-primary: #8c734a;
     --color-brand-primary-light-1: #9E8865;
     --color-brand-primary-light-2: #A99677;
