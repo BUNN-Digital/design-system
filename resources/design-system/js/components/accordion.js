@@ -11,15 +11,15 @@
 
     BUNN.openAccordion = function($target) {
         var $content = $target.find('.js-accordion-content');
-        var $icon = $target.find('.js-accordion-icon');
-        var iconInactiveClass = $icon.data('inactive-icon');
-        var iconActiveClass = $icon.data('active-icon');
+        var $iconContainer = $target.find('.js-accordion-icon');
+        var iconInactiveState = $iconContainer.data('inactive-icon');
+        var iconActiveState = $iconContainer.data('active-icon');
         var accordionImg = $target.data('accordion-img');
 
         $content.slideDown('fast');
         $target.addClass('open');
         
-        $icon.removeClass(iconInactiveClass).addClass(iconActiveClass);
+        $('[data-fa-i2svg]', $iconContainer).toggleClass(iconInactiveState).toggleClass(iconActiveState);
 
         // if this accordion has an image, show it
         if (accordionImg != null) {
@@ -30,15 +30,15 @@
 
     BUNN.closeAccordion = function($target) {
         var $content = $target.find('.js-accordion-content');
-        var $icon = $target.find('.js-accordion-icon');
-        var iconInactiveClass = $icon.data('inactive-icon');
-        var iconActiveClass = $icon.data('active-icon');
+        var $iconContainer = $target.find('.js-accordion-icon');
+        var iconInactiveState = $iconContainer.data('inactive-icon');
+        var iconActiveState = $iconContainer.data('active-icon');
         var accordionImg = $target.data('accordion-img');
 
         $content.slideUp('fast');
         $target.removeClass('open');
         
-        $icon.removeClass(iconActiveClass).addClass(iconInactiveClass);
+        $('[data-fa-i2svg]', $iconContainer).toggleClass(iconActiveState).toggleClass(iconInactiveState);
     };
 
     /* 
