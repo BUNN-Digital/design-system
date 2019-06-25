@@ -1,0 +1,16 @@
+---
+layout: iframe
+---
+
+<div class="p-8">
+	<button class="btn btn--primary js-show-dismissible" data-dismissible-target="dismissible-0001">Trigger Dismissible</button>
+	<button class="btn btn--outline" onclick="window.localStorage.removeItem('dismissible-0001');">Clear from local storage</button>
+</div>
+
+<div class="absolute hidden bottom-0 right-0 m-4 mb-6 rounded shadow-lg max-w-sm js-dismissible" data-dismissible-id="dismissible-0001">
+	<button class="absolute top-0 right-0 p-4 text-gray-500 js-dismissible-trigger"><i class="far fa-times"></i></button>
+	<div class="p-8 flex">
+		<div class="pr-2 text-brand-primary"><i class="far fa-lightbulb fa-2x"></i></div>
+		<div class="pl-2 pt-2 flex-grow text-gray-800 font-sans-medium">This is a basic dismissible notification. Once dismissed, it will not show again until local storage is cleared.</div>
+	</div>
+</div>

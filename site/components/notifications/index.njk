@@ -1,0 +1,60 @@
+---
+layout: page
+meta_title: Notifications
+meta_description: Notifications
+title: Notifications
+section: Components
+tag: components
+---
+
+<h2 class="section-heading">Basic notification on bottom right</h2>
+
+<div class="panel panel--stroke h-96 mb-8 md:overflow-x-auto md:overflow-y-hidden md:resize md:max-w-full md:pr-3">
+	<div class="panel__section panel__section--flush h-full">
+		<div class="w-full h-full">
+			<iframe src="/components/notifications/notification-bottom-right" frameborder="0" class="w-full h-full"></iframe>
+		</div>
+	</div>
+</div>
+
+
+{% highlight "html" %}
+<div class="absolute bottom-0 right-0 m-4 mb-6 flex rounded shadow-lg max-w-sm">
+	<div class="p-8 flex items-start">
+		<div class="pr-2 text-lg-2 text-affirm"><i class="fal fa-check-circle"></i></div>
+		<div class="pl-2 pt-2 flex-grow text-gray-800 font-sans-medium">This is a basic notification with some example text</div>
+	</div>
+</div>
+{% endhighlight %}
+
+<h2 class="section-heading">Dismissible notification</h2>
+
+<p>We can store the ID of a dismissible item in local storage to know whether it's been dismissed. In the examle below, you can trigger a notification and then dismiss it. Once dismissed, the notification cannot re-appear until you clear your local storage.</p>
+
+<div class="bg-inform-light p-4 mb-8">
+	<p class="mb-0"><i class="fa fa-info-circle text-info-circle text-inform"></i> Dismissible notification requires <code>dismissible.js</code></p>
+</div>
+
+<div class="panel panel--stroke h-96 mb-8 md:overflow-x-auto md:overflow-y-hidden md:resize md:max-w-full md:pr-3">
+	<div class="panel__section panel__section--flush h-full">
+		<div class="w-full h-full">
+			<iframe src="/components/notifications/notification-dismissible" frameborder="0" class="w-full h-full"></iframe>
+		</div>
+	</div>
+</div>
+
+
+{% highlight "html" %}
+<div class="p-8">
+	<button class="btn btn--primary js-show-dismissible" data-dismissible-target="dismissible-0001">Trigger Dismissible</button>
+	<button class="btn btn--outline" onclick="window.localStorage.removeItem('dismissible-0001');">Clear from local storage</button>
+</div>
+
+<div class="absolute hidden bottom-0 right-0 m-4 mb-6 rounded shadow-lg max-w-sm js-dismissible" data-dismissible-id="dismissible-0001">
+	<button class="absolute top-0 right-0 p-4 text-gray-500 js-dismissible-trigger"><i class="far fa-times"></i></button>
+	<div class="p-8 flex">
+		<div class="pr-2 text-brand-primary"><i class="far fa-lightbulb fa-2x"></i></div>
+		<div class="pl-2 pt-2 flex-grow text-gray-800 font-sans-medium">This is a basic notification with some example text</div>
+	</div>
+</div>
+{% endhighlight %}

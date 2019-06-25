@@ -5223,12 +5223,12 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: #3DC04D; backgr
 
 /* Transitions */
 
-.transition-all-2s-linear {
+.transition-all-02s-linear {
   -webkit-transition: all 0.2s linear;
   transition: all 0.2s linear;
 }
 
-.transition-all-2s-ease {
+.transition-all-02s-ease {
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
 }

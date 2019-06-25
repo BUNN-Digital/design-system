@@ -44,10 +44,10 @@
 }
 
 /* Transitions */
-.transition-all-2s-linear {
+.transition-all-02s-linear {
     transition: all 0.2s linear;
 }
 
-.transition-all-2s-ease {
+.transition-all-02s-ease {
     transition: all 0.2s ease;
 }
