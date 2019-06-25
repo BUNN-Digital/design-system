@@ -168,7 +168,7 @@ const watch = (done) => {
     
     gulp.watch(paths.docs.src + 'css/**/*.css', compileDocsCss);
     
-    gulp.watch(paths.designSystem.src + 'js/**/*.js', gulp.series(compileJs));
+    gulp.watch(paths.designSystem.src + 'js/**/*.js', compileJs);
     
     gulp.watch(paths.docs.src + 'js/**/*.js', compileDocsJs);
     
@@ -184,9 +184,7 @@ const eleventy = () => {
     });
 }
 
-const compileJs = gulp.series(
-    gulp.parallel(compileVendorJs, compileDesignSystemComponentsJs, compileDesignSystemGlobalJs, compileDocsJs)
-)
+const compileJs = gulp.parallel(compileVendorJs, compileDesignSystemComponentsJs, compileDesignSystemGlobalJs, compileDocsJs)
 
 const compileCss = gulp.parallel(compileDesignSystemCss, compileDocsCss)
 
