@@ -1,5 +1,4 @@
 .breadcrumb {
-    @apply text-base;
     &__item {
         &-link {
             @apply inline-block text-black pl-1;

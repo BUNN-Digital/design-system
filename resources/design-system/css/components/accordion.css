@@ -65,7 +65,3 @@
         }
     }
 }
-
-.content-expand-toggle {
-    @apply text-brand-primary font-sans-demi cursor-pointer;
-}

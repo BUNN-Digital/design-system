@@ -268,15 +268,15 @@ module.exports = {
     variants: {
         appearance: ['responsive'],
         backgroundAttachment: ['responsive'],
-        backgroundColor: ['responsive', 'hover', 'focus', 'group-hover'],
+        backgroundColor: ['responsive', 'hover', 'focus', 'group-hover', 'group-active'],
         backgroundPosition: ['responsive'],
         backgroundRepeat: ['responsive'],
-        backgroundSize: ['responsive', 'group-hover'],
+        backgroundSize: ['responsive', 'group-hover', 'group-active'],
         borderCollapse: [],
-        borderColor: ['responsive', 'hover', 'focus', 'group-hover'],
+        borderColor: ['responsive', 'hover', 'focus', 'group-hover', 'group-active'],
         borderRadius: ['responsive'],
         borderStyle: ['responsive'],
-        borderWidth: ['responsive', 'group-hover'],
+        borderWidth: ['responsive', 'group-hover', 'group-active'],
         cursor: ['responsive'],
         display: ['responsive'],
         flexDirection: ['responsive'],
@@ -303,7 +303,7 @@ module.exports = {
         negativeMargin: ['responsive'],
         objectFit: ['responsive'],
         objectPosition: ['responsive'],
-        opacity: ['responsive', 'group-hover'],
+        opacity: ['responsive', 'group-hover', 'group-active'],
         outline: ['focus'],
         overflow: ['responsive'],
         padding: ['responsive'],
@@ -311,14 +311,14 @@ module.exports = {
         position: ['responsive'],
         inset: ['responsive'],
         resize: ['responsive'],
-        boxShadow: ['responsive', 'hover', 'focus', 'group-hover'],
+        boxShadow: ['responsive', 'hover', 'focus', 'group-hover', 'group-active'],
         fill: [],
         stroke: [],
         tableLayout: ['responsive'],
         textAlign: ['responsive'],
-        textColor: ['responsive', 'hover', 'focus', 'group-hover'],
+        textColor: ['responsive', 'hover', 'focus', 'group-hover', 'group-active'],
         fontSize: ['responsive'],
-        fontStyle: ['responsive', 'group-hover'],
+        fontStyle: ['responsive', 'group-hover', 'group-active'],
         textTransform: ['responsive'],
         textDecoration: ['responsive', 'hover', 'focus'],
         fontSmoothing: ['responsive'],
@@ -351,5 +351,13 @@ module.exports = {
 	|
 	*/
 
-    plugins: []
+    plugins: [
+        function({ addVariant, e }) {
+            addVariant('group-active', ({ modifySelectors, separator }) => {
+              modifySelectors(({ className }) => {
+                return `.group.active .group-active${e(`${separator}${className}`)}`
+              })
+            })
+        }
+    ]
 };
