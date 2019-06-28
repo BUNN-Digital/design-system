@@ -18,6 +18,7 @@
 @import "panel";
 @import "popup-menu";
 @import "product";
+@import "slide-up-overlay";
 @import "spinner";
 @import "typeahead";
 @import "video";

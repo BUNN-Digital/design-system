@@ -1,49 +1,43 @@
-.speed-brew-classes {
-    @screen lg {
-        height: 800px;
-    }
-}
-
 @screen lg {
-    .speed-brew-class {
+    .slide-up-overlay {
         &__title {
             box-shadow: 0 0 0 0 var(--color-brand-primary) inset;
             transition: all 0.2s ease;
         }
     
         &__product {
-            background-size: 172%;
+            background-size: 155%;
             opacity: 1;
-            background-position: center -80px;
+            background-position: center;
             /* transform: scale3d(1,1,1); */
             transition: all 0.2s ease;
         }
 
         &__description {
-            opacity: 0;
             background: transparent;
-            max-height: 50%;
+            bottom: 0;
+            opacity: 0;
             transform: translateY(100%);
             transition: all 0.2s ease;
         }
         
         &:hover {
-            .speed-brew-class__content {
+            .slide-up-overlay__content {
                 background-color: black; 
             }
 
-            .speed-brew-class__title {
+            .slide-up-overlay__title {
                 background-color: rgba(255,255,255,0.2);
                 /* box-shadow: 0px -3px 0 0 var(--color-brand-primary) inset; */
             }
     
-            .speed-brew-class__product {
+            .slide-up-overlay__product {
                 opacity: 0.6;
                 /* transform: scale3d(1.01,1.01,1.01); */
-                background-size: 150%;
+                background-size: 140%;
             }
     
-            .speed-brew-class__description {
+            .slide-up-overlay__description {
                 background: rgba(0,0,0,0.6);
                 opacity: 1;
                 transform: translateY(0);
