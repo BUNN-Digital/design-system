@@ -39,8 +39,6 @@
     $(document).on('mousedown', function(e) {
         var $activeDropdown = $('.js-dropdown-menu-item.open');
 
-        console.log($(e.target).closest('.js-drawer').length);
-
         if ($activeDropdown.length &&
             !$(e.target).closest('.js-dropdown-menu-item').length &&
             !$(e.target).closest('.js-drawer').length
