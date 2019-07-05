@@ -9,15 +9,16 @@
         });
     };
 
-    BUNN.openAccordion = function($target) {
-        var $content = $target.find('.js-accordion-content');
-        var $iconContainer = $target.find('.js-accordion-icon');
+    BUNN.openAccordion = function($title) {
+        var $accordionItem = $title.closest('.js-accordion-item');
+        var $content = $accordionItem.children('.js-accordion-content');
+        var $iconContainer = $title.find('.js-accordion-icon');
         var iconInactiveState = $iconContainer.data('inactive-icon');
         var iconActiveState = $iconContainer.data('active-icon');
-        var accordionImg = $target.data('accordion-img');
+        var accordionImg = $title.data('accordion-img');
 
         $content.slideDown('fast');
-        $target.addClass('open');
+        $accordionItem.addClass('open');
         
         $('[data-fa-i2svg]', $iconContainer).toggleClass(iconInactiveState).toggleClass(iconActiveState);
 
@@ -28,44 +29,45 @@
         }
     };
 
-    BUNN.closeAccordion = function($target) {
-        var $content = $target.find('.js-accordion-content');
-        var $iconContainer = $target.find('.js-accordion-icon');
+    BUNN.closeAccordion = function($title) {
+        var $accordionItem = $title.closest('.js-accordion-item');
+        var $content = $accordionItem.children('.js-accordion-content');
+        var $iconContainer = $title.find('.js-accordion-icon');
         var iconInactiveState = $iconContainer.data('inactive-icon');
         var iconActiveState = $iconContainer.data('active-icon');
-        var accordionImg = $target.data('accordion-img');
 
         $content.slideUp('fast');
-        $target.removeClass('open');
+        $accordionItem.removeClass('open');
         
         $('[data-fa-i2svg]', $iconContainer).toggleClass(iconActiveState).toggleClass(iconInactiveState);
     };
 
     /* 
-     * @param $target $(.js-accordion-title)
+     * @param $title $(.js-accordion-title)
      */
-    BUNN.toggleAccordion = function($target) {
-        var $accordion = $target.closest('.js-accordion');
-        var $openAccordionItem = $accordion.find('.js-accordion-item.open');
-        var accordionImg = $target.data('accordion-img');
+    BUNN.toggleAccordion = function($title) {
+        var $accordion = $title.closest('.js-accordion');
+        var $accordionItem = $title.closest('.js-accordion-item');
+        var $openAccordionItem = $accordion.children('.js-accordion-item.open');
+        var accordionImg = $title.data('accordion-img');
         
         // if this item is not already open...
-        if (!$target.hasClass('open')) {
+        if (!$accordionItem.hasClass('open')) {
 
             // close any siblings
             if ($openAccordionItem) {
-                BUNN.closeAccordion($openAccordionItem);
+                BUNN.closeAccordion($openAccordionItem.children('.js-accordion-title'));
             }
 
             // and open the target item
-            BUNN.openAccordion($target);
+            BUNN.openAccordion($title);
 
         // if it IS already open...
         } else {
             
             //and doesn't have an image, close it
             if (!accordionImg) {
-                BUNN.closeAccordion($target);
+                BUNN.closeAccordion($title);
             }
         }
     };
@@ -84,11 +86,11 @@
 
     BUNN.initAccordion();
 
-    $('.js-accordion-title').click(function() {
-        BUNN.toggleAccordion($(this).parent());
+    $(document).on('click', '.js-accordion-title', function() {
+        BUNN.toggleAccordion($(this));
     });
 
-    $('.js-content-expand-toggle').click(function() {
+    $(document).on('click', '.js-content-expand-toggle', function() {
         let $content = $('.js-content-expand');
         let $linkText = this.innerText;
         let $maxHeight = $content.prop('scrollHeight');

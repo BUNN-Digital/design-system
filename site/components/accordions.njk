@@ -13,7 +13,7 @@ tag: components
 	<div class="accordion__item js-accordion-item">
 		<div class="accordion__title js-accordion-title cursor-pointer hover:text-brand-primary font-sans-demi cursor-pointer font-sans-medium flex items-center">
 			<div class="flex-grow">Accordion Title</div>
-			<div class="js-accordion-icon p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-down fa-flip-vertical"><i class="fal fa-angle-down"></i></div>
+			<div class="js-accordion-icon p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"><i class="fal fa-angle-down"></i></div>
 		</div>
 		<div class="accordion__content js-accordion-content hidden py-4">
 			Accordion Content
@@ -22,7 +22,7 @@ tag: components
 	<div class="accordion__item js-accordion-item">
 		<div class="accordion__title js-accordion-title cursor-pointer hover:text-brand-primary font-sans-demi cursor-pointer font-sans-medium flex items-center">
 			<div class="flex-grow">Accordion Title</div>
-			<div class="js-accordion-icon p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-down fa-flip-vertical"><i class="fal fa-angle-down"></i></div>
+			<div class="js-accordion-icon p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"><i class="fal fa-angle-down"></i></div>
 		</div>
 		<div class="accordion__content js-accordion-content hidden py-4">
 			Accordion Content
@@ -35,7 +35,7 @@ tag: components
 	<div class="accordion__item js-accordion-item">
 		<div class="accordion__title js-accordion-title cursor-pointer hover:text-brand-primary font-sans-demi cursor-pointer font-sans-medium flex items-center">
 			<div class="flex-grow">Accordion Title</div>
-			<div class="js-accordion-icon p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-down fa-flip-vertical"><i class="fal fa-angle-down"></i></div>
+			<div class="js-accordion-icon p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"><i class="fal fa-angle-down"></i></div>
 		</div>
 		<div class="accordion__content js-accordion-content hidden py-4">
 			Accordion Content
@@ -44,10 +44,112 @@ tag: components
 	<div class="accordion__item js-accordion-item">
 		<div class="accordion__title js-accordion-title cursor-pointer hover:text-brand-primary font-sans-demi cursor-pointer font-sans-medium flex items-center">
 			<div class="flex-grow">Accordion Title</div>
-			<div class="js-accordion-icon p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-down fa-flip-vertical"><i class="fal fa-angle-down"></i></div>
+			<div class="js-accordion-icon p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"><i class="fal fa-angle-down"></i></div>
 		</div>
 		<div class="accordion__content js-accordion-content hidden py-4">
 			Accordion Content
+		</div>
+	</div>
+</div>
+{% endhighlight %}
+
+<h2 class="section-heading">Nested Accordions</h2>
+
+<div class="accordion js-accordion">
+	<div class="accordion__item js-accordion-item">
+		<div class="accordion__title js-accordion-title cursor-pointer hover:text-brand-primary font-sans-demi cursor-pointer font-sans-medium flex items-center">
+			<div class="flex-grow">Accordion Title</div>
+			<div class="js-accordion-icon p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"><i class="fal fa-angle-down"></i></div>
+		</div>
+		<div class="accordion__content js-accordion-content hidden py-4">
+			<div>Accordion Content</div>
+			
+			<div class="pt-4 pl-8">
+				<div class="accordion js-accordion">
+					<div class="accordion__item js-accordion-item">
+						<div class="accordion__title js-accordion-title cursor-pointer hover:text-brand-primary font-sans-demi cursor-pointer font-sans-medium flex items-center">
+							<div class="js-accordion-icon p-2 text-gray-400" data-inactive-icon="fa-plus" data-active-icon="fa-minus"><i class="fal fa-plus"></i></div>
+							<div class="flex-grow">Accordion Title</div>
+						</div>
+						<div class="accordion__content js-accordion-content hidden py-4">
+							Accordion Content
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="accordion__item js-accordion-item">
+		<div class="accordion__title js-accordion-title cursor-pointer hover:text-brand-primary font-sans-demi cursor-pointer font-sans-medium flex items-center">
+			<div class="flex-grow">Accordion Title</div>
+			<div class="js-accordion-icon p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"><i class="fal fa-angle-down"></i></div>
+		</div>
+		<div class="accordion__content js-accordion-content hidden py-4">
+			<div>Accordion Content</div>
+			
+			<div class="pt-4 pl-8">
+				<div class="accordion js-accordion">
+					<div class="accordion__item js-accordion-item">
+						<div class="accordion__title js-accordion-title cursor-pointer hover:text-brand-primary font-sans-demi cursor-pointer font-sans-medium flex items-center">
+							<div class="js-accordion-icon p-2 text-gray-400" data-inactive-icon="fa-plus" data-active-icon="fa-minus"><i class="fal fa-plus"></i></div>
+							<div class="flex-grow">Accordion Title</div>
+						</div>
+						<div class="accordion__content js-accordion-content hidden py-4">
+							Accordion Content
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+{% highlight "html" %}
+<div class="accordion js-accordion">
+	<div class="accordion__item js-accordion-item">
+		<div class="accordion__title js-accordion-title cursor-pointer hover:text-brand-primary font-sans-demi cursor-pointer font-sans-medium flex items-center">
+			<div class="flex-grow">Accordion Title</div>
+			<div class="js-accordion-icon p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"><i class="fal fa-angle-down"></i></div>
+		</div>
+		<div class="accordion__content js-accordion-content hidden py-4">
+			<div>Accordion Content</div>
+			
+			<div class="pt-4 pl-8">
+				<div class="accordion js-accordion">
+					<div class="accordion__item js-accordion-item">
+						<div class="accordion__title js-accordion-title cursor-pointer hover:text-brand-primary font-sans-demi cursor-pointer font-sans-medium flex items-center">
+							<div class="js-accordion-icon p-2 text-gray-400" data-inactive-icon="fa-plus" data-active-icon="fa-minus"><i class="fal fa-plus"></i></div>
+							<div class="flex-grow">Accordion Title</div>
+						</div>
+						<div class="accordion__content js-accordion-content hidden py-4">
+							Accordion Content
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="accordion__item js-accordion-item">
+		<div class="accordion__title js-accordion-title cursor-pointer hover:text-brand-primary font-sans-demi cursor-pointer font-sans-medium flex items-center">
+			<div class="flex-grow">Accordion Title</div>
+			<div class="js-accordion-icon p-2 text-lg-2 text-gray-400" data-inactive-icon="fa-angle-down" data-active-icon="fa-angle-up"><i class="fal fa-angle-down"></i></div>
+		</div>
+		<div class="accordion__content js-accordion-content hidden py-4">
+			<div>Accordion Content</div>
+			
+			<div class="pt-4 pl-8">
+				<div class="accordion js-accordion">
+					<div class="accordion__item js-accordion-item">
+						<div class="accordion__title js-accordion-title cursor-pointer hover:text-brand-primary font-sans-demi cursor-pointer font-sans-medium flex items-center">
+							<div class="js-accordion-icon p-2 text-gray-400" data-inactive-icon="fa-plus" data-active-icon="fa-minus"><i class="fal fa-plus"></i></div>
+							<div class="flex-grow">Accordion Title</div>
+						</div>
+						<div class="accordion__content js-accordion-content hidden py-4">
+							Accordion Content
+						</div>
+					</div>
+				</div>
+			</div>
 		</div>
 	</div>
 </div>
