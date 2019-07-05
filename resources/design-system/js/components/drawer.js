@@ -22,7 +22,7 @@
 
     // -- Event Handlers -- //
 
-    $('.js-drawer-trigger').on('click', function() {
+    $(document).on('click', '.js-drawer-trigger', function() {
         var targetDrawerId = $(this).data('drawer');
         BUNN.openDrawer(targetDrawerId);
     });
