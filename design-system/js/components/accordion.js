@@ -7,6 +7,13 @@
     $('.js-accordion-item.open').each(function () {
       BUNN.openAccordion($(this));
     });
+    $('.js-active-accordion-sub').each(function () {
+      if ($(this).hasClass('js-accordion-item')) {
+        BUNN.openAccordion($(this));
+      } else {
+        BUNN.openAccordion($(this).closest('.js-accordion').find('.js-accordion-item'));
+      }
+    });
   };
 
   BUNN.openAccordion = function ($title) {
