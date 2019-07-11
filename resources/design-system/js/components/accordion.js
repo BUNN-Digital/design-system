@@ -3,19 +3,23 @@
     // -- Global Methods -- //
 
 	BUNN.initAccordion = function() {
+
         // If any accordion items load with a class of "open", make sure their content displays and icons are set accordingly
         $('.js-accordion-item.open').each(function() {
             BUNN.openAccordion($(this));
         });
 
         $('.js-active-accordion-sub').each(function() {
-            if ($(this).hasClass('js-accordion-item')) {
-                BUNN.openAccordion($(this));
+            if ($(this).hasClass('js-accordion-item') && !$(this).hasClass('open')) {
+                BUNN.openAccordion($(this).children('.js-accordion-title'));
+                console.log('on the item');
             }
             else {
-                BUNN.openAccordion($(this).closest('.js-accordion-item'));
+                BUNN.openAccordion($(this).closest('.js-accordion-item').children('.js-accordion-title'));
+                console.log('in the item');
             }
         });
+    
     };
 
     BUNN.openAccordion = function($title) {
@@ -28,8 +32,11 @@
 
         $content.slideDown('fast');
         $accordionItem.addClass('open');
+
+        var $icon = $('[class*=fa]', $iconContainer).length ? $('[class*=fa]', $iconContainer) : $('[data-fa-i2svg]', $iconContainer);
+
+        $icon.removeClass(iconInactiveState).addClass(iconActiveState);
         
-        $('[data-fa-i2svg]', $iconContainer).toggleClass(iconInactiveState).toggleClass(iconActiveState);
 
         // if this accordion has an image, show it
         if (accordionImg != null) {
@@ -47,8 +54,11 @@
 
         $content.slideUp('fast');
         $accordionItem.removeClass('open');
+
+        var $icon = $('[class*=fa]', $iconContainer).length ? $('[class*=fa]', $iconContainer) : $('[data-fa-i2svg]', $iconContainer);
+
+        $icon.removeClass(iconActiveState).addClass(iconInactiveState);
         
-        $('[data-fa-i2svg]', $iconContainer).toggleClass(iconActiveState).toggleClass(iconInactiveState);
     };
 
     /* 
