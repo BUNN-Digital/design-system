@@ -10,10 +10,8 @@
     $('.js-active-accordion-sub').each(function () {
       if ($(this).hasClass('js-accordion-item') && !$(this).hasClass('open')) {
         BUNN.openAccordion($(this).children('.js-accordion-title'));
-        console.log('on the item');
       } else {
         BUNN.openAccordion($(this).closest('.js-accordion-item').children('.js-accordion-title'));
-        console.log('in the item');
       }
     });
   };
