@@ -54,29 +54,7 @@
         &.category-1126 {
             text-transform: uppercase;
         }
-
-        &.category-1116:after,
-        &.category-1117:after,
-        &.category-1118:after,
-        &.category-1119:after,
-        &.category-1120:after,
-        &.category-1121:after,
-        &.category-1123:after,
-        &.category-1124:after,
-        &.category-1125:after,
-        &.category-1126:after {
-            content: "®";
-            font-size: 20px;
-            position: absolute;
-            top: 2px;
-        }
-
-        &.category-1122:after {
-            content: "™";
-            font-size: 18px;
-            position: absolute;
-            top: 2px;
-        }
+        
     }
 }
 .region-media {
