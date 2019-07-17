@@ -19,7 +19,7 @@
   BUNN.openAccordion = function ($title) {
     var $accordionItem = $title.closest('.js-accordion-item');
     var $content = $accordionItem.children('.js-accordion-content');
-    var $iconContainer = $title.find('.js-accordion-icon');
+    var $iconContainer = $title.children('.js-accordion-icon');
     var iconInactiveState = $iconContainer.data('inactive-icon');
     var iconActiveState = $iconContainer.data('active-icon');
     var accordionImg = $title.data('accordion-img');
