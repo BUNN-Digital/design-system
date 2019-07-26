@@ -54,7 +54,7 @@
     var $accordion = $title.closest('.js-accordion');
     var $accordionItem = $title.closest('.js-accordion-item');
     var $openAccordionItem = $accordion.children('.js-accordion-item.open');
-    var accordionImg = $title.data('accordion-img'); // if this item is not already open...
+    var accordionImg = $title.parent().data('accordion-img'); // if this item is not already open...
 
     if (!$accordionItem.hasClass('open')) {
       // close any siblings
@@ -69,6 +69,12 @@
       if (!accordionImg) {
         BUNN.closeAccordion($title);
       }
+    } // toggle accordion image...
+
+
+    if (accordionImg) {
+      $(':not(#' + accordionImg).removeClass('active');
+      $('#' + accordionImg).addClass('active');
     }
   };
 
