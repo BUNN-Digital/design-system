@@ -49,7 +49,7 @@ a.btn {
         &.disabled:hover {
             opacity: 0.85;
             cursor: not-allowed !important;
-            @apply bg-brand-primary pointer-events-none;
+            @apply bg-brand-primary;
         }
     }
 
@@ -73,7 +73,7 @@ a.btn {
         /* Disabled */
         &.disabled {
             cursor: not-allowed !important;
-            @apply text-gray-400 bg-white border-gray-400 pointer-events-none;
+            @apply text-gray-400 bg-white border-gray-400;
         }
     }
 
