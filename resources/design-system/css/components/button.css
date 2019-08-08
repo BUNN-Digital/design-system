@@ -48,7 +48,7 @@ a.btn {
         &.disabled,
         &.disabled:hover {
             opacity: 0.85;
-            @apply bg-brand-primary;
+            @apply bg-brand-primary pointer-events-none cursor-not-allowed;
         }
     }
 
