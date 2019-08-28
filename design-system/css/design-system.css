@@ -1935,52 +1935,6 @@ a.link--neutral:hover {
       opacity: 0;
     }
 
-.breadcrumb__item-link {
-      display: inline-block;
-      color: #0b0b0b;
-      padding-left: 0.25rem;
-    }
-
-.breadcrumb__item-link:before {
-        content: "/";
-        padding-right: 0.5rem;
-      }
-
-.breadcrumb__item-link:hover span {
-          text-decoration: underline;
-        }
-
-.breadcrumb__item-link-home {
-        padding-left: 0;
-      }
-
-.breadcrumb__item-link-home:before {
-          content: "";
-          padding-right: 0;
-        }
-
-/* --  Hide Category Groups -- */
-
-.breadcrumb__item-link[data-category-id="1003"],
-            .breadcrumb__item-link[data-category-id="1004"],
-            .breadcrumb__item-link[data-category-id="1005"],
-            .breadcrumb__item-link[data-category-id="1006"] {
-        display: none;
-      }
-
-.breadcrumb__item-label {
-      display: inline-block;
-      color: #444444;
-      color: var(--color-gray-700);
-      padding-left: 0.25rem;
-    }
-
-.breadcrumb__item-label:before {
-        content: "/";
-        padding-right: 0.5rem;
-        color: #0b0b0b;
-      }
-
 .btn,
 a.btn {
   font-family: "AvenirNextLTW01-Medium", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -2104,6 +2058,7 @@ a.btn {
         a.btn--primary.disabled,
         a.btn--primary.disabled:hover {
       opacity: 0.85;
+      cursor: not-allowed !important;
       background-color: #005EB8;
       background-color: var(--color-brand-primary);
     }
@@ -2141,6 +2096,7 @@ a.btn {
 /* Disabled */
 
 .btn--outline.disabled, a.btn--outline.disabled {
+      cursor: not-allowed !important;
       color: #cdcdcd;
       color: var(--color-gray-400);
       background-color: #ffffff;
@@ -2529,29 +2485,6 @@ a.btn {
         .category-media__heading-cta.category-1125,
         .category-media__heading-cta.category-1126 {
       text-transform: uppercase;
-    }
-
-.category-media__heading-cta.category-1116:after,
-        .category-media__heading-cta.category-1117:after,
-        .category-media__heading-cta.category-1118:after,
-        .category-media__heading-cta.category-1119:after,
-        .category-media__heading-cta.category-1120:after,
-        .category-media__heading-cta.category-1121:after,
-        .category-media__heading-cta.category-1123:after,
-        .category-media__heading-cta.category-1124:after,
-        .category-media__heading-cta.category-1125:after,
-        .category-media__heading-cta.category-1126:after {
-      content: "®";
-      font-size: 20px;
-      position: absolute;
-      top: 2px;
-    }
-
-.category-media__heading-cta.category-1122:after {
-      content: "™";
-      font-size: 18px;
-      position: absolute;
-      top: 2px;
     }
 
 .region-media {
@@ -4783,8 +4716,6 @@ body > .popup-menu--hybrid .popup-menu__content-body {
     width:100%;
     margin:0;
   }
-
-/* DESIGN SYSTEM MODULES */
 
 /* DESIGN SYSTEM FEATURES  */
 

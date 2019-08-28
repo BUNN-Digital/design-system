@@ -1,0 +1,32 @@
+---
+layout: page
+meta_title: Breadcrumbs
+meta_description: Breadcrumbs
+title: Breadcrumbs
+section: Components
+tag: components
+---
+
+<h2 class="section-heading">Breadcrumbs</h2>
+
+<div class="uppercase text-black font-sans-medium text-sm-2 tracking-wider">
+    <a href="/" class="inline-block hover:underline">Home</a>
+    <span class="inline-block mx-1">/</span>
+    <a href="/equipment" class="inline-block hover:underline" data-category-id="1000">Crumb 1</a>
+    <span class="inline-block mx-1">/</span>
+    <a href="/equipment" class="inline-block hover:underline" data-category-id="1000">Crumb 2</a>
+    <span class="inline-block mx-1">/</span>
+    <span class="text-gray-700" data-category-id="1100">Coffee</span>
+</div>
+
+{% highlight "html" %}
+<div class="uppercase text-black font-sans-medium text-sm-2 tracking-wider">
+    <a href="/" class="inline-block hover:underline">Home</a>
+    <span class="inline-block mx-1">/</span>
+    <a href="/equipment" class="inline-block hover:underline" data-category-id="1000">Crumb 1</a>
+    <span class="inline-block mx-1">/</span>
+    <a href="/equipment" class="inline-block hover:underline" data-category-id="1000">Crumb 2</a>
+    <span class="inline-block mx-1">/</span>
+    <span class="text-gray-700" data-category-id="1100">Coffee</span>
+</div>
+{% endhighlight %}
