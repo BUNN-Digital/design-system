@@ -2,6 +2,7 @@
     --color-brand-primary-RGB: 0,94,184;
 
     --color-brand-primary: #005EB8;
+    --color-brand-secondary: #000000;
     --color-brand-primary-light-1: #2776C2;
     --color-brand-primary-light-2: #4086C9;
     --color-brand-primary-dark-1: #004F9B;
@@ -30,8 +31,9 @@
 :root.gourmet {
     --color-brand-primary-RGB: 141,115,74;
     --color-brand-primary: #8c734a;
-    --color-brand-primary-light-1: #9E8865;
-    --color-brand-primary-light-2: #A99677;
+    --color-brand-primary-light-1: #AE9875;
+    --color-brand-primary-light-2: #CFC1AB;
     --color-brand-primary-dark-1: #705C3B;
     --color-brand-primary-dark-2: #463A2D;
+    --color-brand-secondary: #A4552D;
 }
