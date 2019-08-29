@@ -24,6 +24,7 @@ module.exports = {
 
             'brand-primary-RGB': 'var(--color-brand-primary-RGB)',
             'brand-primary': 'var(--color-brand-primary)',
+            'brand-secondary': 'var(--color-brand-secondary)',
             'brand-primary-light-1': 'var(--color-brand-primary-light-1)',
             'brand-primary-light-2': 'var(--color-brand-primary-light-2)',
             'brand-primary-dark-1': 'var(--color-brand-primary-dark-1)',
@@ -105,10 +106,13 @@ module.exports = {
         },
 
         screens: {
-            'sm': '480px',
-            'md': '768px',
-            'lg': '1200px',
-            'xl': '1920px',
+            'sm':       '480px',
+            'sm-md':    '620px',
+            'md':       '768px',
+            'md-lg':    '980px',
+            'lg':       '1200px',
+            'lg-xl':    '1560px',
+            'xl':       '1920px',
         },
 
         fontFamily: {
