@@ -1429,8 +1429,10 @@ img.mfp-img {
   --color-brand-primary-light-1: #AE9875;
   --color-brand-primary-light-2: #DBC9AD;
   --color-brand-primary-light-3: #EFE4D2;
+  --color-brand-primary-light-4: #FFFAF2;
   --color-brand-primary-dark-1: #64543A;
   --color-brand-primary-dark-2: #4A3826;
+  --color-brand-secondary-RGB: 164,85,45;
   --color-brand-secondary: #A4552D;
 }
 
@@ -1439,12 +1441,6 @@ a:visited,
 a:active {
   outline: none;
   text-decoration: none;
-}
-
-button,
-a {
-  -webkit-transition: all 0.2s ease;
-  transition: all 0.2s ease;
 }
 
 :target:before {
