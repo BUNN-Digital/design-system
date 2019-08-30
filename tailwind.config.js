@@ -27,6 +27,8 @@ module.exports = {
             'brand-secondary': 'var(--color-brand-secondary)',
             'brand-primary-light-1': 'var(--color-brand-primary-light-1)',
             'brand-primary-light-2': 'var(--color-brand-primary-light-2)',
+            'brand-primary-light-3': 'var(--color-brand-primary-light-3)',
+            'brand-primary-light-4': 'var(--color-brand-primary-light-4)',
             'brand-primary-dark-1': 'var(--color-brand-primary-dark-1)',
             'brand-primary-dark-2': 'var(--color-brand-primary-dark-2)',
 
@@ -89,6 +91,19 @@ module.exports = {
             'brand-primary-rgba-80': 'rgba(var(--color-brand-primary-RGB),0.8)',
             'brand-primary-rgba-90': 'rgba(var(--color-brand-primary-RGB),0.9)',
             'brand-primary-rgba-100': 'rgba(var(--color-brand-primary-RGB),1)',
+
+            // brand alphas
+            'brand-secondary-rgba-0': 'rgba(var(--color-brand-secondary-RGB),0)',
+            'brand-secondary-rgba-10': 'rgba(var(--color-brand-secondary-RGB),0.1)',
+            'brand-secondary-rgba-20': 'rgba(var(--color-brand-secondary-RGB),0.2)',
+            'brand-secondary-rgba-30': 'rgba(var(--color-brand-secondary-RGB),0.3)',
+            'brand-secondary-rgba-40': 'rgba(var(--color-brand-secondary-RGB),0.4)',
+            'brand-secondary-rgba-50': 'rgba(var(--color-brand-secondary-RGB),0.5)',
+            'brand-secondary-rgba-60': 'rgba(var(--color-brand-secondary-RGB),0.6)',
+            'brand-secondary-rgba-70': 'rgba(var(--color-brand-secondary-RGB),0.7)',
+            'brand-secondary-rgba-80': 'rgba(var(--color-brand-secondary-RGB),0.8)',
+            'brand-secondary-rgba-90': 'rgba(var(--color-brand-secondary-RGB),0.9)',
+            'brand-secondary-rgba-100': 'rgba(var(--color-brand-secondary-RGB),1)',
         },
 
         opacity: {
