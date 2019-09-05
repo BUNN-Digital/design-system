@@ -1,5 +1,5 @@
 /* Scale */
-@variants group-hover, hover, focus {
+@variants responsive, group-hover, hover, focus {
     /* Default scale */
     .scale-100 {
         transform: scale3d(1,1,1);
