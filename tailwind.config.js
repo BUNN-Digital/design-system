@@ -92,7 +92,33 @@ module.exports = {
             'brand-primary-rgba-90': 'rgba(var(--color-brand-primary-RGB),0.9)',
             'brand-primary-rgba-100': 'rgba(var(--color-brand-primary-RGB),1)',
 
-            // brand alphas
+            // brand dark 1 alphas
+            'brand-primary-dark-1-rgba-0': 'rgba(var(--color-brand-primary-dark-1-RGB),0)',
+            'brand-primary-dark-1-rgba-10': 'rgba(var(--color-brand-primary-dark-1-RGB),0.1)',
+            'brand-primary-dark-1-rgba-20': 'rgba(var(--color-brand-primary-dark-1-RGB),0.2)',
+            'brand-primary-dark-1-rgba-30': 'rgba(var(--color-brand-primary-dark-1-RGB),0.3)',
+            'brand-primary-dark-1-rgba-40': 'rgba(var(--color-brand-primary-dark-1-RGB),0.4)',
+            'brand-primary-dark-1-rgba-50': 'rgba(var(--color-brand-primary-dark-1-RGB),0.5)',
+            'brand-primary-dark-1-rgba-60': 'rgba(var(--color-brand-primary-dark-1-RGB),0.6)',
+            'brand-primary-dark-1-rgba-70': 'rgba(var(--color-brand-primary-dark-1-RGB),0.7)',
+            'brand-primary-dark-1-rgba-80': 'rgba(var(--color-brand-primary-dark-1-RGB),0.8)',
+            'brand-primary-dark-1-rgba-90': 'rgba(var(--color-brand-primary-dark-1-RGB),0.9)',
+            'brand-primary-dark-1-rgba-100': 'rgba(var(--color-brand-primary-dark-1-RGB),1)',
+
+            // brand dark 2 alphas
+            'brand-primary-dark-2-rgba-0': 'rgba(var(--color-brand-primary-dark-2-RGB),0)',
+            'brand-primary-dark-2-rgba-10': 'rgba(var(--color-brand-primary-dark-2-RGB),0.1)',
+            'brand-primary-dark-2-rgba-20': 'rgba(var(--color-brand-primary-dark-2-RGB),0.2)',
+            'brand-primary-dark-2-rgba-30': 'rgba(var(--color-brand-primary-dark-2-RGB),0.3)',
+            'brand-primary-dark-2-rgba-40': 'rgba(var(--color-brand-primary-dark-2-RGB),0.4)',
+            'brand-primary-dark-2-rgba-50': 'rgba(var(--color-brand-primary-dark-2-RGB),0.5)',
+            'brand-primary-dark-2-rgba-60': 'rgba(var(--color-brand-primary-dark-2-RGB),0.6)',
+            'brand-primary-dark-2-rgba-70': 'rgba(var(--color-brand-primary-dark-2-RGB),0.7)',
+            'brand-primary-dark-2-rgba-80': 'rgba(var(--color-brand-primary-dark-2-RGB),0.8)',
+            'brand-primary-dark-2-rgba-90': 'rgba(var(--color-brand-primary-dark-2-RGB),0.9)',
+            'brand-primary-dark-2-rgba-100': 'rgba(var(--color-brand-primary-dark-2-RGB),1)',
+
+            // brand secondary alphas
             'brand-secondary-rgba-0': 'rgba(var(--color-brand-secondary-RGB),0)',
             'brand-secondary-rgba-10': 'rgba(var(--color-brand-secondary-RGB),0.1)',
             'brand-secondary-rgba-20': 'rgba(var(--color-brand-secondary-RGB),0.2)',

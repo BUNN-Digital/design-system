@@ -1606,7 +1606,7 @@
   }
 }
 
-@media (min-width: 1560px) {
+@media (min-width: 1440px) {
   /* Default scale */
 
   .lg-xl\:scale-100 {
@@ -1872,7 +1872,7 @@
   }
 }
 
-@media (min-width: 1920px) {
+@media (min-width: 1560px) {
   /* Default scale */
 
   .xl\:scale-100 {
@@ -2133,6 +2133,538 @@
   }
 
   .xl\:focus\:scale-130:focus {
+    -webkit-transform: scale3d(1.3,1.3,1.3);
+            transform: scale3d(1.3,1.3,1.3);
+  }
+}
+
+@media (min-width: 1680px) {
+  /* Default scale */
+
+  .xl-xxl\:scale-100 {
+    -webkit-transform: scale3d(1,1,1);
+            transform: scale3d(1,1,1);
+  }
+
+  /* Scale Down */
+
+  .xl-xxl\:scale-050 {
+    -webkit-transform: scale3d(0.5,0.5,0.5);
+            transform: scale3d(0.5,0.5,0.5);
+  }
+
+  .xl-xxl\:scale-060 {
+    -webkit-transform: scale3d(0.6,0.6,0.6);
+            transform: scale3d(0.6,0.6,0.6);
+  }
+
+  .xl-xxl\:scale-070 {
+    -webkit-transform: scale3d(0.7,0.7,0.7);
+            transform: scale3d(0.7,0.7,0.7);
+  }
+
+  .xl-xxl\:scale-080 {
+    -webkit-transform: scale3d(0.8,0.8,0.8);
+            transform: scale3d(0.8,0.8,0.8);
+  }
+
+  .xl-xxl\:scale-090 {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+            transform: scale3d(0.9,0.9,0.9);
+  }
+
+  /* Scale Up */
+
+  .xl-xxl\:scale-101 {
+    -webkit-transform: scale3d(1.01,1.01,1.01);
+            transform: scale3d(1.01,1.01,1.01);
+  }
+
+  .xl-xxl\:scale-102 {
+    -webkit-transform: scale3d(1.02,1.02,1.02);
+            transform: scale3d(1.02,1.02,1.02);
+  }
+
+  .xl-xxl\:scale-103 {
+    -webkit-transform: scale3d(1.03,1.03,1.03);
+            transform: scale3d(1.03,1.03,1.03);
+  }
+
+  .xl-xxl\:scale-110 {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+            transform: scale3d(1.1,1.1,1.1);
+  }
+
+  .xl-xxl\:scale-120 {
+    -webkit-transform: scale3d(1.2,1.2,1.2);
+            transform: scale3d(1.2,1.2,1.2);
+  }
+
+  .xl-xxl\:scale-130 {
+    -webkit-transform: scale3d(1.3,1.3,1.3);
+            transform: scale3d(1.3,1.3,1.3);
+  }
+
+  /* Default scale */
+
+  .group:hover .xl-xxl\:group-hover\:scale-100 {
+    -webkit-transform: scale3d(1,1,1);
+            transform: scale3d(1,1,1);
+  }
+
+  /* Scale Down */
+
+  .group:hover .xl-xxl\:group-hover\:scale-050 {
+    -webkit-transform: scale3d(0.5,0.5,0.5);
+            transform: scale3d(0.5,0.5,0.5);
+  }
+
+  .group:hover .xl-xxl\:group-hover\:scale-060 {
+    -webkit-transform: scale3d(0.6,0.6,0.6);
+            transform: scale3d(0.6,0.6,0.6);
+  }
+
+  .group:hover .xl-xxl\:group-hover\:scale-070 {
+    -webkit-transform: scale3d(0.7,0.7,0.7);
+            transform: scale3d(0.7,0.7,0.7);
+  }
+
+  .group:hover .xl-xxl\:group-hover\:scale-080 {
+    -webkit-transform: scale3d(0.8,0.8,0.8);
+            transform: scale3d(0.8,0.8,0.8);
+  }
+
+  .group:hover .xl-xxl\:group-hover\:scale-090 {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+            transform: scale3d(0.9,0.9,0.9);
+  }
+
+  /* Scale Up */
+
+  .group:hover .xl-xxl\:group-hover\:scale-101 {
+    -webkit-transform: scale3d(1.01,1.01,1.01);
+            transform: scale3d(1.01,1.01,1.01);
+  }
+
+  .group:hover .xl-xxl\:group-hover\:scale-102 {
+    -webkit-transform: scale3d(1.02,1.02,1.02);
+            transform: scale3d(1.02,1.02,1.02);
+  }
+
+  .group:hover .xl-xxl\:group-hover\:scale-103 {
+    -webkit-transform: scale3d(1.03,1.03,1.03);
+            transform: scale3d(1.03,1.03,1.03);
+  }
+
+  .group:hover .xl-xxl\:group-hover\:scale-110 {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+            transform: scale3d(1.1,1.1,1.1);
+  }
+
+  .group:hover .xl-xxl\:group-hover\:scale-120 {
+    -webkit-transform: scale3d(1.2,1.2,1.2);
+            transform: scale3d(1.2,1.2,1.2);
+  }
+
+  .group:hover .xl-xxl\:group-hover\:scale-130 {
+    -webkit-transform: scale3d(1.3,1.3,1.3);
+            transform: scale3d(1.3,1.3,1.3);
+  }
+
+  /* Default scale */
+
+  .xl-xxl\:hover\:scale-100:hover {
+    -webkit-transform: scale3d(1,1,1);
+            transform: scale3d(1,1,1);
+  }
+
+  /* Scale Down */
+
+  .xl-xxl\:hover\:scale-050:hover {
+    -webkit-transform: scale3d(0.5,0.5,0.5);
+            transform: scale3d(0.5,0.5,0.5);
+  }
+
+  .xl-xxl\:hover\:scale-060:hover {
+    -webkit-transform: scale3d(0.6,0.6,0.6);
+            transform: scale3d(0.6,0.6,0.6);
+  }
+
+  .xl-xxl\:hover\:scale-070:hover {
+    -webkit-transform: scale3d(0.7,0.7,0.7);
+            transform: scale3d(0.7,0.7,0.7);
+  }
+
+  .xl-xxl\:hover\:scale-080:hover {
+    -webkit-transform: scale3d(0.8,0.8,0.8);
+            transform: scale3d(0.8,0.8,0.8);
+  }
+
+  .xl-xxl\:hover\:scale-090:hover {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+            transform: scale3d(0.9,0.9,0.9);
+  }
+
+  /* Scale Up */
+
+  .xl-xxl\:hover\:scale-101:hover {
+    -webkit-transform: scale3d(1.01,1.01,1.01);
+            transform: scale3d(1.01,1.01,1.01);
+  }
+
+  .xl-xxl\:hover\:scale-102:hover {
+    -webkit-transform: scale3d(1.02,1.02,1.02);
+            transform: scale3d(1.02,1.02,1.02);
+  }
+
+  .xl-xxl\:hover\:scale-103:hover {
+    -webkit-transform: scale3d(1.03,1.03,1.03);
+            transform: scale3d(1.03,1.03,1.03);
+  }
+
+  .xl-xxl\:hover\:scale-110:hover {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+            transform: scale3d(1.1,1.1,1.1);
+  }
+
+  .xl-xxl\:hover\:scale-120:hover {
+    -webkit-transform: scale3d(1.2,1.2,1.2);
+            transform: scale3d(1.2,1.2,1.2);
+  }
+
+  .xl-xxl\:hover\:scale-130:hover {
+    -webkit-transform: scale3d(1.3,1.3,1.3);
+            transform: scale3d(1.3,1.3,1.3);
+  }
+
+  /* Default scale */
+
+  .xl-xxl\:focus\:scale-100:focus {
+    -webkit-transform: scale3d(1,1,1);
+            transform: scale3d(1,1,1);
+  }
+
+  /* Scale Down */
+
+  .xl-xxl\:focus\:scale-050:focus {
+    -webkit-transform: scale3d(0.5,0.5,0.5);
+            transform: scale3d(0.5,0.5,0.5);
+  }
+
+  .xl-xxl\:focus\:scale-060:focus {
+    -webkit-transform: scale3d(0.6,0.6,0.6);
+            transform: scale3d(0.6,0.6,0.6);
+  }
+
+  .xl-xxl\:focus\:scale-070:focus {
+    -webkit-transform: scale3d(0.7,0.7,0.7);
+            transform: scale3d(0.7,0.7,0.7);
+  }
+
+  .xl-xxl\:focus\:scale-080:focus {
+    -webkit-transform: scale3d(0.8,0.8,0.8);
+            transform: scale3d(0.8,0.8,0.8);
+  }
+
+  .xl-xxl\:focus\:scale-090:focus {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+            transform: scale3d(0.9,0.9,0.9);
+  }
+
+  /* Scale Up */
+
+  .xl-xxl\:focus\:scale-101:focus {
+    -webkit-transform: scale3d(1.01,1.01,1.01);
+            transform: scale3d(1.01,1.01,1.01);
+  }
+
+  .xl-xxl\:focus\:scale-102:focus {
+    -webkit-transform: scale3d(1.02,1.02,1.02);
+            transform: scale3d(1.02,1.02,1.02);
+  }
+
+  .xl-xxl\:focus\:scale-103:focus {
+    -webkit-transform: scale3d(1.03,1.03,1.03);
+            transform: scale3d(1.03,1.03,1.03);
+  }
+
+  .xl-xxl\:focus\:scale-110:focus {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+            transform: scale3d(1.1,1.1,1.1);
+  }
+
+  .xl-xxl\:focus\:scale-120:focus {
+    -webkit-transform: scale3d(1.2,1.2,1.2);
+            transform: scale3d(1.2,1.2,1.2);
+  }
+
+  .xl-xxl\:focus\:scale-130:focus {
+    -webkit-transform: scale3d(1.3,1.3,1.3);
+            transform: scale3d(1.3,1.3,1.3);
+  }
+}
+
+@media (min-width: 1920px) {
+  /* Default scale */
+
+  .xxl\:scale-100 {
+    -webkit-transform: scale3d(1,1,1);
+            transform: scale3d(1,1,1);
+  }
+
+  /* Scale Down */
+
+  .xxl\:scale-050 {
+    -webkit-transform: scale3d(0.5,0.5,0.5);
+            transform: scale3d(0.5,0.5,0.5);
+  }
+
+  .xxl\:scale-060 {
+    -webkit-transform: scale3d(0.6,0.6,0.6);
+            transform: scale3d(0.6,0.6,0.6);
+  }
+
+  .xxl\:scale-070 {
+    -webkit-transform: scale3d(0.7,0.7,0.7);
+            transform: scale3d(0.7,0.7,0.7);
+  }
+
+  .xxl\:scale-080 {
+    -webkit-transform: scale3d(0.8,0.8,0.8);
+            transform: scale3d(0.8,0.8,0.8);
+  }
+
+  .xxl\:scale-090 {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+            transform: scale3d(0.9,0.9,0.9);
+  }
+
+  /* Scale Up */
+
+  .xxl\:scale-101 {
+    -webkit-transform: scale3d(1.01,1.01,1.01);
+            transform: scale3d(1.01,1.01,1.01);
+  }
+
+  .xxl\:scale-102 {
+    -webkit-transform: scale3d(1.02,1.02,1.02);
+            transform: scale3d(1.02,1.02,1.02);
+  }
+
+  .xxl\:scale-103 {
+    -webkit-transform: scale3d(1.03,1.03,1.03);
+            transform: scale3d(1.03,1.03,1.03);
+  }
+
+  .xxl\:scale-110 {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+            transform: scale3d(1.1,1.1,1.1);
+  }
+
+  .xxl\:scale-120 {
+    -webkit-transform: scale3d(1.2,1.2,1.2);
+            transform: scale3d(1.2,1.2,1.2);
+  }
+
+  .xxl\:scale-130 {
+    -webkit-transform: scale3d(1.3,1.3,1.3);
+            transform: scale3d(1.3,1.3,1.3);
+  }
+
+  /* Default scale */
+
+  .group:hover .xxl\:group-hover\:scale-100 {
+    -webkit-transform: scale3d(1,1,1);
+            transform: scale3d(1,1,1);
+  }
+
+  /* Scale Down */
+
+  .group:hover .xxl\:group-hover\:scale-050 {
+    -webkit-transform: scale3d(0.5,0.5,0.5);
+            transform: scale3d(0.5,0.5,0.5);
+  }
+
+  .group:hover .xxl\:group-hover\:scale-060 {
+    -webkit-transform: scale3d(0.6,0.6,0.6);
+            transform: scale3d(0.6,0.6,0.6);
+  }
+
+  .group:hover .xxl\:group-hover\:scale-070 {
+    -webkit-transform: scale3d(0.7,0.7,0.7);
+            transform: scale3d(0.7,0.7,0.7);
+  }
+
+  .group:hover .xxl\:group-hover\:scale-080 {
+    -webkit-transform: scale3d(0.8,0.8,0.8);
+            transform: scale3d(0.8,0.8,0.8);
+  }
+
+  .group:hover .xxl\:group-hover\:scale-090 {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+            transform: scale3d(0.9,0.9,0.9);
+  }
+
+  /* Scale Up */
+
+  .group:hover .xxl\:group-hover\:scale-101 {
+    -webkit-transform: scale3d(1.01,1.01,1.01);
+            transform: scale3d(1.01,1.01,1.01);
+  }
+
+  .group:hover .xxl\:group-hover\:scale-102 {
+    -webkit-transform: scale3d(1.02,1.02,1.02);
+            transform: scale3d(1.02,1.02,1.02);
+  }
+
+  .group:hover .xxl\:group-hover\:scale-103 {
+    -webkit-transform: scale3d(1.03,1.03,1.03);
+            transform: scale3d(1.03,1.03,1.03);
+  }
+
+  .group:hover .xxl\:group-hover\:scale-110 {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+            transform: scale3d(1.1,1.1,1.1);
+  }
+
+  .group:hover .xxl\:group-hover\:scale-120 {
+    -webkit-transform: scale3d(1.2,1.2,1.2);
+            transform: scale3d(1.2,1.2,1.2);
+  }
+
+  .group:hover .xxl\:group-hover\:scale-130 {
+    -webkit-transform: scale3d(1.3,1.3,1.3);
+            transform: scale3d(1.3,1.3,1.3);
+  }
+
+  /* Default scale */
+
+  .xxl\:hover\:scale-100:hover {
+    -webkit-transform: scale3d(1,1,1);
+            transform: scale3d(1,1,1);
+  }
+
+  /* Scale Down */
+
+  .xxl\:hover\:scale-050:hover {
+    -webkit-transform: scale3d(0.5,0.5,0.5);
+            transform: scale3d(0.5,0.5,0.5);
+  }
+
+  .xxl\:hover\:scale-060:hover {
+    -webkit-transform: scale3d(0.6,0.6,0.6);
+            transform: scale3d(0.6,0.6,0.6);
+  }
+
+  .xxl\:hover\:scale-070:hover {
+    -webkit-transform: scale3d(0.7,0.7,0.7);
+            transform: scale3d(0.7,0.7,0.7);
+  }
+
+  .xxl\:hover\:scale-080:hover {
+    -webkit-transform: scale3d(0.8,0.8,0.8);
+            transform: scale3d(0.8,0.8,0.8);
+  }
+
+  .xxl\:hover\:scale-090:hover {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+            transform: scale3d(0.9,0.9,0.9);
+  }
+
+  /* Scale Up */
+
+  .xxl\:hover\:scale-101:hover {
+    -webkit-transform: scale3d(1.01,1.01,1.01);
+            transform: scale3d(1.01,1.01,1.01);
+  }
+
+  .xxl\:hover\:scale-102:hover {
+    -webkit-transform: scale3d(1.02,1.02,1.02);
+            transform: scale3d(1.02,1.02,1.02);
+  }
+
+  .xxl\:hover\:scale-103:hover {
+    -webkit-transform: scale3d(1.03,1.03,1.03);
+            transform: scale3d(1.03,1.03,1.03);
+  }
+
+  .xxl\:hover\:scale-110:hover {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+            transform: scale3d(1.1,1.1,1.1);
+  }
+
+  .xxl\:hover\:scale-120:hover {
+    -webkit-transform: scale3d(1.2,1.2,1.2);
+            transform: scale3d(1.2,1.2,1.2);
+  }
+
+  .xxl\:hover\:scale-130:hover {
+    -webkit-transform: scale3d(1.3,1.3,1.3);
+            transform: scale3d(1.3,1.3,1.3);
+  }
+
+  /* Default scale */
+
+  .xxl\:focus\:scale-100:focus {
+    -webkit-transform: scale3d(1,1,1);
+            transform: scale3d(1,1,1);
+  }
+
+  /* Scale Down */
+
+  .xxl\:focus\:scale-050:focus {
+    -webkit-transform: scale3d(0.5,0.5,0.5);
+            transform: scale3d(0.5,0.5,0.5);
+  }
+
+  .xxl\:focus\:scale-060:focus {
+    -webkit-transform: scale3d(0.6,0.6,0.6);
+            transform: scale3d(0.6,0.6,0.6);
+  }
+
+  .xxl\:focus\:scale-070:focus {
+    -webkit-transform: scale3d(0.7,0.7,0.7);
+            transform: scale3d(0.7,0.7,0.7);
+  }
+
+  .xxl\:focus\:scale-080:focus {
+    -webkit-transform: scale3d(0.8,0.8,0.8);
+            transform: scale3d(0.8,0.8,0.8);
+  }
+
+  .xxl\:focus\:scale-090:focus {
+    -webkit-transform: scale3d(0.9,0.9,0.9);
+            transform: scale3d(0.9,0.9,0.9);
+  }
+
+  /* Scale Up */
+
+  .xxl\:focus\:scale-101:focus {
+    -webkit-transform: scale3d(1.01,1.01,1.01);
+            transform: scale3d(1.01,1.01,1.01);
+  }
+
+  .xxl\:focus\:scale-102:focus {
+    -webkit-transform: scale3d(1.02,1.02,1.02);
+            transform: scale3d(1.02,1.02,1.02);
+  }
+
+  .xxl\:focus\:scale-103:focus {
+    -webkit-transform: scale3d(1.03,1.03,1.03);
+            transform: scale3d(1.03,1.03,1.03);
+  }
+
+  .xxl\:focus\:scale-110:focus {
+    -webkit-transform: scale3d(1.1,1.1,1.1);
+            transform: scale3d(1.1,1.1,1.1);
+  }
+
+  .xxl\:focus\:scale-120:focus {
+    -webkit-transform: scale3d(1.2,1.2,1.2);
+            transform: scale3d(1.2,1.2,1.2);
+  }
+
+  .xxl\:focus\:scale-130:focus {
     -webkit-transform: scale3d(1.3,1.3,1.3);
             transform: scale3d(1.3,1.3,1.3);
   }
