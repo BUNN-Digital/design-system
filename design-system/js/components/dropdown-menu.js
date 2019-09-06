@@ -24,19 +24,28 @@
 
   $navItemTrigger.on('click', function (e) {
     var $navMenuItem = $(this).closest('.js-dropdown-menu-item');
+    var $openSiblingMenu = $navMenuItem.siblings('.active');
     var $navMenuItemContent = $navMenuItem.find('.js-dropdown-menu-content');
     var $iconContainer = $navMenuItem.find('.js-dropdown-menu-item-icon');
     var iconInactiveState = $iconContainer.data('inactive-icon');
     var iconActiveState = $iconContainer.data('active-icon');
     var $icon = $('[class*=fa]', $iconContainer).length ? $('[class*=fa]', $iconContainer) : $('[data-fa-i2svg]', $iconContainer);
 
-    if ($navMenuItem.hasClass('open')) {
-      $navMenuItem.removeClass('open active');
+    if ($navMenuItem.hasClass('active')) {
+      $navMenuItem.removeClass('active');
       $icon.removeClass(iconActiveState).addClass(iconInactiveState);
       BUNN.closeDropdown($navMenuItemContent);
     } else {
-      $navMenuItems.removeClass('open active');
-      $navMenuItem.addClass('open active');
+      console.log($openSiblingMenu.length);
+      $navMenuItems.removeClass('active');
+
+      if ($openSiblingMenu.length) {
+        var $openSiblingMenuIconContainer = $openSiblingMenu.find('.js-dropdown-menu-item-icon');
+        var $openSiblingMenuIcon = $('[class*=fa]', $openSiblingMenuIconContainer).length ? $('[class*=fa]', $openSiblingMenuIconContainer) : $('[data-fa-i2svg]', $openSiblingMenuIconContainer);
+        $openSiblingMenuIcon.removeClass(iconActiveState).addClass(iconInactiveState);
+      }
+
+      $navMenuItem.addClass('active');
       $icon.removeClass(iconInactiveState).addClass(iconActiveState);
       BUNN.closeDropdown($navMenuItemsContent);
       BUNN.openDropdown($navMenuItemContent);
@@ -51,7 +60,7 @@
       var iconInactiveState = $iconContainer.data('inactive-icon');
       var iconActiveState = $iconContainer.data('active-icon');
       var $icon = $('[class*=fa]', $iconContainer).length ? $('[class*=fa]', $iconContainer) : $('[data-fa-i2svg]', $iconContainer);
-      $navMenuItems.removeClass('open active');
+      $navMenuItems.removeClass('active');
       $icon.removeClass(iconActiveState).addClass(iconInactiveState);
       BUNN.closeDropdown($activeMenuContent);
     }
