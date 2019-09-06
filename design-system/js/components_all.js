@@ -225,13 +225,19 @@
   $navItemTrigger.on('click', function (e) {
     var $navMenuItem = $(this).closest('.js-dropdown-menu-item');
     var $navMenuItemContent = $navMenuItem.find('.js-dropdown-menu-content');
+    var $iconContainer = $navMenuItem.find('.js-dropdown-menu-item-icon');
+    var iconInactiveState = $iconContainer.data('inactive-icon');
+    var iconActiveState = $iconContainer.data('active-icon');
+    var $icon = $('[class*=fa]', $iconContainer).length ? $('[class*=fa]', $iconContainer) : $('[data-fa-i2svg]', $iconContainer);
 
     if ($navMenuItem.hasClass('open')) {
       $navMenuItem.removeClass('open active');
+      $icon.removeClass(iconActiveState).addClass(iconInactiveState);
       BUNN.closeDropdown($navMenuItemContent);
     } else {
       $navMenuItems.removeClass('open active');
       $navMenuItem.addClass('open active');
+      $icon.removeClass(iconInactiveState).addClass(iconActiveState);
       BUNN.closeDropdown($navMenuItemsContent);
       BUNN.openDropdown($navMenuItemContent);
     }
@@ -241,7 +247,12 @@
 
     if ($activeDropdown.length && !$(e.target).closest('.js-dropdown-menu-item').length && !$(e.target).closest('.js-drawer').length) {
       var $activeMenuContent = $activeDropdown.find('.js-dropdown-menu-content');
+      var $iconContainer = $activeDropdown.find('.js-dropdown-menu-item-icon');
+      var iconInactiveState = $iconContainer.data('inactive-icon');
+      var iconActiveState = $iconContainer.data('active-icon');
+      var $icon = $('[class*=fa]', $iconContainer).length ? $('[class*=fa]', $iconContainer) : $('[data-fa-i2svg]', $iconContainer);
       $navMenuItems.removeClass('open active');
+      $icon.removeClass(iconActiveState).addClass(iconInactiveState);
       BUNN.closeDropdown($activeMenuContent);
     }
   });
