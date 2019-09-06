@@ -6,7 +6,7 @@
   var $navMenuItemsContent = $('.js-dropdown-menu-content');
 
   BUNN.closeDropdown = function ($menu) {
-    if (window.innerWidth < BUNN.screens.lg) {
+    if (window.innerWidth < BUNN.screens.md) {
       $menu.slideUp('fast');
     } else {
       $menu.fadeOut('fast');
@@ -14,7 +14,7 @@
   };
 
   BUNN.openDropdown = function ($menu) {
-    if (window.innerWidth < BUNN.screens.lg) {
+    if (window.innerWidth < BUNN.screens.md) {
       $menu.slideDown('fast');
     } else {
       $menu.fadeIn('fast');
@@ -27,11 +27,11 @@
     var $navMenuItemContent = $navMenuItem.find('.js-dropdown-menu-content');
 
     if ($navMenuItem.hasClass('open')) {
-      $navMenuItem.removeClass('open');
+      $navMenuItem.removeClass('open active');
       BUNN.closeDropdown($navMenuItemContent);
     } else {
-      $navMenuItems.removeClass('open');
-      $navMenuItem.addClass('open');
+      $navMenuItems.removeClass('open active');
+      $navMenuItem.addClass('open active');
       BUNN.closeDropdown($navMenuItemsContent);
       BUNN.openDropdown($navMenuItemContent);
     }
@@ -41,7 +41,7 @@
 
     if ($activeDropdown.length && !$(e.target).closest('.js-dropdown-menu-item').length && !$(e.target).closest('.js-drawer').length) {
       var $activeMenuContent = $activeDropdown.find('.js-dropdown-menu-content');
-      $navMenuItems.removeClass('open');
+      $navMenuItems.removeClass('open active');
       BUNN.closeDropdown($activeMenuContent);
     }
   });
