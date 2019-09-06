@@ -126,8 +126,10 @@ module.exports = {
             'md':       '768px',
             'md-lg':    '980px',
             'lg':       '1200px',
-            'lg-xl':    '1560px',
-            'xl':       '1920px',
+            'lg-xl':    '1440px',
+            'xl':       '1560px',
+            'xl-xxl':   '1680px',
+            'xxl':      '1920px',
         },
 
         fontFamily: {
