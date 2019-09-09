@@ -36,7 +36,6 @@
 
             BUNN.closeDropdown($navMenuItemContent);
         } else {
-            console.log($openSiblingMenu.length);
             $navMenuItems.removeClass('active');
 
             if ($openSiblingMenu.length) {
