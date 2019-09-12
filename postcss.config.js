@@ -4,10 +4,10 @@ const postcssNested = require('postcss-nested')
 const postcssPresetEnv = require('postcss-preset-env')
 
 module.exports = {
-    plugins: [
-        postcssImport(),
-        tailwindcss(),
-        postcssNested(),
-        postcssPresetEnv({ stage: 3})
-    ]
-  }
+  plugins: [
+    postcssImport(),
+    tailwindcss(),
+    postcssNested(),
+    postcssPresetEnv({ stage: 3 })
+  ]
+}

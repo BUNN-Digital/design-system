@@ -11,12 +11,9 @@
   };
 
   BUNN.closeDrawer = function () {
-    var $openDrawer = $('.drawer--open');
-
-    if ($openDrawer) {
-      $('body').removeClass('drawer-open');
-      $openDrawer.removeClass('drawer--open');
-    }
+    var $openDrawer = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : $('.drawer--open');
+    $('body').removeClass('drawer-open');
+    $openDrawer.removeClass('drawer--open');
   }; // -- Event Handlers -- //
 
 
@@ -25,16 +22,29 @@
     BUNN.openDrawer(targetDrawerId);
   });
   $(document).on('click', function (e) {
-    var $drawer = $('.drawer--open');
-
     if ($(e.target).hasClass('js-drawers')) {
       BUNN.closeDrawer();
     }
-  }); // Re-position elements for screen size
-
-  enquire.register("screen and (min-width: 1200px)", {
+  });
+  enquire.register('screen and (min-width: ' + BUNN.screensPx['sm-md'] + ' )', {
     match: function match() {
-      BUNN.closeDrawer();
+      var $openDrawer = $('[data-hide-at="sm-md"]');
+      if ($openDrawer.length) BUNN.closeDrawer($openDrawer);
+    }
+  }).register('screen and (min-width: ' + BUNN.screensPx.md + ' )', {
+    match: function match() {
+      var $openDrawer = $('[data-hide-at="md"]');
+      if ($openDrawer.length) BUNN.closeDrawer($openDrawer);
+    }
+  }).register('screen and (min-width: ' + BUNN.screensPx['md-lg'] + ' )', {
+    match: function match() {
+      var $openDrawer = $('[data-hide-at="md-lg"]');
+      if ($openDrawer.length) BUNN.closeDrawer($openDrawer);
+    }
+  }).register('screen and (min-width: ' + BUNN.screensPx.lg + ' )', {
+    match: function match() {
+      var $openDrawer = $('[data-hide-at="lg"]');
+      if ($openDrawer.length) BUNN.closeDrawer($openDrawer);
     }
   });
 })(window.BUNN = window.BUNN || {}, jQuery);

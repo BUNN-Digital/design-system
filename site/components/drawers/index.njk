@@ -16,6 +16,8 @@ tag: components
 	<li><code>.drawer--bottom</code></li>
 </ul>
 
+<p>Each drawer can also specify the breakpoint it should "hide" at. The <code>sm</code>, <code>sm-md</code>, <code>md</code>, <code>md-lg</code>, and <code>lg</code> breakpoints can be used. To specify a breakpoint for a drawer to hide at, add a <code>data-hide-at="[breakpoint-name]"</code> attribute to it.</p>
+
 <h2 class="section-heading">Basic drawer from the left</h2>
 
 <p>Drawers are triggered by specifying the drawer ID in the <code>data-drawer</code> property.</p>
@@ -43,7 +45,7 @@ tag: components
 {% highlight "html" %}
 <!-- Drawer -->
 <div class="drawers js-drawers z-overlay">
-    <div id="drawer-1" class="drawer js-drawer drawer--left z-menu">
+    <div id="drawer-1" class="drawer js-drawer drawer--left z-menu" data-hide-at="lg">
         <div class="fixed bg-white w-full h-16 top-0 z-shell flex justify-between items-center border-b border-gray-200">
             <div class="font-sans-medium pl-6 leading-none flex-grow">Drawer Header</div>
             <button class="js-drawer-close-btn self-stretch h-16 px-6 flex items-center cursor-pointer z-shell"><i class="fal fa-times"></i></button>
