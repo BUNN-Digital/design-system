@@ -2551,7 +2551,6 @@ body.drawer-open {
   left: 0;
   overflow: hidden;
   background-color: rgba(0, 0, 0, 0.4);
-  will-change: opacity;
   opacity: 0;
   pointer-events: none;
   -webkit-transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
@@ -2567,7 +2566,6 @@ body.drawer-open {
   position: fixed;
   -webkit-transition: all 0.2s ease-in;
   transition: all 0.2s ease-in;
-  will-change: transform;
   background: white;
 }
 
@@ -2587,7 +2585,7 @@ body.drawer-open {
             transform: translateX(-100%);
   }
 
-.drawer--left.drawer--open {
+.drawer--left.open {
       box-shadow: 0 10px 20px 0 rgba(0, 0, 0, 0.3);
     }
 
@@ -2597,7 +2595,7 @@ body.drawer-open {
             transform: translateX(100%);
   }
 
-.drawer--right.drawer--open {
+.drawer--right.open {
       box-shadow: 0 -10px 20px 0 rgba(0, 0, 0, 0.3);
     }
 
@@ -2614,7 +2612,7 @@ body.drawer-open {
             transform: translateY(-100%);
   }
 
-.drawer--top.drawer--open {
+.drawer--top.open {
       box-shadow: 10px 0 20px 0 rgba(0, 0, 0, 0.3);
     }
 
@@ -2624,7 +2622,7 @@ body.drawer-open {
             transform: translateY(100%);
   }
 
-.drawer--bottom.drawer--open {
+.drawer--bottom.open {
       box-shadow: -10px 0 20px 0 rgba(0, 0, 0, 0.3);
     }
 
@@ -2642,7 +2640,7 @@ body.drawer-open {
 
 /* Drawer states */
 
-.drawer--open {
+.drawer.open {
     -webkit-transform: translateX(0);
             transform: translateX(0);
     -webkit-transition: all 0.3s ease-out;

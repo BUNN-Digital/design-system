@@ -4,22 +4,23 @@
   // -- Global Methods -- //
   BUNN.openDrawer = function (target) {
     var $drawer = $('#' + target);
-    var $closeBtn = $drawer.find('.js-drawer-close-btn');
     $('body').addClass('drawer-open');
-    $drawer.addClass('drawer--open');
-    $closeBtn.on('click', BUNN.closeDrawer);
+    $drawer.addClass('open');
   };
 
   BUNN.closeDrawer = function () {
-    var $openDrawer = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : $('.drawer--open');
+    var $openDrawer = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : $('.js-drawer.open');
     $('body').removeClass('drawer-open');
-    $openDrawer.removeClass('drawer--open');
+    $openDrawer.removeClass('open');
   }; // -- Event Handlers -- //
 
 
   $(document).on('click', '.js-drawer-trigger', function () {
     var targetDrawerId = $(this).data('drawer');
     BUNN.openDrawer(targetDrawerId);
+  });
+  $(document).on('click', '.js-drawer-close-btn', function () {
+    BUNN.closeDrawer();
   });
   $(document).on('click', function (e) {
     if ($(e.target).hasClass('js-drawers')) {

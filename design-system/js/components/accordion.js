@@ -24,7 +24,7 @@
     var iconActiveState = $iconContainer.data('active-icon');
     var accordionImg = $title.data('accordion-img');
     $content.slideDown('fast');
-    $accordionItem.addClass('open');
+    $accordionItem.addClass('open active');
     var $icon = $('[class*=fa]', $iconContainer).length ? $('[class*=fa]', $iconContainer) : $('[data-fa-i2svg]', $iconContainer);
     $icon.removeClass(iconInactiveState).addClass(iconActiveState); // if this accordion has an image, show it
 
@@ -41,13 +41,13 @@
     var iconInactiveState = $iconContainer.data('inactive-icon');
     var iconActiveState = $iconContainer.data('active-icon');
     $content.slideUp('fast');
-    $accordionItem.removeClass('open');
+    $accordionItem.removeClass('open active');
     var $icon = $('[class*=fa]', $iconContainer).length ? $('[class*=fa]', $iconContainer) : $('[data-fa-i2svg]', $iconContainer);
     $icon.removeClass(iconActiveState).addClass(iconInactiveState);
   };
-  /* 
-   * @param $title $(.js-accordion-title)
-   */
+  /*
+     * @param $title $(.js-accordion-title)
+     */
 
 
   BUNN.toggleAccordion = function ($title) {
@@ -65,7 +65,7 @@
 
       BUNN.openAccordion($title); // if it IS already open...
     } else {
-      //and doesn't have an image, close it
+      // and doesn't have an image, close it
       if (!accordionImg) {
         BUNN.closeAccordion($title);
       }
@@ -81,10 +81,10 @@
   BUNN.contentExpand = function ($content, $linkText, $maxHeight) {
     if ($linkText === 'Show more') {
       $('.js-content-expand-toggle').text('Show less');
-      $content.addClass('open').css('max-height', $maxHeight);
+      $content.addClass('open active').css('max-height', $maxHeight);
     } else {
       $('.js-content-expand-toggle').text('Show more');
-      $content.removeClass('open').css('max-height', '240px');
+      $content.removeClass('open active').css('max-height', '240px');
     }
   }; // -- Event Handlers -- //
 

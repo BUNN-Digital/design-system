@@ -2,7 +2,7 @@
 
 (function (BUNN, $, undefined) {
   // -- Global Methods -- //
-  // Convenient method to init any tabs with a 
+  // Convenient method to init any tabs with a
   // .active class. This is handy if .js-tab-content.active
   // is added to the dom dynamically before being made visible.
   BUNN.initTabs = function () {

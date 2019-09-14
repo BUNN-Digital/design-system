@@ -3,15 +3,13 @@
 
   BUNN.openDrawer = target => {
     const $drawer = $('#' + target)
-    const $closeBtn = $drawer.find('.js-drawer-close-btn')
     $('body').addClass('drawer-open')
-    $drawer.addClass('drawer--open')
-    $closeBtn.on('click', BUNN.closeDrawer)
+    $drawer.addClass('open')
   }
 
-  BUNN.closeDrawer = ($openDrawer = $('.drawer--open')) => {
+  BUNN.closeDrawer = ($openDrawer = $('.js-drawer.open')) => {
     $('body').removeClass('drawer-open')
-    $openDrawer.removeClass('drawer--open')
+    $openDrawer.removeClass('open')
   }
 
   // -- Event Handlers -- //
@@ -21,6 +19,10 @@
     BUNN.openDrawer(targetDrawerId)
   })
 
+  $(document).on('click', '.js-drawer-close-btn', function () {
+    BUNN.closeDrawer()
+  })
+
   $(document).on('click', function (e) {
     if ($(e.target).hasClass('js-drawers')) {
       BUNN.closeDrawer()
@@ -28,22 +30,22 @@
   })
 
   enquire.register('screen and (min-width: ' + BUNN.screensPx['sm-md'] + ' )', {
-    match: function () {
+    match () {
       const $openDrawer = $('[data-hide-at="sm-md"]')
       if ($openDrawer.length) BUNN.closeDrawer($openDrawer)
     }
   }).register('screen and (min-width: ' + BUNN.screensPx.md + ' )', {
-    match: function () {
+    match () {
       const $openDrawer = $('[data-hide-at="md"]')
       if ($openDrawer.length) BUNN.closeDrawer($openDrawer)
     }
   }).register('screen and (min-width: ' + BUNN.screensPx['md-lg'] + ' )', {
-    match: function () {
+    match () {
       const $openDrawer = $('[data-hide-at="md-lg"]')
       if ($openDrawer.length) BUNN.closeDrawer($openDrawer)
     }
   }).register('screen and (min-width: ' + BUNN.screensPx.lg + ' )', {
-    match: function () {
+    match () {
       const $openDrawer = $('[data-hide-at="lg"]')
       if ($openDrawer.length) BUNN.closeDrawer($openDrawer)
     }

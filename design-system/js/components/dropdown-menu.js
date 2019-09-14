@@ -1,6 +1,6 @@
 ;
 
-(function (window, $, undefined) {
+(function (BUNN, $, undefined) {
   var $navItemTrigger = $('.js-dropdown-menu-trigger');
   var $navMenuItems = $('.js-dropdown-menu-item');
   var $navMenuItemsContent = $('.js-dropdown-menu-content');
@@ -19,7 +19,7 @@
     } else {
       $menu.fadeIn('fast');
     }
-  }; //Trigger on click
+  }; // Trigger on click
 
 
   $navItemTrigger.on('click', function (e) {
@@ -51,7 +51,7 @@
     }
   });
   $(document).on('mousedown', function (e) {
-    var $activeDropdown = $('.js-dropdown-menu-item.open');
+    var $activeDropdown = $('.js-dropdown-menu-item.active');
 
     if ($activeDropdown.length && !$(e.target).closest('.js-dropdown-menu-item').length && !$(e.target).closest('.js-drawer').length) {
       var $activeMenuContent = $activeDropdown.find('.js-dropdown-menu-content');
@@ -64,4 +64,4 @@
       BUNN.closeDropdown($activeMenuContent);
     }
   });
-})(window, jQuery);
+})(window.BUNN = window.BUNN || {}, jQuery);
