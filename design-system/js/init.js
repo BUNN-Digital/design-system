@@ -32,5 +32,19 @@ function _arrayWithHoles(arr) { if (Array.isArray(arr)) return arr; }
         value = _Object$entries$_i[1];
 
     BUNN.screens[key] = parseInt(value);
-  }
+  } // Enquire breakpoints
+
+
+  BUNN.enquire = {
+    xs: 'screen and (min-width: ' + BUNN.screensPx.xs + ' )',
+    sm: 'screen and (min-width: ' + BUNN.screensPx.sm + ' )',
+    'sm-md': 'screen and (min-width: ' + BUNN.screensPx['sm-md'] + ' )',
+    md: 'screen and (min-width: ' + BUNN.screensPx.md + ' )',
+    'md-lg': 'screen and (min-width: ' + BUNN.screensPx['md-lg'] + ' )',
+    lg: 'screen and (min-width: ' + BUNN.screensPx.lg + ' )',
+    'lg-xl': 'screen and (min-width: ' + BUNN.screensPx['lg-xl'] + ' )',
+    xl: 'screen and (min-width: ' + BUNN.screensPx.xl + ' )',
+    'xl-xxl': 'screen and (min-width: ' + BUNN.screensPx['xl-xxl'] + ' )',
+    xxl: 'screen and (min-width: ' + BUNN.screensPx.xxl + ' )'
+  };
 })(window.BUNN = window.BUNN || {});

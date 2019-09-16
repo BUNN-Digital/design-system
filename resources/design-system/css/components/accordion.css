@@ -1,10 +1,6 @@
 .accordion__title {
     text-overflow: ellipsis;
     white-space: nowrap;
-
-    .open & {
-        @apply text-brand-primary border-brand-primary;
-    }
 }
 
 .accordion__content {

@@ -1844,13 +1844,6 @@ a.link--neutral:hover {
   white-space: nowrap;
 }
 
-.open .accordion__title {
-    color: #005EB8;
-    color: var(--color-brand-primary);
-    border-color: #005EB8;
-    border-color: var(--color-brand-primary);
-  }
-
 .accordion__content {
   display: none;
 }
