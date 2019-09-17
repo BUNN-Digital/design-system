@@ -3,12 +3,15 @@
 (function (BUNN, $, undefined) {
   // -- Global Methods -- //
   BUNN.openDrawer = function ($drawer) {
-    $('body').addClass('drawer-open');
     $drawer.addClass('open');
+
+    if (typeof $drawer.data('modal') !== 'undefined') {
+      BUNN.enableModal();
+    }
   };
 
   BUNN.closeDrawer = function ($drawer) {
-    $('body').removeClass('drawer-open');
+    BUNN.disableModal();
     $drawer.removeClass('open');
   }; // -- Event Handlers -- //
 
@@ -23,7 +26,7 @@
     BUNN.closeDrawer($drawer);
   });
   $(document).on('click', function (e) {
-    if ($(e.target).hasClass('js-drawers')) {
+    if ($(e.target).hasClass('js-modal-overlay')) {
       var $drawer = $('.js-drawer.open');
       BUNN.closeDrawer($drawer);
     }

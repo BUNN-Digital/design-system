@@ -2,12 +2,15 @@
   // -- Global Methods -- //
 
   BUNN.openDrawer = $drawer => {
-    $('body').addClass('drawer-open')
     $drawer.addClass('open')
+
+    if (typeof $drawer.data('modal') !== 'undefined') {
+      BUNN.enableModal()
+    }
   }
 
   BUNN.closeDrawer = $drawer => {
-    $('body').removeClass('drawer-open')
+    BUNN.disableModal()
     $drawer.removeClass('open')
   }
 
@@ -25,7 +28,7 @@
   })
 
   $(document).on('click', function (e) {
-    if ($(e.target).hasClass('js-drawers')) {
+    if ($(e.target).hasClass('js-modal-overlay')) {
       const $drawer = $('.js-drawer.open')
       BUNN.closeDrawer($drawer)
     }

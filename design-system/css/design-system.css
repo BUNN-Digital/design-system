@@ -1510,6 +1510,36 @@ a:active {
 }
   }
 
+body.modal-open {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+  background-color: rgba(0, 0, 0, 0.4);
+  opacity: 0;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  -webkit-transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
+  transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
+  pointer-events: none;
+  z-index: -1;
+}
+
+.modal-open .modal-overlay {
+    visibility: visible;
+    opacity: 1;
+    pointer-events: auto;
+    z-index: 400;
+  }
+
 *[aria-invalid*="true"] {
   border-width: 1px;
   border-color: #C5282D;
@@ -1612,7 +1642,6 @@ button:disabled {
 /* Horizontal rules */
 
 hr {
-  border-bottom-width: 1px;
   border-color: #e0e0e0;
   border-color: var(--color-gray-300);
   margin-top: 1rem;
@@ -2399,7 +2428,7 @@ a.btn {
   }
 
 .region-media__image, .category-media__image, .search-media__image {
-    z-index: 0;
+    z-index: 10;
     min-width: 100%;
     -webkit-filter: brightness(65%);
             filter: brightness(65%);
@@ -2528,32 +2557,6 @@ a.btn {
       border-color: #005EB8;
       border-color: var(--color-brand-primary);
     }
-
-body.drawer-open {
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-}
-
-.drawers {
-  pointer-events: none;
-  position: fixed;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  left: 0;
-  overflow: hidden;
-  background-color: rgba(0, 0, 0, 0.4);
-  opacity: 0;
-  pointer-events: none;
-  -webkit-transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
-  transition: opacity 0.3s cubic-bezier(0, 0, 0.3, 1);
-}
-
-.drawer-open .drawers {
-    pointer-events: auto;
-    opacity: 1;
-  }
 
 .drawer {
   position: fixed;
@@ -17305,8 +17308,12 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: #3DC04D; backgr
   z-index: auto;
 }
 
-.z-page {
+.z-zero {
   z-index: 0;
+}
+
+.z-page {
+  z-index: 10;
 }
 
 .z-shell {
@@ -29875,8 +29882,12 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: #3DC04D; backgr
     z-index: auto;
   }
 
-  .xs\:z-page {
+  .xs\:z-zero {
     z-index: 0;
+  }
+
+  .xs\:z-page {
+    z-index: 10;
   }
 
   .xs\:z-shell {
@@ -42435,8 +42446,12 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: #3DC04D; backgr
     z-index: auto;
   }
 
-  .sm\:z-page {
+  .sm\:z-zero {
     z-index: 0;
+  }
+
+  .sm\:z-page {
+    z-index: 10;
   }
 
   .sm\:z-shell {
@@ -54995,8 +55010,12 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: #3DC04D; backgr
     z-index: auto;
   }
 
-  .sm-md\:z-page {
+  .sm-md\:z-zero {
     z-index: 0;
+  }
+
+  .sm-md\:z-page {
+    z-index: 10;
   }
 
   .sm-md\:z-shell {
@@ -67555,8 +67574,12 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: #3DC04D; backgr
     z-index: auto;
   }
 
-  .md\:z-page {
+  .md\:z-zero {
     z-index: 0;
+  }
+
+  .md\:z-page {
+    z-index: 10;
   }
 
   .md\:z-shell {
@@ -80115,8 +80138,12 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: #3DC04D; backgr
     z-index: auto;
   }
 
-  .md-lg\:z-page {
+  .md-lg\:z-zero {
     z-index: 0;
+  }
+
+  .md-lg\:z-page {
+    z-index: 10;
   }
 
   .md-lg\:z-shell {
@@ -92675,8 +92702,12 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: #3DC04D; backgr
     z-index: auto;
   }
 
-  .lg\:z-page {
+  .lg\:z-zero {
     z-index: 0;
+  }
+
+  .lg\:z-page {
+    z-index: 10;
   }
 
   .lg\:z-shell {
@@ -105235,8 +105266,12 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: #3DC04D; backgr
     z-index: auto;
   }
 
-  .lg-xl\:z-page {
+  .lg-xl\:z-zero {
     z-index: 0;
+  }
+
+  .lg-xl\:z-page {
+    z-index: 10;
   }
 
   .lg-xl\:z-shell {
@@ -117795,8 +117830,12 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: #3DC04D; backgr
     z-index: auto;
   }
 
-  .xl\:z-page {
+  .xl\:z-zero {
     z-index: 0;
+  }
+
+  .xl\:z-page {
+    z-index: 10;
   }
 
   .xl\:z-shell {
@@ -130355,8 +130394,12 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: #3DC04D; backgr
     z-index: auto;
   }
 
-  .xl-xxl\:z-page {
+  .xl-xxl\:z-zero {
     z-index: 0;
+  }
+
+  .xl-xxl\:z-page {
+    z-index: 10;
   }
 
   .xl-xxl\:z-shell {
@@ -142915,8 +142958,12 @@ meter.pw-strength[value="4"]::-moz-meter-bar { background-color: #3DC04D; backgr
     z-index: auto;
   }
 
-  .xxl\:z-page {
+  .xxl\:z-zero {
     z-index: 0;
+  }
+
+  .xxl\:z-page {
+    z-index: 10;
   }
 
   .xxl\:z-shell {

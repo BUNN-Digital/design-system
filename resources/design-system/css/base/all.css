@@ -2,6 +2,7 @@
 @import "interactions";
 @import "keyframes";
 @import "layout";
+@import "modal";
 @import "rules";
 @import "standard";
 @import "typography";

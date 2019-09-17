@@ -287,7 +287,8 @@ module.exports = {
     zIndex: {
       negative: -1,
       auto: 'auto',
-      page: 0,
+      zero: 0,
+      page: 10,
       shell: 100,
       menu: 200,
       floating: 300,
