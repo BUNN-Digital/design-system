@@ -23,7 +23,6 @@
 		"cross-env": "^5.2.1",
 		"cssnano": "^4.1.10",
 		"del": "^4.1.1",
-		"enquire.js": "^2.1.6",
 		"gulp": "^4.0.2",
 		"gulp-cached": "^1.1.1",
 		"gulp-changed": "^3.2.0",
@@ -38,8 +37,6 @@
 		"gulp-sourcemaps": "^2.6.5",
 		"gulp-uglify": "^3.0.1",
 		"html-minifier": "^3.5.21",
-		"magnific-popup": "^1.1.0",
-		"owl.carousel": "^2.3.4",
 		"postcss-custom-properties": "^8.0.11",
 		"postcss-import": "^12.0.1",
 		"postcss-nested": "^4.1.2",
@@ -49,8 +46,11 @@
 		"vinyl-source-stream": "^2.0.0"
 	},
 	"dependencies": {
-		"@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
+    "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
 		"core-js": "^3.3.2",
+    "enquire.js": "^2.1.6",
+    "magnific-popup": "^1.1.0",
+    "owl.carousel": "^2.3.4",
 		"postcss-preset-env": "^6.7.0",
 		"tar": "^4.4.13"
 	},
