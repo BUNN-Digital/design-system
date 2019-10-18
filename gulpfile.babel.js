@@ -27,7 +27,9 @@ const paths = {
   },
 
   vendorLibs: [
-    './node_modules/owl.carousel/dist/owl.carousel.js'
+    './node_modules/owl.carousel/dist/owl.carousel.js',
+    './node_modules/magnific-popup/dist/jquery.magnific-popup.js',
+    './node_modules/enquire.js/dist/enquire.js'
   ]
 }
 
