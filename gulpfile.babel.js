@@ -1,23 +1,19 @@
-/**
- * Required Packages
- */
 import gulp from 'gulp'
+import babelify from 'babelify'
+import browserify from 'browserify'
+import source from 'vinyl-source-stream'
+import buffer from 'vinyl-buffer'
 import childProcess from 'child_process'
 import postcss from 'gulp-postcss'
 import rename from 'gulp-rename'
 import cleanCSS from 'gulp-clean-css'
-import notify from 'gulp-notify'
-import babel from 'gulp-babel'
 import concat from 'gulp-concat'
 import uglify from 'gulp-uglify'
 import plumber from 'gulp-plumber'
-import purgecss from '@fullhuman/postcss-purgecss'
-// import del from 'del';
-// const run = require('gulp-run-command').default;
+import notify from 'gulp-notify'
+import debug from 'gulp-debug'
 
-/**
- * Resources paths
- */
+/* === CONFIG === */
 const paths = {
 
   designSystem: {
@@ -30,16 +26,15 @@ const paths = {
     dest: 'docs/'
   },
 
-  vendorScripts: [
+  vendorLibs: [
     './node_modules/owl.carousel/dist/owl.carousel.js'
   ]
-
 }
 
 /**
  * Errors function
  */
-const onError = function (err) {
+const onError = (err) => {
   notify.onError({
     title: 'Gulp Error - Compile Failed',
     message: 'Error: <%= error.message %>'
@@ -48,132 +43,80 @@ const onError = function (err) {
   this.emit('end')
 }
 
-class TailwindExtractor {
-  static extract (content) {
-    return content.match(/[A-z0-9-:\/]+/g) || []
-  }
-}
+/* === DESIGN SYSTEM CSS === */
 
-/**
- * Compile Design System CSS
- */
-const compileDesignSystemCss = () => {
+export const compileDesignSystemCss = () => {
   return gulp.src(paths.designSystem.src + 'css/*.css')
-    .pipe(plumber({ errorHandler: onError }))
     .pipe(postcss())
     .pipe(gulp.dest(paths.designSystem.dest + 'css/'))
     .pipe(cleanCSS())
-    .pipe(rename({
-      suffix: '.min'
-    }))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(paths.designSystem.dest + 'css/'))
-    .pipe(notify({
-      message: 'Compiled design system CSS'
-    }))
 }
 
-/**
- * Compile Docs CSS
- */
-const compileDocsCss = () => {
+/* === DOCS CSS === */
+
+export const compileDocsCss = () => {
   return gulp.src([
     paths.docs.src + 'css/docs.css',
     paths.docs.src + 'css/fonts.css'
   ])
-    .pipe(plumber({ errorHandler: onError }))
     .pipe(postcss())
     .pipe(gulp.dest(paths.docs.dest + 'css/'))
-    .pipe(notify({
-      message: 'Compiled docs CSS'
-    }))
 }
 
-/**
- * Compile Vendor JS
- */
-const compileVendorJs = () => {
-  return gulp.src(paths.vendorScripts)
-    .pipe(plumber({ errorHandler: onError }))
-    .pipe(concat('vendor.js'))
+/* === VENDOR LIBS === */
+export const compileVendorJs = () => {
+  return gulp.src(paths.vendorLibs)
+    .pipe(concat('libs.js'))
     .pipe(gulp.dest(paths.designSystem.dest + 'js/'))
     .pipe(uglify())
-    .pipe(rename({
-      suffix: '.min'
-    }))
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(paths.designSystem.dest + 'js/'))
-    .pipe(notify({
-      message: 'Compiled vendor JS'
-    }))
 }
 
-/**
- * Compile Design System Components Scripts
- */
-const compileDesignSystemComponentsJs = () => {
-  return gulp.src(paths.designSystem.src + 'js/components/*.js')
-    .pipe(plumber({ errorHandler: onError }))
-  // .pipe(cached('designSystemComponents'))
-    .pipe(babel({
-      sourceType: 'script'
-    }))
-    .pipe(gulp.dest(paths.designSystem.dest + 'js/components/'))
-    .pipe(concat('components_all.js'))
+/* === DESIGN SYSTEM JS === */
+
+export const compileDesignSystemJs = () => {
+  return browserify({
+    entries: paths.designSystem.src + 'js/bunn-design-system.js',
+    debug: true
+  })
+    .transform(babelify)
+    .bundle()
+    .pipe(source('bunn-design-system.js'))
+    .pipe(buffer())
     .pipe(gulp.dest(paths.designSystem.dest + 'js/'))
-    .pipe(rename({
-      suffix: '.min'
-    }))
     .pipe(uglify())
+    .pipe(rename({ suffix: '.min' }))
     .pipe(gulp.dest(paths.designSystem.dest + 'js/'))
-    .pipe(notify({
-      message: 'Compiled design system components JS'
-    }))
 }
 
-/**
- * Compile Design System Scripts
- */
-const compileDesignSystemGlobalJs = () => {
-  return gulp.src(paths.designSystem.src + 'js/*.js')
-    .pipe(plumber({ errorHandler: onError }))
-  // .pipe(cached('designSystemGlobalJs'))
-    .pipe(babel({
-      sourceType: 'script'
-    }))
-    .pipe(gulp.dest(paths.designSystem.dest + 'js/'))
-    .pipe(notify({
-      message: 'Compiled design system global JS'
-    }))
-}
+/* === DOCS JS === */
 
-/**
- * Compile Docs Scripts
- */
-const compileDocsJs = () => {
-  return gulp.src(paths.docs.src + 'js/**/*.js')
-    .pipe(plumber({ errorHandler: onError }))
-    .pipe(babel({
-      sourceType: 'script'
-    }))
-    .pipe(concat('docs.js'))
+export const compileDocsJs = () => {
+  return browserify({
+    entries: paths.docs.src + 'js/docs.js',
+    debug: true
+  })
+    .transform(babelify)
+    .bundle()
+    .pipe(source('docs.js'))
+    .pipe(buffer())
     .pipe(gulp.dest(paths.docs.dest + 'js/'))
-    .pipe(notify({
-      message: 'Compiled Docs JS'
-    }))
 }
+
+/* === WATCH === */
 
 const watch = (done) => {
-  gulp.watch('./tailwind.config.js', compileDesignSystemCss)
-
   gulp.watch(paths.designSystem.src + 'css/**/*.css', compileDesignSystemCss)
-
   gulp.watch(paths.docs.src + 'css/**/*.css', compileDocsCss)
-
-  gulp.watch(paths.designSystem.src + 'js/**/*.js', compileJs)
-
+  gulp.watch(paths.designSystem.src + 'js/**/*.js', compileDesignSystemJs)
   gulp.watch(paths.docs.src + 'js/**/*.js', compileDocsJs)
-
   done()
 }
+
+/* === ELEVENTY === */
 
 const eleventy = () => {
   const command = 'eleventy --config=eleventy.config.js --serve'
@@ -184,21 +127,9 @@ const eleventy = () => {
   })
 }
 
-const compileJs = gulp.parallel(compileVendorJs, compileDesignSystemComponentsJs, compileDesignSystemGlobalJs, compileDocsJs)
+/* === TASKS === */
 
-const compileCss = gulp.parallel(compileDesignSystemCss, compileDocsCss)
-
-const compileAssets = gulp.parallel(compileCss, compileJs)
-
-export {
-  compileDesignSystemCss,
-  compileDocsCss,
-  compileJs,
-  compileCss,
-  compileAssets
-}
-
-export const build = gulp.parallel(compileCss, compileJs)
+export const build = gulp.parallel(compileDesignSystemJs, compileDocsJs, compileDesignSystemCss, compileDocsCss)
 export const dev = gulp.series(build, watch, eleventy)
 
 export default build
