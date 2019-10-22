@@ -37,8 +37,42 @@
             "swatch": ""
         },
         {
+            "name": ".gourmet brand-secondary",
+            "hex": "#A4552D",
+            "swatch": ""
+        }
+    ],
+    "gourmetTints": [
+        {
             "name": ".gourmet brand-primary-light-1",
             "hex": "#8e7c63",
+            "swatch": "brand-primary-light-1"
+        },
+        {
+            "name": ".gourmet brand-primary-light-2",
+            "hex": "#DBC9AD",
+            "swatch": "brand-primary-light-2"
+        },
+        {
+            "name": ".gourmet brand-primary-light-3",
+            "hex": "#EFE4D2",
+            "swatch": "brand-primary-light-3"
+        },
+        {
+            "name": ".gourmet brand-primary-light-4",
+            "hex": "#FFFAF2",
+            "swatch": "brand-primary-light-4"
+        }
+    ],
+    "gourmetShades": [
+        {
+            "name": ".gourmet brand-primary-dark-1",
+            "hex": "#64543A",
+            "swatch": ""
+        },
+        {
+            "name": ".gourmet brand-primary-dark-2",
+            "hex": "#4A3826",
             "swatch": ""
         }
     ],
