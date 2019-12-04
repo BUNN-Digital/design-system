@@ -1,12 +1,8 @@
-/* purgecss start ignore */
 @import "color";
-/* purgecss end ignore */
 @import "interactions";
 @import "keyframes";
 @import "layout";
 @import "modal";
 @import "rules";
 @import "standard";
-/* purgecss start ignore */
 @import "typography";
-/* purgecss end ignore */
