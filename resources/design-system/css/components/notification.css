@@ -1,5 +1,5 @@
 .notification-bar {
-    @apply fixed top-0 left-0 right-0 flex flex-col-reverse items-center mx-4 z-floating;
+    @apply fixed top-0 left-0 right-0 flex flex-col-reverse items-center mx-4 z-modal;
 
     @screen lg {
        @apply items-end;
