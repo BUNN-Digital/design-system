@@ -1,2 +1,2 @@
-@import "notifications";
-@import "field-validation";
+@import "./notifications";
+@import "./field-validation";
