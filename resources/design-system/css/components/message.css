@@ -5,12 +5,16 @@
     @apply rounded bg-gray-200 text-base;
 
     &__icon {
-        min-width: 60px;
+        min-width: 44px;
         text-align: center;
         display: flex;
         justify-content: center;
         align-items: center;
         @apply bg-gray-200 text-white rounded-l;
+
+        @screen md {
+			min-width: 60px;
+		}
 
         &:before {
             font-family: "Font Awesome 5 Pro";
@@ -20,11 +24,20 @@
 
     &__body {
         flex-grow: 1;
-        @apply p-6 rounded-r;
+        @apply p-4 rounded-r;
+
+        @screen md {
+		    @apply p-6;
+        }
     }
 
     p {
         margin: 0;
+        @apply text-sm-1;
+
+        @screen md {
+		    @apply text-base;
+        }
 
         + p {
             @apply mt-4;
