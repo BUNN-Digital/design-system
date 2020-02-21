@@ -1,6 +1,6 @@
 {
 	"name": "bunn-design-system",
-	"version": "0.8.70",
+	"version": "0.8.71",
 	"description": "BUNN Design System",
 	"scripts": {
 		"dev": "cross-env ELEVENTY_ENV=development rm -rf dist && gulp dev",
