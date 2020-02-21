@@ -49,7 +49,8 @@ a.btn {
         &.disabled:hover {
             opacity: 0.85;
             cursor: not-allowed !important;
-            @apply bg-brand-primary;
+            text-shadow: 1px 1px 0 rgba(0,70,137, .5);
+            @apply bg-brand-primary text-white-rgba-70;
         }
     }
 
@@ -73,6 +74,7 @@ a.btn {
         /* Disabled */
         &.disabled {
             cursor: not-allowed !important;
+            text-shadow: 1px 1px 0 rgba(205,205,205, .3);
             @apply text-gray-400 bg-white border-gray-400;
         }
     }
