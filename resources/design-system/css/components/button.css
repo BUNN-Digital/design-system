@@ -75,7 +75,7 @@ a.btn {
         &.disabled, 
         &[disabled] {
             cursor: not-allowed !important;
-            @apply text-gray-400 bg-white border-gray-400 shadow-inner;
+            @apply bg-white border-brand-primary-light-2 text-brand-primary-light-2;
         }
     }
 
