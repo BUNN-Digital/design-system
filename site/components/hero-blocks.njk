@@ -1,0 +1,89 @@
+---
+layout: page
+meta_title: Hero Blocks
+meta_description: Hero Blocks
+title: Hero Blocks
+section: Components
+tag: components
+---
+
+<h2 class="section-heading">Stacked Hero Blocks with Column Reverse</h2>
+
+
+<div class="hero-block__container">
+
+  <div class="hero-block hero-block--reverse">
+    <div class="hero-block__image-container">
+      <img class="hero-block__image" src="https://images.unsplash.com/photo-1593369196682-6d8ec9ff3ae0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=640&h=600&q=80" alt="Unsplash" />
+    </div>
+    <div class="hero-block__content-wrapper">
+      <div class="hero-block__content">
+        <div class="hero-block__title">BUNN Home Products</div>
+        <div class="hero-block__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id convallis lorem. Aliquam ac congue ipsum, sed auctor metus. Quisque ut elit vel sem dapibus consectetur non sed eros.</div>
+        <div class="hero-block__cta-group">
+          <a class="btn btn--primary btn--small">Shop Online</a>
+          <a class="btn btn--primary btn--small">Get Help</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="hero-block">
+    <div class="hero-block__image-container">
+      <img class="hero-block__image" src="https://source.unsplash.com/640x600/?coffee" alt="Unsplash" />
+    </div>
+    <div class="hero-block__content-wrapper">
+      <div class="hero-block__content">
+        <div class="hero-block__title">BUNN Commercial</div>
+        <div class="hero-block__description">Fusce ultrices venenatis ultrices. Sed semper tristique massa, et congue ante commodo a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </div>
+        <div class="hero-block__cta-group">
+          <a class="btn btn--primary btn--small">Equipment</a>
+          <a class="btn btn--primary btn--small">Service</a>
+          <a class="btn btn--primary btn--small">Digital Solutions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+{% highlight "html" %}
+<div class="hero-block__container">
+  <!-- block 1 (on top Mobile) -->
+  <div class="hero-block hero-block--reverse">
+    <div class="hero-block__image-container">
+      <img class="hero-block__image" src="https://images.unsplash.com/photo-1593369196682-6d8ec9ff3ae0?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=640&h=600&q=80" alt="Unsplash" />
+    </div>
+    <div class="hero-block__content-wrapper">
+      <div class="hero-block__content">
+        <div class="hero-block__title">BUNN Home Products</div>
+        <div class="hero-block__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Curabitur id convallis lorem. Aliquam ac congue ipsum, sed auctor metus. Quisque ut elit vel sem dapibus consectetur non sed eros.</div>
+        <div class="hero-block__cta-group">
+          <a class="btn btn--primary btn--small">Shop Online</a>
+          <a class="btn btn--primary btn--small">Get Help</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end: block 1 -->
+
+  <!-- block 2 (on top Desktop) -->
+  <div class="hero-block">
+    <div class="hero-block__image-container">
+      <img class="hero-block__image" src="https://source.unsplash.com/640x600/?coffee" alt="Unsplash" />
+    </div>
+    <div class="hero-block__content-wrapper">
+      <div class="hero-block__content">
+        <div class="hero-block__title">BUNN Commercial</div>
+        <div class="hero-block__description">Fusce ultrices venenatis ultrices. Sed semper tristique massa, et congue ante commodo a. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. </div>
+        <div class="hero-block__cta-group">
+          <a class="btn btn--primary btn--small">Equipment</a>
+          <a class="btn btn--primary btn--small">Service</a>
+          <a class="btn btn--primary btn--small">Digital Solutions</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- end: block 2 -->
+</div>
+{% endhighlight %}
