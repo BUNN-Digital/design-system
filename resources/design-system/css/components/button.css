@@ -82,6 +82,16 @@ a.btn {
         }
     }
 
+    &--text {
+        background: transparent;
+        @apply border-transparent text-brand-primary;
+
+        &:hover {
+            background: transparent;
+            @apply border-brand-primary;
+        }
+    }
+
     &--stroke {
         @apply bg-transparent border border-gray-300 text-brand-primary;
 
