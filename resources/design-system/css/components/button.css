@@ -100,6 +100,55 @@ a.btn {
         }
     }
 
+    &--inverted {
+    
+        &.btn--primary {
+            @apply bg-white border-white text-brand-primary;
+
+            &:hover {
+                @apply bg-gray-100 border-gray-100 text-brand-primary;
+            }
+
+            &.disabled,
+            &.disabled:hover,
+            &[disabled],
+            &[disabled]:hover {
+                opacity: 0.85;
+                cursor: not-allowed !important;
+                @apply bg-white shadow-inner;
+            }
+        }
+
+        &.btn--outline {
+            background: transparent;
+            @apply border-white text-white;
+    
+            &:hover {
+                background: transparent;
+                @apply bg-white text-brand-primary border-white;
+            }
+
+            /* Disabled */
+            &.disabled, 
+            &.disabled:hover,
+            &[disabled],
+            &[disabled]:hover {
+                cursor: not-allowed !important;
+                background: transparent;
+                opacity: 0.65;
+                @apply border-white text-white;
+            }
+        }
+
+        &.btn--text {
+            @apply text-white;
+
+            &:hover {
+                @apply border-white;
+            }
+        }
+    }
+
     /* Loading */
     .btn__spinner {
         display: none;
@@ -126,7 +175,6 @@ a.btn {
             justify-content: center;
         }
     }
-
 
     /* Buttons appearing to be links (keeps padding) */
     &--link {
