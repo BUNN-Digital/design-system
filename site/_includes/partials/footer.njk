@@ -1,8 +1,11 @@
 <div class="h-12 fixed inset-x-0 bottom-0 z-page bg-black">
 	<footer class="py-4 px-6 text-white">
 		<div class="flex justify-between text-sm-1">
-			<div>&copy; Copyright BUNN 2018-2019</div>
+			<div>&copy; Copyright BUNN 2018-<span id="current_year"></span></div>
 			<div>version {{ pkg.version }}</div>
 		</div>
 	</footer>
 </div>
+<script>
+	document.getElementById("current_year").innerHTML = new Date().getFullYear();
+</script>
