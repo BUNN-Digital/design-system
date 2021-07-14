@@ -47,7 +47,8 @@ a.btn {
         /* Disabled */
         &.disabled,
         &.disabled:hover,
-        &[disabled] {
+        &[disabled],
+        &[disabled]:hover {
             opacity: 0.85;
             cursor: not-allowed !important;
             @apply bg-brand-primary shadow-inner;
@@ -72,8 +73,10 @@ a.btn {
         }
 
         /* Disabled */
-        &.disabled, 
-        &[disabled] {
+        &.disabled,
+        &.disabled:hover 
+        &[disabled],
+        &[disabled]:hover {
             cursor: not-allowed !important;
             @apply bg-white border-brand-primary-light-2 text-brand-primary-light-2;
         }
