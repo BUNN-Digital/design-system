@@ -32,3 +32,8 @@
 .mfp-wrap {
     @apply z-modal;
 }
+
+button.mfp-close,
+button.mfp-arrow {
+    outline: initial;
+}
