@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 43.96 43.98">
+	<defs>
+<mask id="a" x="0" y="0" width="231.91" height="43.98" maskUnits="userSpaceOnUse">
+<polygon points="0.02 43.98 231.91 43.98 231.91 0 0.02 0 0.02 43.98" fill="#fff"></polygon>
+</mask>
+<mask id="b" x="0.02" y="0" width="231.89" height="43.98" maskUnits="userSpaceOnUse">
+<polygon points="0.02 43.98 231.91 43.98 231.91 0 0.02 0 0.02 43.98" fill="#fff"></polygon>
+</mask>
+</defs>
+<title>BUNN® Logo Mark - for light backgrounds</title>
+<g mask="url(#a)">
+<path d="M37.58,37.29c7.88-7.56,8.93-22.72.49-30.6a.69.69,0,0,0-1,0C24.8,21.28,25.31,21.07,24.8,21.52a3.61,3.61,0,0,1-5.07,0c-1.27-1.33-13-14.82-13-14.82a.71.71,0,0,0-1,0c-7.29,6.76-8.16,22,.5,30.61S27.93,46.54,37.58,37.29Z" fill="#0b0c0a"></path>
+</g>
+<g mask="url(#b)">
+<path d="M20.19,17.5c-.53-.57-10.9-12.13-10.9-12.13a.85.85,0,0,1,0-1.2,15.4,15.4,0,0,1,4.62-2.62c5-1.62,8.91-2,12.81-1,4.88,1.24,7.18,3.06,7.8,3.63a.83.83,0,0,1,0,1.2S24.79,17,24.3,17.5a3.22,3.22,0,0,1-4.11,0" fill="#265495"></path>
+</g>
+</svg>
