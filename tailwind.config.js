@@ -281,7 +281,7 @@ module.exports = {
     },
 
     borderColor: theme => {
-      return global.Object.assign({ default: theme('colors.gray.300', 'currentColor') }, theme('colors'))
+      return global.Object.assign({ DEFAULT: theme('colors.gray.300', 'currentColor') }, theme('colors'))
     },
 
     zIndex: {
