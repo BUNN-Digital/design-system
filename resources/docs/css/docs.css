@@ -12,10 +12,10 @@
 p code,
 ul code,
 ol code {
-  display: inline-block;
-  padding: 2px 4px;
-  border-radius: 3px;
-  background: #f0f0f0;
-  color: #ea4079;
-  font-family: monospace;
+    display: inline-block;
+    padding: 2px 4px;
+    border-radius: 3px;
+    background: #f0f0f0;
+    color: #ea4079;
+    font-family: monospace;
 }
