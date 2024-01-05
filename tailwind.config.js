@@ -14,7 +14,14 @@ View the full documentation at https://tailwindcss.com.
 */
 
 module.exports = {
-
+  // content: {
+  // './site/**/*.{njk,js}',
+  // './components/**/*.{html,js}',
+  // },
+  content: [
+    './site/**/*.{njk,js}',
+    // './components/**/*.{html,js}',
+  ],
   theme: {
 
     colors: {
@@ -412,6 +419,7 @@ module.exports = {
           return `.group.active .group-active${e(`${separator}${className}`)}`
         })
       })
-    }
+    },
+    require("tailwindcss/nesting")
   ]
 }

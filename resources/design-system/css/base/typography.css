@@ -6,14 +6,14 @@
 .heading-alpha,
 .cms-content h1,
 .cms-content .heading-alpha {
-    @apply mb-4;
-    @apply text-lg-3;
+    @apply mb-4 lg:mb-6;
+    @apply text-lg-3 lg:text-lg-5 lg:font-sans-light;
     line-height: 2.5rem;
 
     @screen lg {
-        @apply text-lg-5;
-        @apply mb-6;
-        @apply font-sans-light;
+        /* @apply text-lg-5; */
+        /* @apply mb-6; */
+        /* @apply font-sans-light; */
         line-height: 4.25rem;
     }
 }
@@ -21,14 +21,14 @@
 .heading-beta,
 .cms-content h2,
 .cms-content .heading-beta {
-    @apply mb-4;
-    @apply text-lg-2;
+    @apply mb-4 lg:mt-12;
+    @apply text-lg-2 lg:text-lg-4 lg:font-sans-light;
     line-height: 2.125rem;
 
     @screen lg {
-        @apply mt-12;
-        @apply text-lg-4;
-        @apply font-sans-light;
+        /* @apply mt-12; */
+        /* @apply text-lg-4; */
+        /* @apply font-sans-light; */
         line-height: 3.5rem;
     }
 }
@@ -36,14 +36,14 @@
 .heading-gamma,
 .cms-content h3,
 .cms-content .heading-gamma {
-    @apply mb-4;
-    @apply text-lg-1;
+    @apply mb-4 lg:mt-10;
+    @apply text-lg-1 lg:text-lg-3;
     @apply font-sans-medium;
     line-height: 1.75rem;
 
     @screen lg {
-        @apply text-lg-3;
-        @apply mt-10;
+        /* @apply text-lg-3; */
+        /* @apply mt-10; */
         line-height: 2.5rem;
     }
 }
@@ -51,14 +51,14 @@
 .heading-delta,
 .cms-content h4,
 .cms-content .heading-delta {
-    @apply mb-4;
-    @apply text-body;
+    @apply mb-4 lg:mt-8;
+    @apply text-body lg:text-lg-2;
     @apply font-sans-medium;
     line-height: 1.5rem;
 
     @screen lg {
-        @apply text-lg-2;
-        @apply mt-8;
+        /* @apply text-lg-2; */
+        /* @apply mt-8; */
         line-height: 2.125rem;
     }
 }
@@ -66,15 +66,15 @@
 .heading-epsilon,
 .cms-content h5,
 .cms-content .heading-epsilon {
-    @apply mb-1;
-    @apply text-base;
+    @apply mb-1 lg:mb-2 lg:mt-8;
+    @apply text-base lg:text-body;
     @apply font-sans-demi;
     line-height: 1.5rem;
 
     @screen lg {
-        @apply mb-2;
-        @apply mt-8;
-        @apply text-body;
+        /* @apply mb-2; */
+        /* @apply mt-8; */
+        /* @apply text-body; */
         line-height: 1.5rem;
     }
 }
@@ -82,14 +82,14 @@
 .heading-zeta,
 .cms-content h6,
 .cms-content .heading-zeta {
-    @apply mb-1;
-    @apply text-sm-1;
+    @apply mb-1 lg:mb-2 lg:mt-6;
+    @apply text-sm-1 lg:text-base;
     @apply font-sans-demi;
 
     @screen lg {
-        @apply mb-2;
-        @apply mt-6;
-        @apply text-base;
+        /* @apply mb-2; */
+        /* @apply mt-6; */
+        /* @apply text-base; */
     }
 }
 
@@ -124,11 +124,11 @@ ol {
 
 .lede,
 p.lede {
-    @apply text-body mb-6;
+    @apply text-body lg:text-lg-1 mb-6 lg:mb-8;
     line-height: 1.75rem;
 
     @screen lg {
-        @apply text-lg-1 mb-8;
+        /* @apply text-lg-1 mb-8; */
         line-height: 2rem;
     }
 }

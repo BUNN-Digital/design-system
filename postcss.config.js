@@ -5,9 +5,30 @@ const postcssPresetEnv = require('postcss-preset-env')
 
 module.exports = {
   plugins: [
-    postcssImport(),
-    tailwindcss(),
     postcssNested(),
-    postcssPresetEnv({ stage: 3 })
+    postcssImport(),
+    // postcssPresetEnv({ stage: 3 }),
+    tailwindcss(),
   ]
 }
+
+// module.exports = {
+//   plugins: {
+//     'postcss-import': {},
+//     'tailwindcss/nesting': 'postcss-nesting',
+//     tailwindcss: {},
+//     autoprefixer: {},
+//   }
+// }
+
+// module.exports = {
+//   plugins: {
+//     'postcss-import': {},
+//     'tailwindcss/nesting': 'postcss-nesting',
+//     tailwindcss: {},
+//     'postcss-preset-env': {
+//       stage: 3,
+//       features: { 'nesting-rules': false },
+//     },
+//   }
+// }

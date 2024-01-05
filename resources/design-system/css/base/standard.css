@@ -9,10 +9,10 @@ body {
     -moz-osx-font-smoothing: antialiased;
     font-smoothing: antialiased;
     min-width: 320px;
-    @apply bg-black text-base;
+    @apply bg-black text-base md:text-body;
 
     @screen md {
-        @apply text-body;
+        /* @apply text-body; */
     }
 }
 
@@ -20,7 +20,8 @@ form {
     @apply text-base;
 }
 
-input, select {
+input,
+select {
     line-height: 1.15;
 }
 .select-arrow {

@@ -1,11 +1,11 @@
 @import "syntax-highlighting";
 
 .section-heading {
-    @apply font-sans-medium pb-2 mt-4 border-b border-gray-200 mt-10 mb-4;
+    @apply font-sans-medium pb-2 lg:pb-4 border-b border-gray-200 mt-10 lg:mt-20 lg:mb-8 mb-4;
     line-height: 1.5rem;
 
     @screen lg {
-        @apply pb-4 mt-20 mb-8;
+        /* @apply pb-4 mt-20 mb-8; */
     }
 }
 

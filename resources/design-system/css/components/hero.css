@@ -1,54 +1,52 @@
 .hero {
+    &__banner {
+        @apply border-b-4 border-gray-300 mx-auto;
+        height: 300px;
+        background-position: center center;
+        background-size: auto 100%;
+        background-repeat: no-repeat;
+        max-width: 1906px;
 
-	&__banner {
-		@apply border-b-4 border-gray-300 mx-auto;
-		height: 300px;
-		background-position: center center;
-		background-size: auto 100%;
-		background-repeat: no-repeat;
-		max-width: 1906px;
+        @screen md {
+            height: 400px;
+        }
 
-		@screen md {
-			height: 400px;
-		}
+        @screen lg {
+            height: 600px;
+        }
 
-		@screen lg {
-			height: 600px;
-		}
+        .content-right {
+            @apply flex flex-row justify-end;
+        }
+    }
 
-		.content-right {
-			@apply flex flex-row justify-end;
-		}
+    &__banner--short {
+    }
 
-	}
+    &__body {
+        @apply flex flex-col items-start justify-center h-full px-4 sm:px-6 md:px-4 lg:px-8 text-white;
 
-	&__banner--short {
+        @screen sm {
+            /* @apply px-6; */
+        }
 
-	}
+        @screen md {
+            /* @apply px-4; */
+        }
 
-	&__body {
-		@apply flex flex-col items-start justify-center h-full px-4 text-white;
+        @screen lg {
+            /* @apply px-8; */
+        }
+    }
 
-		@screen sm {
-			@apply px-6;
-		}
+    &__branding {
+        img,
+        svg {
+            @apply block max-w-full;
+        }
+    }
 
-		@screen md {
-			@apply px-4;
-		}
-
-		@screen lg {
-			@apply px-8;
-		}
-	}
-
-	&__branding {
-		img, svg {
-			@apply block max-w-full;
-		}
-	}
-
-	&__tagline {
-		@apply  font-sans-light;
-	}
+    &__tagline {
+        @apply font-sans-light;
+    }
 }
