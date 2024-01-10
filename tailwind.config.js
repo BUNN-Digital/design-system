@@ -308,14 +308,14 @@ module.exports = {
   },
   // plugins: [],
   plugins: [
-    function ({ addVariant, e }) {
-      addVariant('group-active', ({ modifySelectors, separator }) => {
-        modifySelectors(({ className }) => {
-          return `.group.active .group-active${e(`${separator}${className}`)}`
-        })
-      })
-    },
-    require("tailwindcss/nesting")
+    // function ({ addVariant, e }) {
+    //   addVariant('group-active', ({ modifySelectors, separator }) => {
+    //     modifySelectors(({ className }) => {
+    //       return `.group.active .group-active${e(`${separator}${className}`)}`
+    //     })
+    //   })
+    // },
+    // require("tailwindcss/nesting")
   ]
 }
 
