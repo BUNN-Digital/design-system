@@ -18,30 +18,30 @@ tag: components
 		</div>
 		<div class="flex flex-col w-1/2 mb-2 ml-2">
 			<label class="w-full m-1 text-base font-sans-demi">Last name</label>
-			<input type="text" name="last-name" placeholder="Last Name" v-model="formData.lastName" class="p-3 my-1 border border-gray-100 rounded">
+			<input type="text" name="last-name" placeholder="Last Name" v-model="formData.lastName" class="p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600">
 		</div>
 	</div>
 	<!-- Email address & phone number -->
 	<div class="flex w-full">
 		<div class="flex flex-col w-1/2 mb-2 mr-2">
 			<label class="w-full m-1 text-base font-sans-demi">E-mail address</label>
-			<input type="text" name="first-name" placeholder="email@domain.com" v-model="formData.email" class="p-3 my-1 border border-gray-100 rounded">
+			<input type="text" name="first-name" placeholder="email@domain.com" v-model="formData.email" class="p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600">
 		</div>
 		<div class="flex flex-col w-1/2 mb-2 ml-2">
 			<label class="w-full m-1 text-base font-sans-demi">Phone number</label>
-			<input type="text" name="last-name" placeholder="(555) 555-5555" v-model="formData.phoneNumber" class="p-3 my-1 border border-gray-100 rounded">
+			<input type="text" name="last-name" placeholder="(555) 555-5555" v-model="formData.phoneNumber" class="p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600">
 		</div>
 	</div>
 	<!-- Mailing address lines -->
 	<div class="flex flex-col w-full">
 		<label class="flex m-1 text-base font-sans-demi">Mailing address</label>
 		<div class="flex mb-3">
-			<input type="text" name="address-line-1" placeholder="Address line 1" v-model="formData.addressBlock.addressLine1" class="w-full p-3 my-1 border border-gray-100 rounded">
+			<input type="text" name="address-line-1" placeholder="Address line 1" v-model="formData.addressBlock.addressLine1" class="w-full p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600">
 		</div>
 	</div>
 	<div class="flex flex-col w-full">
 		<div class="flex mb-2">
-			<input type="text" name="address-line-2" placeholder="Address line 2" v-model="formData.addressBlock.addressLine2" class="w-full p-3 my-1 border border-gray-100 rounded">
+			<input type="text" name="address-line-2" placeholder="Address line 2" v-model="formData.addressBlock.addressLine2" class="w-full p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600">
 		</div>
 	</div>
 	<!-- City, State, Zip inline -->
@@ -50,21 +50,21 @@ tag: components
 			<label class="w-full m-1 text-base font-sans-demi">City</label>
 			<div class="flex mb-2">
 				<input type="text" name="city" placeholder="City" v-model="formData.addressBlock.city"
-						class="w-full p-3 my-1 border border-gray-100 rounded">
+						class="w-full p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600">
 			</div>
 		</div>
 		<div class="flex flex-col w-1/3 mx-2">
 			<label class="w-full m-1 text-base font-sans-demi">State</label>
 			<div class="flex mb-2">
 				<input type="text" name="State" placeholder="State" v-model="formData.addressBlock.state"
-						class="w-full p-3 my-1 border border-gray-100 rounded">
+						class="w-full p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600">
 			</div>
 		</div>
 		<div class="flex flex-col w-1/3 ml-2">
 			<label class="w-full m-1 text-base font-sans-demi">Zip</label>
 			<div class="flex mb-2">
 				<input type="text" name="zip" placeholder="Zip" v-model="formData.addressBlock.zip"
-						class="w-full p-3 my-1 border border-gray-100 rounded">
+						class="w-full p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600">
 			</div>
 		</div>
 	</div>
@@ -73,8 +73,8 @@ tag: components
 	<div class="flex w-full">
 		<div class="flex flex-col w-full mb-2 ">
 			<label for="password" class="w-full m-1 text-base font-sans-demi">Password</label>
-			<input id="password" type="password" name="password" placeholder="Password" class="w-full p-3 my-1 border border-gray-100 rounded js-password-input"/>
-			<span class="underline cursor-pointer js-toggle-password font-sans-regular text-sm-1 hover:no-underline" >show</span>
+			<input id="password" type="password" name="password" placeholder="Password" class="w-full p-3 my-1 border border-gray-100 rounded js-password-input placeholder:text-gray-600"/>
+			<span class="underline cursor-pointer js-toggle-password font-sans-regular text-sm-1 hover:no-underline">show</span>
 		</div>
 	</div>
 
@@ -101,11 +101,11 @@ tag: components
 	<div class="flex w-full">
 		<div class="flex flex-col w-1/2 mb-2 mr-2">
 			<label class="w-full m-1 text-base font-sans-demi">First name</label>
-			<input type="text" name="first-name" placeholder="First name" v-model="formData.firstName" class="p-3 my-1 border border-gray-100 rounded">
+			<input type="text" name="first-name" placeholder="First name" v-model="formData.firstName" class="p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600">
 		</div>
 		<div class="flex flex-col w-1/2 mb-2 ml-2">
 			<label class="w-full m-1 text-base font-sans-demi">Last name</label>
-			<input type="text" name="last-name" placeholder="Last Name" v-model="formData.lastName" class="p-3 my-1 border border-gray-100 rounded">
+			<input type="text" name="last-name" placeholder="Last Name" v-model="formData.lastName" class="p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600">
 		</div>
 	</div>
 	<div class="flex">
@@ -129,31 +129,31 @@ tag: components
 	<div class="flex w-full">
 		<div class="flex flex-col w-full mb-2">
 			<label class="w-full m-1 text-base font-sans-demi">First name</label>
-			<input type="text" name="first-name" placeholder="First name" v-model="formData.firstName" class="p-3 my-1 border border-gray-100 rounded">
+			<input type="text" name="first-name" placeholder="First name" v-model="formData.firstName" class="p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600">
 		</div>
 	</div>
 	<div class="flex w-full">
 		<div class="flex flex-col w-full mb-2">
 			<label class="w-full m-1 text-base font-sans-demi">Last name</label>
-			<input type="text" name="first-name" placeholder="Last name" v-model="formData.lastName" class="p-3 my-1 border border-gray-100 rounded">
+			<input type="text" name="first-name" placeholder="Last name" v-model="formData.lastName" class="p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600">
 		</div>
 	</div>
 	<div class="flex w-full">
 		<div class="flex flex-col w-full mb-2">
 			<label class="w-full m-1 text-base font-sans-demi">E-mail address</label>
-			<input type="text" name="first-name" placeholder="email@domain.com" v-model="formData.email" class="p-3 my-1 border border-gray-100 rounded">
+			<input type="text" name="first-name" placeholder="email@domain.com" v-model="formData.email" class="p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600">
 		</div>
 	</div>
 	<div class="flex w-full">
 		<div class="flex flex-col w-full mb-2">
 			<label class="w-full m-1 text-base font-sans-demi">Phone number</label>
-			<input type="text" name="first-name" placeholder="(555) 555-5555" v-model="formData.phoneNumber" class="p-3 my-1 border border-gray-100 rounded">
+			<input type="text" name="first-name" placeholder="(555) 555-5555" v-model="formData.phoneNumber" class="p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600">
 		</div>
 	</div>
 	<div class="flex w-full">
 		<div class="flex flex-col w-full mb-2">
 			<label class="w-full m-1 text-base font-sans-demi">Message</label>
-			<textarea type="text" name="first-name" placeholder="Message" v-model="formData.message"    class="h-32 p-3 my-1 border border-gray-100 rounded"></textarea>
+			<textarea type="text" name="first-name" placeholder="Message" v-model="formData.message"    class="h-32 p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600"></textarea>
 		</div>
 	</div>
 	<!-- Button row -->
@@ -177,7 +177,7 @@ tag: components
 	<div class="flex w-full">
 		<div class="flex flex-col w-full mb-2">
 			<label class="w-full m-1 text-base font-sans-demi">First name</label>
-			<input type="text" name="first-name" placeholder="First name" v-model="formData.firstName" class="p-3 my-1 border border-gray-100 rounded">
+			<input type="text" name="first-name" placeholder="First name" v-model="formData.firstName" class="p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600">
 		</div>
 	</div>
 	<!-- Button row -->
@@ -205,7 +205,7 @@ tag: components
 			</label>
 		</div>
 		<div class="md:w-2/3">
-			<input class="w-3/4 p-3 my-1 border border-gray-100 rounded" placeholder="First name" v-model="formData.firstName" id="first-name" type="text" value="">
+			<input class="w-3/4 p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600" placeholder="First name" v-model="formData.firstName" id="first-name" type="text" value="">
 		</div>
 	</div>
 	<div class="flex items-center mb-4">
@@ -215,7 +215,7 @@ tag: components
 			</label>
 		</div>
 		<div class="md:w-2/3">
-			<input class="w-3/4 p-3 my-1 border border-gray-100 rounded" placeholder="Last name" v-model="formData.lastName" id="last-name" type="text" value="">
+			<input class="w-3/4 p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600" placeholder="Last name" v-model="formData.lastName" id="last-name" type="text" value="">
 		</div>
 	</div>
 	<div class="flex items-center mb-4">
@@ -225,7 +225,7 @@ tag: components
 			</label>
 		</div>
 		<div class="md:w-2/3">
-			<input class="w-3/4 p-3 my-1 border border-gray-100 rounded" placeholder="email@domain.com" id="email-address" v-model="formData.email" type="text" value="">
+			<input class="w-3/4 p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600" placeholder="email@domain.com" id="email-address" v-model="formData.email" type="text" value="">
 		</div>
 	</div>
 	<div class="flex items-center mb-4">
@@ -235,7 +235,7 @@ tag: components
 			</label>
 		</div>
 		<div class="md:w-2/3">
-			<input class="w-3/4 p-3 my-1 border border-gray-100 rounded" v-model="formData.phoneNumber" id="phone-number" placeholder="(555) 555-5555" type="text" value="">
+			<input class="w-3/4 p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600" v-model="formData.phoneNumber" id="phone-number" placeholder="(555) 555-5555" type="text" value="">
 		</div>
 	</div>
 	<div class="flex items-center mb-4">
@@ -245,7 +245,7 @@ tag: components
 			</label>
 		</div>
 		<div class="md:w-2/3">
-			<textarea type="text" name="message" placeholder="Message" v-model="formData.message"    class="w-3/4 h-32 p-3 my-1 border border-gray-100 rounded"></textarea>
+			<textarea type="text" name="message" placeholder="Message" v-model="formData.message" class="w-3/4 h-32 p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600"></textarea>
 		</div>
 	</div>
 	<div class="flex items-center mb-4">
@@ -271,7 +271,7 @@ tag: components
 			</label>
 		</div>
 		<div class="md:w-2/3">
-			<input class="w-3/4 p-3 my-1 border border-gray-100 rounded" placeholder="First name" v-model="formData.firstName" id="first-name" type="text" value="">
+			<input class="w-3/4 p-3 my-1 border border-gray-100 rounded placeholder:text-gray-600" placeholder="First name" v-model="formData.firstName" id="first-name" type="text" value="">
 		</div>
 	</div>
 	<div class="flex items-center mb-4">
