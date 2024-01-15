@@ -5,6 +5,7 @@ module.exports = {
       pattern: /./
     },
   ],
+  content: ["./site/**/*.{html,njk,md,js,json}"],
   theme: {
     colors: {
       transparent: 'transparent',
