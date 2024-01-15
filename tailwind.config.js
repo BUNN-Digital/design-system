@@ -1,6 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  content: ["./site/**/*.{njk,js}"],
+  safelist: [
+    {
+      pattern: /./
+    },
+  ],
   theme: {
     colors: {
       transparent: 'transparent',
@@ -308,14 +312,14 @@ module.exports = {
   },
   // plugins: [],
   plugins: [
-    // function ({ addVariant, e }) {
-    //   addVariant('group-active', ({ modifySelectors, separator }) => {
-    //     modifySelectors(({ className }) => {
-    //       return `.group.active .group-active${e(`${separator}${className}`)}`
-    //     })
-    //   })
-    // },
-    // require("tailwindcss/nesting")
+    function ({ addVariant, e }) {
+      addVariant('group-active', ({ modifySelectors, separator }) => {
+        modifySelectors(({ className }) => {
+          return `.group.active .group-active${e(`${separator}${className}`)}`
+        })
+      })
+    },
+    require("tailwindcss/nesting")
   ]
 }
 
