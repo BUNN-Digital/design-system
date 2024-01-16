@@ -1,91 +1,80 @@
 .hero-block {
-  @apply bg-gray-100 flex flex-col mb-4;
+    @apply bg-gray-100 flex flex-col lg:flex-row mb-4;
 
-  &__container {
-    @apply flex flex-col;
+    &__container {
+        @apply flex flex-col lg:flex-col-reverse;
+
+        @screen lg {
+            /* @apply flex-col-reverse; */
+        }
+    }
 
     @screen lg {
-      @apply flex-col-reverse;
-    }
-  }
-
-  @screen lg {
-    @apply flex-row;
-  }
-
-  &--reverse {
-    
-
-    @screen lg {
-      @apply flex-row-reverse;
+        /* @apply flex-row; */
     }
 
+    &--reverse {
+        @apply lg:flex-row-reverse;
+        @screen lg {
+            /* @apply flex-row-reverse; */
+        }
 
-    .hero-block__content {
-
-
-      @screen md-lg {
-        @apply pl-16 pr-12;
-      }
-      
-    }
-  }
-
-
-  &__image-container {
-      @apply flex-1;
-  }
-
-  &__image {
-    min-width:100%;
-  }
-
-  &__content-wrapper {
-    @apply flex items-center flex-1;
-  }
-
-  &__content {
-
-    @apply p-8 w-full;
-
-    @screen md {
-      @apply p-10;
+        .hero-block__content {
+            /* @screen md-lg { */
+            @apply md-lg:pl-16 md-lg:pr-12;
+            /* } */
+        }
     }
 
-    @screen md-lg {
-      @apply p-12 pr-16;
-    }
-  }
-
-  &__title {
-    @apply font-sans-regular text-lg-1 mb-2;
-
-    @screen md {
-      @apply text-lg-2;
+    &__image-container {
+        @apply flex-1;
     }
 
-    @screen md-lg {
-      @apply text-lg-3;
+    &__image {
+        min-width: 100%;
     }
 
-
-  }
-
-  &__description {
-    @apply text-sm-1 mb-6;
-
-    @screen md {
-      @apply text-base mb-8;
+    &__content-wrapper {
+        @apply flex items-center flex-1;
     }
-  }
 
-  &__cta-group {
-    @apply flex flex-col;
+    &__content {
+        @apply p-8 md:p-10 md-lg:p-12 md-lg:pr-16 w-full;
 
-    .btn {
-      @apply mb-2
+        @screen md {
+            /* @apply p-10; */
+        }
+
+        @screen md-lg {
+            /* @apply p-12 pr-16; */
+        }
     }
-  }
 
+    &__title {
+        @apply font-sans-regular text-lg-1 md:text-lg-2 md-lg:text-lg-3 mb-2;
 
+        @screen md {
+            /* @apply text-lg-2; */
+        }
+
+        @screen md-lg {
+            /* @apply text-lg-3; */
+        }
+    }
+
+    &__description {
+        @apply text-sm-1 md:text-base mb-6 md:mb-8;
+
+        @screen md {
+            /* @apply text-base mb-8; */
+        }
+    }
+
+    &__cta-group {
+        @apply flex flex-col;
+
+        .btn {
+            @apply mb-2;
+        }
+    }
 }

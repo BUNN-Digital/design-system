@@ -1,9 +1,9 @@
 .btn,
 a.btn {
-    @apply font-sans-medium text-base py-2 px-4 inline-block text-center border border-transparent bg-gray-300 text-gray-700 cursor-pointer rounded;
+    @apply font-sans-medium text-base py-2 md:py-3 px-4 md:px-8 inline-block text-center border border-transparent bg-gray-300 text-gray-700 cursor-pointer rounded;
 
     @screen md {
-        @apply py-3 px-8;
+        /* @apply py-3 px-8; */
     }
 
     &:hover {
@@ -16,10 +16,10 @@ a.btn {
     }
 
     &--large {
-        @apply py-3 px-8 rounded;
+        @apply py-3 md:py-4 px-8 md:px-10 rounded md:rounded-lg md:text-lg-1;
 
         @screen md {
-            @apply text-lg-1 py-4 px-10 rounded-lg;
+            /* @apply text-lg-1 py-4 px-10 rounded-lg; */
         }
     }
 
@@ -74,8 +74,7 @@ a.btn {
 
         /* Disabled */
         &.disabled,
-        &.disabled:hover 
-        &[disabled],
+        &.disabled:hover &[disabled],
         &[disabled]:hover {
             cursor: not-allowed !important;
             @apply bg-white border-brand-primary-light-2 text-brand-primary-light-2;
@@ -101,7 +100,6 @@ a.btn {
     }
 
     &--inverted {
-    
         &.btn--primary {
             @apply bg-white border-white text-brand-primary;
 
@@ -122,14 +120,14 @@ a.btn {
         &.btn--outline {
             background: transparent;
             @apply border-white text-white;
-    
+
             &:hover {
                 background: transparent;
                 @apply bg-white text-brand-primary border-white;
             }
 
             /* Disabled */
-            &.disabled, 
+            &.disabled,
             &.disabled:hover,
             &[disabled],
             &[disabled]:hover {

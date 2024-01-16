@@ -21,29 +21,27 @@
     }
 
     &__heading {
-        @apply text-lg-1 text-white uppercase text-center;
+        @apply text-lg-1 md:text-lg-2 lg:text-lg-3 text-white uppercase text-center;
 
         @screen md {
-            @apply text-lg-2;
+            /* @apply text-lg-2; */
         }
 
         @screen lg {
-            @apply text-lg-3;
+            /* @apply text-lg-3; */
         }
     }
 
     &__heading-cta {
-        @apply text-lg-2 text-white mb-2 relative;
+        @apply sm:text-lg-3 text-lg-2 text-white mb-2 relative;
 
         @screen sm {
-            @apply text-lg-3;
+            /* @apply text-lg-3; */
         }
     }
 }
 .category-media {
-
-    &__heading-cta{
-
+    &__heading-cta {
         &.category-1116,
         &.category-1117,
         &.category-1118,
@@ -54,7 +52,6 @@
         &.category-1126 {
             text-transform: uppercase;
         }
-        
     }
 }
 .region-media {
@@ -63,16 +60,15 @@
         height: 20rem;
     }
     &__image {
-        -webkit-animation: fadein .5s; /* Safari, Chrome and Opera > 12.1 */
-        -moz-animation: fadein .5s; /* Firefox < 16 */
-        -ms-animation: fadein .5s; /* Internet Explorer */
-        -o-animation: fadein .5s; /* Opera < 12.1 */
-        animation: fadein .5s;
+        -webkit-animation: fadein 0.5s; /* Safari, Chrome and Opera > 12.1 */
+        -moz-animation: fadein 0.5s; /* Firefox < 16 */
+        -ms-animation: fadein 0.5s; /* Internet Explorer */
+        -o-animation: fadein 0.5s; /* Opera < 12.1 */
+        animation: fadein 0.5s;
         height: 14rem;
 
         @screen lg {
             height: 20rem;
         }
-
     }
 }

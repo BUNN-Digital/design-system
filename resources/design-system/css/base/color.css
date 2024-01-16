@@ -1,13 +1,13 @@
 :root {
-    --color-brand-primary-RGB: 0,94,184;
-    --color-brand-primary-dark-1-RGB: 0,79,155;
-    --color-brand-primary-dark-2-RGB: 0,70,137;
-    
-    --color-brand-primary: #005EB8;
+    --color-brand-primary-RGB: 0, 94, 184;
+    --color-brand-primary-dark-1-RGB: 0, 79, 155;
+    --color-brand-primary-dark-2-RGB: 0, 70, 137;
+
+    --color-brand-primary: #005eb8;
     --color-brand-secondary: #000000;
-    --color-brand-primary-light-1: #2776C2;
-    --color-brand-primary-light-2: #4086C9;
-    --color-brand-primary-dark-1: #004F9B;
+    --color-brand-primary-light-1: #2776c2;
+    --color-brand-primary-light-2: #4086c9;
+    --color-brand-primary-dark-1: #004f9b;
     --color-brand-primary-dark-2: #004689;
 
     --color-gray-100: #f7f7f7;
@@ -20,27 +20,27 @@
     --color-gray-800: #222222;
     --color-gray-900: #1a1a1a;
 
-    --color-declare: #F5AA38;
-    --color-declare-light: #FDEACE;
-    --color-avert: #C5282D;
-    --color-avert-light: #F6D5D6;
-    --color-affirm: #3DC04D;
-    --color-affirm-light: #D8F3DC;
-    --color-inform: #005EB8;
-    --color-inform-light: #CCE5FF;
+    --color-declare: #f5aa38;
+    --color-declare-light: #fdeace;
+    --color-avert: #c5282d;
+    --color-avert-light: #f6d5d6;
+    --color-affirm: #3dc04d;
+    --color-affirm-light: #d8f3dc;
+    --color-inform: #005eb8;
+    --color-inform-light: #cce5ff;
 }
 
 :root.gourmet {
-    --color-brand-primary-RGB: 141,115,74;
-    --color-brand-primary-dark-1-RGB: 100,84,58;
-    --color-brand-primary-dark-2-RGB: 74,56,38;
-    --color-brand-secondary-RGB: 164,85,45;
+    --color-brand-primary-RGB: 141, 115, 74;
+    --color-brand-primary-dark-1-RGB: 100, 84, 58;
+    --color-brand-primary-dark-2-RGB: 74, 56, 38;
+    --color-brand-secondary-RGB: 164, 85, 45;
     --color-brand-primary: #8c734a;
-    --color-brand-primary-light-1: #AE9875;
-    --color-brand-primary-light-2: #DBC9AD;
-    --color-brand-primary-light-3: #EFE4D2;
-    --color-brand-primary-light-4: #FFFAF2;
-    --color-brand-primary-dark-1: #64543A;
-    --color-brand-primary-dark-2: #4A3826;
-    --color-brand-secondary: #A4552D;
+    --color-brand-primary-light-1: #ae9875;
+    --color-brand-primary-light-2: #dbc9ad;
+    --color-brand-primary-light-3: #efe4d2;
+    --color-brand-primary-light-4: #fffaf2;
+    --color-brand-primary-dark-1: #64543a;
+    --color-brand-primary-dark-2: #4a3826;
+    --color-brand-secondary: #a4552d;
 }

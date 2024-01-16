@@ -1,6 +1,6 @@
 {
   "name": "bunn-design-system",
-  "version": "1.0.0",
+  "version": "0.8.79",
   "description": "BUNN Design System",
   "scripts": {
     "dev": "cross-env ELEVENTY_ENV=development rm -rf dist && gulp dev",
@@ -13,11 +13,10 @@
   "author": "BUNN Digital",
   "license": "MIT",
   "devDependencies": {
-    "@11ty/eleventy": "^2.0.1",
+    "@11ty/eleventy": "^0.8.3",
     "@babel/core": "^7.6.4",
     "@babel/preset-env": "^7.6.3",
     "@babel/register": "^7.6.2",
-    "autoprefixer": "^10.4.16",
     "babelify": "^10.0.0",
     "browserify": "^16.5.0",
     "cross-env": "^5.2.1",
@@ -31,7 +30,7 @@
     "gulp-debug": "^4.0.0",
     "gulp-notify": "^3.2.0",
     "gulp-plumber": "^1.2.0",
-    "gulp-postcss": "^9.0.1",
+    "gulp-postcss": "^8.0.0",
     "gulp-rename": "^1.2.3",
     "gulp-run-command": "^0.0.9",
     "gulp-sourcemaps": "^2.6.5",
@@ -39,19 +38,23 @@
     "html-minifier": "^3.5.21",
     "postcss": "^8.4.33",
     "postcss-custom-properties": "^8.0.11",
-    "postcss-import": "^16.0.0",
-    "postcss-preset-env": "^9.3.0",
+    "postcss-import": "^12.0.1",
+    "postcss-nested": "^6.0.1",
+    "postcss-nesting": "^12.0.2",
     "standard": "^14.3.1",
-    "tailwindcss": "^3.4.1",
     "vinyl-buffer": "^1.0.1",
     "vinyl-source-stream": "^2.0.0"
   },
   "dependencies": {
     "@11ty/eleventy-plugin-syntaxhighlight": "^2.0.3",
+    "autoprefixer": "^9",
     "core-js": "^3.3.2",
     "enquire.js": "^2.1.6",
     "magnific-popup": "^1.1.0",
     "owl.carousel": "^2.3.4",
+    "postcss-cli": "^11.0.0",
+    "postcss-preset-env": "^6.7.0",
+    "tailwindcss": "npm:@tailwindcss/postcss7-compat",
     "tar": "^4.4.18"
   },
   "browserslist": "> 0.25%, not dead"

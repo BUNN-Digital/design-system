@@ -13,8 +13,8 @@
         @apply bg-gray-200 text-white rounded-l;
 
         @screen md {
-			min-width: 60px;
-		}
+            min-width: 60px;
+        }
 
         &:before {
             font-family: "Font Awesome 5 Pro";
@@ -24,19 +24,19 @@
 
     &__body {
         flex-grow: 1;
-        @apply p-4 rounded-r;
+        @apply p-4 md:p-6 rounded-r;
 
         @screen md {
-		    @apply p-6;
+            /* @apply p-6; */
         }
     }
 
     p {
         margin: 0;
-        @apply text-sm-1;
+        @apply text-sm-1 md:text-base;
 
         @screen md {
-		    @apply text-base;
+            /* @apply text-base; */
         }
 
         + p {

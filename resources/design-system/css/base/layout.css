@@ -1,20 +1,20 @@
 .section {
-    @apply py-8;
+    @apply py-8 md:py-16;
 
     &--collapsed {
         padding: 0;
     }
 
     @screen md {
-        @apply py-16;
+        /* @apply py-16; */
     }
 }
 
 .container {
     width: 100%;
-    @apply max-w-8xl mx-auto px-4;
+    @apply max-w-8xl mx-auto px-4 md:px-6;
 
     @screen md {
-        @apply px-6;
+        /* @apply px-6; */
     }
 }

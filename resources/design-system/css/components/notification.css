@@ -1,17 +1,17 @@
 .notification-bar {
-    @apply fixed top-0 left-0 right-0 flex flex-col-reverse items-center mx-4 z-modal;
+    @apply fixed top-0 left-0 right-0 flex flex-col-reverse items-center lg:items-end mx-4 z-modal;
 
     @screen lg {
-       @apply items-end;
+        /* @apply items-end; */
     }
 }
 .notification {
-    @apply font-sans-medium bg-white text-sm-1 rounded shadow-lg py-5 pr-6 relative w-full mt-4 hidden flex items-center max-w-2xl;
+    @apply font-sans-medium bg-white text-sm-1 rounded shadow-lg py-5 pr-6 relative w-full mt-4 hidden flex items-center max-w-2xl lg:max-w-md;
     padding-left: 5.425rem;
     min-height: 72px;
 
     @screen lg {
-        @apply max-w-md;
+        /* @apply max-w-md; */
     }
 
     &:before {
