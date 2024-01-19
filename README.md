@@ -6,8 +6,8 @@ Design system for BUNN Digital, powered by Eleventy.
 
 ## Requirements
 
-* Node `>=` v8.9.0
-* Gulp 4
+- Node `>=` v18.16.0
+- Gulp 4
 
 ## Installation
 
@@ -16,7 +16,6 @@ npm install
 ```
 
 `cd` into your project folder and `npm run dev` which will start the Eleventy development server and Gulp. Eleventy has browser hot reloading baked in and will watch all files for changes.
-
 
 ## Folder Structure
 

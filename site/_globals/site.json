@@ -1,23 +1,23 @@
 {
-    "name": "BUNN Design System",
-    "url": "https://resource.bunn.com/design",
-    "author": {
-        "name": "BUNN Digital",
-        "email": "jon.thomas@bunn.com",
-        "handle": "@jonthomas",
-        "avatar": "/images/blog/author.jpg"
-    },
-    "images": {
-        "favicon": "/images/favicon.ico",
-        "favicon16": "/images/favicon-32x32.png",
-        "favicon32": "/images/favicon-16x16.png",
-        "appleTouch": "/images/apple-touch-icon.png",
-        "twitter": "/images/meta/twitter.jpg",
-        "og": "/images/meta/og.jpg"
-    },
-    "social_links": {
-        "facebook": "https://www.facebook.com",
-        "twitter": "https://www.twitter.com",
-        "linkedin": "https://www.linkedin.com"
-    }
+  "name": "BUNN Design System",
+  "url": "https://resource.bunn.com/design",
+  "author": {
+    "name": "BUNN Digital",
+    "email": "eCommerceAdmin@bunn.com",
+    "handle": "@BUNN",
+    "avatar": "/images/bunn-logo-mark-light.png"
+  },
+  "images": {
+    "favicon": "/images/favicon.ico",
+    "favicon16": "/images/favicon-32x32.png",
+    "favicon32": "/images/favicon-16x16.png",
+    "appleTouch": "/images/apple-touch-icon.png",
+    "twitter": "/images/meta/twitter.jpg",
+    "og": "/images/meta/og.jpg"
+  },
+  "social_links": {
+    "facebook": "https://www.facebook.com",
+    "twitter": "https://www.twitter.com",
+    "linkedin": "https://www.linkedin.com"
+  }
 }
