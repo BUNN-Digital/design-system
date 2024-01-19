@@ -1,10 +1,5 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
-  safelist: [
-    {
-      pattern: /./
-    },
-  ],
   content: ["./site/**/*.{html,njk,md,js,json}"],
   theme: {
     colors: {
